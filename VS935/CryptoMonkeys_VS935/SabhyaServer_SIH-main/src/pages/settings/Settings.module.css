@@ -1,0 +1,25 @@
+.pageContent{
+    margin: 80px 0 0 150px;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    margin: 0 0 15px 0;
+
+}
+.rowType2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.secondInput{
+    margin: 0 0 0 2vw;
+}
+.inputTailwind{
+    width:60vw;
+
+}
+.spinner{
+    margin:30vh 40vw;
+}

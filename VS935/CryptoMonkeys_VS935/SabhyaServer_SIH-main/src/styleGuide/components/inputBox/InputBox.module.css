@@ -1,0 +1,31 @@
+.label{
+    font-size: 15px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+.largeHeight{
+    height: 40px;
+}
+
+.inputField{
+    border: 2px solid #CAE9FF;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: 'DM Sans';
+    font-size: 20px;
+    background-color: #FDFEFF;
+}
+
+.inputField::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(141, 141, 141);
+  opacity: 1; /* Firefox */
+}
+
+.inputField:disabled {
+    color: #D5D5D5;
+}
+.disabledText{
+    color: #7C7C7C;
+}

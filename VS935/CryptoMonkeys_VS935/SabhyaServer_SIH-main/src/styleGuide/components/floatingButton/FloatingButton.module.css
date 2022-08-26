@@ -1,0 +1,15 @@
+.btn{
+    height:55px;
+    background-color: #62B6CB;   
+    border-radius: 10px;
+    text-align: center;
+    color:#FDFEFF;
+    font-size: 20px;
+    padding-top: 13px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+background-color: #6ac2d8; 
+}
+

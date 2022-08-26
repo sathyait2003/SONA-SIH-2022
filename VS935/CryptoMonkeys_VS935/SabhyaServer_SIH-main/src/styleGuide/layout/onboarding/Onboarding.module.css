@@ -1,0 +1,119 @@
+.pageOne{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15vh;
+}
+
+.vl {
+  border-left: 2px solid #CAE9FF;
+  height: 70vh;
+}
+.pageText{
+    font-size: 20px;
+    font-weight: 400;
+    color:#1B4965;
+    margin:10px;
+}
+.formDisplay{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+}
+.formOption{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.pageOneSecTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formOption:hover .optionIcon{
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+    border:3px solid #fff;
+    /* box-shadow: 4px 4px 4px 0px #8e8d8d3d; */
+}
+
+.formOption:hover .pageText{
+    margin-top: 15px;
+}
+
+.selected{
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+    border:3px solid #fff;
+    box-shadow: 4px 4px 4px 0px #8e8d8d3d;
+}
+
+.selectedText{
+    margin-top: 15px;
+}
+
+.pageTwo{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    margin-top: 10px;
+}
+
+.gridContainer{
+    display: grid;
+    width: 80vw;
+    height: 50vh;
+    grid-template-columns: auto auto auto auto;
+}
+
+.shrunkGridContainer{
+    display: grid;
+    width: 60vw;
+    height: 30vh;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 30px 0 0 -5vw;
+
+}
+
+.gridItem{
+    margin:5px 0;
+}
+
+.shrunkGridItem{
+    margin: 0;
+}
+
+.pageContent{
+    margin: 10px 0 0 20vw;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    margin: 10px 0 10px 0;
+
+}
+
+.image_form {
+   width: 60vw;
+}
+
+.rowType2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.secondInput{
+    margin: 0 0 0 2vw;
+}
+
+.secondInputText{
+    margin: 45px 0 0 1vw;
+    color: #7C7C7C;
+}

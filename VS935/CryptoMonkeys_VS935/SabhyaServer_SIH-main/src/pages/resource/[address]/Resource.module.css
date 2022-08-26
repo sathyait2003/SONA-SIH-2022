@@ -1,0 +1,90 @@
+.nav {
+    height: 5vh;
+    width: 100%;
+    padding-left: 2vw;
+}
+
+.flex {
+    display : flex;
+    width: 80%;
+    margin: 2vw 0vw 2vw 4vw;
+    height:40vh;
+}
+
+.resource {
+    width: 60%;
+    display: flex;
+}
+
+.resource img {
+    width: 40%;
+    height: 100%;
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+.resource h1 {
+   font-weight: 700;
+   font-size: 44px;
+   line-height: 50px;
+   margin-left: 1vw;
+}
+
+.collection {
+    margin-top: 8vh;
+    color : #7C7C7C;
+}
+
+.subscriberCount {
+    display: flex;
+    margin-left: 2vw;
+    margin-top : 1vw;
+}
+
+.infoText {
+    margin-left: 1vw;
+}
+
+.institute {
+   width: 40%;
+   display: grid;
+   place-items: center;
+}
+
+.profile_flex {
+   display: flex;
+   margin-left: 1vw;
+}
+
+.profile_flex h3{
+    font-weight: 600;
+    margin: 10px 0px 0px 20px;
+ }
+
+.profile img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.description {
+    width: 80%;
+    margin-left: 4vw;
+}
+
+.description h1 {
+    font-size : 24px;
+    font-weight: 500;
+}
+
+.description p {
+    font-size: 14px;
+}
+
+.download_align {
+    margin-left : 4vw;
+    margin-top: 2vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

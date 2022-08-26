@@ -1,0 +1,5 @@
+.login_center {
+    height: 50vh;
+    display: grid;
+    place-items: center;
+}

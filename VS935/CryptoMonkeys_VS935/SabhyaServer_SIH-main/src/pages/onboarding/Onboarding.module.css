@@ -1,0 +1,20 @@
+.navigationButtons{
+    display: flex;
+    align-items: baseline;
+
+}
+
+.floatingBtn1{
+    position:fixed;
+    left : 7vw;
+    bottom: 10vh;
+}
+.floatingBtn2{
+    position:fixed;
+    bottom : 10vh;
+    right : 7vw;
+}
+
+.hidden{
+    display: none;
+}

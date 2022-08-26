@@ -1,0 +1,14 @@
+.welcome__flex {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: #1B4965;
+}
+.welcome__flex img {
+    margin-left: 10px;
+    height: 50px;
+    width: auto;
+}
