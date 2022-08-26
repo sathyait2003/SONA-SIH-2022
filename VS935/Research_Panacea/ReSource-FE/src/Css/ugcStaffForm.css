@@ -1,0 +1,15 @@
+.form-title
+{
+    text-align: center;
+}
+.Submit-Button{
+    padding: 0%;
+}
+.generate-password-btn {
+    margin-top: 30px;
+    align-content: center;
+    width: 200px;
+}
+.form-input{
+    margin: 20px !important;
+}

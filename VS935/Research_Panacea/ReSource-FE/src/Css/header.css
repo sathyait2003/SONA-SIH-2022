@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+.nav-link{
+    color: #000000 !important;
+}
+.logoutbtn {
+    /* Button Blue */
+    /* background-color: #00BFFF; */
+    color: #000000;
+    /* background-color: transparent;
+    color: #000000; */
+}
+.logoutbtn:hover {
+    /* Button Blue */
+    background-color: #0b9ccc;
+    color: #ffffff;
+}
+.portalname {
+    font-family: 'Bree Serif', serif;
+    font-size: 2em;
+    font-weight: bolder;
+}
+#dropdown-basic{
+    padding: 0%;
+    margin: 0%;
+    color: rgba(0,0,0);
+}
+.navbar{
+    background-color: rgb(255, 255, 255) !important;
+}
+.service-dropdown{
+    padding-top: 7px !important;
+    border: none !important;
+}
+.servicebtn {
+    border: none !important;
+    padding-left: 0% !important;
+}
+.social-Links {
+    color: #caced1;
+    text-decoration: none;
+}
+.social-Links:hover {
+    color: #caced1;
+    text-decoration: none;
+}
+.logo {
+    /* height: 32px; */
+}
+/* RESPONSIVE DESIGNS */
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) 
+{
+    nav {
+        width: 100vw;
+        overflow-x: hidden !important;
+        overflow-y: auto;
+    }
+    .portalname {
+        font-family: 'Bree Serif', serif;
+        font-size: 1.7em;
+        font-weight: bolder;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+ @media (min-width: 576px) and (max-width: 768px)
+ {		
+    nav {
+        width: 100vw;
+        overflow-x: hidden !important;
+        overflow-y: auto;
+    }
+    
+ }
+
+/* // Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... } */
+
+ /* // Extra large devices (large desktops, 1200px and up) */
+ @media screen and (min-width: 1400px) {
+
+  }
+@media (min-width: 1900px)
+{
+}
