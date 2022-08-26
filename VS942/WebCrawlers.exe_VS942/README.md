@@ -4,6 +4,15 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <h1 align="center">ResearcHaven 🔎</h1>
+  
+### IMPORTANT NOTE
+IF YOU ARE NOT ABLE TO ACCCESS THESE REPOSITORY YOU CAN EITHER CLONE THIS REPOSITORY OR TRY VISITING THESE LINKS 
+
+[ReasearcHaven Frontend](https://github.com/WebCrawlers-exe/SIH-FRONTEND)
+
+[ReasearcHaven Backend](https://github.com/WebCrawlers-exe/SIH-BACKEND)
+
+[ReasearcHaven NLP](https://github.com/WebCrawlers-exe/SIH-NLP)
 
 <!--   <p align="center">
     The nation's first central platform for all your funding needs. 
