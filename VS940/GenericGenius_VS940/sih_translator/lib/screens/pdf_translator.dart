@@ -27,12 +27,7 @@ class _PdfTranslatorState extends State<PdfTranslator> {
   bool _buttonsEnabled = false;
   // File? file;
 
-  // xyz() async {
-  //   var storage = AzureStorage.parse('DefaultEndpointsProtocol=https;AccountName=hisourcecontainer;AccountKey=KlA1hV8yMXrPQ/kZba9l2TEerYodlo2CnnPoJBlTvumqGEw1aZS792MwhylAJ4+qw+bdlhmx8yAi+AStnjYicg==;EndpointSuffix=core.windows.net');
-  //   await storage.putBlob(/source/$file);
-  //   print(file);
-  //   print("Uploaded on source");
-  // }
+ 
   void translate(String src, String desc, String input) async {
     GoogleTranslator translator = new GoogleTranslator();
     var translation = await translator.translate(input, from: src, to: desc);
