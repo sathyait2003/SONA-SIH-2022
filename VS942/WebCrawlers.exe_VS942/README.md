@@ -78,6 +78,7 @@ Our problem statement is related to the **duplicity of research proposals** subm
 - Overcoming various errors as we learned how to use the **AHP Algorithm** for the first time.
 - Overcoming various **CORS** errors by trial and error when trying to integrate the **back-end API** with the front-end architecture.
 - Reorienting ourselves constantly as we received feedback for the different new features we need to implement at each review.
+- We faced cors error and we tried to resolve it.
 
 ## ✨ Accomplishments that we're proud of
 - Our **USP** that we made **innovative use** of **AHP** and **NLP libraries** to create a custom, extremely efficient Plagiarism checker. 
