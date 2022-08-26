@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pratikriiya Vishleshan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- Choices CSS-->
+    <link rel="stylesheet" href="vendor/choices.js/public/assets/styles/choices.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/overlayscrollbars/css/OverlayScrollbars.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        body {
+            counter-reset: Serial;
+            /* Set the Serial counter to 0 */
+        }
+
+        tr td:first-child:before {
+            counter-increment: Serial;
+            /* Increment the Serial counter */
+            content: "" counter(Serial);
+            /* Display the counter */
+        }
+    </style>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/All_India_Council_for_Technical_Education_logo-removebg-preview.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+        <!-- Sidebar Header    -->
+        <div class="sidebar-header d-flex align-items-center justify-content-center p-3 mb-3">
+            <!-- User Info-->
+            <div class="sidenav-header-inner text-center"><img class="img-fluid rounded-circle avatar mb-3"
+                    src="img/All_India_Council_for_Technical_Education_logo-removebg-preview.png" alt="person">
+                <h2 class="h5 text-white text-uppercase mb-0">Admin</h2>
+                <!-- <p class="text-sm mb-0 text-muted">HEI</p> -->
+            </div>
+            <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center"
+                href="index.html">
+                <p class="h1 m-0">PV</p>
+            </a>
+        </div>
+        <!-- Sidebar Navigation Menus--><span
+            class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
+        <ul class="list-unstyled">
+            <li class="sidebar-item"><a class="sidebar-link" href="admin.html">
+                    <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+                        <use xlink:href="#real-estate-1"> </use>
+                    </svg>Home </a></li>
+            <!-- <li class="sidebar-item"><a class="sidebar-link" href="add_department.html">
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#browser-window-1"> </use>
+          </svg>Department </a></li>
+      <li class="sidebar-item"><a class="sidebar-link" href="#FACULTY" data-bs-toggle="collapse">
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#browser-window-1"> </use>
+          </svg>Faculty </a>
+        <ul class="collapse list-unstyled " id="FACULTY">
+          <li><a class="sidebar-link" href="add_faculty.html">Add/Edit</a></li>
+          <li><a class="sidebar-link" href="send_faculty_feedback.html">Feedback</a></li>
+
+        </ul>
+      </li>
+      <li class="sidebar-item"><a class="sidebar-link" href="#STUDENT" data-bs-toggle="collapse">
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#browser-window-1"> </use>
+          </svg>Student </a>
+        <ul class="collapse list-unstyled " id="STUDENT">
+          <li><a class="sidebar-link" href="add_Student.html">Add/Edit</a></li>
+          <li><a class="sidebar-link" href="send_student_feedback.html">Feedback</a></li>
+
+        </ul>
+      </li>
+      <li class="sidebar-item"><a class="sidebar-link" href="Send_parent_feedback.html">
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#real-estate-1"> </use>
+          </svg>Parent </a></li>
+      <li class="sidebar-item"><a class="sidebar-link" href="#Alumini" data-bs-toggle="collapse">
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#browser-window-1"> </use>
+          </svg>Alumini </a>
+        <ul class="collapse list-unstyled " id="Alumini">
+          <li><a class="sidebar-link" href="add_alumini.html">Add/Edit</a></li>
+          <li><a class="sidebar-link" href="Send_Alumini_feedback.html">Feedback</a></li>
+
+        </ul>
+      </li>
+      <li class="sidebar-item"><a class="sidebar-link" href="#Employer" data-bs-toggle="collapse">
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#browser-window-1"> </use>
+          </svg>Employer </a>
+        <ul class="collapse list-unstyled " id="Employer">
+          <li><a class=" sidebar-link" href="add_employer.html">Add/Edit</a></li>
+          <li><a class="sidebar-link" href="send_employer_feedback.html">Feedback</a></li>
+        </ul>
+      </li> -->
+            <!-- <li class="sidebar-item"><a class="sidebar-link" href="Profile">
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#user-1"> </use>
+          </svg>Profile </a>
+      </li> -->
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="login.html">
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy ">
+                        <use xlink:href="#security-1"> </use>
+                    </svg>
+                    <span class="d-none d-sm-inline-block">Logout</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="page">
+        <!-- navbar-->
+        <header class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <div class="d-flex align-items-center"><a
+                                class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900"
+                                id="toggle-btn" href="#">
+                                <svg class="svg-icon svg-icon-sm svg-icon-heavy text-white">
+                                    <use xlink:href="#menu-1"> </use>
+                                </svg></a><a class="navbar-brand ms-2" href="index.html">
+                                <div class="brand-text d-none d-md-inline-block text-uppercase letter-spacing-0"><span
+                                        class="text-white fw-normal text-xs">Pratikriya </span><strong
+                                        class="text-primary text-sm">Vishleshan</strong></div>
+                            </a></div>
+                        <ul class="nav-menu mb-0 list-unstyled d-flex flex-md-row align-items-md-center">
+
+                            <!-- Log out-->
+                            <li class="nav-item"><a class="nav-link text-white text-sm ps-0" href="login.html"> <span
+                                        class="d-none d-sm-inline-block">Logout</span>
+                                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                                        <use xlink:href="#security-1"> </use>
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Main Body -->
+        <section class="py-5">
+            <div class="container-fluid">
+                <div class="row align-items-stretch gy-4">
+                    <h2>Faculty Ranking</h2>
+                    <input class="form-control" id="myInput" type="text"
+                        placeholder="Search for Institution , State or District .....          ">
+                    <br>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Ranking</th>
+                                <th>Faculty</th>
+                                <th>Institution Name</th>
+                                <th>State</th>
+                                <th>District</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            <tr>
+                                <td></td>
+                                <td>Krishna Agarwal</td>
+                                <td>IIT MADRAS - INDIAN INSTITUTE OF TECHNOLOGY - [IITM]</td>
+                                <td>TamilNadu</td>
+                                <td>Chennai</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Sunil Kumawat</td>
+                                <td>IIT DELHI - INDIAN INSTITUTE OF TECHNOLOGY [IITD]</td>
+                                <td>New Delhi</td>
+                                <td>Delhi ncr</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Dharmik Patel</td>
+                                <td>DHIRUBHAI AMBANI INSTITUTE OF INFORMATION AND COMMUNICATION TECHNOLOGY - [DA-IICT]
+                                </td>
+                                <td>Gujarat</td>
+                                <td>Gandhinagar</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Monish Soni</td>
+                                <td>IIT BOMBAY - INDIAN INSTITUTE OF TECHNOLOGY - [IITB]</td>
+                                <td>Maharashtra</td>
+                                <td>Mumbai</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Sakshi Patel</td>
+                                <td>PARUL UNIVERSITY</td>
+                                <td>Gujarat</td>
+                                <td>VADODARA</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Abir choudhary</td>
+                                <td>IIT KHARAGPUR - INDIAN INSTITUTE OF TECHNOLOGY - [IITKGP]</td>
+                                <td>West Bengal</td>
+                                <td>KHARAGPUR</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Vineet Agarwal</td>
+                                <td>PILLAI COLLEGE OF ENGINEERING </td>
+                                <td>Maharashtra</td>
+                                <td>Mumbai</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Pankaj</td>
+                                <td>IIT KANPUR - INDIAN INSTITUTE OF TECHNOLOGY - [IITK]</td>
+                                <td>Uttar Pradesh</td>
+                                <td> KANPUR</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Gannesh Kumawat</td>
+                                <td>BALLARPUR INSTITUTE OF TECHNOLOGY - [BIT] </td>
+                                <td>Maharashtra</td>
+                                <td>CHANDRAPUR</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Rahul</td>
+                                <td>IIT ROORKEE - INDIAN INSTITUTE OF TECHNOLOGY - [IITR] </td>
+                                <td>Uttarakhand</td>
+                                <td>ROORKEE</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Nikhil Soni</td>
+                                <td>K. J. SOMAIYA COLLEGE OF ENGINEERING - [KJSCE]</td>
+                                <td>Maharashtra</td>
+                                <td>Mumbai</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Muskan choudhary</td>
+                                <td>BITS PILANI (PILANI CAMPUS)</td>
+                                <td>Rajasthan</td>
+                                <td>PILANI</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Aatmaram Bhide</td>
+                                <td>PILLAI COLLEGE OF ENGINEERING </td>
+                                <td>Maharashtra</td>
+                                <td>Mumbai</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Kaamal ghose</td>
+                                <td>NETAJI SUBHASH ENGINEERING COLLEGE - [NSEC]</td>
+                                <td>West Bengal</td>
+                                <td>KOLKATA</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Udit</td>
+                                <td>IIT GUWAHATI - INDIAN INSTITUTE OF TECHNOLOGY - [IITG]</td>
+                                <td>Assam</td>
+                                <td>GUWAHATI</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Rohit Tailor</td>
+                                <td>IIT MADRAS - INDIAN INSTITUTE OF TECHNOLOGY - [IITM]</td>
+                                <td>TamilNadu</td>
+                                <td>Chennai</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Manav Kumar</td>
+                                <td>NETAJI SUBHASH ENGINEERING COLLEGE - [NSEC]</td>
+                                <td>West Bengal</td>
+                                <td>KOLKATA</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Rakesh Agarwal</td>
+                                <td>IIT ROORKEE - INDIAN INSTITUTE OF TECHNOLOGY - [IITR] </td>
+                                <td>Uttarakhand</td>
+                                <td>ROORKEE</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Manav tailor</td>
+                                <td>IIT MADRAS - INDIAN INSTITUTE OF TECHNOLOGY - [IITM]</td>
+                                <td>TamilNadu</td>
+                                <td>Chennai</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Surajmal Suthar</td>
+                                <td>IIT MADRAS - INDIAN INSTITUTE OF TECHNOLOGY - [IITM]</td>
+                                <td>TamilNadu</td>
+                                <td>Chennai</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Deependra raj</td>
+                                <td>NETAJI SUBHASH ENGINEERING COLLEGE - [NSEC]</td>
+                                <td>West Bengal</td>
+                                <td>KOLKATA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- Header Section-->
+    </div>
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/just-validate/js/just-validate.min.js"></script>
+    <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="vendor/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
+    <!-- Main File-->
+    <script src="js/front.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <script>
+        // ------------------------------------------------------- //
+        //   Inject SVG Sprite - 
+        // ------------------------------------------------------ //
+        function injectSvgSprite(path) {
+
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function (e) {
+                var div = document.createElement("div");
+                div.className = 'd-none';
+                div.innerHTML = ajax.responseText;
+                document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+        // this is set to BootstrapTemple website as you cannot 
+        // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+        // while using file:// protocol
+        // pls don't forget to change to your domain :)
+        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+
+
+        var citiesByState = {
+            AndhraPradesh: [
+                "Anantapur",
+                "Chittoor",
+                "East Godavari",
+                "Guntur",
+                "Kadapa",
+                "Krishna",
+                "Kurnool",
+                "Prakasam",
+                "Nellore",
+                "Srikakulam",
+                "Visakhapatnam",
+                "Vizianagaram",
+                "West Godavari",
+            ],
+
+            ArunachalPradesh: [
+                "Anjaw",
+                "Changlang",
+                "Dibang Valley",
+                "East Kameng",
+                "East Siang",
+                "Kra Daadi",
+                "Kurung Kumey",
+                "Lohit",
+                "Longding",
+                "Lower Dibang Valley",
+                "Lower Subansiri",
+                "Namsai",
+                "Papum Pare",
+                "Siang",
+                "Tawang",
+                "Tirap",
+                "Upper Siang",
+                "Upper Subansiri",
+                "West Kameng",
+                "West Siang",
+                "Itanagar",
+            ],
+            Assam: [
+                "Baksa",
+                "Barpeta",
+                "Biswanath",
+                "Bongaigaon",
+                "Cachar",
+                "Charaideo",
+                "Chirang",
+                "Darrang",
+                "Dhemaji",
+                "Dhubri",
+                "Dibrugarh",
+                "Goalpara",
+                "Golaghat",
+                "Hailakandi",
+                "Hojai",
+                "Jorhat",
+                "Kamrup Metropolitan",
+                "Kamrup (Rural)",
+                "Karbi Anglong",
+                "Karimganj",
+                "Kokrajhar",
+                "Lakhimpur",
+                "Majuli",
+                "Morigaon",
+                "Nagaon",
+                "Nalbari",
+                "Dima Hasao",
+                "Sivasagar",
+                "Sonitpur",
+                "South Salmara Mankachar",
+                "Tinsukia",
+                "Udalguri",
+                "West Karbi Anglong",
+            ],
+            Bihar: [
+                "Araria",
+                "Arwal",
+                "Aurangabad",
+                "Banka",
+                "Begusarai",
+                "Bhagalpur",
+                "Bhojpur",
+                "Buxar",
+                "Darbhanga",
+                "East Champaran",
+                "Gaya",
+                "Gopalganj",
+                "Jamui",
+                "Jehanabad",
+                "Kaimur",
+                "Katihar",
+                "Khagaria",
+                "Kishanganj",
+                "Lakhisarai",
+                "Madhepura",
+                "Madhubani",
+                "Munger",
+                "Muzaffarpur",
+                "Nalanda",
+                "Nawada",
+                "Patna",
+                "Purnia",
+                "Rohtas",
+                "Saharsa",
+                "Samastipur",
+                "Saran",
+                "Sheikhpura",
+                "Sheohar",
+                "Sitamarhi",
+                "Siwan",
+                "Supaul",
+                "Vaishali",
+                "West Champaran",
+            ],
+            Chhattisgarh: [
+                "Balod",
+                "Baloda Bazar",
+                "Balrampur",
+                "Bastar",
+                "Bemetara",
+                "Bijapur",
+                "Bilaspur",
+                "Dantewada",
+                "Dhamtari",
+                "Durg",
+                "Gariaband",
+                "Janjgir Champa",
+                "Jashpur",
+                "Kabirdham",
+                "Kanker",
+                "Kondagaon",
+                "Korba",
+                "Koriya",
+                "Mahasamund",
+                "Mungeli",
+                "Narayanpur",
+                "Raigarh",
+                "Raipur",
+                "Rajnandgaon",
+                "Sukma",
+                "Surajpur",
+                "Surguja",
+            ],
+            Goa: ["North Goa", "South Goa"],
+            Gujarat: [
+                "Ahmedabad",
+                "Amreli",
+                "Anand",
+                "Aravalli",
+                "Banaskantha",
+                "Bharuch",
+                "Bhavnagar",
+                "Botad",
+                "Chhota Udaipur",
+                "Dahod",
+                "Dang",
+                "Devbhoomi Dwarka",
+                "Gandhinagar",
+                "Gir Somnath",
+                "Jamnagar",
+                "Junagadh",
+                "Kheda",
+                "Kutch",
+                "Mahisagar",
+                "Mehsana",
+                "Morbi",
+                "Narmada",
+                "Navsari",
+                "Panchmahal",
+                "Patan",
+                "Porbandar",
+                "Rajkot",
+                "Sabarkantha",
+                "Surat",
+                "Surendranagar",
+                "Tapi",
+                "Vadodara",
+                "Valsad",
+            ],
+            Haryana: [
+                "Ambala",
+                "Bhiwani",
+                "Charkhi Dadri",
+                "Faridabad",
+                "Fatehabad",
+                "Gurugram",
+                "Hisar",
+                "Jhajjar",
+                "Jind",
+                "Kaithal",
+                "Karnal",
+                "Kurukshetra",
+                "Mahendragarh",
+                "Mewat",
+                "Palwal",
+                "Panchkula",
+                "Panipat",
+                "Rewari",
+                "Rohtak",
+                "Sirsa",
+                "Sonipat",
+                "Yamunanagar",
+            ],
+            HimachalPradesh: [
+                "Bilaspur",
+                "Chamba",
+                "Hamirpur",
+                "Kangra",
+                "Kinnaur",
+                "Kullu",
+                "Lahaul Spiti",
+                "Mandi",
+                "Shimla",
+                "Sirmaur",
+                "Solan",
+                "Una",
+            ],
+            JammuKashmir: [
+                "Anantnag",
+                "Bandipora",
+                "Baramulla",
+                "Budgam",
+                "Doda",
+                "Ganderbal",
+                "Jammu",
+                "Kargil",
+                "Kathua",
+                "Kishtwar",
+                "Kulgam",
+                "Kupwara",
+                "Leh",
+                "Poonch",
+                "Pulwama",
+                "Rajouri",
+                "Ramban",
+                "Reasi",
+                "Samba",
+                "Shopian",
+                "Srinagar",
+                "Udhampur",
+            ],
+            Jharkhand: [
+                "Bokaro",
+                "Chatra",
+                "Deoghar",
+                "Dhanbad",
+                "Dumka",
+                "East Singhbhum",
+                "Garhwa",
+                "Giridih",
+                "Godda",
+                "Gumla",
+                "Hazaribagh",
+                "Jamtara",
+                "Khunti",
+                "Koderma",
+                "Latehar",
+                "Lohardaga",
+                "Pakur",
+                "Palamu",
+                "Ramgarh",
+                "Ranchi",
+                "Sahebganj",
+                "Seraikela Kharsawan",
+                "Simdega",
+                "West Singhbhum",
+            ],
+            Karnataka: [
+                "Bagalkot",
+                "Bangalore Rural",
+                "Bangalore Urban",
+                "Belgaum",
+                "Bellary",
+                "Bidar",
+                "Vijayapura",
+                "Chamarajanagar",
+                "Chikkaballapur",
+                "Chikkamagaluru",
+                "Chitradurga",
+                "Dakshina Kannada",
+                "Davanagere",
+                "Dharwad",
+                "Gadag",
+                "Gulbarga",
+                "Hassan",
+                "Haveri",
+                "Kodagu",
+                "Kolar",
+                "Koppal",
+                "Mandya",
+                "Mysore",
+                "Raichur",
+                "Ramanagara",
+                "Shimoga",
+                "Tumkur",
+                "Udupi",
+                "Uttara Kannada",
+                "Yadgir",
+            ],
+            Kerala: [
+                "Alappuzha",
+                "Ernakulam",
+                "Idukki",
+                "Kannur",
+                "Kasaragod",
+                "Kollam",
+                "Kottayam",
+                "Kozhikode",
+                "Malappuram",
+                "Palakkad",
+                "Pathanamthitta",
+                "Thiruvananthapuram",
+                "Thrissur",
+                "Wayanad",
+            ],
+            MadhyaPradesh: [
+                "Agar Malwa",
+                "Alirajpur",
+                "Anuppur",
+                "Ashoknagar",
+                "Balaghat",
+                "Barwani",
+                "Betul",
+                "Bhind",
+                "Bhopal",
+                "Burhanpur",
+                "Chhatarpur",
+                "Chhindwara",
+                "Damoh",
+                "Datia",
+                "Dewas",
+                "Dhar",
+                "Dindori",
+                "Guna",
+                "Gwalior",
+                "Harda",
+                "Hoshangabad",
+                "Indore",
+                "Jabalpur",
+                "Jhabua",
+                "Katni",
+                "Khandwa",
+                "Khargone",
+                "Mandla",
+                "Mandsaur",
+                "Morena",
+                "Narsinghpur",
+                "Neemuch",
+                "Panna",
+                "Raisen",
+                "Rajgarh",
+                "Ratlam",
+                "Rewa",
+                "Sagar",
+                "Satna",
+                "Sehore",
+                "Seoni",
+                "Shahdol",
+                "Shajapur",
+                "Sheopur",
+                "Shivpuri",
+                "Sidhi",
+                "Singrauli",
+                "Tikamgarh",
+                "Ujjain",
+                "Umaria",
+                "Vidisha",
+            ],
+            Maharashtra: [
+                "Ahmednagar",
+                "Akola",
+                "Amravati",
+                "Aurangabad",
+                "Beed",
+                "Bhandara",
+                "Buldhana",
+                "Chandrapur",
+                "Dhule",
+                "Gadchiroli",
+                "Gondia",
+                "Hingoli",
+                "Jalgaon",
+                "Jalna",
+                "Kolhapur",
+                "Latur",
+                "Mumbai City",
+                "Mumbai Suburban",
+                "Nagpur",
+                "Nanded",
+                "Nandurbar",
+                "Nashik",
+                "Osmanabad",
+                "Palghar",
+                "Parbhani",
+                "Pune",
+                "Raigad",
+                "Ratnagiri",
+                "Sangli",
+                "Satara",
+                "Sindhudurg",
+                "Solapur",
+                "Thane",
+                "Wardha",
+                "Washim",
+                "Yavatmal",
+            ],
+            Manipur: [
+                "Bishnupur",
+                "Chandel",
+                "Churachandpur",
+                "Imphal East",
+                "Imphal West",
+                "Jiribam",
+                "Kakching",
+                "Kamjong",
+                "Kangpokpi",
+                "Noney",
+                "Pherzawl",
+                "Senapati",
+                "Tamenglong",
+                "Tengnoupal",
+                "Thoubal",
+                "Ukhrul",
+            ],
+            Meghalaya: [
+                "East Garo Hills",
+                "East Jaintia Hills",
+                "East Khasi Hills",
+                "North Garo Hills",
+                "Ri Bhoi",
+                "South Garo Hills",
+                "South West Garo Hills",
+                "South West Khasi Hills",
+                "West Garo Hills",
+                "West Jaintia Hills",
+                "West Khasi Hills",
+            ],
+            Mizoram: [
+                "Aizawl",
+                "Champhai",
+                "Kolasib",
+                "Lawngtlai",
+                "Lunglei",
+                "Mamit",
+                "Saiha",
+                "Serchhip",
+                "Aizawl",
+                "Champhai",
+                "Kolasib",
+                "Lawngtlai",
+                "Lunglei",
+                "Mamit",
+                "Saiha",
+                "Serchhip",
+            ],
+            Nagaland: [
+                "Dimapur",
+                "Kiphire",
+                "Kohima",
+                "Longleng",
+                "Mokokchung",
+                "Mon",
+                "Peren",
+                "Phek",
+                "Tuensang",
+                "Wokha",
+                "Zunheboto",
+            ],
+            Odisha: [
+                "Angul",
+                "Balangir",
+                "Balasore",
+                "Bargarh",
+                "Bhadrak",
+                "Boudh",
+                "Cuttack",
+                "Debagarh",
+                "Dhenkanal",
+                "Gajapati",
+                "Ganjam",
+                "Jagatsinghpur",
+                "Jajpur",
+                "Jharsuguda",
+                "Kalahandi",
+                "Kandhamal",
+                "Kendrapara",
+                "Kendujhar",
+                "Khordha",
+                "Koraput",
+                "Malkangiri",
+                "Mayurbhanj",
+                "Nabarangpur",
+                "Nayagarh",
+                "Nuapada",
+                "Puri",
+                "Rayagada",
+                "Sambalpur",
+                "Subarnapur",
+                "Sundergarh",
+            ],
+            Punjab: [
+                "Amritsar",
+                "Barnala",
+                "Bathinda",
+                "Faridkot",
+                "Fatehgarh Sahib",
+                "Fazilka",
+                "Firozpur",
+                "Gurdaspur",
+                "Hoshiarpur",
+                "Jalandhar",
+                "Kapurthala",
+                "Ludhiana",
+                "Mansa",
+                "Moga",
+                "Mohali",
+                "Muktsar",
+                "Pathankot",
+                "Patiala",
+                "Rupnagar",
+                "Sangrur",
+                "Shaheed Bhagat Singh Nagar",
+                "Tarn Taran",
+            ],
+            Rajasthan: [
+                "Ajmer",
+                "Alwar",
+                "Banswara",
+                "Baran",
+                "Barmer",
+                "Bharatpur",
+                "Bhilwara",
+                "Bikaner",
+                "Bundi",
+                "Chittorgarh",
+                "Churu",
+                "Dausa",
+                "Dholpur",
+                "Dungarpur",
+                "Ganganagar",
+                "Hanumangarh",
+                "Jaipur",
+                "Jaisalmer",
+                "Jalore",
+                "Jhalawar",
+                "Jhunjhunu",
+                "Jodhpur",
+                "Karauli",
+                "Kota",
+                "Nagaur",
+                "Pali",
+                "Pratapgarh",
+                "Rajsamand",
+                "Sawai Madhopur",
+                "Sikar",
+                "Sirohi",
+                "Tonk",
+                "Udaipur",
+            ],
+            Sikkim: ["East Sikkim", "North Sikkim", "South Sikkim", "West Sikkim"],
+            TamilNadu: [
+                "Ariyalur",
+                "Chennai",
+                "Coimbatore",
+                "Cuddalore",
+                "Dharmapuri",
+                "Dindigul",
+                "Erode",
+                "Kanchipuram",
+                "Kanyakumari",
+                "Karur",
+                "Krishnagiri",
+                "Madurai",
+                "Nagapattinam",
+                "Namakkal",
+                "Nilgiris",
+                "Perambalur",
+                "Pudukkottai",
+                "Ramanathapuram",
+                "Salem",
+                "Sivaganga",
+                "Thanjavur",
+                "Theni",
+                "Thoothukudi",
+                "Tiruchirappalli",
+                "Tirunelveli",
+                "Tiruppur",
+                "Tiruvallur",
+                "Tiruvannamalai",
+                "Tiruvarur",
+                "Vellore",
+                "Viluppuram",
+                "Virudhunagar",
+            ],
+            Telangana: [
+                "Adilabad",
+                "Bhadradri Kothagudem",
+                "Hyderabad",
+                "Jagtial",
+                "Jangaon",
+                "Jayashankar",
+                "Jogulamba",
+                "Kamareddy",
+                "Karimnagar",
+                "Khammam",
+                "Komaram Bheem",
+                "Mahabubabad",
+                "Mahbubnagar",
+                "Mancherial",
+                "Medak",
+                "Medchal",
+                "Nagarkurnool",
+                "Nalgonda",
+                "Nirmal",
+                "Nizamabad",
+                "Peddapalli",
+                "Rajanna Sircilla",
+                "Ranga Reddy",
+                "Sangareddy",
+                "Siddipet",
+                "Suryapet",
+                "Vikarabad",
+                "Wanaparthy",
+                "Warangal Rural",
+                "Warangal Urban",
+                "Yadadri Bhuvanagiri",
+            ],
+            Tripura: [
+                "Dhalai",
+                "Gomati",
+                "Khowai",
+                "North Tripura",
+                "Sepahijala",
+                "South Tripura",
+                "Unakoti",
+                "West Tripura",
+            ],
+            UttarPradesh: [
+                "Agra",
+                "Aligarh",
+                "Allahabad",
+                "Ambedkar Nagar",
+                "Amethi",
+                "Amroha",
+                "Auraiya",
+                "Azamgarh",
+                "Baghpat",
+                "Bahraich",
+                "Ballia",
+                "Balrampur",
+                "Banda",
+                "Barabanki",
+                "Bareilly",
+                "Basti",
+                "Bhadohi",
+                "Bijnor",
+                "Budaun",
+                "Bulandshahr",
+                "Chandauli",
+                "Chitrakoot",
+                "Deoria",
+                "Etah",
+                "Etawah",
+                "Faizabad",
+                "Farrukhabad",
+                "Fatehpur",
+                "Firozabad",
+                "Gautam Buddha Nagar",
+                "Ghaziabad",
+                "Ghazipur",
+                "Gonda",
+                "Gorakhpur",
+                "Hamirpur",
+                "Hapur",
+                "Hardoi",
+                "Hathras",
+                "Jalaun",
+                "Jaunpur",
+                "Jhansi",
+                "Kannauj",
+                "Kanpur Dehat",
+                "Kanpur Nagar",
+                "Kasganj",
+                "Kaushambi",
+                "Kheri",
+                "Kushinagar",
+                "Lalitpur",
+                "Lucknow",
+                "Maharajganj",
+                "Mahoba",
+                "Mainpuri",
+                "Mathura",
+                "Mau",
+                "Meerut",
+                "Mirzapur",
+                "Moradabad",
+                "Muzaffarnagar",
+                "Pilibhit",
+                "Pratapgarh",
+                "Raebareli",
+                "Rampur",
+                "Saharanpur",
+                "Sambhal",
+                "Sant Kabir Nagar",
+                "Shahjahanpur",
+                "Shamli",
+                "Shravasti",
+                "Siddharthnagar",
+                "Sitapur",
+                "Sonbhadra",
+                "Sultanpur",
+                "Unnao",
+                "Varanasi",
+            ],
+            Uttarakhand: [
+                "Almora",
+                "Bageshwar",
+                "Chamoli",
+                "Champawat",
+                "Dehradun",
+                "Haridwar",
+                "Nainital",
+                "Pauri",
+                "Pithoragarh",
+                "Rudraprayag",
+                "Tehri",
+                "Udham Singh Nagar",
+                "Uttarkashi",
+            ],
+            WestBengal: [
+                "Alipurduar",
+                "Bankura",
+                "Birbhum",
+                "Cooch Behar",
+                "Dakshin Dinajpur",
+                "Darjeeling",
+                "Hooghly",
+                "Howrah",
+                "Jalpaiguri",
+                "Jhargram",
+                "Kalimpong",
+                "Kolkata",
+                "Malda",
+                "Murshidabad",
+                "Nadia",
+                "North 24 Parganas",
+                "Paschim Bardhaman",
+                "Paschim Medinipur",
+                "Purba Bardhaman",
+                "Purba Medinipur",
+                "Purulia",
+                "South 24 Parganas",
+                "Uttar Dinajpur",
+            ],
+            AndamanNicobar: ["Nicobar", "North Middle Andaman", "South Andaman"],
+            Chandigarh: ["Chandigarh"],
+            DadraHaveli: ["Dadra Nagar Haveli"],
+            DamanDiu: ["Daman", "Diu"],
+            Delhi: [
+                "Central Delhi",
+                "East Delhi",
+                "New Delhi",
+                "North Delhi",
+                "North East Delhi",
+                "North West Delhi",
+                "Shahdara",
+                "South Delhi",
+                "South East Delhi",
+                "South West Delhi",
+                "West Delhi",
+            ],
+            Lakshadeep: ["Lakshadweep"],
+            Pondicherry: ["Karaikal", "Mahe", "Puducherry", "Yanam"],
+        };
+        function makeCitySubMenu(value) {
+            if (value.length == 0)
+                document.getElementById(
+                    "institute_city"
+                ).innerHTML = `<option value="" disabled selected>Plese Choose State </option>`;
+            else {
+                var citiesOptions = "";
+                for (cityId in citiesByState[value]) {
+                    citiesOptions +=
+                        "<option>" + citiesByState[value][cityId] + "</option>";
+                }
+                document.getElementById("institute_city").innerHTML = citiesOptions;
+            }
+        }
+
+        function filterforinstitution() {
+
+        }
+
+    </script>
+
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</body>
+
+</html>
