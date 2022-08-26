@@ -1,0 +1,458 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 13011 - 2022</h5>
+<h5 align="center">INDIA POLITICAL CENTER vs. UNION OF INDIA</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="130112022"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">13011/2022</font> Filed on 26-04-2022 03:54 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="blue" style="font-size:16px;font-weight:bold;">PENDING</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">PIL-W</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">W.P.(C) No. 000487 -  / 2022  Registered on 08-07-2022<br/>(Verified On 02-08-2022)</div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">08-08-2022</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE S. ABDUL NAZEER and HON'BLE MR. JUSTICE J.K. MAHESHWARI</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Pending - (Motion Hearing <br/> [FRESH (FOR ADMISSION) - CIVIL CASES]) List After (Weeks) (2)-Ord dt:08-08-2022 </font>
+</td>
+</tr><tr>
+<td width="140px">Tentatively case may be listed on <b>(likely to be listed on)</b></td>
+<td style="font-size:12px;font-weight:100;"><font color="blue" style="font-size:12px;font-weight:100;">14-10-2022</font> (Computer generated)</td></tr><tr>
+<td width="140px">Category</td>
+<td>0812-Letter Petition &amp; Pil Matters : Others</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 INDIA POLITICAL CENTER<br/>  THROUGH THE AUTHORISED SIGNATORY MR. VIPIN MALIK FLAT 108, IST FLOOR, GOLF APT, SUJAN SINGH PARK, MAHARISHI RAMANNA MARG  ,NEW DELHI         , DELHI          </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 UNION OF INDIA<br/>  THROUGH THE SECRETARY CENTRAL MINISTRY OF EDUCATION 127-C, SHASTRI BHAWAN,  ,NEW DELHI         , DELHI          </p><p>  2 STATE OF ANDHRA PRADESH<br/>  THROUGH THE PRINCIPAL SECRETARY SRI ANJANEYA TOWERS, ROAD NO. 7-104, B-BLOCK, 4TH FLOOR, N.T.T.P.S ROAD, IBRAHIM PATNAM, AMARAWATHI, JIJAYAWADA, KRISHNA DT.-521456  ,KRISHNA          , ANDHRA PRADESH         </p><p>  3 STATE OF ARUNACHAL PRADESH<br/>  THROUGH THE SECRETARY (EDUCATION) ESS SECTOR, PAPUM PARE, NEAR CIVIL LINES, ITANAGAR, ARUNACHAL PRADESH-791111  , , ARUNACHAL PRADESH         </p><p>  4 STATE OF ASSAM<br/>  THROUGH THE SECRETARY TO THE GOVERNMENT OF ASSAM ASSAM, KAHILIPARA, GUWAHATI-781019  ,GUWAHATI  , ASSAM          </p><p>  5 STATE OF BIHAR<br/>  THROUGH THE PRINCIPAL SECRETARY GROUND FLOOR, VIKASH BHAWAN, BAILEY ROAD, PATNA SECRETARIAT, PATNA-800015  ,PATNA            , BIHAR            </p><p>  6 STATE OF CHHATTISGARH<br/>  THROUGH THE PRINCIPAL SECRETARY (EDUCATION) BTI GROUND SHANKAR NAGAR, RAIPUR-492007  ,RAIPUR          , CHHATTISGARH          </p><p>  7 STATE OF GOA<br/>  THROUGH THE DIRECTOR OF EDUCATION HEAD OFFICE-PORVORIM GOA-403521  , , GOA          </p><p>  8 STATE OF GUJARAT<br/>  THROUGH THE PRINCIPAL SECRETARY (PRIMARY AND SECONDARY EDUCATION) 9/1, DR. JIVRAJ MEHTA BHAVAN, GANDHINAGAR-382010  ,GANDHINAGAR          , GUJARAT          </p><p>  9 STATE OF HARYANA<br/>  THROUGH THE PRINCIPAL SECRETARY (EDUCATION) PLOT NO. 1/B, SHIKSHA SADAN, SECTOR -5, PANCHKULA-134109  ,PANCHKULA *         , HARYANA          </p><p>  10 STATE OF HIMACHAL PRADESH<br/>  THROUGH THE SECRETARY  GOVERNMENT OF HIMACHAL PRADESH, SHIMLA- 171002  ,SHIMLA          , HIMACHAL PRADESH         </p><p>  11 STATE OF JHARKHAND<br/>  THROUGH THE SECRETARY 3RD FLOOR, YOJANA BHAWAN, NEPAL HOUSE, DORANDA RANCHI, JHARKHAND-834002  ,RANCHI          , JHARKHAND          </p><p>  12 STATE OF KARNATAKA<br/>  THROUGH THE PRINCIPAL SECRETARY TO THE GOVERNMENT 2ND GATE, 6TH FLOOR, M.S. BUILDING, DR. AMBEDKAR VEEDHI, BENGALURU-01  ,BANGALORE          , KARNATAKA          </p><p>  13 STATE OF KERALA<br/>  THROUGH THE PRINCIPAL SECRETARY (EDUCATION) JAGATHI, THIRUVANANTHAPURAM-695014  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  14 STATE OF MADHYA PRADESH<br/>  THROUGH THE PRINCIPAL SECRETARY DEPARTMENT OF HIGHER EDUCATION, 2ND FLOOR, ANNEX-3, VALLABH BHAWAN, BHOPAL-462004  ,BHOPAL , MADHYA PRADESH </p><p>  15 STATE OF MAHARASHTRA<br/>  THROUGH THE PRINCIPAL SECRETARY 411, 4TH FLOOR, MANTRALAYA ANNEX, MADAM CAMA ROAD, NARIMAN POINT, MUMBAI-400032  ,MUMBAI          , MAHARASHTRA          </p><p>  16 STATE OF MANIPUR<br/>  THROUGH THE DIRECTOR OF EDUCATION MANIPUR, OLD LAMBULANE, JAIL ROAD, IMPHAL, MANIPUR-795001  ,IMPHAL , MANIPUR          </p><p>  17 STATE OF MEGHALAYA<br/>  THROUGH THE ADDITIONAL CHIEF SECRETARY GOVERNMENT OF MEGHALAYA, MEGHALAYA CIVIL SECRETARIAT, MYNTDU BUILDING, SHILLONG-793001  , , MEGHALAYA          </p><p>  18 STATE OF MIZORAM<br/>  THROUGH THE COMMISSIONER AND SECRETARY GOVERNMENT OF MIZORAM, MCDONALD HILL, ZARKAWT, AIZAWL  ,AIZAWL          , MIZORAM          </p><p>  19 STATE OF NAGALAND<br/>  THROUGH THE DIRECTOR GOVERNMENT OF NAGALAND, DIRECTORATE OF HIGHER EDUCATION, BELOW NEW SECRETARIAT, NAGALAND, KOHIMA-797001  ,KOHIMA          , NAGALAND          </p><p>  20 STATE OF ODISHA THROUGH THE PRINCIPAL SECRETARY<br/>  HIGHER
+EDUCATION DEPARTMENT, GOVERNMENT OF
+ODISHA
+HIGHER EDUCATION DEPARTMENT ODISHA
+SECRETARIAT, BHUBANESWAR- 751001  , , OTHER </p><p>  21 STATE OF PUNJAB,<br/>  THROUGH SECRETARY DEPARTMENT OF HIGHER
+EDUCATION AND LANGUAGES, GOVERNMENT OF
+PUNJAB
+VIDYA BHAWAN (PUNJAB SCHOOL EDUCATION
+BOARD)
+BLOCK E, 5TH FLOOR, PHASE-VIII SAS NAGAR
+(MOHALI) &amp;NDASH; PUNJAB &amp;NDASH; 160062  , , OTHER </p><p>  22 STATE OF RAJASTHAN<br/>  THROUGH SECRETARY DEPARTMENT OF HIGHER
+EDUCATION AND COMMISSIONER, COLLEGE
+EDUCATION, GOVERNMENT OF RAJASTHAN
+BLOCK-IV, DR. S. RADHAKRISHNAN SHIKSHA
+SANKUL, JAWAHAR LAL NEHRU MARG, JAIPUR-
+302015  , , OTHER </p><p>  23 STATE OF SIKKIM<br/>  THROUGH THE ADDITIONAL CHIEF SECRETARY, EDUCATION DEPARTMENT
+HUMAN RESOURCE DEVELOPMENT DEPARTMENT
+TASHILING SECRETARIAT, SECRETARIAT RD,
+GANGTOK, SIKKIM &amp;NDASH; 737101  , , OTHER </p><p>  24 STATE OF TAMIL NADU,<br/>  THROUGH THE SECRETARY OF EDUCATION, GOVERNMENT OF TAMIL NADU
+DIRECTORATE OF SCHOOL EDUCATION DPI
+COMPLEX COLLEGE ROAD,
+CHENNAI &amp;NDASH; 600006  , , OTHER </p><p>  25 STATE OF TELANGANA<br/>  THROUGH THE SECRETARY OF EDUCATION, GOVERNMENT OF TELANGANA
+5TH FLOOR, BURGULA RAMA KRISHNA RAO
+BHAVAN, NH 44, HILL FORT, ADARSH NAGAR,
+HYDERABAD, TELANGANA &amp;NDASH; 500063  , , OTHER </p><p>  26 STATE OF TRIPURA,<br/>  THROUGH THE SECRETARY OF EDUCATION, GOVERNMENT OF TRIPURA
+DIRECTORATE OF HIGHER EDUCATION 1ST
+FLOOR, SHIKSHA BHAWAN, OFFICE LANE,
+AGARTALA, TRIPURA WEST &amp;NDASH; 799001  , , OTHER </p><p>  27 STATE OF UTTAR PRADESH,<br/>  THROUGH THE ADDITIONAL CHIEF SECRETARY, ROOM NO. &amp;NDASH; 03, NAVEEN BHAWAN, U.P.
+SECRETARIAT, LUCKNOW &amp;NDASH; 226001  , , OTHER </p><p>  28 STATE OF UTTARAKHAND,<br/>  THROUGH THE SECRETARY DEPARTMENT OF
+EDUCATION,
+UTTARAKHAND, NANOORKHEDA, DEHRADUN &amp;NDASH;
+248008  , , OTHER </p><p>  29 STATE OF WEST BENGAL, THROUGH THE PRINCIPAL SECRETARY<br/>  DEPARTMENT OF HIGHER EDUCATION,
+GOVERNMENT OF WEST BENGAL
+BIKASH BHAVAN, SALT LAKE CITY, KOLKATA -
+700 091  , , OTHER </p><p>  30 UNION TERRITORY OF ANDAMAN AND NICOBAR ISLANDS, THOUGH THE SECRETARY,<br/>  DIRECTORATE OF
+EDUCATION, ANDAMAN AND NICOBAR
+ADMINISTRATION
+VIP ROAD THOMAS COLONY, JUNGLIGHAT, PORT
+BLAIR, ANDAMAN AND NICOBAR ISLANDS &amp;NDASH;
+744103  , , OTHER </p><p>  31 UNION TERRITORY OF CHANDIGARH, THROUGH THE EDUCATION SECRETARY<br/>  1ST FLOOR, ADDITIONAL DELUXE BUILDING,
+SECTOR-9, UT CHANDIGARH, PIN &amp;NDASH; 160009  , , OTHER </p><p>  32 UNION TERRITORY OF DADRA AND NAGAR HAVELI, THROUGH THE DIRECTOR OF EDUCATION,<br/>  DIRECTORATE OF EDUCATION, UT
+ADMINISTRATION OF DADRA AND NAGAR HAVELI,
+FIRST FLOOR, BUILDING NO.5, PWD OFFICE
+COMPLEX, SILVASSA &amp;NDASH; 396230  , , OTHER </p><p>  33 UNION TERRITORY OF DAMAN AND DIU, THROUGH THE DIRECTOR OF EDUCATION,<br/>  DIRECTORATE OF EDUCATION, DAMAN,
+SECRETARIAT, MOTI-DAMAN
+DAMAN &amp;NDASH; 396220  , , OTHER </p><p>  34 UNION TERRITORY OF NATIONAL CAPITAL TERRITORY OF DELHI, THROUGH THE PRINCIPAL SECRETARY<br/>  (EDUCATION), DIRECTOR EDUCATION (DOE),
+ROOM NO-12, OLD SECRETARIAT, NEW DELHI-
+110054  , , OTHER </p><p>  35 UNION TERRITORY OF JAMMU AND KASHMIR, THROUGH THE DIRECTOR OF EDUCATION<br/>  MINI
+SECRETARIAT, JANDK ROOM NO.2/24 CIVIL
+SECRETARIAT, JAMMU AND KASHMIR &amp;NDASH; 190001  , , OTHER </p><p>  36 UNION TERRITORY OF LAKSHADWEEP, THROUGH THE SECRETARY EDUCATION,<br/>  OLD DP BUILDING 1ST FLOOR SECRETARIAT
+KAVARATTI &amp;NDASH; 682555  , , OTHER </p><p>  37 UNION TERRITORY OF PUDUCHERRY THROUGH DIRECTOR<br/>  DIRECTORATE OF HIGHER
+AND TECHNICAL EDUCATION, GOVERNMENT OF
+PUDUCHERRY THOLKAPPIAR MAIN ROAD, GOVERNMENT
+QUARTERS, LAWSPET, PUDUCHERRY, 605008  , , OTHER </p><p>  38 DIRECTOR, NATIONAL COUNCIL OF EDUCATIONAL RESEARCH AND TRAINING<br/>  SRI AUROBINDO MARG, NCERT CAMPUS,
+KATWARIA SARAI, NEW DELHI
+DELHI &amp;NDASH; 110016  , , OTHER </p><p>  39 CENTRAL BOARD OF SECONDARY EDUCATION<br/>  SHIKSHA KENDRA 2, COMMUNITY CENTER, PREET
+VIHAR, DELHI - 110092  , , OTHER </p><p>  40 COUNCIL FOR THE INDIAN SCHOOL CERTIFICATE EXAMINATIONS<br/>  PRAGATI HOUSE, 3RD FLOOR, 47-48, NEHRU
+PLACE, NEW DELHI &amp;NDASH; 110019  , , OTHER </p><p>  41 UNIVERSITY GRANTS COMMISSION<br/>  BAHADUR SHAH ZAFAR MARG,
+NEW DELHI &amp;NDASH; 110002  , , OTHER </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  VEDANT SINGH</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

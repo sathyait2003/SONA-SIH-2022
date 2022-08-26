@@ -1,0 +1,402 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 40513 - 2017</h5>
+<h5 align="center">SHAIK IMRAN BEHMAD vs. MINISTRY OF HUMAN RESOURCE DEVELOPMENT</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="405132017"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">40513/2017</font> Filed on 11-12-2017 04:03 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="red" style="font-size:16px;font-weight:bold;">DISPOSED</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">X</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">W.P.(C) No. 001233 -  / 2017  Registered on 16-12-2017<br/>(Verified On 18-12-2017)</div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">22-01-2018</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE ADARSH KUMAR GOEL and HON'BLE MR. JUSTICE UDAY UMESH LALIT</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">DISPOSED (Motion Hearing <br/> FOR ORDER) Disposed off-Ord dt:22-01-2018  (Disposal Date: 22-01-2018, Month: 1, Year: 2018)<br/> JUDGES: HON'BLE MR. JUSTICE ADARSH KUMAR GOEL, HON'BLE MR. JUSTICE UDAY UMESH LALIT</font>
+</td>
+</tr><tr>
+<td width="140px">Disp.Type</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Disposed Off</font>
+</td>
+</tr><tr>
+<td width="140px">Category</td>
+<td>4003-Admission/Transfer To Engineering And Medical Colleges : Others</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 SHAIK IMRAN BEHMAD<br/>  R/O 9-20-182/C MUJAHID NAGAR MALAPALLY  , DISTRICT: NIZAMABAD ,NIZAMABAD          , TELANGANA </p><p>  2 SINGH KUSHAL TAPESHWAR<br/>  73, 3RD FLOOR, 5TH A MAIN ROAD, VIJAYNAGAR 2ND STAGE, HAMPINAGAR POST  ,BANGALORE          , KARNATAKA          </p><p>  3 SUSHANT M KOSULKAR<br/>  PLOT NO.64 SHRIRAM NAGAR, UDAY NAGAR SQUARE, RING ROAD  ,NAGPUR          , MAHARASHTRA          </p><p>  4 GOKUL TRIMBAK ILHE<br/>  A/P KOLHAR. KD, TAL RAHURI  , DISTRICT: RAHURI ,AHMADNAGAR          , MAHARASHTRA          </p><p>  5 D. CHANDRAMOULI<br/>  NO.74, SAKTHI NAGAR KAKALUR ESTATE (OPP), KAKALUR POST,  ,THIRUVALLUR          , TAMIL NADU         </p><p>  6 SREEJITH D<br/>  UDAYAKKARA (H), PALAKKOLLY P.O., PULPALLY, (DT), WAYANAD STATE  ,WAYANAD            , KERALA            </p><p>  7 S. SHARMILA<br/>  904/1, TIMBERDEPOT ROAD, RANITHOTTAM, NAGERCOIL, KANYAKUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  8 C.G KIRAN<br/>  11/3, NGO COLONY 4TH STREET, CHOOLAIMEDU  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  9 BORADE RAVINDRA ANNASAHEB<br/>  A/P MADKIJAMB, TAL DINDORI  , DISTRICT: DINDORI ,NASHIK          , MAHARASHTRA          </p><p>  10 K. MANIKANDAN<br/>  NO.174 J MAIN, 1ST BLOCK, NAGARBHAVI 2ND STAGE,  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  11 SHEETAL KHARI<br/>  C90, FIRST FLOOR, DLF EXT, BHOPURA,  ,GHAZIABAD          , UTTAR PRADESH         </p><p>  12 M.A. JOE SELVARAJA<br/>  5-448, F1 JAMIL FLATS, VIGNARAJAPURAM 6TH ST, VENGAIVASAL  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  13 DEEPAK P<br/>  THAPASYA, SANTHINAGAR, TIRUR  ,MALAPPURAM            , KERALA            </p><p>  14 VISHNU K J<br/>  KIZHAKKEKALAM, NOCHULLY, KUZHALMANNAM  , DISTRICT: PALAKKAD ,PALAKKAD            , KERALA            </p><p>  15 ASHISH KESHAVRAO NIKAM<br/>  B-4, 203, RAHUL NISARG, ATUL NAGAR PHASE II, WARJE  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  16 K. KANNAKI<br/>  10-44B2, VARTHAGANADAR KUDIYERUPPU, KANYA KUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  17 LAXMI NARAYAN BEHERA<br/>  FLAT NO.8, DAMODAR NISARG, HINGNE KHURD, SINHAGAD ROAD  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  18 CLEOPHAS FERNANDEZ. J.<br/>  C-42 RAMALINGAR ROAD, BLOCK 10 NEYVELI, CUDDALORE DIST  ,CUDDALORE          , TAMIL NADU         </p><p>  19 B BALAMURUGAN<br/>  PLOT NO.75, SAKUNTHALAPATTU ILLAM, MURUGESAN SALAI, NLC OFFICERS NAGAR,  , DISTRICT: VADALUR ,CUDDALORE          , TAMIL NADU         </p><p>  20 A KALA<br/>  4-349K, KARUMENIA BHAVAN, BHARAT NAGAR, MELA PUTHERI, NAGERCOIL, KANYAKUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  21 GHARSELE AJAY SINGH MANOHAR<br/>  HANUMAN CHOWK WARD NO.2, KHATIA GONDIYA  ,GONDIYA *         , MAHARASHTRA          </p><p>  22 S. DINESH<br/>  1130 THENDRAL NAGAR, 1ST STREET VENGIKKAL  ,TIRUVANNAMALAI          , TAMIL NADU         </p><p>  23 KATKAR SHRIDHAR PRALHAD<br/>  FLAT NO.102, 1 WING, SKY HEIGHTS, PISOLE  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  24 I. MADHUMADHURAN<br/>  48, RAINBOW ENCLAVE, EAST SUGUNAPURAM, COIMBATORE  ,COIMBATORE          , TAMIL NADU         </p><p>  25 YOGESH SURESH MULE<br/>  ROW HOUSE NO.A4/6, NARAYAN HUTT SOCIETY, JAI GANESH SAMRAJYA, OPP. SAINT DNYANESHWAR HOSPITAL, SPINE ROAD, PUNE NASHIK HIGHWAY, BHOSARI  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  26 LINO ABRAHAM<br/>  KOCHUPARAMBIL HOUSE, NARAKATHANI PO, EZUMATOOR  , , KERALA            </p><p>  27 VINODH VIJAYAKUMAR<br/>  A403, GANESH SHRISHTI APARTMENTS, BEHIND D MART, RAVET, PUNE  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  28 ASISH KUMAR PATEL P<br/>  9, VASUDEVAN NAGAR, OLD PERUNGALATHUR,  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  29 JANMEJAY GUPTA<br/>  329, GROUND FLOOR, 6TH CROSS, 2ND A MAIN, VIGNAN NAGAR  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  30 PRACHI<br/>  A-29, MOUNT N GLORY, KHARADI, PUNE  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  31 RION M JOSEPH<br/>  KOCHUVILAYIL VEEDU, NELLIPALLY PO PUNALUR  , , KERALA            </p><p>  32 SHANTANU G. JOG<br/>  1, GAURISHANKAR APT, SUS ROAD, PASHAN,PUNE  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  33 SHESHADRI PURANDARDAS SHINGRE<br/>  SHRI MADWASHRYA, 1061, SHUKRAWAR PETH, SUBHASH NAGAR, 9TH LANE, BEHIND ACHARYA ATRE SABHAGRIHA, PUNE  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  34 TANJINA AFRIN AHMED<br/>  DR. ZAKIR HUSSAIN ROAD, W/NO.8, P.O AND P.S. DHUBRI, DIST. DHUBRI  , DISTRICT: DHUBRI ,DHUBRI          , ASSAM          </p><p>  35 SYED MOHSIN AHMED<br/>  5/3, 2ND MAIN ROAD, MATTADAHALLI, RT NAGAR POST,  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  36 K. KAVIN KUMAR<br/>  NO.60 THIRUMALAI NAGAR, SEDUKKARI POST, SEDUKKARI POST, GUDIYATTAM, VELLORE DIST.  ,VELLORE          , TAMIL NADU         </p><p>  37 SUMAN PRASAD<br/>  23B, N BLOCK, SAKET  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  38 ANAND JOY<br/>  MUNDUKOTTACKAL HOUSE CHETHACKAL PO RANNY PATHANAMTHITTA  ,PATHANAMTHITTA            , KERALA            </p><p>  39 MAHARAJ KRISHAN S/D/W/Thru:- JANKI NATH PANDITA<br/>  FLAT NO.19 BLOCK NO.77 LANE NO.16 JAGTI TOWNSHIP NAGROTA  , , JAMMU &amp; KASHMIR        </p><p>  40 SANDEEP DEENANATH PANDEY<br/>  A-204, VIDHI APT., INDRAPRATH COMPLEX, NEAR HANUMAN TEMPLE, NAVGHAR ROAD, BHAYANDAR EAST  , DISTRICT: THANE ,THANE          , MAHARASHTRA          </p><p>  41 AAKASH SHARMA<br/>  GE SUBHASHREE APARTMENT 2ND MAIN ROAD IST BLOCK RT NAGAR ADJACENT TO BANJARA ACADEMY  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  42 MAHESH KUMAR J<br/>  5-448, F1 JAMIL FLATS, VIGNARAJAPURAM 6TH ST, VENGAIVASAL  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  43 GIRIRAJ D. PATIL<br/>  B-22 OM PRASHANT TAMBE NAGAR S.N. ROAD MULUND  ,MUMBAI          , MAHARASHTRA          </p><p>  44 KULDIP KULKARNI<br/>  B-9, BUILDING NO.9, VIJAY NAGAR, DHAYARI  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  45 SUMEET CHINCHOLIKAR<br/>  441/4, FLAT NO.3, MATHRUCHAYA APTS, BEHIND K.E.M HOSPITAL , NEW SOMWAR PETH  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  46 TUSHAR K KULKARNI<br/>  N-42, CC2, 16/5 TRIMURTI CHOWK, CIDCO,  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  47 ASHISH KUMAR SINGH<br/>  ROOM NO.501, SRI SAI NILAYAM, KAVERAMMA NILAYAM, 10TH CROSS, TULASI THEATER ROAD, MARATHAHALLI  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  48 KAMRAN ZAKI AHMED<br/>  DSOUZA MANSION, FLAT NO.9, 2ND FLOOR, NEHRU ROAD, SANTACRUZ (EAST),  , DISTRICT: MUMBAI ,MUMBAI          , MAHARASHTRA          </p><p>  49 RAJU KUMAR<br/>  HOUSE NO.365, NEW MARKET NEAR MAMTA GARDEN, RAWATBHATA, VIA KOTA  ,KOTA          , RAJASTHAN          </p><p>  50 SABALE SACHIN WAMAN<br/>  5/91, C-1 MANIYAR BUILDING, TARDEO ROAD, MUMBAI CENTRAL  , DISTRICT: MUMBAI ,MUMBAI          , MAHARASHTRA          </p><p>  51 YOGESHWAR MOTIRAM  NIKAM<br/>  FLAT NO.3, GAYTRI BUILDING NO.4, MAHALAXMI CO. OPP. HSG. SOCIETY, KATHE LANE, DWARKA  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  52 VINAYAK BHANUDAS KUMBHAR<br/>  AT BHADGAON, POST/TAL KHED, DIST. RATNAGIRI  , DISTRICT: RATNAGIRI ,RATNAGIRI          , MAHARASHTRA          </p><p>  53 ARUN YADAV<br/>  ROOM NO.101, 1ST FLOOR, PLOT 230, SECTOR-14, NERUL NAVI MUMBAI  , DISTRICT: MUMBAI ,MUMBAI          , MAHARASHTRA          </p><p>  54 ASHISH KUMAR S/D/W/Thru:- VIJAY PAL SINGH<br/>  221, VILL. DHAMPUR HUSSAINPUR NEAR PRIMARY SCHOOL, TEH AND THANA DHAMPUR  , DISTRICT: DHAMPUR ,BIJNOR          , UTTAR PRADESH         </p><p>  55 SANDIP DUTTA<br/>  FLAT NO.302, SHREE SIDDHIVINAYAK LOTUS IIA, NEAR UNDRI CHOWK, WADACHIWADI ROAD, UNDRI  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  56 NEETHU K BABU<br/>  KANJIRAKATTIL HOUSE, NANDIKARA P.O.  ,THRISSUR            , KERALA            </p><p>  57 VISAL VASUDEVAN<br/>  ULAKAMPARAMBIL, KALLARA SOUTH, KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  58 AGEESH PK<br/>  AGISHA NIVAS, P.O MOOZHIKKARA, THALASSERY (VIA), KANNUR DIST.  ,KANNUR            , KERALA            </p><p>  59 C N NITHINJI<br/>  NO.10, MARIA KRUPA, 1ST FLOOR, RAMAIAH REDDY NEW COLONY, SECTOR B, BASAVANAGAR,  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  60 SISIRA N RATHISH<br/>  NAYANAM, NIRMALAGIRI P.O., KUTHUPRAMBA  ,KANNUR            , KERALA            </p><p>  61 BINU GEORGE<br/>  A007, DS MAX SIGMA, GOLLAHALLI ROAD, ELECTRONIC CITY, PHASE 1  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  62 AHAMMED NILOFAR<br/>  HOUSE NO.3 136/1, FIRST FLOOR, RASHAD NAGAR, (8TH CROSS), GOVINDAPURA MAIN ROAD,  , DISTRICT: BANGLORE ,BANGALORE          , KARNATAKA          </p><p>  63 ANDREW RANJITH PANDIAN<br/>  NO.16, 53RD STREET, 9TH AVENUE, ASHOK NAGAR  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  64 TRESA HARSHA P GEORGE<br/>  A007, DS MAX SIGMA, GOLLAHALLI ROAD, ELECTRONIC CITY, PHASE 1  ,BANGALORE          , KARNATAKA          </p><p>  65 FASIL KADAKKOTTIRI<br/>  KADAKKOTTIRI HOUSE, IDHIMUZHIKKAL, CHELAMBRA (PO), MALAPPURAM  ,MALAPPURAM            , KERALA            </p><p>  66 RAHUL K V<br/>  SABARI, PAZHAKUTTY P O, NEDUMANGAD, THIRUVANANTHAPURAM  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  67 SIAUM SREENAGESH<br/>  MUTTATHIL HOUSE, P.O. PULLUT NORTH, KODUNGALLUR  ,THRISSUR            , KERALA            </p><p>  68 AFFAN P<br/>  PAZHERI HOUSE, ERANHIKKAL ROAD, THURAKKAL (PO), KONDOTTY, MALAPPURAM  ,MALAPPURAM            , KERALA            </p><p>  69 JITHIN C<br/>  GOKULAM (H.O), SUBASH NAGAR, PINNAGODE ROAD, KALPETTA (PO), WYANAD (DIST.)  ,WAYANAD            , KERALA            </p><p>  70 MILSHA MUKUND<br/>  FLAT NO.B404, SILVER PEARL APARTMENT, CHOODASANDRA CIRCLE, NEAR KSRP QUARTERS, HOSA ROAD  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  71 PRASHOB C<br/>  PRASHANTHI, CHALA-12-KANDI, P.O. THOTTADA,  ,KANNUR            , KERALA            </p><p>  72 K KANDASWAMY<br/>  873, 15TH CROSS, 1ST STAGE, 1ST PHASE, CHANDRA LAYOUT,  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  73 SANOJ P SURESH<br/>  PUTHUSSERY HOUSE, NEERVARAM POST, PANAMARAM VIA  , DISTRICT: WAYANAD ,WAYANAD            , KERALA            </p><p>  74 ANZAL MOIDU<br/>  KALAPPARAMBIL HOUSE, SUBSTATION, KOTHAMANGALAM P.O, KOTHAMANGALAM  ,ERNAKULAM            , KERALA            </p><p>  75 ARJUN V.R<br/>  MAYOORI HOUSE, PARAVOOR, PULIKKAL P.O  ,MALAPPURAM            , KERALA            </p><p>  76 SREEJIT<br/>  DOOR NO.1, REHOBOTH COTTAGE, 3RD CROSS, KALKERE MAIN ROAD, RAMAMURTHY NAGAR  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  77 MARVEL RAPHAEL<br/>  KANNAMPUZHA HOUSE, THIRUMUDIKKUNNU, KORATTY EAST PO  ,THRISSUR            , KERALA            </p><p>  78 NIKHIL T P<br/>  THERUPARAMBATH (H), MUTHIYANGA (PO), VALLIYAYI, PATHAYAKUNNU  ,KANNUR            , KERALA            </p><p>  79 ARNAB CHAKRABORTY<br/>  64 L J ROAD, SADHURBAGAN, BAIDYABATI, HOOGHLY  ,HUGLI         , WEST BENGAL        </p><p>  80 AMRITH RAJ<br/>  THEKKAYIL PARAMBATH HOUSE NALUTHARA, MAHE  ,KANNUR            , KERALA            </p><p>  81 TIJO JOSE<br/>  112, B BLOCK, TRIFECTA JOLI, HADOSIDDAPURA, CARMELARAM POST  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  82 RAFI N BATHER<br/>  KAMPIVILA, KARAMCODE POST, KOLLAM  ,KOLLAM            , KERALA            </p><p>  83 VIVEK V KUMAR<br/>  ATHIRA (MATTATHIL), NORTH GATE, ETTUMANOOR P.O, KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  84 VIVEK V. DEVAN<br/>  POOVATHUM PARAMBIL HOUSE, CHERUKARA (PO), PERINTHALMANNA  ,MALAPPURAM            , KERALA            </p><p>  85 VASUDEVAN T<br/>  OLD NO.49/2, PADDY FIELD STREET, PERAMBUR,  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  86 TOBIN ABRAHAM<br/>  KOTTARATHU MEZHUVELIL, ANTHYALANCAVU PO, KADAMMANITTA, PATHANAMTHITTA  ,PATHANAMTHITTA            , KERALA            </p><p>  87 SHINOJ G<br/>  SLV PG FOR GENTS, SHINOJ, DOOR NO.202, 140, 13TH CROSS, OPP. AZMEERA APARTMENTS, NEELADRI NAGAR, ELECTRONIC CIT, PHASE 1,  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  88 SREEDHU M.G<br/>  NAYANAM, P.O. NIRMALAGIRI, THOKKILANGADI, KUTHUPARAMBA  ,KANNUR            , KERALA            </p><p>  89 JIJO VARGHESE<br/>  KULANJIKOMBIL HOUSE PAYYANAMON P.O KONNI PATHANAMTHITTA  ,PATHANAMTHITTA            , KERALA            </p><p>  90 KURIAN K C<br/>  KUTTANCHIRA HOUSE, SANTHIPURAM PO, KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  91 VAISAKH PREM V.P<br/>  DEVIKRIPA, VETTAMPALLY, IRINCHAYAM P.O., NEDUMANG, AD  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  92 SHIBIN T P<br/>  THEKKEPURAKKAL HOUSE, PO TIRUR, KOTT PAYYANANGADI, DT. MALAPPURAM  ,MALAPPURAM            , KERALA            </p><p>  93 NITHIN BABU<br/>  KOOVAKKATTIL HOUSE, KOLANI P.O, THODUPUZHA, IDUKKI  ,IDUKKI            , KERALA            </p><p>  94 KARTHIK KUTTAN<br/>  MULLAKKAPARAMBIL HOUSE, NANDIPULAM PO  ,THRISSUR            , KERALA            </p><p>  95 NEERAJ BHARAT BORIKAR<br/>  ANGUR BAGICHA ROAD, 12 GURUKRIPA COLONY GONDIA  ,GONDIYA *         , MAHARASHTRA          </p><p>  96 SREE HARI MOHAN<br/>  11/480, SARAVANA NAGAR, SIVANMALAI POST KANGAYAM POST  , , KERALA            </p><p>  97 RAUSHAN SINGH<br/>  SAMARJEET SINGH VILLAGE POST MANIAR DIST. BALLIA  ,BALLIA , UTTAR PRADESH         </p><p>  98 S. BALAKRISHNAN<br/>  9/4, TYPE 2, CAMP 2, ANNALMIN NAGAR, TUTICORIN  , , TAMIL NADU         </p><p>  99 R. SHANMUGAM<br/>  59/4, ANAL MIN NAGAR 11, THOTTILPATTY, METTUR DAM 6, SALEM DIST.  ,SALEM          , TAMIL NADU         </p><p>  100 R. RAVI KUMAR<br/>  15/18, THANUKALAYAN NAGAR, IIND STREET, SUCHINDRUM, KANYAKUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  101 K. MANIVANNAN<br/>  4-349K, KARUMENIA BHAVAN, BHARAT NAGAR, MELA PUTHERI, NAGERCOIL, KANYAKUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  102 SHRIKRISHNA RATNAKAR MUJUMDAR<br/>  A-403, OM MEGHASPARSHA, BEHIND MAHAVIR ELECTRONICS, BIBVEWADI  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  103 RADHAKANTA NAYAK<br/>  KANCHI ASSOCIATES, HOUSE NO.7B NEAR AGS COLONY 1ST MAIN ROAD, VELACHERY  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  104 PRERNA KUMARI<br/>  A-102, ASHIANA NAGAR, PUSPANJALI LOK APARTMENT, PHASE 1  ,PATNA            , BIHAR            </p><p>  105 SANJEEV KUMAR<br/>  A 102, ASHIANA NAGAR, PUSPANJALI LOK APPARTMENT, PHASE 1  ,PATNA            , BIHAR            </p><p>  106 HITESH KANJIBARI SADARIA S/D/W/Thru:- SADARIA KANJIBHAI<br/>  210/7, NEW TPS COLONY, SIKKA, GSECL, JAMNAGAR  ,JAMNAGAR          , GUJARAT          </p><p>  107 B SESHADRI SSSLYER<br/>  FLAT NO.206, SAFFALAYA APARTMENT, BHARATH NAGAR, AMARAVATHI ROAD  ,NAGPUR          , MAHARASHTRA          </p><p>  108 SNEHA K TAHILYANI<br/>  D/O KANHAIYALAL TAHILYANI, BEHIND CHAWLA BUILDING, PLOT NO.140, CHAWLA CHOWK, JARIPATKA, S.O  ,NAGPUR          , MAHARASHTRA          </p><p>  109 ALDES DOST S/D/W/Thru:- JOSEPH DOST<br/>  MADATHIPARAMBIL HOUSE, PALAPARMBU ROAD, PACHALAM  ,ERNAKULAM            , KERALA            </p><p>  110 D THIAGARAJAN S/D/W/Thru:- DHANDAPANI<br/>  NO.185, RAMAIAH DEVAR STREET, NATARAJ NAGAR KOCHADAI, MADURAI SOUTH, ARASARADI  ,MADURAI          , TAMIL NADU         </p><p>  111 ADITYA SINGH<br/>  164 SURYA NIKETAN, VIKAS MARG,  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  112 KS SANTOSH S/D/W/Thru:- K K KRISHNAN<br/>  517 METRO VIEW APARTMENTS, POCKET B, SECTOR 13, N.S.I.T, DWARKA, SOUTH WEST DELHI  ,SOUTH WEST *        , DELHI          </p><p>  113 NAWAZ KARBHARI S/D/W/Thru:- BADIUZZAMAN KARBHARI<br/>  NEAR POONA COLLEGE, BLDG B2 F-504 384 BHAWANI PETH PUNE  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  114 SAUMYA AGRAHARI<br/>  C702, 25TH CROSS RD, SECTOR 7, HSR LAYOUT 5TH SECTOR, BENGALURU  ,BANGALORE          , KARNATAKA          </p><p>  115 MITHESH J PARMAR<br/>  204-A4, XRBIA HINJEWADI TOWNSHIP, MARUNJI ROAD, NERE-DATTAWADI, JAMBHE POST  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  116 VENKITESWARAN P.N<br/>  PEE VEEMADHOM, AMBALAVATTOM (PO), PANAMANNA  ,PALAKKAD            , KERALA            </p><p>  117 MOHAMED ANEES MP<br/>  MENOTHIL POOPARAMBIL HO KAVENCHERY PO  ,MALAPPURAM            , KERALA            </p><p>  118 S SELVADURAI<br/>  18/4A, HOLY CROSS COLLEGE ROAD, PUNNAKATTUVILAI, NAGERCOIL, KANYAKUMARI DIST..  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  119 S. SUHI MILRED GOLDY<br/>  48, ISAAC STREET, NAGERCOIL, KANYAKUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  120 V. JEYANTHI<br/>  7/57E, PANIKAR STREET, PULIYOORKURICHY, THUCKALAY, KANYA KUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  121 K. VALLI<br/>  14C, GNANAI STREET, NAGERCOIL, KANYA KUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  122 E. MURGAKANNU<br/>  20, T.N.H.B COLONY, VALLANKUMARANVILLAI, KOTTAR POST, NAGERCOIL, KANYA KUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  123 D. MAKESH<br/>  211D, KUMPAVILLAI, VETUVENNI, MARTTHANDAM, KANYA KUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  124 V. SELVIN<br/>  35/3A1, YELAVILLAI, GNANAMVILLAI, MARTTHANDAM KANYA KUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  125 J. DEEPA<br/>  143, EAST STREET, VADALIVILAI, KOTTAR, NAGERCOIL, KANYA KUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  126 S VENKATACHALAM<br/>  4/890, KAVITHA NAGAR, KULLAMPALAYAM, GOBICHETTIPALAYAM, ERODE  ,ERODE          , TAMIL NADU         </p><p>  127 V. N. CHAKRAVARTHY<br/>  133, POONGA NAGAR, SITRA AIRPORT POST, COIMBATORE  ,COIMBATORE          , TAMIL NADU         </p><p>  128 J. SURESH BABU<br/>  253/8 ARUN NAGAR, ARUN NAGAR, ANNAXIYER THOTTAM, SALEM  ,SALEM          , TAMIL NADU         </p><p>  129 J. AMALA AROCKIARAJ<br/>  40, EAST STREET, POTHA METTUPATTY, MANAPARAI, TIRCHY  , , TAMIL NADU         </p><p>  130 S. SUJATHA<br/>  14, SRI SAI HOME, MARRIAMMAN KOIL STREET, CHINNA PORUR,  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  131 G JOSEP<br/>  1005K CRESCENT NAGAR, KTC NAGAR,  ,TIRUNELVELI          , TAMIL NADU         </p><p>  132 D KARTHIK<br/>  NEW NO.40/ OLD NO.19, MADURAI VEERA SAMY KOIL STREET, PUTHUR, TIRUCHY  , , TAMIL NADU         </p><p>  133 J. AROCKIA ANBARASU<br/>  D/NO. 6/9/16C ADAIKALAM PILLAI STREET TEHNMAPPATTU DIST. THIRUPPATTUR  , , TAMIL NADU         </p><p>  134 P SAKTHIVEL<br/>  24/1 INDIRA NAGAR, 2ND ST, NANJUNDAPURAM ROAD,  , DISTRICT: COIMBATORE ,COIMBATORE          , TAMIL NADU         </p><p>  135 K. ARULANANTHAN<br/>  88, WEST STREET, THIPPICHETTY PALAYAM, KADAYAMPATTY, POST BHIVANI  , , TAMIL NADU         </p><p>  136 A RAMESH<br/>  125 B, GANGAI SALAI, DHEERANMANAGAR, MANIKANDAM, TRICHY  , , TAMIL NADU         </p><p>  137 V. NAVANEETHAKRISHNAN<br/>  NO.10 KANNAGI NAGAR 2 STREET, WEAVERS COLONY EXTN, TIRUPPUR  ,TIRUPPUR , TAMIL NADU         </p><p>  138 S ESWARAMOORTHI<br/>  3/141, VARANASHIPALAYAM, KANAKKAMPALAYAM PO, PERUMANALLUR VIA, TIRUPUR  , , TAMIL NADU         </p><p>  139 K. SANDIRASEGARANE<br/>  121/4B, KULLANAMPATTI, NATHAM ROAD, DINDIGUL  ,DINDIGUL          , TAMIL NADU         </p><p>  140 S. SARAVANAKUMAR<br/>  3/38F KARUNANIDHI COLONY, SILUVATHUR ROAD,  ,DINDIGUL          , TAMIL NADU         </p><p>  141 P. MAHENDRAN<br/>  A221, YAMUNAI STREET, DHEERAN MANAGAR, MANIKANDAM, TIRCHY  , , TAMIL NADU         </p><p>  142 G SATHEESH KUMAR<br/>  7/217, D 10 N.G.O. COLONY, KOTTAR POST, NAGERCOIL, KANYAKUMARI DIST.  ,KANNIYAKUMARI          , TAMIL NADU         </p><p>  143 S SELVA BOOPATHY<br/>  24/6, MARIYAMMAN KOVIL STREET, MUDALIYAR CHATIRAM TRICHY  , , TAMIL NADU         </p><p>  144 D. SELVI<br/>  255DA/5-8A12, METTU STREET, NEHRU NAGAR, ELAMBALUR ROAD, PERAMBALUR,  ,PERAMBALUR *         , TAMIL NADU         </p><p>  145 N. SARAVANAN S/D/W/Thru:- NATRAJAN<br/>  3RD CROSS, 120 BHARTHI NAGAR, TIRCHY  , , TAMIL NADU         </p><p>  146 S. PALANIVEL SENTHIL KUMAR<br/>  1/438-A, MRF NAGAR, 3RD STREET, NALLAMPATTI ROAD, KULLANAMPATTI  , , TAMIL NADU         </p><p>  147 G MANIKANDAN<br/>  2/57B, 1ST MAIN ROAD, NEAR VINAYAKAR TEMPLE, KANCHIPURAM MAA NAGAR, VILANKURYHI POST,  , DISTRICT: COIMBATORE ,COIMBATORE          , TAMIL NADU         </p><p>  148 S MARIMUTHU<br/>  78/1F, BUNGLOW 2ND STREET, KOVILPATTI, TUTICORIN DIST.  , , TAMIL NADU         </p><p>  149 SHRITY ROY<br/>  D3 1203, SNN RAJ SERENITY, BEGUR KOPPA ROAD, YELENAHALLI,  , DISTRICT: BANGALORE ,BANGALORE          , KARNATAKA          </p><p>  150 R. BALA KRISHNAN<br/>  Q6/2, 6TH STREET, ATTHIPATTU CAMP, NORTH CHENNAI THERMAL POWER STATION,  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  151 D.G. KALAIKUMAR<br/>  R5/4, VALLUR CAMP, NORTH CHENNAI THERMAL POWER STATION  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p><p>  152 P. SOLAIMALAI<br/>  21-D/8 MUTHALIYAR EAST STREET THALLAKULAM  , DISTRICT: MADURAI ,MADURAI          , TAMIL NADU         </p><p>  153 S. MUTHURAMALINGAM<br/>  55A EB MAIN ROAD, PYKARA,  , DISTRICT: MADURAI ,MADURAI          , TAMIL NADU         </p><p>  154 R. KARTHIKEYAN<br/>  HIG 31 TNHB COLONY SECTOR 6 KOODALPUDUR ANAIYUR  , DISTRICT: MADURAI ,MADURAI          , TAMIL NADU         </p><p>  155 V ANNADURAI<br/>  NO.3/1A, SECOND STREET, BHARATHIYAR NAGAR, ENNORE  , DISTRICT: CHENNAI ,CHENNAI          , TAMIL NADU         </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 MINISTRY OF HUMAN RESOURCE DEVELOPMENT SECRETARY<br/>  SECRETARY SHASHTRI BHAWAN, DR RAJENDRA PRASAD ROAD  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  2 ALL INDIA COUNCIL OF TECHNICAL EDUCATION (AICTE) THR ITS SECRETARY<br/>  NELSON MANDELA MARG, VASANT KUNJ  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  3 UNIVERSITY GRANT COMMISSION (UGC) THR. ITS CHAIRMAN<br/>  BAHADUR SHAH ZAFAR MARG  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  4 INDIRA GANDHI NATIONAL OPEN UNIVERSITY (IGNOU) THR. ITS VICE CHANCELLOR<br/>  MAIDAN GARHI,  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  5 DISTANCE EDUCATION COUNCIL (BUREAU) (DEB) UNIVERSITY GRANTS COMMISSION (UGC)<br/>  BAHADUR SHAH ZAFAR MARG  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  6 JANARDAN RAI NAGAR RAJASTHAN VIDYAPEETH, RAJASTHAN (JRN) THR. ITS VICE CHANCELLOR<br/>  PRATAP NAGAR, UDAIPUR  , DISTRICT: UDAIPUR ,UDAIPUR          , RAJASTHAN          </p><p>  7 INSTITUTE OF ADVANCED STUDIES IN EDUCATION, RAJASTHAN (IASE) THR. ITS VICE CHANCELLOR<br/>  GANDHI VIDYA MANDIR, CHURU DIST. SARDARSHAHR  ,CHURU          , RAJASTHAN          </p><p>  8 ALLAHABAD AGRICULTURAL INSTITUTE, ALLAHABAD (AAI) )SAM HIGGINBOTTOM UNIVERSITY OF AGRICULTURE, TECHN THR. ITS VICE CHANCELLOR<br/>  ALLAHABAD AGRICULTURAL INSTITUTE DEEMED UNIVERSITY NAINI  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  9 VINAYAKA MISSION UNIVERSITY (VMU) THR. ITS CHANCELLOR<br/>  NH 47, SANKAGIRI MAIN ROAD, ARIYANUR, SALEM  , DISTRICT: SALEM ,SALEM          , TAMIL NADU         </p><p>  10 GUJRAT STATE ELECTRICITY CORPORATION LIMITED  THR. ITS GENERAL MANAGER (HR)<br/>  VIDYUT BHAVAN, RACE COURSE, VADODARA  ,VADODARA          , GUJARAT          </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  DILIP ANNASAHEB TAUR</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

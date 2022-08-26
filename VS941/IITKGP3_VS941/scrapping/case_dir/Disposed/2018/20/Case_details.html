@@ -1,0 +1,402 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 9575 - 2018</h5>
+<h5 align="center">THE STATE BOARD OF TECHNICAL EDUCATION AND TRAINING vs. K. MAHENDER REDDY</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="95752018"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">9575/2018</font> Filed on 13-03-2018 05:30 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="red" style="font-size:16px;font-weight:bold;">DISPOSED</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">XII-A</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 007537 - 007544 / 2018  Registered on 20-03-2018<br/></div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">10-04-2018</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE ADARSH KUMAR GOEL and HON'BLE MR. JUSTICE ROHINTON FALI NARIMAN</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">DISPOSED (Motion Hearing <br/> [AFTER NOTICE (FOR ADMISSION) - CIVIL CASES]) Disposed off-Ord dt:10-04-2018  (Disposal Date: 10-04-2018, Month: 4, Year: 2018)<br/> JUDGES: HON'BLE MR. JUSTICE ADARSH KUMAR GOEL, HON'BLE MR. JUSTICE ROHINTON FALI NARIMAN</font>
+</td>
+</tr><tr>
+<td width="140px">Disp.Type</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Disposed Off</font>
+</td>
+</tr><tr>
+<td width="140px">Category</td>
+<td>4003-Admission/Transfer To Engineering And Medical Colleges : Others</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 THE STATE BOARD OF TECHNICAL EDUCATION AND TRAINING<br/>  BRKR BHAVAN  , DISTRICT: TELANGANA STATE ,HYDERABAD          , TELANGANA </p><p>  2 THE STATE BOARD OF TECHNICAL EDUCATION AND TRAINING OF T.S. SECRETARY<br/>  B.R.K.R BHAVAN, 7TH FLOOR,  ,HYDERABAD          , TELANGANA </p><p>  3 STATE BOARD OF TECHNICAL EDUCATION AND TRAINING (SBTET) SECRESTARY<br/>  BRKR BUILDING COMPLEX, LIBERTY  ,HYDERABAD          , TELANGANA </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 K. MAHENDER REDDY S/D/W/Thru:- VENKAT REDDY<br/>  SUB ENGINEER, O/O AE OPERATION AMALCONDA, TS NPDCDL  , DISTRICT: KARIMNAGAR ,KARIMNAGAR          , TELANGANA </p><p>  2 M. RAJAMALLU S/D/W/Thru:- GATTAIAH<br/>  SUB ENGINEER O/O AE (OPERATION). ODELA PEDDAPALLY DIVISION, TSNPDCL  ,KARIMNAGAR          , TELANGANA </p><p>  3 THE NORTHEN POWER DISTRIBUTION COMPANY OF TELANGANA LTD.  CHAIRMAN AND MANAGING DIRECTOR<br/>  31/2, VIDYUTH BHAWAN, NAKKALAGUTTA, HANAMKONDA  ,WARANGAL          , TELANGANA </p><p>  4 NIGGA GANGA SHEKHAR RAO S/D/W/Thru:- RAJAM<br/>  SUB ENGINEER O/O ADDITIONAL ASSISTANT ENGINEER, OPERATION SECTION, SARANGAPUR, NIZAMABAD, TSNPDCL  ,NIZAMABAD          , TELANGANA </p><p>  5 SUNKA THRIMOORTHY S/D/W/Thru:- RAJESHAM<br/>  SUB ENGINEER O/O ADDITIONAL ASSISTANT ENGINEER, OPERATION PEDDAPALLY RURAL WEST KARIMNAGAR CIRCLE, TSNPDCL  ,KARIMNAGAR          , TELANGANA </p><p>  6 B.SHANKAR S/D/W/Thru:- B. VENKATAYYA SREERAMULU<br/>  SUB ENGINEER SCADA CIRCLE/ HYD GTS COLONY, ERRAGADDA OFF OF T.S.S.P.D.C.L  ,HYDERABAD          , TELANGANA </p><p>  7 S.KARHIK CHAKRAWARTHY S/D/W/Thru:- S.ESHWAR<br/>  SUB ENGINEER SCADA CIRCLE/ HYD GTS COLONY, ERRAGADDA OFF OF T.S.S.P.D.C.L  ,HYDERABAD          , TELANGANA </p><p>  8 K.BALAKRISHNA S/D/W/Thru:- K. SATYANARAYANA<br/>  SUB ENGINEER MRT DIV./RR EAST CIRCLE OFF OF T.S.S.P.D.C.L., UPPAL  ,RANGAREDDI          , TELANGANA </p><p>  9 B.SHYAM SUNDER S/D/W/Thru:- B. PENTAYYA<br/>  SUB ENGINEER OPERATION SECTION OFFICE MULUGU MANDAL, OFF OF T.S.S.P.D.C.L.  ,MEDAK          , TELANGANA </p><p>  10 A.P. TRANSMISSION CORPORATION LTD. CHAIRMAN AND MANAGING DIRECTOR<br/>  VIDYUT SOUDHA, KHAIRTABAD  ,HYDERABAD          , TELANGANA </p><p>  11 TELANGANA STATE TRANSMISSION CORPORATION LTD. CHAIRMAN AND MANAGING DIRECTOR<br/>  VIDYUT SOUDHA, KHAIRTABAD  ,HYDERABAD          , TELANGANA </p><p>  12 TELENGANA STATE SOUTHERN POWER DISTRIBUTION COMPANY LTD<br/>  CORPORATE OFFICE H.NO.6-1-50, MINT COMPOUND  ,HYDERABAD          , TELANGANA </p><p>  13 THE STATE OF TELANGANA ENERGY DEPARTMENT PRINCIPAL SECRETARY<br/>  SECRETARIAT  ,HYDERABAD          , TELANGANA </p><p>  14 THE STATE OF TELANGANA HIGHER EDUCATION DEPARTMENT PRINCIPAL SECRETARY<br/>  SECRETARIAT  ,HYDERABAD          , TELANGANA </p><p>  15 TELANGANA STATE COUNSEL FOR HIGHER EDUCATION SECRETARY<br/>  OPP TO MAHAVIR HOSPITAL, MASAB TANK  ,HYDERABAD          , TELANGANA </p><p>  16 JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY REGISTRAR<br/>  KUKATPALLY  ,HYDERABAD          , TELANGANA </p><p>  17 REGISTRAR DISTANCE EDUCATION COUNSEL DISTANCE EDUCATION BUREAU<br/>  INDIRA GANDHI NATIONAL OPEN UNIVERSITY, MAIDAN GARHI  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  18 THE UNIVERSITY GRANTS COMMISSION SECRETARY<br/>  BNADURSHAH JAFAR MARG  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  19 ALL INDIA COUNSEL FOR TECHNICAL EDUCATION SECRETARY<br/>  7TH FLOOR, CHANDER LOK BUILSING, JANPATH  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  20 SRINIVAS BHOOKYA S/D/W/Thru:- SUNDER NAIK<br/>  SUN ENGINEER O/O ADDL. ASSISTANT ENGINEER OPERATION TOWN-III, TSNPDCL, KARIMNAGAR  ,KARIMNAGAR          , TELANGANA </p><p>  21 NALA ASHOK S/D/W/Thru:- MADANAIAH<br/>  SUB ENGINEER O/O ADDITIONAL ASSISTANT ENGINEER, OPERATION, CHENJARLA  ,KARIMNAGAR          , TELANGANA </p><p>  22 TELENGANA STATE NORTHERN POWER DISTRIBUTION COMPANY LTD<br/>  CORPORATE OFFICE, NAKKALAKUNTA, HANMAKONDA  ,WARANGAL          , TELANGANA </p><p>  23 MITTAPALLY SHANKER S/D/W/Thru:- RAJAIAH<br/>  ASST. ENGINEER, ADILABAD CIRCLE, TS NPDCL O/O. DIVISIONAL ENGINEER/DPE/MANCHERIAL, ADILABAD CIRCLE, TS NPDCL  ,ADILABAD          , TELANGANA </p><p>  24 THOTA SHARATH KUMAR S/D/W/Thru:- VENKATESHWARLU<br/>  ASSISTANT ENGINEER, TS NPDCL, KHAMMAM CIRCLE O/O SUPERINTENDING ENGINEER, CIRCLE OFFICE, TS NPDCL  ,KHAMMAM          , TELANGANA </p><p>  25 DEVARANENI SAMPATH S/D/W/Thru:- RAJESHWAR RAO<br/>  ASST. ENGINEER, KARIMNAGAR CIRCLE, TS NPDCL O/O DIVISIONAL ENGINEER/OPERATION, PEDDAPALLI, KARIMNAGAR, TS NPDCL  ,KARIMNAGAR          , TELANGANA </p><p>  26 BUKYA RAMAKRISHNA S/D/W/Thru:- LACHA<br/>  ASST. ENGINEER, KHAMMAM CIRCLE, TS NPDCL O/O ASST. DIVISIONAL ENGINEER/MRT/TS NPDCL, KHAMMAM CIRCLE  ,KHAMMAM          , TELANGANA </p><p>  27 A.P. TRANSMISSION CORPORATION LTD. CHAIRMAN AND MANAGING DIRECTOR<br/>  VIDYUT SOUDHA, KHAIRTABAD  ,HYDERABAD          , TELANGANA </p><p>  28 TELANGANA STATE NORTHERN POWER DISTRIBUTION COMPANY LTD<br/>  CORPORATE OFFICE, VIDYUT BHAVAN, NALLAGUTTA  ,WARANGAL          , TELANGANA </p><p>  29 THE STATE BOARD OF TECHNICAL EDUCATION AND TRAINING OF T.S. SECRETARY<br/>  B.R.K.R BHAWAN, 7TH FLOOR  ,HYDERABAD          , TELANGANA </p><p>  30 THE STATE OF TELANGANA ENERGY DEPARTMENT SECRETARY<br/>  SECRETARIAT  ,HYDERABAD          , TELANGANA </p><p>  31 THE STATE OF TELANGANA HIGHER EDUCATION DEPARTMENT PRINCIPAL SECRETARY<br/>  SECRETARIAT  ,HYDERABAD          , TELANGANA </p><p>  32 TELANGANA STATE COUNSEL FOR HIGHER EDUCATION SECRETARY<br/>  OPP TO MAHAVIR HOSPITAL, MASAB TANK  ,HYDERABAD          , TELANGANA </p><p>  33 JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY REGISTRAR<br/>  KUKATPALLY  ,HYDERABAD          , TELANGANA </p><p>  34 REGISTRAR DISTANCE EDUCATION COUNSEL DISTANCE EDUCATION BUREAU<br/>  INDIRA GANDHI NATIONAL OPEN UNIVERSITY, MAIDAN GARHI  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  35 THE UNIVERSITY GRANTS COMMISSION SECRETARY<br/>  BHADURSHAH JAFAR MARG  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  36 ALL INDIA COUNSEL FOR TECHNICAL EDUCATION SECRETARY<br/>  7TH FLOOR, CHANDER LOK BUILSING, JANPATH  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  37 ADICHERLA SRINIVAS S/D/W/Thru:- SHANKARAIAH<br/>  O/O ADE/OPERATION, SULTANABAD, KARIMNAGAR CIRCLE, TS NPDCL  ,KARIMNAGAR          , TELANGANA </p><p>  38 D. BALAKRISHNA<br/>  O/O ADE/OPERATION, SIRPUR KAGAZNAGAR, ADILABAD CIRCLE,  TS NPDCL  ,ADILABAD          , TELANGANA </p><p>  39 MARTHA SARVESHWAR S/D/W/Thru:- VENKATAIAH<br/>  ASST. DIVISIONAL ENGINEER O/O ADE/OPERATION, SIRPUR KAGAZNAGAR, ADILABAD CIRCLE,  TS NPDCL  ,ADILABAD          , TELANGANA </p><p>  40 INDARAPU KANAKAIAH S/D/W/Thru:- RAJAIAH<br/>  ASST. ENGINEER O/O ASST. DIVISIONAL ENGINEER, CONSTRUCTION, TSNPDCL, JAGTIAL  ,KARIMNAGAR          , TELANGANA </p><p>  41 GUNUKULA VENKATA RAMANAIAH S/D/W/Thru:- RAGHUPATHI<br/>  ADDITIONAL ASSISTANT ENNGINEER O/O ASSISTANT DIVISIONAL ENGINEER, OPERATION, TSNPDCL  ,KARIMNAGAR          , TELANGANA </p><p>  42 JONNALA SRINIVAS REDDY S/D/W/Thru:- GANGA REDDY<br/>  TESTER 1STN GRADE O/O ASST. DIVISIONAL ENGINEER CT AND LT METERS, TSNPDCL  ,KARIMNAGAR          , TELANGANA </p><p>  43 PALADUGULA SRINATH S/D/W/Thru:- PULLAIAH<br/>  SUB ENGINEER O/O ASST. DIVISIONAL ENGINEER COMMERCIAL, TSNPDCL, CIRCLE OFFICE  ,KARIMNAGAR          , TELANGANA </p><p>  44 BARKAM RAJU S/D/W/Thru:- RAJAIAH<br/>  SUB ENGINEER O/O ASST. DIVISIONAL ENGINEER COMMERCIAL, TSNPDCL, CIRCLE OFFICE  ,KARIMNAGAR          , TELANGANA </p><p>  45 P.MEGHANATH S/D/W/Thru:- RAMADAS<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 1-47/1/B, GHR COLONY, SHADNAGAR  ,MAHBUBNAGAR          , TELANGANA </p><p>  46 E. SHIVA KUMAR S/D/W/Thru:- VEERABASAPPA<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER H.NO.A-505, PHASE-I, ALLWYN COLONY, KUKATPALLY  ,HYDERABAD          , TELANGANA </p><p>  47 V.PRADEEP KUMAR S/D/W/Thru:- LAXMAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 9-170/102, SREE RUPA RESIDENCY, MARUTHI NAGAR, MEEDIPALLY  ,RANGAREDDI          , TELANGANA </p><p>  48 R RAMA KRISHNA S/D/W/Thru:- R.SATYARN<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 1-7-630/65, SASTRY NAGAR, RAM NAGAR  ,HYDERABAD          , TELANGANA </p><p>  49 SHOUKATH ALI S/D/W/Thru:- ABDUL NABI<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 8-3-228/678/1474, SRIRAMNAGAR COLONY, MOTI NAGAR  ,HYDERABAD          , TELANGANA </p><p>  50 V SAI KUMAR S/D/W/Thru:- VSRK SASTRY<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 603, SECRETARIAT COLONY, MANIKONDA  ,HYDERABAD          , TELANGANA </p><p>  51 V RAMESH GOUD S/D/W/Thru:- RAMUIU<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 1-97, VEMULA NARWA, SHADNAGAR  ,MAHBUBNAGAR          , TELANGANA </p><p>  52 R MURALI KRISHNA S/D/W/Thru:- PULLAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 1-8-249/4/2/A, FRIENDS COLONY, RAM NAGAR  ,HYDERABAD          , TELANGANA </p><p>  53 A. PRUDVIRAJ S/D/W/Thru:- A SHANKARJI<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 14-2-457, GOSHA MAHAL  ,HYDERABAD          , TELANGANA </p><p>  54 P NANAJI S/D/W/Thru:- LAWRENCE<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 3-1-140, SIVAPURI COLONY L.B. NAGAR  ,HYDERABAD          , TELANGANA </p><p>  55 B.NARAHARI S/D/W/Thru:- NARSAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 3-93497, BAVANAGAR COLONY, MANSOORABAD, LB NAGAR  ,HYDERABAD          , TELANGANA </p><p>  56 T. MADHUSUDAN REDDY S/D/W/Thru:- SATYANARAYANA REDDY<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 3-27/2/2, PRASANT HILLS, MEERPET  ,HYDERABAD          , TELANGANA </p><p>  57 G. NARSIMHA PRASAD S/D/W/Thru:- CHINNA NARASIMHUDU<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 2-17, HIMAGIRI COLONY, BANDLAGUDA  ,RANGAREDDI          , TELANGANA </p><p>  58 K SRINIVASULU S/D/W/Thru:- LALAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 1-108, GHANAPUR ACHAMPET  ,MAHBUBNAGAR          , TELANGANA </p><p>  59 BALA RAJU S/D/W/Thru:- BALAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O PLOT NO.45, SRI SAI ENCLAVE, BODDUPPAL  ,RANGAREDDI          , TELANGANA </p><p>  60 B DURGA PRASAD S/D/W/Thru:- SURI BABU<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 8-1-303/A/10, VIVEKANAND NAGAR COLONY, SHAIKPET NALA  ,HYDERABAD          , TELANGANA </p><p>  61 I SRINIVAS RAO S/D/W/Thru:- TOGA RAO<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 9-1-33/A/1/20, PRASHANTH NAGAR, LUNGUR HOUSE  ,HYDERABAD          , TELANGANA </p><p>  62 R SRINIVASA RAO S/D/W/Thru:- KOTAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 3-280/1, KHAMMAM X ROADS  , DISTRICT: KODAD , , TELANGANA </p><p>  63 M SRINIVASA RAO S/D/W/Thru:- ACLINARAYANA<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 3-2780/3/A/4, SRINAGAR COLONY, KODAD  ,NALGONDA          , TELANGANA </p><p>  64 TR GANESHWAR S/D/W/Thru:- T RATNAM<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 3-11-301, SRINIVAS COLONY, LB NAGAR  ,HYDERABAD          , TELANGANA </p><p>  65 M RAMA RAO S/D/W/Thru:- LAKSHMINARSU<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 4-80/1 PLOT NO. 90, PRAGATHI NAGAR COLONY, MEERPET  ,RANGAREDDI          , TELANGANA </p><p>  66 A SRIDHAR REDDY S/D/W/Thru:- LAXMA REDDY<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 33-239, SHARANYA GREEN HOMES, BIPAAS ROAD  , DISTRICT: MIRYALGUDA , , TELANGANA </p><p>  67 K VENKAT REDDY S/D/W/Thru:- PITCHI REDDY<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 32-67, RAMCHANDRAGUDEM  , DISTRICT: MIRYALGUDA , , TELANGANA </p><p>  68 CH DVK VARMA S/D/W/Thru:- KRISHNAMURTHY RAJU<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O F.NO.411, KANCHERLA TOWERS  ,NALGONDA          , TELANGANA </p><p>  69 V SATYA CHARY S/D/W/Thru:- NARSIMHA CHARY<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 3-3-2, BEECHMAHALLA STREET  , DISTRICT: BHONGIR , , TELANGANA </p><p>  70 P VENKATESH S/D/W/Thru:- MURLIDHER<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 8-4152/1, MC DOWEL COLONY, BODUPPAL  ,HYDERABAD          , TELANGANA </p><p>  71 B RAVINDER S/D/W/Thru:- B RAJAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O LIGH NO. 252, PAHE II, BESIDE MAHALAKSHMI DEVI TEMPLE, APHB COLONY, MOULA AN  ,HYDERABAD          , TELANGANA </p><p>  72 N YEDUKONDALA REDDY S/D/W/Thru:- POTHURAJU<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O P.NO.220, BOUDHA NAGAR, UPPAL DEPOT  ,HYDERABAD          , TELANGANA </p><p>  73 T NARSINGA RAO S/D/W/Thru:- VENKATESH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 1-9-53/14/A, RAM NAGAR  ,HYDERABAD          , TELANGANA </p><p>  74 SYED MERAJUDDIN QADRI S/D/W/Thru:- SYED MOINUDDIN QUADRI<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 9-4-47/22/A/6/2, BACK SIDE IAS COLONY, HAKEEMPR4., TOLICHOWKI  ,HYDERABAD          , TELANGANA </p><p>  75 T S DURGA PRASAD S/D/W/Thru:- TRK MURTHY<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O F.NO.304, CRESENT HEAVEN APARTMENTS SHANTHI NAGAR, RK PURAM  ,HYDERABAD          , TELANGANA </p><p>  76 V  SANJEEVAIAH S/D/W/Thru:- SOMAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O F.NO. 214, BLOCK-B, VIJAYA RAGAVA TOWNSHIP SERILINGAMPALLY  ,HYDERABAD          , TELANGANA </p><p>  77 MD. AKBAR S/D/W/Thru:- JANEMIYAN<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 12-1-1035/1, NORTH LALAGUDA, SECUNDERABAD  ,SECUNDERABAD    , TELANGANA </p><p>  78 P VENKATESHWARLU S/D/W/Thru:- RAGHAVAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 10-243/18, VASANTH NAGAR  ,HYDERABAD          , TELANGANA </p><p>  79 P Y RAJU S/D/W/Thru:- P YELLAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 2-3-497/36, M.G NAGAR MACHABOLLARAM  ,HYDERABAD          , TELANGANA </p><p>  80 M VENKATESHWARA RAO<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 23-120, ASHOK NAGAR, BHEL  ,HYDERABAD          , TELANGANA </p><p>  81 ASN  RAJU S/D/W/Thru:- A PRATAP RAJU<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 5-3-78/A, F.NO.201, MANKAPALLY ENCLAVE, KUKATPALLY  ,HYDERABAD          , TELANGANA </p><p>  82 D RAVI KUMAR S/D/W/Thru:- D BABU RAO<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O P. NO.540 AND 541, PRAGATHI NAGAR KUKLATPALLY  ,HYDERABAD          , TELANGANA </p><p>  83 N V RAJ KUMAR S/D/W/Thru:- N SRIHARI RAO<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O P.NO.50, VIVEKANANDA COLONY, DOWN TOWN BAZAAR, BOLARAM  ,HYDERABAD          , TELANGANA </p><p>  84 R N JAGDISH KUMAR S/D/W/Thru:- R SRIDHER RAO<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 8-1-863, RTC COLONY  ,NALGONDA          , TELANGANA </p><p>  85 SATYA PRASAD PETWAL S/D/W/Thru:- LATE DAYARAM PETWAL<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O P. NO.62, SANTOSHIMAA COLONY, SAFILGUDA  ,SECUNDERABAD    , TELANGANA </p><p>  86 K MURALI KRISHNA S/D/W/Thru:- K S PRASAD<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 2-30/18/6, INJAPUR KATTA  ,RANGAREDDI          , TELANGANA </p><p>  87 P KALYAN BABU S/D/W/Thru:- RAMASWAMY<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 1-8-156 MALLIKARJUNA COLONY,  ALWAL  ,SECUNDERABAD    , TELANGANA </p><p>  88 K VENKAT RAO S/D/W/Thru:- RAGHUPATHI RAO<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O 10-4-191/24, RD.NO.6, DHARMAPURI COLONY SAROORNAGAR  ,HYDERABAD          , TELANGANA </p><p>  89 V SRINIVASA RAO S/D/W/Thru:- RAGHAVAIAH<br/>  INCHARGE ADDITIONAL ASSISTANT ENGINEER R/O PLOT NO.386, B SRINIVASAPURI COLONY, VANASTALIPURAM  ,HYDERABAD          , TELANGANA </p><p>  90 THE STATE OF TELANGANA SECRETARY HIGHER EDUCATION DEPARTMENT<br/>  TELANGANA SECRETARIAT  ,HYDERABAD          , TELANGANA </p><p>  91 TELANGANA STATE TRANSMISSION CORPORATION (TSTRANSCO) CHAIRMAN AND MANAGING DIRECTOR<br/>  VIDYUT SOUDHA, KHAIRTABAD  ,HYDERABAD          , TELANGANA </p><p>  92 THE SOUTHERN POWER DISTRIBUTION COMPANY OF TELENGANA LIMITED (TSSPDCL) CHAIRMAN AND MANAGING DIRECTOR<br/>  MINT COMPOUND  ,HYDERABAD          , TELANGANA </p><p>  93 THE CHIEF GENERAL MANAGER (HRD) THE SOUTHERN POWER DISTRIBUTION COMPANY OF TELANGANA LIMITED<br/>  MINT COMPOUND  ,HYDERABAD          , TELANGANA </p><p>  94 K. VENKATESH S/D/W/Thru:- K. NARASIMHA<br/>  SUB ENGINEER O/O THE AE/OP/MALLAPUR SECTION, HABSIGUDA  ,SECUNDERABAD    , TELANGANA </p><p>  95 PRATHIBHA BHARATHI S/D/W/Thru:- G. MYSI REDDY<br/>  SUB ENGINEER O/O SUPERINTENDENT ENGINEER, R.R EAST CIECLE  ,HYDERABAD          , TELANGANA </p><p>  96 U. MEGHANADAM S/D/W/Thru:- U. APPALA SWAMY<br/>  SUB ENGINEER O/O DIVISIONAL ENGINEER, HABSIGUDA DIVISION  ,HYDERABAD          , TELANGANA </p><p>  97 K. BALAKRISHNA S/D/W/Thru:- K. SATYANARAYANA<br/>  SUB ENGINEER O/O OPERATIONAL SECTION RAMANTHAPUR  ,HYDERABAD          , TELANGANA </p><p>  98 PORTA SUDHEER S/D/W/Thru:- SUBBARAIDU P.V.<br/>  SUB ENGINEER O/O SUPERINTENDING ENGINEER, R.R. EAST CIRCLE  ,HYDERABAD          , TELANGANA </p><p>  99 M. NIKIL NARASIMHA RAO S/D/W/Thru:- LATE M. GURUNATHAM<br/>  SUB ENGINEER O/O DIVISIONAL ENGINEER (OPERATION) ERRAGADDA, CITY-IV  ,HYDERABAD          , TELANGANA </p><p>  100 J. SURESH BABU S/D/W/Thru:- J. SRINIVASULU<br/>  SUB ENGINEER O/O OPERATION SECTION MAHABUBNAGAR TOWN  ,MAHBUBNAGAR          , TELANGANA </p><p>  101 R. HARI KRISHNA S/D/W/Thru:- R. MOTHYA<br/>  O/O OPERATION SECTION HYDERNAGAR  ,HYDERABAD          , TELANGANA </p><p>  102 M. PENTYA NAYAK S/D/W/Thru:- M. DEVULU<br/>  SUB ENGINEER O/O OPERQATION, BOLLARAM SECTION  ,SECUNDERABAD    , TELANGANA </p><p>  103 D. SARITHA S/D/W/Thru:- LATE D. CHANDRA MOULI<br/>  SUB ENGINEER O/O OPERATION PR NAGAR SECTION MUSHEERABAD X ROADS  ,SECUNDERABAD    , TELANGANA </p><p>  104 G.S. KIRAN PAWAN DAS S/D/W/Thru:- G. SURYA SEKHAR<br/>  SUB ENGINEER O/O ADE/NMC/SCADA, ERRAGADDA, ACADE CIRCLE  ,HYDERABAD          , TELANGANA </p><p>  105 T.S. SUJAN KUMAR S/D/W/Thru:- T.S. SUKUMARAN<br/>  SUB ENGINEER O/O OPERATION SECTION CHERLAPALLY  ,HYDERABAD          , TELANGANA </p><p>  106 B. SANTHOSH KUMAR S/D/W/Thru:- JOGA RAO<br/>  SUB ENGINEER O/O DIVISIONAL ENGINEER, CHARMINAR DIVISION  ,HYDERABAD          , TELANGANA </p><p>  107 KOLLU DILIP KUMAR CHOUDARY S/D/W/Thru:- LATE K. SUDHAKARBABU CHOWDARY<br/>  SUB ENGINEER O/O OPERATION SUB DIVISION, VANASTHALIPURAM  ,HYDERABAD          , TELANGANA </p><p>  108 L. KRISHNA S/D/W/Thru:- L. JOGA<br/>  SUB ENGINEER O/O DE/ CABLES MINT COMPUND  ,HYDERABAD          , TELANGANA </p><p>  109 P. RAMULU S/D/W/Thru:- P. KESHYA<br/>  ASSISTANT ENGINEER O/O CIRCLE OFFICE MAHABUBNAGAR  ,MAHBUBNAGAR          , TELANGANA </p><p>  110 S. SREENIVASULU S/D/W/Thru:- S. BALA KRISHNAIAH<br/>  SUB ENGINEER O/O OPERATION, SUB DIVISION, MAKTHAL  ,MAHBUBNAGAR          , TELANGANA </p><p>  111 P. PRASUMA S/D/W/Thru:- RAMA BRAHMAN<br/>  SUB ENGINEER O/O DE/LINES/RR NORTH, E SEVA BUILDING, KPHB PHASE III  ,HYDERABAD          , TELANGANA </p><p>  112 D. YADAGIRI S/D/W/Thru:- D. ANJAIAH<br/>  SUB ENGINEER OPERATION BACHUPALLY SECTION  ,HYDERABAD          , TELANGANA </p><p>  113 ISHRATH BANI S/D/W/Thru:- MAWBOOL AHMED<br/>  SUB ENGINEER OPERATION MAHABUBNAGAR  ,MAHBUBNAGAR          , TELANGANA </p><p>  114 A. PRAVEEN S/D/W/Thru:- DAS<br/>  SUB ENGINEER O/O OPERATION SECTION RAJENDRANGAR  ,HYDERABAD          , TELANGANA </p><p>  115 B. UDAYA KUMAR S/D/W/Thru:- B. VISHNU MURTHY<br/>  ASSISTANT ENGINEER O/O ASSISTANT DIVISIONAL ENGINEER/TRE/RR (NORTH) LINES CIRCLE, 33/11 KV, HMT SUB SACTION, QUTBULLAPUR  ,RANGAREDDI          , TELANGANA </p><p>  116 P. SHIVA KRISHNA PRASAD S/D/W/Thru:- NARASIMHA RAO<br/>  ASSISTANT ENGINEER O/O 132/333 KV, ROAD NO.44, JUBILEE HILLS  ,HYDERABAD          , TELANGANA </p><p>  117 P.V.B. VENUGOPAL S/D/W/Thru:- P. BHUSHANAM<br/>  ASSISTANT ENGINEER/TECHNICAL O/O DIVISIONAL ENGINEER (ELECTRICAL), JOGIPET  ,MEDAK          , TELANGANA </p><p>  118 D. SRIDHAR S/D/W/Thru:- D. SOMAIAH<br/>  ASSISTANT ENGINEER HT METERS, R.R. EAST. MOULALI, RANGA REDDY EAST. UPPAL  ,HYDERABAD          , TELANGANA </p><p>  119 RAVINDER KANPULA S/D/W/Thru:- DHARMAIAH<br/>  ASSISTANT ENGINEER 33/11 KV, KOTHUR SUB-STATION O/O ASSISTANT ENGINEER OPERATION KOTHUR  ,MAHBUBABAD , TELANGANA </p><p>  120 M. ASHOK BABU S/D/W/Thru:- M. BALARAMULU<br/>  ASSISTANT ENGINEER METER AND PROTECTION, SIDDIPET, SIDDIPET CIRCLE  ,MEDAK          , TELANGANA </p><p>  121 AVUTA NARAHARI CHAKRAVARTHI, AVUTA NARAHARI CHAKRAVARTHI S/D/W/Thru:- A. NARSAIAH<br/>  ASSISTANT ENGINEER O/O THE DIVISIONAL ENGINEER CONSTRUCTION HYDERABAD  ,HYDERABAD          , TELANGANA </p><p>  122 B. RAM DAS S/D/W/Thru:- JAMLA<br/>  ASSISTANT ENGINEER R/O FLAT NO.402 MARUTHI SRIRAM PROPERTY, SAIBABA NAGAR, OLD ALWAL  ,SECUNDERABAD    , TELANGANA </p><p>  123 GOPAL KOPPULA S/D/W/Thru:- NARSAIAH<br/>  ASSISTANT ENGINEER O/O ASSISTANT ENGINEER/OUTDOOR/CITY STORE, GTS COLONY,  ERRAGADDA  ,HYDERABAD          , TELANGANA </p><p>  124 KATTA SRIKANTH S/D/W/Thru:- K. YADAGIRI<br/>  ASSISTANT ENGINEER OPERATIONLNAGARAM, HABSIGUDA DIVISION, RANGA REDDY EAST CIRCLE  ,RANGAREDDI          , TELANGANA </p><p>  125 H.B. SATHISH BABU S/D/W/Thru:- RAJAIAH<br/>  ASSISTANT ENGINEER LT LAB/MRT/HYDERABAD CENTRAL CIRCLE TSSPDCL  ,HYDERABAD          , TELANGANA </p><p>  126 N. VENKATESHWAR RAO S/D/W/Thru:- N. CHINNAPPA<br/>  ASSISTANT ENGINEER METER AND PROTECTION, SIDDIPET, SIDDIPET CIRCLE  ,MEDAK          , TELANGANA </p><p>  127 G. SAIDULU S/D/W/Thru:- KRISHNAIAH<br/>  ASSISTANT ENGINEER OP/ NEREMET, 33/11 KV SUB STATION VAJPAYEE NAGAR, NEREDMET  ,HYDERABAD          , TELANGANA </p><p>  128 Y. NAGI REDDY S/D/W/Thru:- DURGA REDDY<br/>  ASSISTANT ENGINEER PLOT NO.512, HMT HILLS, KPBH  ,HYDERABAD          , TELANGANA </p><p>  129 T. RAJASHEKAR S/D/W/Thru:- LATE T. JAMMAIAH<br/>  ASSISTANT ENGINEER O/O ASSISTANT ENGINEER (LINES) SALARJUNG SECTION, MALAKPET SUB DIVIS  , , TELANGANA </p><p>  130 K. RAVINDER REDDY S/D/W/Thru:- MAFIA REDDY<br/>  ASSISTANT ENGINEER FLAT NO.511, PANCHAVATI RESIDENCY, NEAR SAHARA MAIN GATE, MANSOORABAD  ,HYDERABAD          , TELANGANA </p><p>  131 TELANGANA STATE TRANSMISSION CORPORATION LTD. CHAIRMAN AND MANAGING DIRECTOR<br/>  VIDYUT SOUDHA KHAIRTABAD  ,HYDERABAD          , TELANGANA </p><p>  132 TELANGANA STATE SOUTHERN POWER DISTRIBUTION COMPANY LTD CHAIRMAN AND MANAGING DIRECTOR<br/>  MINT COMPOUND  ,HYDERABAD          , TELANGANA </p><p>  133 ANDHRA PRADESH STATE COUNCIL FOR HIGHER EDUCATION SECRETARY<br/>  OOP TO MAHAVIR HOSPITAL, MASAB TANK  ,HYDERABAD          , TELANGANA </p><p>  134 V.V SATYANARAYANA<br/>  ASSISTANT DIVISIONAL ENGINEER O/O A.D.E., OPERATION MUNUGOGE SUB DIVISION  ,NALGONDA          , TELANGANA </p><p>  135 MD. NAVVED AHMED<br/>  ASSISTANT DIVISIONAL ENGINEER NALGONDA TOWN SUB DIVISION  ,NALGONDA          , TELANGANA </p><p>  136 G. SATISH<br/>  ASSISTANT DIVISIONAL ENGINEER O/O DIVISIONAL ENGINEER, MRT, RANGA REDDY NORTH 33/11 KV, HMT SUB STATION, QUTBULLAPUR  ,HYDERABAD          , TELANGANA </p><p>  137 MD. SHABABUDDIN<br/>  ASSISTANT DIVISIONAL ENGINEER/ECR/SCADA, GTS COLONY, KALYAN NAGAR  ,HYDERABAD          , TELANGANA </p><p>  138 M. RAVINDER S/D/W/Thru:- BHEEKU<br/>  ASSISTANT ENGINEER O/O DIVISIONAL ENGINEER CONSTRUCTION I, R.R.SOUTH, NANALNAGAR, RETI BOWII  ,HYDERABAD          , TELANGANA </p><p>  139 T. SRINIVAS S/D/W/Thru:- BOJYA<br/>  ASSISTANT ENGINEER O/O DIVISIONAL ENGINEER MASTER PLAN I, RECREATION CLUB MINT COMPOUND, TSSPDCL  ,HYDERABAD          , TELANGANA </p><p>  140 VENKATESH S/D/W/Thru:- RAMACHANDRAIAH<br/>  ASSISTANT DIVISONAL ENGINEER, PROTECTION, R.R. LINES EAST O/O SUPERINTENDING ENGINEER/RR LINES, TELANGANA STATE SOUTHERN DISTRIBUTION COMPANY LIMITED MINT COMPOUND  ,HYDERABAD          , TELANGANA </p><p>  141 B. CHARAN SINGH S/D/W/Thru:- RAMAKOTI<br/>  ASSISTANT DIVISONAL ENGINEER OPERATION, SUB DIVISION KOTHUR O/O SUPERINTENDIG ENGINEER/RR SOUTH, TELANGANA STATE SOUTHERN DISTRIBUTION COMPANY LIMITED  ,RANGAREDDI          , TELANGANA </p><p>  142 G. SRINVIAS S/D/W/Thru:- G. RAJAIAH<br/>  ASSISTANT DIVISONAL ENGINEER, DISTRICT STORES O/O SUPETINTENDING ENGINEER, OPERATION, TELANGANA STATE POWER DISTRIBUTION COMPANY LIMITED  ,SIDDIPET , TELANGANA </p><p>  143 A. RAGHAVENDRA KUMAR S/D/W/Thru:- A. NARAYANA<br/>  WORKING ASSISTANT DIVISONAL ENGINEER OPERATION, GREEN LANDS, HYDERABAD, NORTH CIRCLE, TSSPDCL  ,HYDERABAD          , TELANGANA </p><p>  144 THE CHAIRMAN AND MANAGING DIRECTOR TRANSMISSION CORPORATION OF TELANGANA LIMITED<br/>  VIDYUT SOUDHA HYDERABAD  ,HYDERABAD          , TELANGANA </p><p>  145 THE CHAIRMAN AND MANAGING DIRECTOR SOUTHERN POWER DISTRIBUTION COMPANY OF TELANGANA LIMITED<br/>  MINT COMPOUND  ,HYDERABAD          , TELANGANA </p><p>  146 THE CHAIRMAN AND MANAGING DIRECTOR TELANGANA STATE NORTHERN POWER DIATRIBUTION COMPANY LIMITED<br/>  WARANGAL  ,WARANGAL          , TELANGANA </p><p>  147 JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY REGISTRAR<br/>  KUKATPALLY  ,HYDERABAD          , TELANGANA </p><p>  148 T. AJAY KUMAR S/D/W/Thru:- LAKSHMANA CHARY<br/>  PLOT 530/E PRASHANTH NAGAR, VNASTALIPURAM  ,HYDERABAD          , TELANGANA </p><p>  149 A. RAMESH S/D/W/Thru:- KISHEN LAL<br/>  H.NO 6-1-157 SHESHAGIRI NAGAR, MANUGURU MAN BHDRADRI KOTHAGUDEM  ,KOTHAGUDEM , TELANGANA </p><p>  150 P. SUDHAKAR S/D/W/Thru:- VENKATAMALLU<br/>  ASST ENGINEER VENKATAPOOR VILL, LANAVOLU MANDAL WARANGAL URBAN  ,WARANGAL          , TELANGANA </p><p>  151 A. RAJAIAH S/D/W/Thru:- ERRAIAH<br/>  H. NO. 20-4-4 ASHOK NAGAR, BELLAMPALLY  , DISTRICT: MANCHERIAL , , TELANGANA </p><p>  152 G. LAXMI NARAYANA S/D/W/Thru:- DHARMAYYA<br/>  H NO. 2-4-546, RAMNAGAR HANAMKONDA  , , TELANGANA </p><p>  153 T. NARSING RAO S/D/W/Thru:- T. VENKATESH<br/>  H. NO. 1-9-53/14/A RAMNAGAR  ,HYDERABAD          , TELANGANA </p><p>  154 T.S. DURGA PRASAD S/D/W/Thru:- LATE TRK MURTHY<br/>  H. NO. 304, CRESENTS HEAVEN APTS. A V COLONY, R K PURAM  ,SECUNDERABAD    , TELANGANA </p><p>  155 B. RAVINDER S/D/W/Thru:- B. RAJAIAH<br/>  H. NO. LIGH 525 BESIDEMAHALAKSHMI DEVI TEMPLE PHASE 2, APHB COLONY, MOULALI  ,HYDERABAD          , TELANGANA </p><p>  156 CH. KRISHNA S/D/W/Thru:- CH. ARUN KUMAR<br/>  H. NO. 1-5-158/2 SURYA NAGAR ALWAL  ,SECUNDERABAD    , TELANGANA </p><p>  157 SYED ASLAM PARVEZ S/D/W/Thru:- SYED KHURSHEED FIROZ<br/>  ADDL. ASST. ENGINEER, T.S. TRANSCO, WARANGAL O/O DIVISIONAL ENGINEER, (OGM 1) 132 KV SUB-STATION PEDDA NAGARAM,  ,WARANGAL          , TELANGANA </p><p>  158 K. VENKATESHWAR S/D/W/Thru:- K. NIRANJAN<br/>  ASSISTANT EXECUTIVE ENGINEER, O/O EE/CONSTRUCTION/SD/II/ METRO EAST/ TRANSCO/ STONE BUILDING/ MINT COMPOUND/ HYDERABAD  ,HYDERABAD , ANDHRA PRADESH         </p><p>  159 K. PAVAN KUMAR S/D/W/Thru:- DANIAH<br/>  ASSISTANT EXECUTIVE ENGINEER, O/O ASST. DIVISIONAL ENGINEER/ MRT CENTRAL/SCADA, TSSPDCL. HYDERABAD  ,HYDERABAD , ANDHRA PRADESH         </p><p>  160 A. KIRAN CHAKARVARTHI S/D/W/Thru:- A. VENKATESWARLU<br/>  ASSISTANT DIVISIONAL ENGINEER O/O ASSISTANT DIVISIONAL ENGINEER/ OPERATION SUB DIVISION/ MADHIRA, TSNPDCL  ,KHAMMAM , ANDHRA PRADESH         </p><p>  161 B. RAJENDRAPRASAD S/D/W/Thru:- B. GOVIND<br/>  ASSISTANT ENGINEER O/O TSTRANSCO VIDYUTH SOUDHA, KAIRATHABAD  ,HYDERABAD , ANDHRA PRADESH         </p><p>  162 M. SATYANARAYANA S/D/W/Thru:- POCHAIAH<br/>  SUB ENGINEER, TSSPDCL R/O 2-214, TUKKUGUDA, VILLAGE, MAHESHWARAM MANDAL  ,RANGAREDDI          , TELANGANA </p><p>  163 J. CHANDRASHEKAR S/D/W/Thru:- J. KASINADH<br/>  SUB ENGINEER, TSSPDCL R/O 5-105, RAJYALAKSHMI NAGAR, GURRAMGUDA, BALAPUR MANDAL  ,RANGAREDDI          , TELANGANA </p><p>  164 K. VINOD KUMAR S/D/W/Thru:- PEDDA LINGAPPA<br/>  ASSISTANT ENGINEER VIDYUT SOUDHA, T.S. TRANSCO  ,HYDERABAD          , TELANGANA </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>   VENKAT PALWAI LAW ASSOCIATES</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  G. N. REDDY[caveat][caveat][caveat][caveat][caveat]</p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

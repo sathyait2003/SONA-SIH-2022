@@ -1,0 +1,402 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 12974 - 2017</h5>
+<h5 align="center">RAM PRATAP SINGH ETC. vs. THE STATE OF UTTAR PRADESH ETC</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="129742017"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">12974/2017</font> Filed on 24-04-2017 12:00 AM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="red" style="font-size:16px;font-weight:bold;">DISPOSED</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">III-A</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">C.A. No. 010679 - 010680 / 2018  Registered on 24-10-2018<br/>SLP(C) No. 014259 - 014260 / 2017  Registered on 02-05-2017<br/></div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">24-10-2018</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE A.K. SIKRI and HON'BLE MR. JUSTICE ASHOK BHUSHAN</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">DISPOSED (Final Hearing) Leave Granted &amp; Disposed off-Ord dt:24-10-2018  (Disposal Date: 24-10-2018, Month: 10, Year: 2018)<br/> JUDGES: HON'BLE MR. JUSTICE A.K. SIKRI, HON'BLE MR. JUSTICE ASHOK BHUSHAN</font>
+</td>
+</tr><tr>
+<td width="140px">Disp.Type</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Leave Granted &amp; Disposed off</font>
+</td>
+</tr><tr>
+<td width="140px">Category</td>
+<td>3200-Establishment And Recognition Of Educational Institutions</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 RAM PRATAP SINGH ETC. S/D/W/Thru:- SHRI DWARIKA BUX SINGH<br/>  BADHAIPUR BHIKHAPUR KANIDEEH, BIHAR KUNDA  , DISTRICT: PRATAPGARH ,PRATAPGARH          , UTTAR PRADESH         </p><p>  2 PAVAN KUMAR CHAURASIYA S/D/W/Thru:- SHRI RAMJI CHAURASIYA<br/>  PURANA BAIRAHNA MADVAPUR  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  3 JITENDRA SHUKLA S/D/W/Thru:- SHRI TEJ NARAIN SHUKLA<br/>  9/10A, MAHEVA NAINI  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  4 RAM PRAKASH S/D/W/Thru:- SHRI BANSHI LAL MAURYA<br/>  MIYAN KA PRUVA, MAJHEEL GAON, KUNDA  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  5 SULEKH KUMAR SINGH S/D/W/Thru:- SHRI CHANDRABHAN SINGH<br/>  BANI SARAI INAYAT BAHADURPUR PHOLPUR  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  6 MANJU VISHWANTH S/D/W/Thru:- AJAI KUMAR YADAV<br/>  159/3, CHAKDAUD NAGAR, NAINI  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  7 RUPESH MALVIYA S/D/W/Thru:- SHRI RAM PRASAD MALVIYA<br/>  GADRA JASRA  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  8 SHARAD CHANDRA SINGH S/D/W/Thru:- SHRI MUNNI LAL SINGH<br/>  GAURA KUREBHAR, JAISHINGHPUR  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  9 PRAMOD KUMAR SHUKLA S/D/W/Thru:- SHRI RAGHAV RAM SHUKLA<br/>  PURE BINDA SHUKI, DHINGVAS LALGANJ,  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  10 AMIT KUMAR DWIVEDI S/D/W/Thru:- SHRI BRAJBHUSHAN DWIVEDI<br/>  TARDEEH, KANEHTI, PHOOLPUR  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  11 DHARMENDRA SINGH S/D/W/Thru:- SHRI GYAN SINGH<br/>  JAGBANDHANPUR, SAHSON, BAHADURPUR  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  12 AJAY KUMAR KESARWANI S/D/W/Thru:- SHRI CHIRAUNJI LAL KESARWANI<br/>  KATRA JARI BARA,  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  13 ANKIT KUMAR KESARWANI S/D/W/Thru:- SHRI SNAGAM LAL SINGH<br/>  KUNWADEEH, SARAI INAYAT, PHOOLPUR  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  14 OM PRAKASH SINGH S/D/W/Thru:- SHRI RAM VILASH SINGH<br/>  BANI SARAI INAYAT  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  15 VISHAL PANDEY S/D/W/Thru:- SHRI JAGDISH PRASAD PANDEY<br/>  40/1, BELHA DEVI ROAD, SADAR BAZAR  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  16 JATA SHANKAR PRAJAPATI S/D/W/Thru:- SHRI MUKKHU RAM PRAJAPATI<br/>  MOHDH. PURANI BAZAR,  ,BHADOHI , UTTAR PRADESH         </p><p>  17 PANKAJ SINGH S/D/W/Thru:- SHRI RAM SAJIVAN<br/>  DAGRAHA KA PURA, BARETHI  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  18 PRADEEP SHARMA S/D/W/Thru:- SHRI PURSHOTTAM LAL<br/>  PAHLE PAR, RAM NAGAR, LALGANJ  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  19 SHASHI KANT GIRI S/D/W/Thru:- SHRI RUDRSH GIRI<br/>  UTTAMGIRI KI CHAKIYA, PHAPHAMAU  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  20 SANGEETA SINGH S/D/W/Thru:- SHRI RAM NAYAK SINGH<br/>  BARI UMRI, SAHSON  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  21 KANCHAN TRIPATHI S/D/W/Thru:- SHRI BHUVNESHWAR NATH TRIPATHI<br/>  BHUVALPUR, SHIKHAR, CHUNAR  ,MIRZAPUR , UTTAR PRADESH         </p><p>  22 VINEET TIWARI S/D/W/Thru:- SHRI YAGYA DUTT TIWARI<br/>  BHAVNIGARH, KOHLA, RANIGANJ  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  23 AKHILESH YADAV<br/>  RAGHUPUR SAIDABAD  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  24 ANIL KUMAR SINGH S/D/W/Thru:- SHRI ABHAIRAJ SINGH<br/>  VILL.- GOTAWAN, SARAI INAYAT, `  , DISTRICT: TEHSIL- PHOOLPUR ,ALLAHABAD          , UTTAR PRADESH         </p><p>  25 NEELAM KUMARI S/D/W/Thru:- SHRI ANURAG KUMAR<br/>  SHIVPURI COLONY, BUDAVA, JASRA,  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  26 MAHENDRA YADAV S/D/W/Thru:- SHRI HARIKESH BAHADUR<br/>  SULTANPUR RANIGANJ  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  27 MRADULA SINGH S/D/W/Thru:- PRADEEP SINGH<br/>  GAURA KUDEBHAR, JAISHINGPUR  ,SULTANPUR , UTTAR PRADESH         </p><p>  28 SONALI JAISWAL S/D/W/Thru:- SHRI DHYAN CHANDRA JAISWAL<br/>  RITHAIYA BAZAR, SARAI INAYAT, BAHADURPUR  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  29 RAM BABU SINGH S/D/W/Thru:- SHRI RAM MANOHAR SINGH<br/>  MANIKPUR SAHSON, BAHADURPUR  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  30 MAHOBA LAL YADAV S/D/W/Thru:- SRI RAJARAM YADAV<br/>  KAKRA ATRAMPUR, KAURIHAD  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  31 JAI PRAKASH CHAUHAN S/D/W/Thru:- SRI BAL CHAND CHAUHAN<br/>  S27/62D27, BELWARIA CHAUKAGHAT  , DISTRICT: VARANASI ,VARANASI , UTTAR PRADESH         </p><p>  32 CHANDRAWATI CHAUHAN S/D/W/Thru:- SRI BAL CHANDRA<br/>  BISUNPUR, KASHIMABAD  ,GHAZIPUR , UTTAR PRADESH         </p><p>  33 MAYA CHAUHAN S/D/W/Thru:- SRI BAL KISHAN CHAUHAN<br/>  S27/62D27, BELWARIA CHAUKAGHAT  , DISTRICT: VARANASI ,VARANASI , UTTAR PRADESH         </p><p>  34 NEETU MISHRA S/D/W/Thru:- SRI JAGDISH PRASAD MISHRA<br/>  JADAPUR DANDU SORAM  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  35 SHAILENDRA KUMAR S/D/W/Thru:- SRI OM PRAKESH<br/>  PARANPUR BHAUNATHPUR (KHAJURHAT)  ,FAIZABAD          , UTTAR PRADESH         </p><p>  36 ALOKMANI RAJAN TIWARI S/D/W/Thru:- SRI DINESH PRASAD TIWARI<br/>  BHAWANI GANJ KAHALA,  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  37 RITA PAL S/D/W/Thru:- SRI BANSI PAL<br/>  KORRA RAJPUR  , DISTRICT: VARANASI ,VARANASI , UTTAR PRADESH         </p><p>  38 JYOTI PAL S/D/W/Thru:- RAM PYARE PAL<br/>  KORRA RAJPUR  , DISTRICT: VARANASI ,VARANASI , UTTAR PRADESH         </p><p>  39 RANJU YADAV S/D/W/Thru:- SRI KANHYA YADAV<br/>  BULAKI DAS KI MATHIYA ATHILAPURA  , DISTRICT: BALLIA ,BALLIA , UTTAR PRADESH         </p><p>  40 VISHAL CHANDRA UMAR VAISH S/D/W/Thru:- SRI JAGDISH PRASAD VIASH<br/>  JANTALL RANIGANJ  ,PRATAPGARH          , UTTAR PRADESH         </p><p>  41 AKHILESH KUMAR VISHWAKARMA S/D/W/Thru:- SRI RAM IRATH VISHWARKARMA<br/>  SENDURAICH BHELA BANDH (KOPAGANJ)  ,MAU , UTTAR PRADESH         </p><p>  42 ANITA S/D/W/Thru:- GOPEL JI<br/>  S17/314 D6, NADESAR RAJA BAZAR  , DISTRICT: VARANASI ,VARANASI , UTTAR PRADESH         </p><p>  43 BHOOP NARAYAN S/D/W/Thru:- SRI DOODH NATH<br/>  BHAGESAR (BANDHI) KORAON  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  44 JAI HIND SINGH S/D/W/Thru:- LALSA PRASAD<br/>  PISHUNPUR CHAURAHE KHANJADIPUR (CHUNAR)  , DISTRICT: MIRZAPUR ,MIRZAPUR , UTTAR PRADESH         </p><p>  45 KANCHAN SINGH S/D/W/Thru:- SRI DURVIJAY SINGH<br/>  KATIYARI CHAKIA RAMAIPUR  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  46 ROHIT PANDEY S/D/W/Thru:- SRI RAJMANI PANDEY<br/>  PURE SUDI TATDIH KANETI,  ,ALLAHABAD          , UTTAR PRADESH         </p><p>  47 SHIV PRAKASH CHAUHAN S/D/W/Thru:- SRI BAL CHANDRA CHAUHAN<br/>  S23/42, DHOWARIYA JAITPUR,  , DISTRICT: VARANASI ,VARANASI , UTTAR PRADESH         </p><p>  48 ABHA S/D/W/Thru:- SRI BANS NARAYAN JAISWAL<br/>  KHAWAJA DOST, SIPAH  , DISTRICT: JAUNPUR ,JAUNPUR , UTTAR PRADESH         </p><p>  49 NEELAM KUMARI S/D/W/Thru:- SRI RAJ KUMAR<br/>  BERUI, GARAPUR  ,ALLAHABAD          , UTTAR PRADESH         </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 THE STATE OF UTTAR PRADESH ETC THROUGH SECRETARY PRATHMIK<br/>  THROUGH SECRETARY PRATHMIK GOVERNMENT OF U.P. CIVIL SECRETARIAT  , DISTRICT: LUCKNOW ,LUCKNOW          , UTTAR PRADESH         </p><p>  2 STATE COUNCIL OF EDUCATION RESEARCH AND TRAINING U.P. THROUGH ITS DIRECTOR<br/>  BASIC EDUCATION DIRECTORATE, NISHAT GANJ,  , DISTRICT: LUCKNOW ,LUCKNOW          , UTTAR PRADESH         </p><p>  3 NEHRU GRAM BHARTI UNIVERSITY THROUGH ITS REGISTRAR<br/>  NEHRU GRAM BHARATI UNIVERSITY, KOTWA, JAMUNIPUR  , DISTRICT: BUBAWAL ,ALLAHABAD          , UTTAR PRADESH         </p><p>  4 DIRECTOR BASIC EDUCATION<br/>  U.P. ALLAHABAD, STATE BANK OF INDIA, AGI OFFICE ROAD  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  5 CHANDRA PRAKASH KANYAKUBI S/D/W/Thru:- SRI CHHEDI LAL KANYAKUBI<br/>  GADAIYA KALA ZARI BASAR JASRA BARA  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  6 SWATI YADAV S/D/W/Thru:- SHRI KAILASH SINGH YADAV<br/>  PARASUPURA, SUBHASH NAGAR  , DISTRICT: GHAZIPUR ,GHAZIPUR , UTTAR PRADESH         </p><p>  7 UNIVERSITY GRANTS COMMISSION, THROUGH SECRETARY<br/>  BAHADUR SHAH ZAFAR MARG  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  8 NATIONAL COUNCIL FOR TEACHER EDUCATION (NCTE) THROUGH MEMBER SECRETARY<br/>  HANS BHAWAN, WING II, 1 BAHADUR SHAH ZAFAR MARG,  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  9 SHASHI KUMAR DWIVEDI S/D/W/Thru:- SRI DASHRATH LAL<br/>  MALEN KA PURA, ANAPUR SORAM  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  10 ABHINAV KUMAR TIWARI S/D/W/Thru:- SRI KRISHNA KANT TIWARI<br/>  CHATURPATTY MARROWN, HANDIA  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  11 ARUN KUMAR PANDEY S/D/W/Thru:- SRI DEEN NATH PANDEY<br/>  CHANDANAHA, DULAPUR, SIADABAD  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  12 MEHA S/D/W/Thru:- SRI MUKUND LAL<br/>  220/5A/1A SHANTI PURAM COLONY, OLD PHAPHAMAU  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  13 NAGENDRA SINGH S/D/W/Thru:- SRI RAM LAKHAN SINGH<br/>  SINDHORA,  MUGARSHAN  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  14 NEHA MALVIYA S/D/W/Thru:- SRI ASHUTOSH MALVIYA<br/>  59 KOCHA RAI GANGA PRASAD KALYANI DEVI  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  15 NEHA VISHWAKARMA S/D/W/Thru:- SRI JAWAHAR LAL VISHWAKARMA<br/>  96, GANGOTRI HAVELIA JHUNSI  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  16 REEMA CHATURVEDI S/D/W/Thru:- SRI SURENDRA NATH PATHAK<br/>  710/76, BARGA GHAT MEERAPUR  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  17 SARIKA BHARTI S/D/W/Thru:- SRI UMA SHANKAR BHARTI<br/>  DURJANPUR JHUNSI  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  18 SARITA MISHRA S/D/W/Thru:- CHANDRESHWAR PRASAD MISHRA<br/>  BHUPENDRA CLOTH HOUSE, ANDASA MOR KUMAR GANJ,  , DISTRICT: FAIZABAD ,FAIZABAD          , UTTAR PRADESH         </p><p>  19 SUNITA MISHRA S/D/W/Thru:- SRI RADHEY KRISHAN MISHRA<br/>  TULAPUR SIKANDARA  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  20 VED MANI TIWARI S/D/W/Thru:- INDIA PRASAD TIWARI<br/>  BHAWANI GANJ, KAHALA  , DISTRICT: PRATAPGARH ,PRATAPGARH          , UTTAR PRADESH         </p><p>  21 ARUN KUMAR PANDEY S/D/W/Thru:- SRI RAJDEV PANDEY<br/>  BHIKHPUR  , DISTRICT: JAUNPUR ,JAUNPUR , UTTAR PRADESH         </p><p>  22 VIVEK KUMAR TIWARI S/D/W/Thru:- SRI GIRDHAR LAL TIWARI<br/>  GURRA SULTANPUR,  , DISTRICT: PRATAPGARH ,PRATAPGARH          , UTTAR PRADESH         </p><p>  23 SUMAR BHARTIYA S/D/W/Thru:- SRI BANWARI LAL BHARTIYA<br/>  RAJUPUR SARAINYA  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  24 VANDANA SINGH S/D/W/Thru:- SRI TRIVENI SINGH<br/>  CHACHITPUR, AMBEDKAR NAGAR  ,AMBEDKAR NAGAR *        , UTTAR PRADESH         </p><p>  25 PRATIKSHA GIRL S/D/W/Thru:- PREM GIRL<br/>  PADILA MAHADEV JI ISMAILGANJ  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  26 SHASHI KANT SHARMA S/D/W/Thru:- SRI KAMALKANT SHARMA<br/>  VIVEK NAGAR TALAB KE PAS  , DISTRICT: PRATAPGARH ,PRATAPGARH          , UTTAR PRADESH         </p><p>  27 ARADHANA RANI PANDEY S/D/W/Thru:- SRI CHHEDI LAL PANDEY<br/>  417/748 MIRZA KA HATA, DARAGANJ  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  28 HEMLATA S/D/W/Thru:- SRI MAHAVEER PRASAD MAURYA<br/>  PISHUNPUR CHAURAHA KHANJADIPUR  , DISTRICT: MIRZAPUR ,MIRZAPUR , UTTAR PRADESH         </p><p>  29 MANOJ KUMAR MISHRA S/D/W/Thru:- SRI YOGYA NARAYAN MISHRA<br/>  KHAKHAPUR KAHALA  , DISTRICT: PRATAPGARH ,PRATAPGARH          , UTTAR PRADESH         </p><p>  30 SATISH KUMAR MISHRA S/D/W/Thru:- SRI RAM SAJIWAN MISHRA<br/>  90C/10A/1, ALLAHPUR, BAGHAMBAI GADDI  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  31 SAVITA DEVI S/D/W/Thru:- CHATURI LAL<br/>  BADALAPUR KAHALI  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  32 SEEMA DWIVEDI S/D/W/Thru:- SRI KAMLAKANT UPADHYAY<br/>  MALEN KA PURA, ANAPUR SORAM  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  33 SUHAGINI MISHRA S/D/W/Thru:- SRI SAMLAKANT TIWARI<br/>  83/2C, CHOOTA BHAGHARA  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  34 SUSHIL KUMAR DWIVEDI S/D/W/Thru:- DASHRATH LAL DWIVEDI<br/>  MALEN KA PURA, ANAPUR SORAM  , DISTRICT: ALLAHABAD ,ALLAHABAD          , UTTAR PRADESH         </p><p>  35 SHILA YADAV S/D/W/Thru:- SRI GIRJA YADAV<br/>  SARAIYAN, SADAT  , DISTRICT: GHAZIPUR ,GHAZIPUR , UTTAR PRADESH         </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  MUKTI CHOWDHARY[P-1]</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  PRANAYA KUMAR MOHAPATRA[R-9]</p><p>  MANISHA T. KARIA[R-8]</p><p>  TANMAYA AGARWAL[R-1]</p><p>  TANMAYA AGARWAL[R-2]</p><p>  TANMAYA AGARWAL[R-4]</p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

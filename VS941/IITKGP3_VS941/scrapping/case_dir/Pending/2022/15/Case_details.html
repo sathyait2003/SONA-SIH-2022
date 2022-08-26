@@ -1,0 +1,410 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 23366 - 2022</h5>
+<h5 align="center">THE STATE OF CHHATTISGARH vs. DR. DEEPAK KUMAR SHUKLA</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="233662022"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">23366/2022</font> Filed on 29-07-2022 10:40 AM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="blue" style="font-size:16px;font-weight:bold;">PENDING</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">IV-C</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 013368 -  / 2022  Registered on 01-08-2022<br/>(Verified On 02-08-2022)</div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">03-08-2022</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MS. JUSTICE INDIRA BANERJEE and HON'BLE MR. JUSTICE V. RAMASUBRAMANIAN</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Pending - (Motion Hearing <br/> [FRESH (FOR ADMISSION) - CIVIL CASES]) Notice Issued and Stay Granted-Ord dt:03-08-2022 </font>
+</td>
+</tr><tr>
+<td width="140px">Tentatively case may be listed on <b>(likely to be listed on)</b></td>
+<td style="font-size:12px;font-weight:100;"><font color="blue" style="font-size:12px;font-weight:100;">19-09-2022</font> (Computer generated)</td></tr><tr>
+<td width="140px">Category</td>
+<td>0602-Service Matters : Regularisation of ad-hoc employees etc.</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 THE STATE OF CHHATTISGARH<br/>  THROUGH SECRETARY TO THE GOVERNMENT OF CHHATTISGARH SECRETARIAT, DEPARTMENT OF HIGHER EDUCATION, MAHANADI MANTRALAYA, ATAL NAGAR NAYA RAIPUR  ,RAIPUR          , CHHATTISGARH          </p><p>  2 ADDITIONAL SECRETARY<br/>  Additional Secretary GOVERNMENT OF CHHATTISGARH, DEPARTMENT OF HIGHER EDUCATION, MAHANADI MANTRALAYA, ATAL NAGAR NAYA RAIPUR, DISTRICT RAIPUR (CG)  ,RAIPUR          , CHHATTISGARH          </p><p>  3 THE COMMISSIONER<br/>  The Commissioner DEPARTMENT OF HIGHER EDUCATION, GOVERNMENT OF CHHATTISGARH, BLOCK-3, INDRAVATI BHAVAN, NAYA RAIPUR, DISTRICT RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  4 THE REGIONAL ADDITIONAL DIRECTOR OF HIGHER EDUCATION<br/>  The Regional Additional Director of Higher Education GOVERNMENT OF CHHATTISGARH, RAIPUR DIVISION, DISTRICT RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  5 THE REGIONAL ADDITIONAL DIRECTOR OF HIGHER EDUCATION<br/>  The Regional Additional Director of Higher Education GOVERNMENT OF CHHATTISGARH, BILASPUR DIVISION, DISTRICT BILASPUR ICCH  ,BILASPUR          , CHHATTISGARH          </p><p>  6 THE REGIONAL ADDITIONAL DIRECTOR OF HIGHER EDUCATION<br/>  The Regional Additional Director of Higher Education GOVERNMENT OF CHHATTISGARH, JAGDALPUR DIVISION, DISTRICT JAGDALPUR (CG).  ,JAGDALPUR , CHHATTISGARH          </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 DR. DEEPAK KUMAR SHUKLA S/D/W/Thru:- LATE BALDAU PRASAD SHUKLA<br/>  SERVICE ASSISTANT PROFESSOR IN NAVEEN GIRLS COLLEGE, BILASPUR, R/O B 18, SAI HOMES, VIDYA NAGAR, NEAR SHIVMANDIR  ,BILASPUR          , CHHATTISGARH          </p><p>  2 AMITANSHU SHEKHAR JHA S/D/W/Thru:- SHRI B.L. JHA<br/>  R/O
+RAJGURUBADA, VIJAYWARD NO.2, JAGDALPUR, DISTRICT BASTAR (CG).  ,BASTAR          , CHHATTISGARH          </p><p>  3 VIJAY KUMAR SHARMA S/D/W/Thru:- LATE SHRI JIWDHAN PRASAD SHARMA<br/>  OPP: HOTEL GREEN PARK, AKALTARA ROAD, DISTRICT JANJGIR-CHAMPA (CG).  ,CHAMPA , CHHATTISGARH          </p><p>  4 (MS) JYOTI MISHRA S/D/W/Thru:- SHRI ONKAR NATH MISHRA<br/>  R/O QUARTER NO.214, SAMATA
+COLONY, RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  5 (SMT) SUNEETA PATRA S/D/W/Thru:- DR.P.K.PATRA<br/>  R/O PROFESSOR COLONY,. SECTOR-1, STREET
+NO.4, HOUSE NO.225, RAIPUR (CG)  ,RAIPUR          , CHHATTISGARH          </p><p>  6 ADITYA NARAYAN SINGH S/D/W/Thru:- SHRI GANESH SINGH THAKUR<br/>  R/O B-8, CHINAR, GREEN GARDEN MUNGALI ROAD, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  7 VIVEK M.DARIDEKAR S/D/W/Thru:- LATE SHRI M.T.DANDEKAR<br/>  R/O ANNAPURNA NIWAS, TILAK NAGAR, BILLASPUR (CG)  ,BILASPUR          , CHHATTISGARH          </p><p>  8 LAXMIKANT BHARATI S/D/W/Thru:- SHRI S.R. BHARATI<br/>  R/O QUARTER NO/F-2/01, FIVE BUILDING. MOHAN NASAR. DURG (CG).  ,DURG          , CHHATTISGARH          </p><p>  9 (SMT) SHAKUNTALA TRIPATHI S/D/W/Thru:- SHRI ANIL KUMAR TRIPATHI<br/>  BRAHMANPARA, WARD NO.6, CHHUIKHADAN, DISTRICT RAJNANDGAON (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  10 (SMT) KAVITA DAS S/D/W/Thru:- SHRI RAVINDRA JATARIA<br/>  R/O NEAR R.S.U.COLONY, BEHIND SCIENCE COLLEGE, HOSTEL NO.3, RAIPUR (CG)  ,RAIPUR          , CHHATTISGARH          </p><p>  11 K.R.HARI S/D/W/Thru:- SHRI K.N.RAGHAVAN NAIR<br/>  R/O C-3/404, WOOD-I-LAND FLAT, NEAR MAHADEV GHAT, AMLESHWAR, DURG (CG).  ,DURG          , CHHATTISGARH          </p><p>  12 SHARAD CHANDRA MISHRA S/D/W/Thru:- SHRI R.N.MISHRA<br/>  R/O SHIVAM NIWAS, NEAR CHHOTA SHIV MANDIR, SUBHASH NAGAR, DURG (CG).  ,DURG          , CHHATTISGARH          </p><p>  13 VENU GOPAL S/D/W/Thru:- SHRI R.SADASIVAN<br/>  R/O NAVCHETNA, HOUSE NO.22, BESIDE SHAHNAI GARDEN, NEAR SMART CLASSES, ROHINIPURAM, RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  14 SANJAY TIWARI S/D/W/Thru:- LATE SHRI L.L.TJWARI<br/>  R/O PO-5, GOVERNMENT SCIENCE COLLEGE CAMPUS, GE ROAD. RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  15 (MRS) KALPANA LAMBEY S/D/W/Thru:- SHRI RAJESH LAMBEY<br/>  R/O 30/146, YOGIRAJ HANUMAN MANDIR GALI, TATYAPARA, RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  16 (SMT) SUNITA JHA S/D/W/Thru:- SHRI C.M.JHA<br/>  R/O A-103, STREET NO.L, VIDYAVIHAR, NEHRU NAGAR [WEST), BHILAI (CG).  ,BHILAI , CHHATTISGARH          </p><p>  17 AKHILESH JADHAV S/D/W/Thru:- SHRI MURALIMANOHAR JADHAV<br/>  R/O C-48, SAI KRIPA, NEAR HARSH TOWER, DEOOURI, RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  18 HARSH SHARMA S/D/W/Thru:- LATE SHRI SARAL KUMAR SHARMA<br/>  R/O - 52, VIVEKANAND NAGAR, RAIPUR (CG)  ,RAIPUR          , CHHATTISGARH          </p><p>  19 PURNIMA MISHRA S/D/W/Thru:- SHRI SHAILESH KUMAR MISHRA<br/>  R/O C-L, 56/7, SECTOR 7, IN FRONT OF KUSHABHAU THAKRE, APARTMENT NO. 3, NEW RAIENDRA NAGAR, RAIPUR (CG)  ,RAIPUR          , CHHATTISGARH          </p><p>  20 SUNAYANA MISHRA S/D/W/Thru:- LATE MAJ. M.P.MISHRA<br/>  R/O 17/901, GURUGOVIND NAGAR, OPPOSITE NEW BUS STAND. RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  21 SHAILENDM KUMAR SINGH S/D/W/Thru:- DR.HIMMAT SINGH<br/>  R/O QUARTER NO.7, DIGVIJAY COLLEGE CAMPUS. RAJNANDGAON (CG).  ,RAJNANDGAON          , CHHATTISGARH          </p><p>  22 SAKHARAM KUNJAM S/D/W/Thru:- SHRI SONAU RAM KUNJAM<br/>  R/O R.E.S.COLONY, O.NO.G-5. DISTRICT NARAYANPUR (CG).  ,NARAYANPUR , CHHATTISGARH          </p><p>  23 ANIL KUMAR MISHRA S/D/W/Thru:- LATE SHRI R.K.MISHRA<br/>  R/O 15, KANHAPARK, VIVEKANAND NAGAR,KOHKA, BHILAI, DISTRICT DURG (CG).  ,DURG          , CHHATTISGARH          </p><p>  24 KIRAN NURUTI S/D/W/Thru:- SHRI AASHA RAM NURUTI<br/>  R/O NEAR CHAVRA SCHOOL, MAIN ROAD, KONDAGAON, DISTRICT BASTAR (CG).
+  ,BASTAR          , CHHATTISGARH          </p><p>  25 SAROJ SHARMA S/D/W/Thru:- SHRI V.K. SHARMA<br/>  R/O- OPPOSITE: HOTEL GREEN PARK, AKALTARA ROAD, JANJGIR, DISTRICT JANJGIR CHAMPA (CG)  ,JANJGIR - CHAMPA*        , CHHATTISGARH          </p><p>  26 SHILPI BOSE S/D/W/Thru:- SHRI A.K.BOSE<br/>  R/O A-5, PALASH COMER, BASANT VIHAR, MAHAVEER NAGAR, RAIPUR (CG).  ,RAIPUR          , CHHATTISGARH          </p><p>  27 RITU SINHA S/D/W/Thru:- DR.PRABODH KUMAR SINHA<br/>  R/O NC-66, CSEB COLONY, KORBA (EAST), DISTRICT KORBA (CG)  ,KORBA *         , CHHATTISGARH          </p><p>  28 SHEKHAR KUMAR SINHA S/D/W/Thru:- LATE SHRI S.N.SINHA<br/>  R/O PROFESSORS COLONY, QUARTER NO.L, BANARAS ROAD, AMBIKAPUR (CG).  ,AMBIKAPUR , CHHATTISGARH          </p><p>  29 HAFZA KHALID S/D/W/Thru:- LATE DR. MOHAMMAD KHALID ALI<br/>  R/O STAFF QUARTERS, GOVERNMENT BILASA GIRLS PG COLLEGE. BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  30 VIDYACHARAN SHUKLA S/D/W/Thru:- UMA SHANKAR SHUKLA<br/>  R/O NARMADA NAGAR, BEHIND BACHPAN SCHOOL, VIDYA BHAWAN, MANGLE CHOWK, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  31 PRABODH KUMAR SINHA S/D/W/Thru:- LATE SHRI JAMNU PRASAD BIRTHWAR<br/>  R/O NC-66, CSEB COLONY, KORBA (EAST). DISTRICT KORBA (CG).  ,KORBA *         , CHHATTISGARH          </p><p>  32 NAMRATA SHARMA S/D/W/Thru:- SHRI RAKESH KUMAR SHARMA<br/>  R/O B-56, NEW B TYPE QUARTERS, HTPS COLONV, KORBA (WEST), DISTRICT KORBA (CG).  ,KORBA *         , CHHATTISGARH          </p><p>  33 NEETA GUPTA S/D/W/Thru:- LATE SHRI M.L.GUPTA<br/>  R/O BEHIND CONGRESS BHAVAN, TILAK NAGAR, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  34 SHRADDHA DUBEY S/D/W/Thru:- SHRI RAM NARAYAN SHUKLA<br/>  R/O SARANAGALI, AHEAD KRISHNA VIHAR, VIDYA NAGAR, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  35 SEEMA MANISHA NATH S/D/W/Thru:- SHRI ALOK SANJAY NATH<br/>  R/O RAJENDRA NAGAR, LINK ROAD, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  36 RAJEEV SHARMA S/D/W/Thru:- SHRI M.L.SHARMA<br/>  COLLEGE ROAD, WARD* NO. 12, TAKHATPUR, POST TAKHATPUR, DISTRICT BILASPUR (CG)  ,BILASPUR          , CHHATTISGARH          </p><p>  37 SEEMA NEGI S/D/W/Thru:- SHRI DEVENDRA SINGH NEGI<br/>  ASSISTANT PROFESSOR IN CHEMISTRY,
+IN GOVERNMENT J.M.P. COLLEGE, TAKHATPUR, DISTRICT BILASOUR. BILASPUR (CG)  ,BILASPUR          , CHHATTISGARH          </p><p>  38 K.ANAND KOWSHIK S/D/W/Thru:- SHRI S.KAILASAM<br/>  R/O A/206, RAVI HEIGHTS, KUMHARPARA. JARHABHATA, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  39 MANJU MADHURI BAJPAI S/D/W/Thru:- LATE SHRI A.M.BAJPAI<br/>  R/O B-20, PRAGATIVIHAR, BAHATRAI ROAD, SEEPAT MARG, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  40 PARAMJEET PANDEY S/D/W/Thru:- SHRI RAJENDRA KUMAR PANDEY<br/>  HIG-08, RING ROAD NO.2, MAHIMA VIHAR, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  41 MAHFOOZ ARIF S/D/W/Thru:- SHRI S.U.ANSARI<br/>  R/O 45-A, PHASE-1. RK NAGAR. BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  42 DURBA CHATTERJEE S/D/W/Thru:- DR.ANUP CHATTERJEE<br/>  R/O R.-7, BINODE NAGAR,
+BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  43 SUSAN UDAI<br/>  R/O B-4, 25 BUNGLOWS COLONY, BILASPUR (CG)  ,BILASPUR          , CHHATTISGARH          </p><p>  44 HARINI RANI AUGUR S/D/W/Thru:- DR.M.R.AUGUR<br/>  R/O A-03, OM ZONE, SHUBHAM VIHAR, BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  45 DHANESHWARI DUBEY S/D/W/Thru:- DR.PRADEEP KUMAR DUBEY<br/>  R/O MIG, 1/85, MP NAGAR EXTENCE, DISTRICT KORBA (CG)  ,KORBA *         , CHHATTISGARH          </p><p>  46 KALYANI JAIN S/D/W/Thru:- SHRI SHARAD KUMAR JAIN<br/>  R/O MIG-29, SHARADA SADAN, NEHRU NAGAR, BILASPUR (CG).
+  ,BILASPUR          , CHHATTISGARH          </p><p>  47 SUNITA TYAGI S/D/W/Thru:- SHRI ADESH KUMAR TYAGI<br/>  R/O HIGH SCHOOL ROAD, BALODA BAZAR, BALODA BAZAR (CG).  ,BALODA BAZAR , CHHATTISGARH          </p><p>  48 UTTARA TIWARI S/D/W/Thru:- SHRI H.P.TEWARI<br/>  R/O KESHAR AWAS, NO.5, SENIOR M.I.G, RAJ KISHORE NAGAR, BILASPUR (CG).
+  ,BILASPUR          , CHHATTISGARH          </p><p>  49 DEOSHARAN MISHRA S/D/W/Thru:- LATE SHRI S.K.MISHRA<br/>  R/C PRIMARY SCHOOL ROAD, TORWAPARA, NEAR SANTOSHI MANDIR. BILASPUR (CG).  ,BILASPUR          , CHHATTISGARH          </p><p>  50 SANGEETA SHUKLA S/D/W/Thru:- DEEPAK KUMAR SHUKLA<br/>  R/O B-18 SAI HOMES, VIDYA NAGAR. NEAR SHIVMANDIR. BILASPUR (CG)  ,BILASPUR          , CHHATTISGARH          </p><p>  51 JAIPRAKASH DUBEY S/D/W/Thru:- LATE SHRI K.L. DUBEY<br/>  R/O- A-161, AGYEYA NAGAR,
+BILASPUR (CG)  ,BILASPUR          , CHHATTISGARH          </p><p>  52 PRITI GUPTA S/D/W/Thru:- A.C. GUPTA<br/>  R/O- JUNA PARA, NEAR KOREA PALACE, BAIKUNTHPUR, KOREA (CG)  ,KORBA *         , CHHATTISGARH          </p><p>  53 ALOK SHUKLA S/D/W/Thru:- PROF. RAM NARAYAN SHUKLA<br/>  R/O HIG-29, SECTOR-01, DEENDAYAL UPADHYAY NAGAR, RAIPUR (CG)  ,RAIPUR          , CHHATTISGARH          </p><p>  54 ARCHANA PANDEY S/D/W/Thru:- SHRI AMALENDRA KUMAR PANDEY<br/>  R/O QUARTER NO.5-A, STREET AND SECTOR 10 BHILAI, TEHSIL AND DISTRICT DURG, (CG), GOVERNMENT D.T. COLLEGE, UTTAI, (CG)  ,DURG          , CHHATTISGARH          </p><p>  55 BABITA DUBEY S/D/W/Thru:- SHRI K.R.DUBEY<br/>  R/O MIG 13, MUKUND NAGAR, DURG (CG)  ,DURG          , CHHATTISGARH          </p><p>  56 RITA GUPTA S/D/W/Thru:- SHRI M.S.GUPTA<br/>  HOUSE NO.4/6, NEHRU NAGAR WEST, BHILAI, TEHSIL AND DISTRICT DURG, (CG)  ,DURG          , CHHATTISGARH          </p><p>  57 MONIYA RAKESH SINGH S/D/W/Thru:- SHRI RAKESH SINGH<br/>  HOUSE NO.8 A, STREET NO. 12, SECTOR 1, BHILAI, TEHSIL AND DISTRICT DURG, (CG)  ,DURG          , CHHATTISGARH          </p><p>  58 M.L.PRASUNA S/D/W/Thru:- M.VENKATESHWARA RAO<br/>  R/O QUARTER NO.4 B, STREET NO.11, SECTOR 10, BHILAI, TEHSIL AND DISTRICT DURG, (CG).  ,DURG          , CHHATTISGARH          </p><p>  59 ARTI DIWAN S/D/W/Thru:- KAILASH DHAR DIWAN<br/>  R/O HOUSE NO.ROSE 132, STREET 3, TALPURI, BHILAI, TEHSIL AND DISTRICT DURG, (CG)  ,DURG          , CHHATTISGARH          </p><p>  60 S.K.BOHRE S/D/W/Thru:- LATE SHRI G.P.BHORE<br/>  R/O RITZ 04, GANPATIVIHUN POTIA ROAD, BORSI, TEHSIL AND DISTRICT DURG, (CG)  ,DURG          , CHHATTISGARH          </p><p>  61 DHAN SINGH SAHARE S/D/W/Thru:- J.L.SAHARE<br/>  R/O SAHARA NIWAS, PLOT NO.40/2, WARD NO.21, SHIWAJEE NAGAR, TEHSIL AND DISTRICT DURG, (CG)  ,DURG          , CHHATTISGARH          </p><p>  62 RAJNEESH KANT TIWARI S/D/W/Thru:- D.K.TIWARI<br/>  R/O NEAR WATER TANK MINAKSHI NAGAR, TEHSIL AND DISTRICT DURG, (CG)  ,DURG          , CHHATTISGARH          </p><p>  63 NIGAR AHMED S/D/W/Thru:- SHRI NIZAM AHMED<br/>  R/O S 8, PADMANABHPUR, DURG, NEAR COMMUNITY HALL, CROSS ROAD 1, SECTOR B, TEHSIL AND DISTRICT DURG, (CG)  ,DURG          , CHHATTISGARH          </p><p>  64 REKHA SHARMA (SHUKLA) S/D/W/Thru:- SHRI JAGANNATH SHARMA<br/>  GANGA NAGAR, SECTOR 2, MANGLA, BILASPUR (CG)  ,BILASPUR          , CHHATTISGARH          </p><p>  65 ARCHANA GARHWEL S/D/W/Thru:- SHRI ASHOK KUMAR GARHWAL<br/>  R/O JABDA ROAD. SARKANDA, BILASPUR (CG)  ,BILASPUR          , CHHATTISGARH          </p><p>  66 THE PRINCIPAL SECRETARY TO THE GOVERNMENT OF CHHATTISGARH<br/>  THE PRINCIPAL SECRETARY TO THE GOVERNMENT OF CHHATTISGARH DEPARTMENT OF GENERAL ADMINISTRATION, SECRETARIAT, MAHANADI MANTTALAYA, NAYA RAIPUR, DISTRICT RAIPUR (CG).
+  ,RAIPUR          , CHHATTISGARH          </p><p>  67 THE PRINCIPAL SECRETARY TO THE GOVERNMENT OF CHHATTISGARH<br/>  The Principal Secretary to the Government of Chhattisgarh DEPARTMENT OF FINANCE, SECRETARIAT, MAHANADI MANTRALAYA, NAYA RAIPUR, DISTRICT RAIPUR (CG),  ,RAIPUR          , CHHATTISGARH          </p><p>  68 THE UNIVERSITY GRANTS COMMISSION<br/>  Through its Secretary BAHADUR SHAH ZAFAR MARG, NEW DELHI - 110002  ,NEW DELHI         , DELHI          </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  VMZ CHAMBERS</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

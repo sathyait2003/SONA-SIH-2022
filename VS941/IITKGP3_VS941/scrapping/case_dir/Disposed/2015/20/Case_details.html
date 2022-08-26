@@ -1,0 +1,404 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 34840 - 2015</h5>
+<h5 align="center">STATE OF RAJASTHAN  vs. DR. ABHISHEK SAINI .</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="348402015"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">34840/2015</font> Filed on 13-10-2015 06:46 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="red" style="font-size:16px;font-weight:bold;">DISPOSED</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">XV</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 032422 / 2015  Registered on 16-11-2015<br/>S.L.P.(C)...CC No. 020031 / 2015  Registered on 03-11-2015<br/></div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">21-02-2019</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE ARUN MISHRA and HON'BLE MR. JUSTICE NAVIN SINHA</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">DISPOSED (Final Hearing) Disposed off-Ord dt:21-02-2019  (Disposal Date: 21-02-2019, Month: 2, Year: 2019)<br/> JUDGES: HON'BLE MR. JUSTICE ARUN MISHRA, HON'BLE MR. JUSTICE NAVIN SINHA</font>
+</td>
+</tr><tr>
+<td width="140px">Disp.Type</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Disposed Off</font>
+</td>
+</tr><tr>
+<td width="140px">Admitted</td>
+<td style="font-size:12px;font-weight:100;">[<font color="red">ADMITTED ON : 18-04-2017</font>]</td></tr><tr>
+<td width="140px">Category</td>
+<td>4001-Admission/Transfer To Engineering And Medical Colleges : Medical admission matters</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 THE STATE OF RAJASTHAN STATE OF RAJASTHAN AND ANR. THR. ITS CHIEF SECRETARY<br/>  THR. ITS CHIEF SECRETARY GOVERNMENT OF RAJASTHAN, GOVERNMENT SECRETARIAT  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  2 THE STATE OF RAJASTHAN MEDICAL EDUCATION PRINCIPAL SECRETARY<br/>  MEDICAL EDUCATION, GOVERNMENT OF RAJASTHAN, GOVERNMENT SECRETARIAT  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 DR. ABHISHEK SAINI . S/D/W/Thru:- SHRI S. K. SAINI<br/>  PLOT NO. 119-120, SONI KA BAG, OPP. S. K. SONI HOSPITAL, SIKAR ROAD  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  2 DR. PRIYANKA SHARMA S/D/W/Thru:- SHRI RAJESH SHARMA<br/>  H. NO. 84, JANAK MARG, HANUMAN NAGAR EXTENSION  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  3 DR. RITIKA AGRAWAL S/D/W/Thru:- DR. R. P. AGRAWAL<br/>  A-59, SADUL GANJ  , DISTRICT: BIKANER ,BIKANER          , RAJASTHAN          </p><p>  4 DR. UTSAV JOSHI S/D/W/Thru:- MR. M. M. JOSHI<br/>  PLOT NO. 80, NEMI SAGAR COLONY, VAISHALI NAGAR  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  5 DR. ANKUR PUNIA S/D/W/Thru:- DR. D. P. PUNIA<br/>  7, HAWA SARAK, CIVIL LINE, SODALA  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  6 DR. RAJYASHREE SINGH S/D/W/Thru:- DR. G. K. SINGH<br/>  DR. CHHOGA LAL NURSING HOME, NEM KA THANA, DISTT. SIKAR  , DISTRICT: SIKAR ,SIKAR          , RAJASTHAN          </p><p>  7 DR. PUNEET AGARWAL S/D/W/Thru:- DR. U. S. AGARWAL<br/>  397, SHANKAR NIWAS, SHRI GOPAL NAGAR, GOPALPURA BUYPASS  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  8 DR. NISHANT KHURANA S/D/W/Thru:- SHRI DEVENDRA PRATAP<br/>  WARD NO. 10, PADAMPUR, GANGA NAGAR  , DISTRICT: GANGANAGAR ,GANGANAGAR          , RAJASTHAN          </p><p>  9 DR. SULABH BANSAL S/D/W/Thru:- SHRI DINESH BANSAL<br/>  MATA BACHINI DEV CHILDREN HOSPITAL, SECTOR-12, SURTGARH ROAD,  , DISTRICT: HANUMANGARH JUNCTION ,HANUMANGARH *         , RAJASTHAN          </p><p>  10 DR. NEHA GUPTA S/D/W/Thru:- SHRI ANIL GUPTA<br/>  A-52, SHASTRI NAGAR, AMANISHA ROAD  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  11 DR. SAMEER KAPOOR S/D/W/Thru:- SANJAY KAPOOR<br/>  48, MODEL TOWN  , DISTRICT: AMBALA ,AMBALA          , HARYANA          </p><p>  12 DR. BHAWNA SOLANKI S/D/W/Thru:- SHRI. R. S. SOLANKI<br/>  H. NO. 29, MAULANA AZAD SOCIETY, PITAMPURA, LOTUS ENCLAVE  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  13 THE STATE OF RAJASTHAN RAJASTHAN UNIVERSITY OF HEALTH SCIENCE THR. ITS REGISTRAR<br/>  RAJASTHAN UNIVERSITY OF HEALTH SCIENCES, KUMBH MARG, SECTOR-18, PRATAP NAGAR, TONK ROAD  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  14 THE STATE OF RAJASTHAN RAJASTHAN UNIVERSITY OF HEALTH SCIENCES CONVENER, RAJASTHAN PRE PG MEDICAL/DENTRAL ENTRANCE EXAMINATION 2011<br/>  RAJASTHAN UNIVERSITY OF HEALTH SCIENCES, KUMBHA MARG, SECTOR-18, PRATAP NAGAR, TONK ROAD  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  15 THE STATE OF RAJASTHAN MEDICAL COUNCIL OF INDIA THR. ITS SECRETARY<br/>  MEDICAL COUNCIL OF INDIA, SECTOR-8, POCKET-14, DWARKA-I  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  16 THE STATE OF RAJASTHAN UNIVERSITY GRANTS COMMISSION THR. ITS SECRETARY<br/>  UNIVERSITY GRANTS COMMISSION, BAHADUR SHAH JAFAR ROAD  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  17 THE STATE OF RAJASTHAN UNION OF INDIA, MINISTRY OF HEALTH AND FAMILY WELFARE THR. ITS SECRETARY<br/>  UNION OF INDIA, MINISTRY OF HEALTH AND FAMILY WELFARE, NIRMAN BHAWAN  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  18 THE STATE OF RAJASTHAN MINISTRY OF HUMAN RESOURCES AND WELFARE DEPARTMENT SECRETARY<br/>  MINISTRY OF HUMAN RESOURCES AND WELFARE DEPARTMENT, SHASTRI BHAWAN, DR. RAJENDRA PRASAD ROAD, CENTRAL SECRETARIAT  , DISTRICT: NEW DELH ,NEW DELHI         , DELHI          </p><p>  19 THE STATE OF RAJASTHAN MAHATMA GANDHI UNIVERSITY OF MEDICAL SCIENCES AND TECHNOLOGY THR. ITS REGISTRAR<br/>  RIICO INDUSTRIAL AREA, SITAPURA, TONK ROAD  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  20 THE STATE OF RAJASTHAN MAHATMA GANDHI MEDICAL COLLEGE AND HOSPITAL THR. ITS PRINCIPAL<br/>  MAHATMA GANDHI MEDICAL COLLEGE AND HOSPITAL, RIICO INDUSTRIAL AREA, SITAPURA, TONK ROAD  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  21 THE STATE OF RAJASTHAN MAHATMA GANDHI MEDICAL COLLEGE AND HOSPITAL REGISTRAR<br/>  IICO INDUSTRIAL AREA, SITAPURA, TONK ROAD  , DISTRICT: JAIPUR ,JAIPUR          , RAJASTHAN          </p><p>  22 DR. YOGENDRA SINGH GURJAR S/D/W/Thru:- SHRI SARNAM SINGH GURJAR<br/>  C/O SARNA MEDICAL STORE, G. P. ROAD, NEW BUS STAND, MANIA, POST OFFICE DHOLPUR  , DISTRICT: DHAULPUR ,DHAULPUR          , RAJASTHAN          </p><p>  23 DR. RICHA SINGH S/D/W/Thru:- SHRI R. B. SINGH<br/>  B-9, SHASTRI NAGAR  , DISTRICT: BIKANER ,BIKANER          , RAJASTHAN          </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  RUCHI KOHLI</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  RAJESH SINGH</p><p>  BIMLESH KUMAR SINGH</p><p>  GAURAV SHARMA</p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

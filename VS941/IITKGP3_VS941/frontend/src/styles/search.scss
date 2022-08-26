@@ -1,0 +1,34 @@
+.search {
+    margin: 1.5rem;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &-input {
+        width: 60%;
+        margin: 0 auto;
+        
+        input {
+            height: 3rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.filter-bar {
+    margin: 3rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search-case-list {
+    margin: 2rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}

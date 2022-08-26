@@ -1,0 +1,426 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 40017 - 2018</h5>
+<h5 align="center">SUNITHA KUMARI T.K vs. THE SECREATARY</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="400172018"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">40017/2018</font> Filed on 23-10-2018 05:39 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="blue" style="font-size:16px;font-weight:bold;">PENDING</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">XI-A</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 009934 -  / 2019  Registered on 15-04-2019<br/>(Verified On 03-12-2018)</div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">15-04-2021</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE A.S. BOPANNA</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Pending - (Motion Hearing <br/> [SERVICE/COMPLIANCE]-BEFORE REGISTRAR(J)  / [DEFAULT / OTHER MATTERS]) Delay Condoned (IA not Filed), Notice (notice to unserved respondents)-Ord dt:15-04-2021 </font>
+</td>
+</tr><tr>
+<td width="140px">Category</td>
+<td>0611-Service Matters : Reservation in service for SC/ST/OBC</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 SUNITHA KUMARI T.K<br/>  AKKIKUDY HOUSE, THENGODE P.O. ERNAKULAM  , DISTRICT: ERNAKULAM ,ERNAKULAM            , KERALA            </p><p>  2 JAYASOORYAN K.K.<br/>  KABANI HOUSE KADUTHURUTHY P.O. KOTTAYAM  ,KOTTAYAM            , KERALA            </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 THE SECREATARY<br/>  THE SECREATARY KOLLAM KUDUKKAD P.O. KOTTAPPURAM KOLLAM  ,KOLLAM            , KERALA            </p><p>  2 U..G.C. BY THE MEMBER SECRETARY UNIVERSITY GRANTS COMMISSION<br/>  NEW DELHI  ,NEW DELHI         , DELHI          </p><p>  3 THE STATE OF KERALA REPRESENTED BY THE CHIEF SECRETARY<br/>  represented by the chief secretary  SECRETARIAT THIRUVANANTHAPURAM 01  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  4 SECRETARY TO GOVERNMENT  DEPARTMENT OF HIGHER EDUCATION<br/>  secretary to government  SECRETARIAT THIRUVANANTHAPURAM 01  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  5 DIRECTOR OF COLLEGIATE EDUCATION<br/>  director of collegiate education THIRUVANANTHAPURAM  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  6 UNIVERSITY OF KERALA  REGISTRAR<br/>  REGISTRAR  UNIVERSITY OF KERALA THIRUVANANTHAPURAM  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  7 MAHATMA GANDHI UNIVERSITY  REGISTRAR<br/>  REGISTRAR M.G. UNIVERSITY KOTTAYAM 01  ,KOTTAYAM            , KERALA            </p><p>  8 KANNUR UNIVERSITY  REGISTRAR<br/>  REGISTRAR KANNUR UNIVERSITY KANNUR 01  ,KANNUR            , KERALA            </p><p>  9 SREE SANKARACHARYA UNIVERSITY REGISTRAR<br/>  REGISTRAR SREE SANAKRACHARYA UNIVERSITY KALADY  , , KERALA            </p><p>  10 THE SECRETARY N.S.S. COLLEGE CENTRAL COMMITTEE MANAGER<br/>  THE SECRETARY N.S.S. HEAD OFFICE CHANGANACHERY 2  , , KERALA            </p><p>  11 THE PRESIDENT THIRUVITHAMCORE DEVASWOM BOARD<br/>  the president DEVASWOM JUNCTION NANDHANCODE THIRUVANANTHAPURAM  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  12 THE MANAGER CHRISTIAN COLLEGE<br/>  the manager KATTUKKADA KOTTAKKADUR P.O. THIRUVANANTHAPURAM  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  13 THE SECRETARY IQBAL COLLEGE TRUST<br/>  the secretary MOOKODU KARAKULAM P.O. EANIKKARA THIRUVANANTHAPURAM  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  14 THE MANAGER MANNANIA ISLAMIC CHARITABLE TRUST<br/>  the manager MANNANIA COLLEGE OF ARTS AND SCIENCE PANCODE  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  15 THE MANAGER SYRO MALANKARA CATHOLIC CHURCH<br/>  the manager ST. JOHNS COLLEGE ACHAL PUNALOOR KOLLAM  ,KOLLAM            , KERALA            </p><p>  16 THE MANAGER ST. STEPHANS COLLEGE<br/>  the manager MULOOR COLLEGE P.O. PATHANAPURAM  ,KOLLAM            , KERALA            </p><p>  17 THE MANAGER T.K.M. ARTS AND SCIENCE COLLEGE<br/>  the manager KOLLAM  ,KOLLAM            , KERALA            </p><p>  18 THE MANAGER M.O.C. COLLEGE<br/>  the manager DEVALOKAM KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  19 THE CHAIRMAN AND MANAGER M.S.M. COLLEGE<br/>  the chairman and manager KAYAMKULAM  ,ALAPPUZHA            , KERALA            </p><p>  20 THE MANAGER C.S.I. MANAGEMENT COLLEGE<br/>  the manager C.S.I. BISHOP HOUSE KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  21 THE MANAGER ST. STEPHANS COLLEGE<br/>  the manager UZHAVOOR KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  22 THE MANAGER ALPHONSA COLLEGE<br/>  the manager ARUNAPURAM P.O. PALA KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  23 THE PRESIDENT AND MANAGER K.G. COLLEGE<br/>  the president and manager PAMPADY KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  24 THE MANAGER B.K. COLLEGE<br/>  the manager AMALAGIRI P.O. KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  25 THE MANAGER MALANKARA ORTHODOX COLLEGES<br/>  the manager MANAGEMENT BASELIOUS COLLEGE K.K. ROAD KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  26 THE MANAGER B.C.M. COLLEGE<br/>  the manager KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  27 THE MANAGER MARTHOMA MANAGEMENT COLLEGE<br/>  the manager THIRUVALLA  , , KERALA            </p><p>  28 THE MANAGER ST. THOMAS COLLEGE<br/>  the manager KOZHENCHERRY PATHANAMTHITTA  ,PATHANAMTHITTA            , KERALA            </p><p>  29 THE MANAGER S.A.S. SNDP YOGAM COLLEGE<br/>  the manager KONNI PATHANAMTHITTA  ,PATHANAMTHITTA            , KERALA            </p><p>  30 THE MANAGER CHRISTIAN COLLEGE<br/>  the manager ANGADICAL CHENGANNUR  , , KERALA            </p><p>  31 THE MANAGER MARIAN COLLEGE<br/>  the manager KUTTIKKANAM IDUKKI  ,IDUKKI            , KERALA            </p><p>  32 THE MANAGER NEW MANS COLLEGE<br/>  the manager THOUPUZHA IDUKKI  ,IDUKKI            , KERALA            </p><p>  33 THE MANAGER PAVANATMA COLLEGE<br/>  THE MANAGER MURIKKASSERRY IDUKKI  ,KOTTAYAM            , KERALA            </p><p>  34 THE MANAGER ST. XAVIERS COLLEGE<br/>  the manager KOTHAVARA P.O. VAIKOM KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  35 THE SECRETARY AND MANAGER ST PETERS COLLEGE TRUST<br/>  the secretary and manager ST. PETERS COLLEGE KOLENCHERRY ERNAKULAM  ,ERNAKULAM            , KERALA            </p><p>  36 THE MANAGER MORNING STAR HOME SCIENCE COLLEGE<br/>  the manager ANGAMALY SOUTH ERNAKULAM  ,ERNAKULAM            , KERALA            </p><p>  37 THE MANAGER S.D. COLLEGE<br/>  the manager NIRMAL A.C. STREET ALAPUZHA  ,ALAPPUZHA            , KERALA            </p><p>  38 THE MANAGING DIRECTOR SREE SANKARA COLLEGE<br/>  the managing director KALADY MATTOOR ERNAKULAM  ,ERNAKULAM            , KERALA            </p><p>  39 THE MANAGER  NIRMALA COLLEGE<br/>  the manager  MOOVATTUPUUZHA  , , KERALA            </p><p>  40 THE CHARIMAN AL AMEEN EDUCATIONAL TRUST<br/>  the chariman EDATHALA ALUVA  , , KERALA            </p><p>  41 THE PRESIDENT AND MANAGER BHARAT MATHA COLLEGE<br/>  the president and manager THRIKKAKARA ANZILIARY BISHOP ARCHDIOCESE OF ERNAKULAM AND ANGAMALY  ,ERNAKULAM            , KERALA            </p><p>  42 THE MANAGER UNION CHRISTIAN COLLEGE<br/>  the manager ALUVA  , , KERALA            </p><p>  43 THE MANAGER MARTHOMA COLLEGE OF WOMEN<br/>  the manager PERUMBAVOOR ERNAKULAM  ,ERNAKULAM            , KERALA            </p><p>  44 THE MANAGER C.D.M.E.A. SIR SYED COLLEGE<br/>  the manager THALIPARAMBA KANNUR  ,KANNUR            , KERALA            </p><p>  45 C.M.I. MANAGER ST. JOSHEPH COLLEGE<br/>  c.m.i. manager DEVAGIRI CALILCUT  , , KERALA            </p><p>  46 THE MANAGER ST. MARYS COLLEGE<br/>  the manager MALANKARA ORTHODOX SYRIAN CHURCH OF THE EAST SULTHAN BATHERY WAYANAD  ,WAYANAD            , KERALA            </p><p>  47 THE MANAGER ZAMORINS GURUVAYOORAPPAN COLLEGE<br/>  THE MANAGER KOZHIKODE  ,KOZHIKODE            , KERALA            </p><p>  48 SUPERIOR GENERAL MANAGER ALL SAINTS COLLEGE<br/>  SUPERIOR GENERAL MANAGER THIRUVANANTHAPURAM  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  49 RECTOR AND MANAGER  LOYOLA COLLEGE OF SOCIAL SCIENCES<br/>  RECTOR AND MANAGER  SREEKARIYAM P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  50 TEH MANAGER  MANAGEMENT BOARD ST. XAVIERS COLLEGE<br/>  TEH MANAGER  MANAGEMENT BOARD THUMAB  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  51 THE MANAGER LATIN CATHOLIC DIOCESE FATHIMA MATH NATIONAL COLLEGE<br/>  THE MANAGER KOLLAM  ,KOLLAM            , KERALA            </p><p>  52 THE MANAGER BISHOP MOORE COLLEGE<br/>  THE MANAGER MAVELIKKARA  , , KERALA            </p><p>  53 THE MANAGER ASSUMPTION COLLEGE<br/>  THE MANAGER CHANGANASSERRY  , , KERALA            </p><p>  54 THE MANAGER DEVAMATHA COLLEGE<br/>  THE MANAGER ST MARYS SYRIAN CATHOLIC FORANA CHURCH KURAVILANGAD KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  55 THE MANAGER ST. DOMINIC COLLEGE<br/>  THE MANAGER ST. DOMINIC CATHEDRAL KANJIRAPPALLY KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  56 THE MANAGER KURIAKOSE ELIAS COLLEGE<br/>  THE MANAGER MANNANAM P.O. KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  57 THE MANAGER ST. MARYS COLLEGE<br/>  THE MANAGER MANNARVADU P.O. KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  58 THE MANAGER MANAGING BOARD<br/>  THE MANAGER S.B. COLLEGE CHANGANACHEERY  , , KERALA            </p><p>  59 THE MANAGER ST. GEORGES COLLEGE<br/>  THE MANAGER ARUVITHURA ERATTUPETTA KOTTYAM  ,KOTTAYAM            , KERALA            </p><p>  60 THE MANAGER HENRY BANKER COLLEGE<br/>  THE MANAGER MELUKAVUMATTOM P.O. KOTTAYAM  ,KOTTAYAM            , KERALA            </p><p>  61 THE MANAGER CATHOLICATE COLLEGE<br/>  THE MANAGER KAKKAMKUNNU PATHANAMTHITTA  ,PATHANAMTHITTA            , KERALA            </p><p>  62 THE MANAGER BISHOP ABRAHAM MEMORIAL COLLEGE<br/>  THE MANAGER THURITHICADU  , , KERALA            </p><p>  63 THE MANAGER<br/>  THE MANAGER ST. THOMAS VALLIYAPALLY EDAVAKA PAZHAVANGADI RANNI PATHANAMTHITTA  ,PATHANAMTHITTA            , KERALA            </p><p>  64 THE MANAGER THE MUSLIM EDUCATIONAL SOCIETYS<br/>  THE MANAGER HEAD QUARTERS BUND ROAD CALICUT  , , KERALA            </p><p>  65 THE MANAGER ST. JOSEPHS COLLEGE<br/>  THE MANAGER (CMI CONGREGATION ST. JOSEPHS PROVINCE) MOOLAMATTAM ARAKULAM P.O. MOOLAMATTOM IDUKKI  ,IDUKKI            , KERALA            </p><p>  66 THE MANAGER SREE NARAYANA ARTS AND SCIENCE COLLEGE<br/>  THE MANAGER (SNDP UNION KOTTAYAM), KUMARAKOM, KOTTAYAM-685 563  ,KOTTAYAM            , KERALA            </p><p>  67 THE MANAGER BASELIOS POULOSE II CATHOLICOS COLLEGE<br/>  THE MANAGER BASELIOS MOUNT PIRAVOM, ERNAKULAM - 686 664.  ,ERNAKULAM            , KERALA            </p><p>  68 THE MANAGER SREE SANKARA TRUST<br/>  THE MANAGER S.S.V. VOLLEGE, PERUMBAVOOR,
+VALANCHIRANGARA, ERNAKULAM - 683 556.  ,ERNAKULAM            , KERALA            </p><p>  69 THE MANAGER MAR ATHUNASIS COLLEGE ASSOCIATION<br/>  THE MANAGER KOTHAMANGALAM COLLEGE P.O., ERNAKULAM - 686 666.
+  ,ERNAKULAM            , KERALA            </p><p>  70 THE MANAGER ST. PETERS COLLEGE TRUST<br/>  THE MANAGER KOLENCHERRY,
+ERNAKULAM - 682 311.  ,ERNAKULAM            , KERALA            </p><p>  71 THE MANAGER ST. PAULS COLLEGE,<br/>  THE MANAGER THE ARCH DIOCESE OF VERAPOLY, H.M.T. COLONY, KALAMASSERRY, ERNAKULAM - 683 503.
+  ,ERNAKULAM            , KERALA            </p><p>  72 THE MANAGER ST. ALBERTS COLLEGE<br/>  THE MANAGER BANERJI ROAD,
+KOCHI - 682 018.  , , KERALA            </p><p>  73 THE MANAGER CARMELITE SISTERS OF SAINT TERESA, ST. THERASAS COLLEGE<br/>  THE MANAGER ERNAKULAM - 682 011.  ,ERNAKULAM            , KERALA            </p><p>  74 THE MANAGER AQUINAS COLLEGE OF EDUCATION<br/>  THE MANAGER EDAKOCHIN, KOCHI - 682006.  , , KERALA            </p><p>  75 THE MANAGER ST. MICHAELS COLLEGE,<br/>  THE MANAGER MAYITHARA, CHERTHALA,
+ALAPPUZHA - 688 539.  ,ALAPPUZHA            , KERALA            </p><p>  76 THE MANAGER MERCY COLLEGE<br/>  THE MANAGER JAI CHRISTO EDUCATIONAL AGENCY, JAI CHRISTO PROVINCIAL HOUSE, PALAKKAD - 678 004.  ,PALAKKAD            , KERALA            </p><p>  77 THE MANAGER COCHIN DEVASWOM BOARD COLLEGE<br/>  THE MANAGER ROUND, THRISSUR - 680001.  ,THRISSUR            , KERALA            </p><p>  78 THE MANAGER CMC EDUCATIONAL AGENCY, CARMEL COLLEGE<br/>  THE MANAGER MALA P.O., THRISSUR - 680 732.
+  ,THRISSUR            , KERALA            </p><p>  79 THE MANAGER CORPORATE MANAGEMENT CMC EDUCATIONAL SOCIETY<br/>  THE MANAGER ST. MARYS COLLEGE, ROUND, 
+THRISSUR - 680 001.  ,THRISSUR            , KERALA            </p><p>  80 THE MANAGER ST. ALOYSIUS COLLEGE<br/>  THE MANAGER ELTHURUTHU, THRISSUR-680 611.  ,THRISSUR            , KERALA            </p><p>  81 THE MANAGER ST. THOMAS COLLEGE<br/>  THE MANAGER THRISSUR - 1.  ,THRISSUR            , KERALA            </p><p>  82 THE MANAGER FRANCISCAN CLARI ST. CONCREGATION EDUCATIONAL<br/>  THE MANAGER , AGENCY, LITTLE FLOWER COLLEGE, GURUVAYOOR-680 101.  , , KERALA            </p><p>  83 THE MANAGER ST. JOSEPHS COLLEGE<br/>  THE MANAGER IRINJALAKUDA - 680121.  , , KERALA            </p><p>  84 THE MANAGER PRAJYOTHI NIKETAN COLLEGE<br/>  THE MANAGER CHRISTIAN CHARITABLE SOCIETY, PUDUKKAD,
+THRISSUR - 680 301.  ,THRISSUR            , KERALA            </p><p>  85 THE MANAGER GURUVAYOOR DEVASWOM MANAGING COMMITTEE<br/>  THE MANAGER SREE KRISHNA COLLEGE, GURUVAYOOR DEVASWOM BOARD, GURUVAYOOR - 680101.  , , KERALA            </p><p>  86 THE MANAGER VIMALA COLLEGE<br/>  THE MANAGER CMC EDUCATIONAL SOCIETY, THRISSUR - 680 001.
+  ,THRISSUR            , KERALA            </p><p>  87 THE MANAGER AMAL COLLEGE MANAGING COMMITTEE<br/>  THE MANAGER SANTHIGRAMAM, MYLAND P.O., ERANHIMAGAD, NILAMBUR,
+MALAPPURAM - 679 343.  ,MALAPPURAM            , KERALA            </p><p>  88 THE MANAGER ANSAR ARABIC COLLEGE COMMITTEE<br/>  THE MANAGER KUNIYIL KIZHUPARAMBA, MALAPPURAM-676 551.
+  ,MALAPPURAM            , KERALA            </p><p>  89 THE MANAGER  ANVARUL ISLAM ARABIC COLLEGE COMMITTEE<br/>  THE MANAGER  KUNIYIL, KIZHUPARAMBA, MALAPPURAM - 673 639  ,MALAPPURAM            , KERALA            </p><p>  90 THE MANAGER ANVARUL ISLAM WOMEN ARABIC COLLEGE<br/>  THE MANAGER KORALA JUMIYYATHUL ULAMA, MOGAM, MALAPPURAM-673642.
+  ,MALAPPURAM            , KERALA            </p><p>  91 THE MANAGER EMEA COLLEGE OF ARTS AND SCIENCE,<br/>  THE MANAGER UMMINIPARAMBA P.O., KONDOTTI, MALAPPURAM - 673 638.  ,MALAPPURAM            , KERALA            </p><p>  92 THE MANAGER FAROOK COLLEGE<br/>  THE MANAGER FAROOK COLLEGE P.O., KOZHIKODE - 673 632.  ,KOZHIKODE            , KERALA            </p><p>  93 THE MANAGER MAHATMA GANDHI COLLEGE<br/>  THE MANAGER IRITTY P.O., KEEZHUR, KANNUR - 670703.  ,KANNUR            , KERALA            </p><p>  94 THE MANAGER MALABAR CHRISTIAN COLLEGE<br/>  THE MANAGER CALICUT-673001.  , , KERALA            </p><p>  95 THE MANAGER MARY MATHA ARTS AND SCIENCE COLLEGE,<br/>  THE MANAGER DIOCESE OF MANANTHAVADY, VEMOM, WAYANAD-670645.  ,WAYANAD            , KERALA            </p><p>  96 THE MANAGER MARTHOMA COLLEGE<br/>  THE MANAGER MARTHOMA COLLEGE CHUNGATHARA EDUCATIONAL SOCIETY, CHUNGATHARA, MALAPPURAM - 679 334.  ,MALAPPURAM            , KERALA            </p><p>  97 THE MANAGER MEA SULLAMUSSULAM SCIENCE COLLEGE<br/>  THE MANAGER MUSLIM EDUCATIONAL ASSOCIATION, AREACODE, UGRAPURAM, MALAPPURAM - 673 639.
+  ,MALAPPURAM            , KERALA            </p><p>  98 THE MANAGER MUHAMMED ABDU REHIMAN MEMORIAL ORPHANGE COLLEGE<br/>  THE MANAGER MUKKAM, MUSLIM ORPHANAGE COMMITTEE MUKKAM, MANNASSERRY, KOZHIKODE - 673 602.
+  ,KOZHIKODE            , KERALA            </p><p>  99 THE MANAGER S.E.S. COLLEGE<br/>  THE MANAGER MUSLIM EDUCATIONAL FOUNDATION,
+PANOOR, VIDYAGIRI, THUVAKKUNNU, KALLIKKANDY, KANNUR - 670 693.  ,KANNUR            , KERALA            </p><p>  100 THE MANAGER NIRMALAGIRI COLLEGE<br/>  THE MANAGER NIRMALAGIRI P.O., KANNUR - 670 701.  ,KANNUR            , KERALA            </p><p>  101 THE MANAGER  P.K.M. COLLEGE OF EDUCATION<br/>  THE MANAGER MUDAMPAM, KAITHUPURAM, KANNUR - 670 631.  ,KANNUR            , KERALA            </p><p>  102 THE MANAGER PAZHASSI RAJA COLLEGE<br/>  THE MANAGER PULPULLY,
+WAYANAD-673 579.  ,WAYANAD            , KERALA            </p><p>  103 THE MANAGER, PROVIDANCE WOMENS COLLEGE<br/>  THE MANAGER, MALAPARAMBA, CALICUT - 673 009.  , , KERALA            </p><p>  104 THE MANAGER P.S.M.O. COLLEGE,<br/>  THE MANAGER POCKER SAHIB MEMORANDUM ORPHANAGE, COLLEGE SOCIETY, TIRURANGADI,
+MALAPPURAM - 676 306.  ,MALAPPURAM            , KERALA            </p><p>  105 THE MANAGER  P. SANKAR MEMORIAL SNDP YOGAM ARTS AND SCIENCE COLLEGE<br/>  THE MANAGER CORPORATE MANAGEMENT OF SNDP YOGAM, COLLEGE, KOYILANDY, KOZHIKODE - 673 305.  ,KOZHIKODE            , KERALA            </p><p>  106 THE MANAGER, ROUSATHAL ULOOM ARABIC COLLEGE<br/>  THE MANAGER, ROUZATHUL ULOOM ASSOCIATION, FAROOK COLLEGE, KOZHIKODE - 673 632  ,KOZHIKODE            , KERALA            </p><p>  107 THE MANAGER S.E.S. COLLEGE,<br/>  THE MANAGER SREEKANDAPURAM EDUCATIONAL SOCIETY,
+SREEKANDAPURAM, KANNUR - 670 631.  ,KANNUR            , KERALA            </p><p>  108 THE MANAGER ST. PIOUS COLLEGE<br/>  THE MANAGER (THE CORPORATE EDUCATIONAL AGENCY OF COLLEGES DIOCESE OF KOTTAYAM), RAJAPURAM, KASARAGOD - 671 532.  ,KASARAGOD            , KERALA            </p><p>  109 THE MANAGER SULLAMUSSALAM ARABIC COLLEGE<br/>  THE MANAGER JUMIYATHUL MUJAHIDEEN, ARECODE,
+MALAPPURAM - 673 639.  ,MALAPPURAM            , KERALA            </p><p>  110 THE MANAGER, SUNNIVVA ARABIC COLLEGE<br/>  THE MANAGER, SUNNI EDUCATIONAL TRUST,
+CHENNAMANGALLUR, MUKKAM, CHENNAMANGALLUR,
+KOZHIKODE - 673 602  ,KOZHIKODE            , KERALA            </p><p>  111 THE MANAGER UNITY WOMENS COLLEGE<br/>  THE MANAGER MUSLIM EDUCATIONAL AND CULTURAL ASSOCIATION, MANJERI, NARUKARA, MALAPPURAM - 696 122.  ,MALAPPURAM            , KERALA            </p><p>  112 UNIVERSITY OF CALICUT<br/>  REGISTRAR UNIVERSITY OF CALICUT, THENHIPALAM,
+KOZHIKODE DISTRICT-673 633.  ,KOZHIKODE            , KERALA            </p><p>  113 V. KAMALAN S/D/W/Thru:- VALLON,<br/>  GENERAL SECRETARY, FEDERATION OF SC/ST, H.O. RNAKULAM, RESIDING AT MALIKA, MUPPATHADAM PO., ALUVA- 683 110.  , , KERALA            </p><p>  114 REJIKUMAR<br/>  KARIMPOLIL HOUSE, PARIYARAM P.O, KADAMUY, KOTTAYAM - 686 021.  ,KOTTAYAM            , KERALA            </p><p>  115 ANILKUMAR P.A PLAMTHOTTAM<br/>  AMARA P.O, CHANGANACHERRY, KOTTAYAM-686 546.  ,KOTTAYAM            , KERALA            </p><p>  116 MINI C.B.<br/>  CHEERATH HOUSE, WADAKKANCHERRY
+P.O, THRISSUR DISTRICT, PIN - 680 582.  ,THRISSUR            , KERALA            </p><p>  117 THUSHARA K.T THADATHIL<br/>  HOUSE,
+KUREEKAD P.O, THIRUVANKULAM,
+ERNAKULAM 682 305.  ,ERNAKULAM            , KERALA            </p><p>  118 BINOY BHASKAR KANDRACHYIL<br/>  VAZHOOR P.O, KODUNGOOR, KOTTAYAM 686 504  ,KOTTAYAM            , KERALA            </p><p>  119 SANTHOSH O.K<br/>  OLICKAL, VAZHAVARA P.O, KATTAPPANA, IDUKKI DISTRICT.  ,IDUKKI            , KERALA            </p><p>  120 REKHA RAJ<br/>  D PALACE
+KUDAMALOOR P.O,
+KOTTAYAM DISTRICT.  ,KOTTAYAM            , KERALA            </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  <span style="color:red">P. K. JAYAKRISHNAN (Dead / Retired / Elevated) </span></p><p>  JOHN MATHEW[P-1]</p><p>  JOHN MATHEW[P-2]</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  NISHE RAJEN SHONKER[R-3]</p><p>  NISHE RAJEN SHONKER[R-1]</p><p>  HIMINDER LAL[R-105]</p><p>  JISHNU M. L.[R-85]</p><p>  RAMESH BABU M. R.[R-61]</p><p>  RAMESH BABU M. R.[R-46]</p><p>  HIMINDER LAL[R-29]</p><p>  RAMESH BABU M. R.[R-25]</p><p>  RAMESH BABU M. R.[R-23]</p><p>  RAMESH BABU M. R.[R-18]</p><p>  ANKUR S. KULKARNI[R-10]</p><p>  LAKSHMEESH S. KAMATH[R-6]</p><p>  NISHE RAJEN SHONKER[R-5]</p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

@@ -1,0 +1,1310 @@
+{
+    "0101": {
+        "Category": "Labour Matters",
+        "Sub Category": "Dismissal"
+    },
+    "0102": {
+        "Category": "Labour Matters",
+        "Sub Category": "Retrenchment"
+    },
+    "0103": {
+        "Category": "Labour Matters",
+        "Sub Category": "Contract Labour"
+    },
+    "0104": {
+        "Category": "Labour Matters",
+        "Sub Category": "Matters relating to wages, bonus, ad-hoc, casual daily wages & their regularisation"
+    },
+    "0105": {
+        "Category": "Labour Matters",
+        "Sub Category": "Matters relating to Workmen Compensation Act"
+    },
+    "0106": {
+        "Category": "Labour Matters",
+        "Sub Category": "ESI"
+    },
+    "0107": {
+        "Category": "Labour Matters",
+        "Sub Category": "Factory Act"
+    },
+    "0108": {
+        "Category": "Labour Matters",
+        "Sub Category": "Conditions of Service & Industrial Employment (Standing Order Act, 1946)"
+    },
+    "0109": {
+        "Category": "Labour Matters",
+        "Sub Category": "Matters under various States Act"
+    },
+    "0110": {
+        "Category": "Labour Matters",
+        "Sub Category": "Others"
+    },
+    "0111": {
+        "Category": "Labour Matters",
+        "Sub Category": "Matters relating to Provident Fund"
+    },
+    "0112": {
+        "Category": "Labour Matters",
+        "Sub Category": "Payment of Gratuity Act, 1962"
+    },
+    "0113": {
+        "Category": "Labour Matters",
+        "Sub Category": "Trade Unions Act, 1926"
+    },
+    "0114": {
+        "Category": "Labour Matters",
+        "Sub Category": "Other matters under Industrial Disputes Act, 1947"
+    },
+    "0201": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Eviction matters of personal necessity"
+    },
+    "0202": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Eviction matters for re-building, and material alteration"
+    },
+    "0203": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Eviction matters of sub-letting"
+    },
+    "0204": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Eviction matters of disclaimer of title"
+    },
+    "0205": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Arrears of rent"
+    },
+    "0206": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Others"
+    },
+    "0207": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Eviction on the ground of misuse"
+    },
+    "0208": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Enhancement of rent"
+    },
+    "0209": {
+        "Category": "Rent Act Matters",
+        "Sub Category": "Eviction on the ground of non-payment of rent"
+    },
+    "0301": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Income Tax Reference under Section 257"
+    },
+    "0302": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Appeals under Section 261 of Income Tax Act upon a certificate granted by the High Court"
+    },
+    "0303": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Other matters under Income Tax act, 1961"
+    },
+    "0304": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Cases relating to Excess Profit Tax Act 1940"
+    },
+    "0305": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Business profit tax Act, 1947"
+    },
+    "0306": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Agricultural Income Tax"
+    },
+    "0307": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Reference under Section 27(3)(a) of the Wealth Tax Act, 1957"
+    },
+    "0308": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Appeals under Section 29(1) of the Wealth Tax Act, 1957 upon a certificate granted by the High Court"
+    },
+    "0309": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Gift Tax Act 1958"
+    },
+    "0310": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Property Tax"
+    },
+    "0311": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Valuation"
+    },
+    "0312": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Capital Gains"
+    },
+    "0313": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "SLPs relating to Wealth Tax"
+    },
+    "0314": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Income from salaries"
+    },
+    "0315": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Income from House Property"
+    },
+    "0316": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Income from Business/Profession"
+    },
+    "0317": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Income from other sources"
+    },
+    "0318": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Deductions/exemptions"
+    },
+    "0319": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Penalties/Prosecution/Settlement Commission"
+    },
+    "0320": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Re-assessment/Revisional Power/Rectification"
+    },
+    "0321": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "CBDT circular"
+    },
+    "0322": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Registration"
+    },
+    "0323": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Others"
+    },
+    "0324": {
+        "Category": "Direct Taxes Matter",
+        "Sub Category": "Matters relating to recovery of Direct Tax due"
+    },
+    "0401": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Interpretation of the Customs Act, Rules & Regulations"
+    },
+    "0402": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Interpretation of exemption notification under Customs Act"
+    },
+    "0403": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Interpretation of other notification under Customs Act"
+    },
+    "0404": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Valuation of Goods under the Customs Act"
+    },
+    "0405": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Sales Tax Act (Central & various States)"
+    },
+    "0406": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Cess Acts (Rubber, Coffee, Tea, Sugar, etc.)"
+    },
+    "0407": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Entry Taxes"
+    },
+    "0408": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Motor Vehicles Taxation"
+    },
+    "0409": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Purchase Tax"
+    },
+    "0410": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Licence Fee"
+    },
+    "0411": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Classification under the Indian Tariff Act, 1934 & Customs Tariff Act, 1975"
+    },
+    "0412": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Reference under Section 82C of the Gold Control Act"
+    },
+    "0413": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Hotel Receipts Tax Act"
+    },
+    "0414": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Entertainment Tax"
+    },
+    "0415": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Terminal Tax"
+    },
+    "0416": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Octroi"
+    },
+    "0417": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Valuation"
+    },
+    "0418": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Toll Tax"
+    },
+    "0419": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Interpretation of the Central Excise Act & the rules"
+    },
+    "0420": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Interpretation of exemption notifications under Central Excise Act"
+    },
+    "0421": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Interpretation of other notifications under Central Excise Act"
+    },
+    "0422": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Valuation of goods under the Central Excise Act"
+    },
+    "0423": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Tariff classification under the Central Excise Act, 1944 and Central Excise Tariff Act, 1985"
+    },
+    "0424": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Import/Export Control Act, 1947"
+    },
+    "0425": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Import Control Order"
+    },
+    "0426": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Open General License"
+    },
+    "0427": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Import/Export Policy"
+    },
+    "0428": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Others"
+    },
+    "0429": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Professional Tax"
+    },
+    "0430": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Water & Sewage Tax"
+    },
+    "0431": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Service Tax"
+    },
+    "0432": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Appeals u/s 130 E of Customs Act, 1962"
+    },
+    "0433": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Appeals u/s 35 L of Central Excise and Salt Act, 1944."
+    },
+    "0434": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Anti Dumping Duty"
+    },
+    "0435": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Value Added Tax"
+    },
+    "0436": {
+        "Category": "Indirect Taxes Matters",
+        "Sub Category": "Matters relating to recovery of Indirect Tax due"
+    },
+    "0501": {
+        "Category": "Land Acquisition & Requisition Matters",
+        "Sub Category": "Matters challenging the acquisition proceedings"
+    },
+    "0502": {
+        "Category": "Land Acquisition & Requisition Matters",
+        "Sub Category": "Matters challenging compensations"
+    },
+    "0503": {
+        "Category": "Land Acquisition & Requisition Matters",
+        "Sub Category": "Requisition & De-requisition of property"
+    },
+    "0504": {
+        "Category": "Land Acquisition & Requisition Matters",
+        "Sub Category": "Others"
+    },
+    "0505": {
+        "Category": "Land Acquisition & Requisition Matters",
+        "Sub Category": "Acquisition for Defence purpose"
+    },
+    "0601": {
+        "Category": "Service Matters",
+        "Sub Category": "Retiral benefits"
+    },
+    "0602": {
+        "Category": "Service Matters",
+        "Sub Category": "Regularisation of ad-hoc employees etc."
+    },
+    "0603": {
+        "Category": "Service Matters",
+        "Sub Category": "Removal/Dismissal/Termination from service or other major penalties"
+    },
+    "0604": {
+        "Category": "Service Matters",
+        "Sub Category": "Suspension"
+    },
+    "0605": {
+        "Category": "Service Matters",
+        "Sub Category": "Compulsory retirement"
+    },
+    "0606": {
+        "Category": "Service Matters",
+        "Sub Category": "Disciplinary proceedings"
+    },
+    "0607": {
+        "Category": "Service Matters",
+        "Sub Category": "Condition of service"
+    },
+    "0608": {
+        "Category": "Service Matters",
+        "Sub Category": "Promotion"
+    },
+    "0609": {
+        "Category": "Service Matters",
+        "Sub Category": "Seniority"
+    },
+    "0610": {
+        "Category": "Service Matters",
+        "Sub Category": "Pay scales"
+    },
+    "0611": {
+        "Category": "Service Matters",
+        "Sub Category": "Reservation in service for SC/ST/OBC"
+    },
+    "0612": {
+        "Category": "Service Matters",
+        "Sub Category": "Equal pay for equal work"
+    },
+    "0613": {
+        "Category": "Service Matters",
+        "Sub Category": "Others"
+    },
+    "0614": {
+        "Category": "Service Matters",
+        "Sub Category": "Medical facilities"
+    },
+    "0615": {
+        "Category": "Service Matters",
+        "Sub Category": "Recruitment/Transfer/Compassionate Appointment"
+    },
+    "0616": {
+        "Category": "Service Matters",
+        "Sub Category": "Minor penalties"
+    },
+    "0617": {
+        "Category": "Service Matters",
+        "Sub Category": "Back wages"
+    },
+    "0618": {
+        "Category": "Service Matters",
+        "Sub Category": "Voluntary Retirement"
+    },
+    "0619": {
+        "Category": "Service Matters",
+        "Sub Category": "Allotment of Accommodation"
+    },
+    "0620": {
+        "Category": "Service Matters",
+        "Sub Category": "Probation & Confirmation"
+    },
+    "0621": {
+        "Category": "Service Matters",
+        "Sub Category": "Temporary Appointment"
+    },
+    "0622": {
+        "Category": "Service Matters",
+        "Sub Category": "Use of forged/false document(s) for securing employment"
+    },
+    "0701": {
+        "Category": "Academic Matters",
+        "Sub Category": "Matters relating to examination"
+    },
+    "0702": {
+        "Category": "Academic Matters",
+        "Sub Category": "Introduction/Abolition of languages"
+    },
+    "0703": {
+        "Category": "Academic Matters",
+        "Sub Category": "Matters relating to syllabi"
+    },
+    "0704": {
+        "Category": "Academic Matters",
+        "Sub Category": "Matters relating to with-holding/cancellation of results, evaluation of marks, expulsion of students"
+    },
+    "0705": {
+        "Category": "Academic Matters",
+        "Sub Category": "Others"
+    },
+    "0706": {
+        "Category": "Academic Matters",
+        "Sub Category": "Tuition Fee"
+    },
+    "0707": {
+        "Category": "Academic Matters",
+        "Sub Category": "Matters relating to management of Educational Institutions"
+    },
+    "0801": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Child labour matters including neglected children"
+    },
+    "0802": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Air pollution matters, i.e., Industrial, Vehicular, Power stations etc."
+    },
+    "0803": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Water Pollution :Industrial, domestic, sewage, rivers and sea"
+    },
+    "0804": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Noise Pollution :Industry, vehicular"
+    },
+    "0805": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Ecological Imbalance: Protection and conservation of forests throughout the country, protection of wild life, ban on felling of trees and falling of underground water level"
+    },
+    "0806": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Bonded labour matters"
+    },
+    "0807": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Matters relating to custody harassment, Jails, complaint of harassment, custodial death, speedy trial, premature release, inaction by police etc."
+    },
+    "0808": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Matters relating to harassment of SC/ST/OBC and women"
+    },
+    "0809": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Matters relating to unauthorised constructions including encroachments, sealing, demolitions, urban planning"
+    },
+    "0810": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Matters relating to Election Commissions"
+    },
+    "0811": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Scam matters"
+    },
+    "0812": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Others"
+    },
+    "0813": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Essential Amenities or Services"
+    },
+    "0814": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Housing"
+    },
+    "0815": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Natural & Man-made Disasters including Riots"
+    },
+    "0816": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "SLPs filed against judgments / orders passed by the High Courts in Writ Petitions filed as PIL"
+    },
+    "0817": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Writ Petitions (Criminal) and Writ Petitions filed as PIL pertaining to criminal investigations/prosecution"
+    },
+    "0818": {
+        "Category": "Letter Petition & Pil Matters",
+        "Sub Category": "Social Justice Matters"
+    },
+    "0901": {
+        "Category": "Election Matters",
+        "Sub Category": "Matters challenging election of President & Vice-President of India"
+    },
+    "0902": {
+        "Category": "Election Matters",
+        "Sub Category": "Elections relating to Gram Panchayats and Zila Parishad"
+    },
+    "0903": {
+        "Category": "Election Matters",
+        "Sub Category": "Matters under Representation of Peoples Act Involving corrupt practices"
+    },
+    "0904": {
+        "Category": "Election Matters",
+        "Sub Category": "Matters relating to re-counting of votes"
+    },
+    "0905": {
+        "Category": "Election Matters",
+        "Sub Category": "Matters under the Co-operative Societies Act"
+    },
+    "0906": {
+        "Category": "Election Matters",
+        "Sub Category": "University election matters"
+    },
+    "0907": {
+        "Category": "Election Matters",
+        "Sub Category": "Delimitation of Constituency"
+    },
+    "0908": {
+        "Category": "Election Matters",
+        "Sub Category": "Others"
+    },
+    "0909": {
+        "Category": "Election Matters",
+        "Sub Category": "Matters challenging Elections of MPs and MLAs"
+    },
+    "0910": {
+        "Category": "Election Matters",
+        "Sub Category": "Elections relating to Municipal Councils"
+    },
+    "0911": {
+        "Category": "Election Matters",
+        "Sub Category": "Appeals u/s 116 A of Representation of People Act, 1951."
+    },
+    "0912": {
+        "Category": "Election Matters",
+        "Sub Category": "Disqualification & expulsion of MPs/MLAs"
+    },
+    "1001": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Matters relating to winding up"
+    },
+    "1002": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Matters relating to Sick Industries"
+    },
+    "1003": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Matters arising out of orders of Company Law Board under Section 397 & 398 of Companies Act, 1956"
+    },
+    "1004": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Reference under Section 7(2) of the MRTP Act, 1969"
+    },
+    "1005": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Appeals under Section 55 of the MRTP Act, 1969"
+    },
+    "1006": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Others"
+    },
+    "1007": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Matters relating to disinvestment"
+    },
+    "1008": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Appeals u/s 15 Z of Securities and Exchange Board of India Act, 1992."
+    },
+    "1009": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Matters filed against the orders of MRTP Commission /Competition Commission."
+    },
+    "1010": {
+        "Category": "Company Law, Mrtp, Trai, Sebi, Idrai & Rbi",
+        "Sub Category": "Matters pertaining to TRAI / SEBI / IDRAI and RBI including Appeals U/S 18 of TRAI Act, Indian Electricity Act, 1910 and 2003, Electricity Supply Act, 1948 and Electricity Reforms Commission Act, 1998"
+    },
+    "1101": {
+        "Category": "Arbitration Matters",
+        "Sub Category": "Arbitration Petitions under Section 11 of Arbitration & Conciliation Act, 1996"
+    },
+    "1100": {
+        "Category": "Arbitration Matters",
+        "Sub Category": "SLPs challenging Arbitration Matters"
+    },
+    "1201": {
+        "Category": "Compensation Matters",
+        "Sub Category": "Motor accident claim matters involving permanent disability/death of persons"
+    },
+    "1202": {
+        "Category": "Compensation Matters",
+        "Sub Category": "Motor accident claim matters relating to the other injuries"
+    },
+    "1203": {
+        "Category": "Compensation Matters",
+        "Sub Category": "Insurer/owners liability matters"
+    },
+    "1204": {
+        "Category": "Compensation Matters",
+        "Sub Category": "Matters relating to railway accident including other railway compensation matters"
+    },
+    "1205": {
+        "Category": "Compensation Matters",
+        "Sub Category": "Matters relating to accidents other than those covered by M.V. Act"
+    },
+    "1206": {
+        "Category": "Compensation Matters",
+        "Sub Category": "Matters relating to telephone, electricity etc."
+    },
+    "1207": {
+        "Category": "Compensation Matters",
+        "Sub Category": "Others"
+    },
+    "1300": {
+        "Category": "Habeas Corpus Matters",
+        "Sub Category": "-"
+    },
+    "1401": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to capital punishment"
+    },
+    "1402": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to maintenance under Section 125 of Cr.P.C."
+    },
+    "1403": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to harassment, cruelty to woman for dowry, dowry death, eveteasing, domestic violence etc."
+    },
+    "1404": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to sexual harassment, kidnapping & abduction"
+    },
+    "1405": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to Prevention of Corruption Act"
+    },
+    "1406": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to Bank scams, cheating, forgery etc."
+    },
+    "1407": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to Essential Commodities Act"
+    },
+    "1408": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to State Excise Law"
+    },
+    "1409": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to bail/interim bail/anticipatory bail"
+    },
+    "1410": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters in which sentence awarded is up to five years"
+    },
+    "1411": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal T.P. Under Article 139(A)(1) of the Constitution of India"
+    },
+    "1412": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal T.P. Under Section 406 of the Cr.P.C."
+    },
+    "1413": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters arising out of Securities Act, 1992."
+    },
+    "1414": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to Drugs and Cosmetics, NDPS Act"
+    },
+    "1415": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to Food Adulteration"
+    },
+    "1416": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to preventive detention, TADA/POTA & national security-COFEPOSA-SAFEMA"
+    },
+    "1417": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to SC & ST (Prevention of atrocities) Act, 1989; Untouchability (offences) Amendment & Misc. Provision Act, 1976."
+    },
+    "1418": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Others"
+    },
+    "1419": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Scam matters other than relating to Banks"
+    },
+    "1420": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Appeal under Section 2 of the Supreme Court enlargement of jurisdiction Act"
+    },
+    "1421": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Police atrocities matters"
+    },
+    "1422": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to Foreign Exchange Regulation Act"
+    },
+    "1423": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters challenging sentence till rising of the court and/or fine only"
+    },
+    "1424": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Appeals u/s 10 of the Special Courts (Trial of Offences relating to transactions in Securities) Act, 1992."
+    },
+    "1425": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Appeals u/s 19 of the Terrorist and Disruptive Activities Act, 1987"
+    },
+    "1426": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters filed by State against Acquittal"
+    },
+    "1427": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters filed by complainant against Acquittal"
+    },
+    "1428": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters under State Police Acts"
+    },
+    "1429": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters for/against quashing of criminal proceedings"
+    },
+    "1430": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters challenging prosecution under Income Tax Act"
+    },
+    "1431": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters challenging prosecution under Negotiable Instruments Act"
+    },
+    "1432": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to Central Excise & Salt Act, 1944"
+    },
+    "1433": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to Customs Act, 1962"
+    },
+    "1434": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Matters relating to Foreign Exchange Management Act (FEMA)"
+    },
+    "1435": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal appeals filed against the orders of various Tribunals"
+    },
+    "1436": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to suspension of sentence"
+    },
+    "1437": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters relating to cancellation to bail"
+    },
+    "1438": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters in which sentence awarded is more than five years"
+    },
+    "1439": {
+        "Category": "Criminal Matters",
+        "Sub Category": "Criminal matters in which sentence awarded is life imprisonment"
+    },
+    "1501": {
+        "Category": "Appeal Against Orders Of Statutory Bodies",
+        "Sub Category": "Bar Council of India"
+    },
+    "1502": {
+        "Category": "Appeal Against Orders Of Statutory Bodies",
+        "Sub Category": "Others"
+    },
+    "1503": {
+        "Category": "Appeal Against Orders Of Statutory Bodies",
+        "Sub Category": "Tribunals"
+    },
+    "1504": {
+        "Category": "Appeal Against Orders Of Statutory Bodies",
+        "Sub Category": "Appeals and other matters U/Ss 30 and 31 of the Armed Forces Tribunal Act, 2007"
+    },
+    "1505": {
+        "Category": "Appeal Against Orders Of Statutory Bodies",
+        "Sub Category": "Matters filed against the orders of other Regulatory Authorities / Bodies"
+    },
+    "1601": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Mutual consent divorce matters"
+    },
+    "1602": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Other divorce matters"
+    },
+    "1603": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Restitution of conjugal rights"
+    },
+    "1604": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Child custody matters"
+    },
+    "1605": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Adoption & Maintenance matters"
+    },
+    "1606": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Minority & guardianship matters"
+    },
+    "1607": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Matters under Hindu Marriage Act"
+    },
+    "1608": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Matters under Muslim Marriage Act"
+    },
+    "1609": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Matters under Christian Marriage Act"
+    },
+    "1610": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Alimony"
+    },
+    "1611": {
+        "Category": "Family Law Matters",
+        "Sub Category": "Others"
+    },
+    "1701": {
+        "Category": "Contempt Of Court Matters",
+        "Sub Category": "Suo Moto civil contempt matters"
+    },
+    "1702": {
+        "Category": "Contempt Of Court Matters",
+        "Sub Category": "Suo Moto criminal contempt matters"
+    },
+    "1703": {
+        "Category": "Contempt Of Court Matters",
+        "Sub Category": "Other civil contempt matters"
+    },
+    "1704": {
+        "Category": "Contempt Of Court Matters",
+        "Sub Category": "Other criminal contempt matters."
+    },
+    "1705": {
+        "Category": "Contempt Of Court Matters",
+        "Sub Category": "Appeals u/s 19(1)(b) of Contempt of Court Act, 1971."
+    },
+    "1801": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "T.P. Under Article 139A(1) of the Constitution of India"
+    },
+    "1802": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "T.P. Under Section 25 of the C.P.C."
+    },
+    "1803": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Civil matters arising out of Securities Act, 1992"
+    },
+    "1804": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Original Civil Suit under Article 131 of the Constitution of India"
+    },
+    "1805": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Matters relating to specific performance of contract"
+    },
+    "1806": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Matters relating to allotment, cancellation, fixation of prices of plots/flats"
+    },
+    "1807": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Others"
+    },
+    "1808": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Market fee under the APMC Act"
+    },
+    "1809": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Matters relating to Lotteries"
+    },
+    "1810": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Dealership and distributership of petroleum products"
+    },
+    "1811": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Benami transactions"
+    },
+    "1812": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Royalty on coal etc."
+    },
+    "1813": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Stage carriage permits"
+    },
+    "1814": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Freedom Fighters Pension"
+    },
+    "1815": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Matters relating to Electricity Dispute(connection/disconnection etc)"
+    },
+    "1816": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Appeals u/s 10 of Special Courts (Trial of offences relating to Transactions in Securities) Act, 1992"
+    },
+    "1817": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Matters for eviction / dispossession other than Rent Control Act matters"
+    },
+    "1818": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Appeals u/s 53 T of The Competition Act, 2002"
+    },
+    "1819": {
+        "Category": "Ordinary Civil Matters",
+        "Sub Category": "Matters relating to demolition"
+    },
+    "1900": {
+        "Category": "Three Judges Bench Matter",
+        "Sub Category": "-"
+    },
+    "2000": {
+        "Category": "Five Judges Bench Matter",
+        "Sub Category": "-"
+    },
+    "2100": {
+        "Category": "Eleven Judges Bench Matter",
+        "Sub Category": "-"
+    },
+    "2200": {
+        "Category": "Seven Judges Bench Matter",
+        "Sub Category": "-"
+    },
+    "2300": {
+        "Category": "Nine Judges Bench Matter",
+        "Sub Category": "-"
+    },
+    "2401": {
+        "Category": "Appointments Etc., Of Constitutional Functionaries",
+        "Sub Category": "Appointment of High Court Judges"
+    },
+    "2402": {
+        "Category": "Appointments Etc., Of Constitutional Functionaries",
+        "Sub Category": "(Deleted)"
+    },
+    "2403": {
+        "Category": "Appointments Etc., Of Constitutional Functionaries",
+        "Sub Category": "Appointment of Advocate General & Attorney General"
+    },
+    "2404": {
+        "Category": "Appointments Etc., Of Constitutional Functionaries",
+        "Sub Category": "Appointment of Members of Election Commissions"
+    },
+    "2405": {
+        "Category": "Appointments Etc., Of Constitutional Functionaries",
+        "Sub Category": "Appointment of Members and Chairman of State Public Service Commission and UPSC"
+    },
+    "2406": {
+        "Category": "Appointments Etc., Of Constitutional Functionaries",
+        "Sub Category": "Appointment of Governors & Lt. Governors"
+    },
+    "2407": {
+        "Category": "Appointments Etc., Of Constitutional Functionaries",
+        "Sub Category": "Others"
+    },
+    "2501": {
+        "Category": "Statutory Appointments And Appointment Of Other Law Officers",
+        "Sub Category": "Appointment of Members, Vice-Chairman and Chairman of CAT, SAT , Other Tribunals , Statutory Corporations/ Bodies"
+    },
+    "2502": {
+        "Category": "Statutory Appointments And Appointment Of Other Law Officers",
+        "Sub Category": "Appointment in Zila Parishad"
+    },
+    "2503": {
+        "Category": "Statutory Appointments And Appointment Of Other Law Officers",
+        "Sub Category": "Appointment of Vice-Chancellors of University"
+    },
+    "2504": {
+        "Category": "Statutory Appointments And Appointment Of Other Law Officers",
+        "Sub Category": "Appointment of other Law Officers"
+    },
+    "2601": {
+        "Category": "Personal Law Matters",
+        "Sub Category": "Matters relating to inheritance & succession"
+    },
+    "2602": {
+        "Category": "Personal Law Matters",
+        "Sub Category": "Matters relating to Gift"
+    },
+    "2603": {
+        "Category": "Personal Law Matters",
+        "Sub Category": "Matters relating to partition"
+    },
+    "2604": {
+        "Category": "Personal Law Matters",
+        "Sub Category": "Matters relating to testamentary succession"
+    },
+    "2605": {
+        "Category": "Personal Law Matters",
+        "Sub Category": "Others"
+    },
+    "2701": {
+        "Category": "Religious & Charitable Endowments",
+        "Sub Category": "Matters relating to management, administrative disputes of Temples etc. (Priest, Pujari, Mahant)"
+    },
+    "2702": {
+        "Category": "Religious & Charitable Endowments",
+        "Sub Category": "WAKF Board matters"
+    },
+    "2703": {
+        "Category": "Religious & Charitable Endowments",
+        "Sub Category": "Others"
+    },
+    "2801": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Partnership"
+    },
+    "2802": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Sale of Goods Act"
+    },
+    "2803": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Contract Act"
+    },
+    "2804": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Trade Marks/Copy Rights/Patents/Design Act"
+    },
+    "2805": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Negotiable Instruments Act"
+    },
+    "2806": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Banks mortgage disputes"
+    },
+    "2807": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Hypothetication, Pledge"
+    },
+    "2808": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Others"
+    },
+    "2809": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Matters relating to recovery of debts/bank loans due under the banks and financial institutions"
+    },
+    "2810": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Bank Guarantee matters"
+    },
+    "2811": {
+        "Category": "Mercantile Laws, Commercial Transactions Including Banking",
+        "Sub Category": "Matters relating to Securitisation and Reconstruction of Financial Assets and Reinforcement of Security Interest Act, 2002."
+    },
+    "2901": {
+        "Category": "Simple Money & Mortgage Matters Etc.",
+        "Sub Category": "Money Lending Act"
+    },
+    "2902": {
+        "Category": "Simple Money & Mortgage Matters Etc.",
+        "Sub Category": "Mortgage private"
+    },
+    "2903": {
+        "Category": "Simple Money & Mortgage Matters Etc.",
+        "Sub Category": "Others"
+    },
+    "3001": {
+        "Category": "Matters Relating To Judiciary",
+        "Sub Category": "Matters pertaining to Judicial Officers"
+    },
+    "3002": {
+        "Category": "Matters Relating To Judiciary",
+        "Sub Category": "Matters pertaining to Employees of Supreme Court and High Courts"
+    },
+    "3003": {
+        "Category": "Matters Relating To Judiciary",
+        "Sub Category": "Matters pertaining to Employees of District Court & Tribunals"
+    },
+    "3004": {
+        "Category": "Matters Relating To Judiciary",
+        "Sub Category": "Matters pertaining to service conditions , etc., of individual Judicial Officer and other matters not specified above"
+    },
+    "3100": {
+        "Category": "Admission To Educational Institutions Other Than Medical & Engineering",
+        "Sub Category": "-"
+    },
+    "3200": {
+        "Category": "Establishment And Recognition Of Educational Institutions",
+        "Sub Category": "-"
+    },
+    "3301": {
+        "Category": "Eviction Under The Public Premises (Eviction) Act",
+        "Sub Category": "Delhi Development Authority (DDA)"
+    },
+    "3302": {
+        "Category": "Eviction Under The Public Premises (Eviction) Act",
+        "Sub Category": "Municipal Corporation of Delhi (MCD)"
+    },
+    "3303": {
+        "Category": "Eviction Under The Public Premises (Eviction) Act",
+        "Sub Category": "Govt. of NCT of Delhi"
+    },
+    "3304": {
+        "Category": "Eviction Under The Public Premises (Eviction) Act",
+        "Sub Category": "Union of India"
+    },
+    "3305": {
+        "Category": "Eviction Under The Public Premises (Eviction) Act",
+        "Sub Category": "New Delhi Municipal Corporation (NDMC)"
+    },
+    "3306": {
+        "Category": "Eviction Under The Public Premises (Eviction) Act",
+        "Sub Category": "Other States/Union Territories"
+    },
+    "3307": {
+        "Category": "Eviction Under The Public Premises (Eviction) Act",
+        "Sub Category": "Others"
+    },
+    "3400": {
+        "Category": "Mines, Minerals And Mining Leases",
+        "Sub Category": "-"
+    },
+    "3501": {
+        "Category": "Land Laws And Agricultural Tenancies",
+        "Sub Category": "Matters relating to sale/transfer of land by SC/ST."
+    },
+    "3502": {
+        "Category": "Land Laws And Agricultural Tenancies",
+        "Sub Category": "Matters relating to agricultural land ceiling"
+    },
+    "3503": {
+        "Category": "Land Laws And Agricultural Tenancies",
+        "Sub Category": "Matters relating to urban land ceiling"
+    },
+    "3504": {
+        "Category": "Land Laws And Agricultural Tenancies",
+        "Sub Category": "Pre-emption matters"
+    },
+    "3505": {
+        "Category": "Land Laws And Agricultural Tenancies",
+        "Sub Category": "Others"
+    },
+    "3600": {
+        "Category": "Admirality And Maritime Laws",
+        "Sub Category": "-"
+    },
+    "3700": {
+        "Category": "Matters Relating To Commissions Of Enquiry",
+        "Sub Category": "-"
+    },
+    "3800": {
+        "Category": "Matters Relating To Consumer Protection",
+        "Sub Category": "-"
+    },
+    "3801": {
+        "Category": "Matters Relating To Consumer Protection",
+        "Sub Category": "Appeals u/s 23 of Consumer Protection Act, 1986."
+    },
+    "3802": {
+        "Category": "Matters Relating To Consumer Protection",
+        "Sub Category": "SLPs relating to Consumer Protection."
+    },
+    "3803": {
+        "Category": "Matters Relating To Consumer Protection",
+        "Sub Category": "Others"
+    },
+    "3900": {
+        "Category": "Matters Pertaining To Armed Forces & Paramilitary Forces",
+        "Sub Category": "-"
+    },
+    "4000": {
+        "Category": "Admission/Transfer To Engineering And Medical Colleges",
+        "Sub Category": "-"
+    },
+    "4001": {
+        "Category": "Admission/Transfer To Engineering And Medical Colleges",
+        "Sub Category": "Medical admission matters"
+    },
+    "4002": {
+        "Category": "Admission/Transfer To Engineering And Medical Colleges",
+        "Sub Category": "Engineering admission matters"
+    },
+    "4003": {
+        "Category": "Admission/Transfer To Engineering And Medical Colleges",
+        "Sub Category": "Others"
+    },
+    "4100": {
+        "Category": "ALLOCATION OF 15% ALL INDIA QUOTA IN ADMISSION/TRANSFER TO MEDICAL COLLEGES",
+        "Sub Category": "-"
+    },
+    "4200": {
+        "Category": "MATTERS RELATING TO LEASES, GOVT. CONTRACTS & CONTRACTS BY LOCAL BODIES",
+        "Sub Category": "-"
+    },
+    "4201": {
+        "Category": "MATTERS RELATING TO LEASES, GOVT. CONTRACTS & CONTRACTS BY LOCAL BODIES",
+        "Sub Category": "Tenders invited or contracts awarded/leases granted or determined by Central Government"
+    },
+    "4202": {
+        "Category": "MATTERS RELATING TO LEASES, GOVT. CONTRACTS & CONTRACTS BY LOCAL BODIES",
+        "Sub Category": "Tenders invited or contracts awarded/leases granted or determined by public sector undertaking"
+    },
+    "4203": {
+        "Category": "MATTERS RELATING TO LEASES, GOVT. CONTRACTS & CONTRACTS BY LOCAL BODIES",
+        "Sub Category": "Tenders invited or contracts awarded/leases granted or determined by State Governments / Union Territories"
+    },
+    "4204": {
+        "Category": "MATTERS RELATING TO LEASES, GOVT. CONTRACTS & CONTRACTS BY LOCAL BODIES",
+        "Sub Category": "Tenders invited or contracts awarded/leases granted or determined by local bodies"
+    },
+    "4205": {
+        "Category": "MATTERS RELATING TO LEASES, GOVT. CONTRACTS & CONTRACTS BY LOCAL BODIES",
+        "Sub Category": "Others"
+    },
+    "4300": {
+        "Category": "State Excise-Trading In Liquor-Privileges, Licences-distilleries Breweries",
+        "Sub Category": "State Excise-Trading In Liquor-Privileges, Licencesdistilleries Breweries"
+    },
+    "4400": {
+        "Category": "Reference Under Article 143 Of The Constitution Of India",
+        "Sub Category": "-"
+    },
+    "4500": {
+        "Category": "Reference Under Article 317(1) Of The Constitution Of India",
+        "Sub Category": "-"
+    },
+    "4600": {
+        "Category": "Refernce Under Section 11 Of The Competition Act, 2002.",
+        "Sub Category": "Reference Under Section 11 Of The Competition Act, 2002."
+    },
+    "4700": {
+        "Category": "Reference Under Section 14 Of The Right To Information Act, 2005",
+        "Sub Category": "-"
+    },
+    "4701": {
+        "Category": "Reference Under Section 14 Of The Right To Information Act, 2005",
+        "Sub Category": "REFERENCE UNDER SECTION 17 OF THE RIGHT TO INFORMATION ACT, 2005"
+    }
+}

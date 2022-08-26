@@ -1,0 +1,58 @@
+[
+    {
+        "S.No": "1",
+        "Process Id": "85888/2021-08-07",
+        "Notice Type": "Letter received by post",
+        "Name": "RABIN CHANDRA PARAMANIK S/o SADANANDA PARAMANIK",
+        "State / District": "JHARKHAND         /",
+        "Station": "",
+        "Issue Date": "07-08-2021",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "18-08-2021",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "2",
+        "Process Id": "50959/2019-02-12",
+        "Notice Type": "Dismissal Letter",
+        "Name": "PRAKASH KUMAR SINGH-1519Copy",
+        "State / District": "NEW DELHI        /DELHI",
+        "Station": "",
+        "Issue Date": "12-02-2019",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "3",
+        "Process Id": "50959/2019-02-12",
+        "Notice Type": "Dismissal Letter",
+        "Name": "Through HIGH COURT OF JUDICATURE AT ALLAHABAD UTTAR PRADESH",
+        "State / District": "/",
+        "Station": "",
+        "Issue Date": "12-02-2019",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "4",
+        "Process Id": "12362/2020-01-20",
+        "Notice Type": "Letter received by post",
+        "Name": "SMT. RAI PARAMANIK S/o SADANANDA PARAMANIKHIGH COURT OF JUDICATURE AT ALLAHABAD UTTAR PRADESH",
+        "State / District": "JHARKHAND         /DHANBAD",
+        "Station": "DHANBAD",
+        "Issue Date": "20-01-2020",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "22-01-2020",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    }
+]

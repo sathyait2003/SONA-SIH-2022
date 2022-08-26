@@ -1,0 +1,533 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 30501 - 2021</h5>
+<h5 align="center">SUSHIL KUMAR PATEL vs. THE STATE OF MADHYA PRADESH</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="305012021"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">30501/2021</font> Filed on 08-12-2021 04:26 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="red" style="font-size:16px;font-weight:bold;">DISPOSED</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">IV-C</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 001746 - 001763 / 2022  Registered on 04-02-2022<br/>(Verified On 08-02-2022)</div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">18-07-2022</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE K.M. JOSEPH and HON'BLE MR. JUSTICE HRISHIKESH ROY</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">DISPOSED (Motion Hearing <br/> [DIRECTION MATTERS]) Dismissed as withdrawn-Ord dt:18-07-2022  (Disposal Date: 18-07-2022, Month: 7, Year: 2022)<br/> JUDGES: HON'BLE MR. JUSTICE K.M. JOSEPH, HON'BLE MR. JUSTICE HRISHIKESH ROY</font>
+</td>
+</tr><tr>
+<td width="140px">Disp.Type</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Dismissed as withdrawn</font>
+</td>
+</tr><tr>
+<td width="140px">Category</td>
+<td>0615-Service Matters : Recruitment/Transfer/Compassionate Appointment</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 SUSHIL KUMAR PATEL S/D/W/Thru:- PANCHAMAL PATEL<br/>  292, WARD NO. 06, NEAR OLD JAIN TEMPLE, VILLAGE AND POST GOSHALPUR, TAHSIL SIHORA  ,JABALPUR , MADHYA PRADESH </p><p>  2 RASHMI S/D/W/Thru:- TEEKARAM W/O SHRI RAJESH KUMAR DHAKAR<br/>  RESIDENT OF UDAYPURA, GRAM,
+PATNA, DISTT. RAISEN, M.P  , , OTHER </p><p>  3 DEEPAK RAHANGGDALE S/D/W/Thru:- VED SINGH RAHANGADALE,<br/>  SAREKHA BLOCK BARGHAT,
+DIST- SEONI, M.P.  , , OTHER </p><p>  4 PRACHI SINGH BAGHEL S/D/W/Thru:- G.S. BAGHEL,<br/>  RESIDENT OF MEAR PATANJALI YOG
+BHAVAN, BEHIND S.P. BUNGALOW, C.V.
+RAMAN WARD, BARAPTTHER, DIST- SEONI, M.P.  , , OTHER </p><p>  5 RAMCHARAN YADAV, S/D/W/Thru:- MOHAN SINGH YADAV,<br/>  RESIDENT OF GANDHI WARD, DIST- SEONI, M.P.  , , OTHER </p><p>  6 KAMAL MANDLAVDIYA, S/D/W/Thru:- SITA RAM SINGH,<br/>  RESIDENT OF ANANTPUR,
+DIST- REWA, M.P.  , , OTHER </p><p>  7 RITU YADAV, S/D/W/Thru:- ANOKHILAL YADAV,<br/>  RESIDENT OF GRAM REHADA, TEHSIL SEONI,
+MALWA, DIST- HOSHANGABAD, M.P.  , , OTHER </p><p>  8 ANITA S/D/W/Thru:- SUDHIR SHANDILYA,<br/>  RESIDENT OF VIVEKANAND WARD,
+NEAR MAT MANDIR, SEONI, M.P.  , , OTHER </p><p>  9 AMIT KUMAR PATHAK, S/D/W/Thru:- GHANSHYAM PATHAK,<br/>  RESIDENT OF VILLAGE AND POST MANEGAON,
+GEHSIL BIRSA, MALANJKHAND, DISTRICT &amp;NDASH;
+BALAGHAT M.P.  , , OTHER </p><p>  10 RAHUL PIWHARE S/D/W/Thru:- DHANANJAY PIWHARE,<br/>  RESIDENT OF VILLAGE AND POST RELWAHI,
+TEHSIL BIRSA (MALANJKHAND),
+DISTRICT BALAGHAT M.P  , , OTHER </p><p>  11 AWADESH KUMAR MASKARE, S/D/W/Thru:- NUKRAMMASKARE,<br/>  RESIDENT OF VILLAGE CHICHOLI,
+POST- BAHELA, TEHSIL LANJI, DISTRICT
+BALAGHAT, M.P.  , , OTHER </p><p>  12 RATNA SINGH S/D/W/Thru:- SURENDRA SINGH PARIHAR<br/>  RESIDENT OF KUMBHRAJ,
+WARD NO. 15, KUMBHRAJ, DIST- GUNA, M.P.  , , OTHER </p><p>  13 PRACHI PANDEY, S/D/W/Thru:- RAM SHIROMANI PANDEY,<br/>  RESIDENT OF AMRITA COLONY,
+GALI NO.02, KISHOR KUNJ,
+BHARHUT NAGAR, SATNA, DISTRICT- SATNA, M.P.  , , OTHER </p><p>  14 HEMLATA CHAWLA, S/D/W/Thru:- SANTOSH KUMAR SABNANI,<br/>  RESIDENT OF SHEELA DENTAL CARE CENTRE,
+CHOWK, BAZAAR, SATNA, DIST- SATNA, M.P.  , , OTHER </p><p>  15 SUCHITA PANDEY, S/D/W/Thru:- SUDHAKAR PRASAD PANDEY,<br/>  RESIDENT OF VILLAGE ITAURA, POST- DHAURAHARA,
+SOHAWAL, DIST- SATNA, M.P.  , , OTHER </p><p>  16 YUVRAJ SINGH THAKUR S/D/W/Thru:- KUNWAR THAKUR<br/>  RESIDENT OF VILLAGE-KUNDA POST-
+MADIYARAS, DISTT. DINDORI M.P.  , , OTHER </p><p>  17 RAJESH KUMAR CHOUHAN S/D/W/Thru:- DURJAN SINGH CHOUHAN<br/>  RESIDENT OF HOUSE NO. 19 WARD NO. 06
+VILLAGE SARHARISEMARIYA MAL
+DISTRICT-DINDORI M.P.  , , OTHER </p><p>  18 KRISHAN RATHOR S/D/W/Thru:- RAJENDRA RATHOR<br/>  RESIDENT OF NANDEPURAWALI ROAD BADOKHAR
+LALORKALAN DISTRICT MORENA M.P.  , , OTHER </p><p>  19 AJAY BABU TIWARI S/D/W/Thru:- VISHWESHWARDAYAL TIWARI,<br/>  RESIDENT OF GRAM JHAMTULITAHIL RAJNAGAR,
+DISTRICT CHATTARPUR, M.P.  , , OTHER </p><p>  20 MONIKA JAIN, S/D/W/Thru:- SHREEPAL JAIN,<br/>  RESIDENT OF 720/3 VALLABH BHAI PATEL
+COLONY GULANA DISTT- SHAJAPUR, M.P.  , , OTHER </p><p>  21 LATIKA BISEN S/D/W/Thru:- VISHAL BISEN<br/>  RESIDENT OF MOHBARRA WARD NO. 14
+KEOLARI DISTT. SEONI M.P.  , , OTHER </p><p>  22 NITESH VERMA S/D/W/Thru:- RADHESHYAM VERMA,<br/>  RESIDENT OF MANNPUR TEHSIL MHOW DISTRICT
+INDORE, M.P.  , , OTHER </p><p>  23 MAHESH SHARMA S/D/W/Thru:- JAMUNA PRASAD SHARMA,<br/>  RESIDENT OF LALOTINARSINGHGARH
+DISTRICT -RAJGARH, M.P.  , , OTHER </p><p>  24 KU. SAPNA KADERE S/D/W/Thru:- DHANRAJ SINGH,<br/>  RESIDENT OF SHEETLA MATA MANDIR TAAL MOHALLA
+VYAVARA DISTRICT-RAJGARH M.P.  , , OTHER </p><p>  25 SANJU BOPCHE S/D/W/Thru:- MAHANADBOPCHE<br/>  RESIDENT OF VILLAGE POST- KOSMI TEHSIL
+BARGHAT, DISTT- SEONI, M.P.  , , OTHER </p><p>  26 ANCHAL KUMAR RAI, S/D/W/Thru:- VIJAYH KUMAR RAI,<br/>  RESIDENT OF VILLAGE- POST CHIINDA, TEHSIL
+KEOLARI, DISTT- SEONI, M.P.  , , OTHER </p><p>  27 SURENDRA KARAIYA S/D/W/Thru:- RAMESH CHAND KARAIYA<br/>  RESIDENT OF WARD NO. 15 HOUSE NO. 42
+NEARBY PETROL PUMP SHADORA DISTRICT
+ASHOKNAGAR, M.P.  , , OTHER </p><p>  28 MUNESH KARAIYA S/D/W/Thru:- RAMESH CHAND KARAIYA,<br/>  RESIDENT OF WARD NO. 15,
+HOUSE NO. 42 NEARBY PETROL PUMP
+SHADORA, DISTRICT ASHOKANGAR, M.P.  , , OTHER </p><p>  29 SWARUP SINGH, S/D/W/Thru:- RAMNARAYAN SINGH,<br/>  RESIDENT OF VILLAGE- LASUDIYA RAM,
+POST- BHAUKHEDI, TEHSIL ICHHAWAR, DIST-
+SEHORE, M.P.  , , OTHER </p><p>  30 SACHIN KUMAR SAHU, S/D/W/Thru:- MAHESH PRASAD SAHU,<br/>  RESIDENT OF PLOT NUMBER 152 PT COLONY
+DHANVANTRI NAGAR WARD GARHA JABALPUR
+DISTRICT JABALPUR, M.P.  , , OTHER </p><p>  31 PURNIMA PAWAR, S/D/W/Thru:- MAHADEVI NAGRE<br/>  RESIDENT OF MATA MANDIR COLONY,
+CHANDANGAWNCHHINDWARA DISTT.
+CHHINDWARA M.P.  , , OTHER </p><p>  32 MADHURI BORIKAR S/D/W/Thru:- LATE GAJANAD BORIKAR,<br/>  RESIDENT OF WARD NO. 04,
+HIRAPUR POST AMEDA BALAGHAT,
+DIST- BALAGHAT, M.P.  , , OTHER </p><p>  33 MAMTA BIRANWAR S/D/W/Thru:- MAHESH BIRANWAR,<br/>  RESIDENT OF BHANPUR POST- NAVEGAON-03
+TEHSIL KHAIRLANJI, DIST- BALAGHAT, M.P.  , , OTHER </p><p>  34 ROOPALI GOSWAMI S/D/W/Thru:- RAMESH GIRI GOSWAMI<br/>  RESIDENT OF WARD NO. 1,
+BHATERA CHOWKI, BALAGHAT, DIST- BALAGHAT, M.P.  , , OTHER </p><p>  35 AMBAR SHARMA, S/D/W/Thru:- KAMAL SHARMA,<br/>  RESIDENT OF VILLAGE LOKIPAR
+POST- SINGHPUR BADA NARSINGHPUR,
+DISTRICT NARSINGHPUR, M.P.  , , OTHER </p><p>  36 NEHA RAWAT S/D/W/Thru:- AJAY RAWAT,<br/>  RESIDENT OF NARMADA COLONY CARE OF NARENDRA
+COLONY CARE OF NARENDRA BIRTHARIYA NEAR
+SHANKAR MANDIR GADARWARADIST- GADARWARA, M.P.  , , OTHER </p><p>  37 ANARSINGH MORE S/D/W/Thru:- GANPAT MORE<br/>  RESIDENT OF 11, NINGAWALPHALYA GRAM MENDALYA,
+PANI POST BAKHARLIWARLA,
+MENDALYAPANIBADWANI DISTRICT
+BADWANI, M.P.  , , OTHER </p><p>  38 JAGDISH KUMAR SAHU S/D/W/Thru:- RAM GOPAL SAHU<br/>  RESIDENT OF 210 GRAM IKODIYA POST
+ONDER TAHSIL MUNGAOLI MUNDRA
+MUNGAOLIASHOKNAGAR, DIST-
+ASHOKNAGAR, M.P.  , , OTHER </p><p>  39 ANUBHUTI KASHYAP S/D/W/Thru:- SHIVAM KASHYAP<br/>  RESIDENT OF WARD NO.11 NEAR SHYAM TAKIJ KAILASH NAGAR CHHINDWARA
+KHAZRI DISTRICT CHHINDWARA, M.P.  , , OTHER </p><p>  40 NILESH ATODE S/D/W/Thru:- BADRI PRASAD<br/>  RESIDENT OF HOUSE NO. 643 WARD NO. 08
+VINDHYA NAGAR NEW COLONY BOARD COLONY,
+KHARGONE DISTRICT KHARGONE (M.P.)  , , OTHER </p><p>  41 SUSHMA MATRE S/D/W/Thru:- KHILENDRAMATRE<br/>  RESIDENT OF GRAM AND POST BHANDERI
+TAHSIL BAIHARBALAGHAT
+DISTRICT BALAGHAT, M.P.  , , OTHER </p><p>  42 NARESH SINGH YADAV, S/D/W/Thru:- RAM SWAROOP YADAV,<br/>  RESIDENT OF VILLAGE THAGOUSA POST
+GOUNDRI TAHSIL BAIRAD SHIVPURI,
+DISTRICT SHIVPURI, M.P.  , , OTHER </p><p>  43 PRITI SIROLIYA S/D/W/Thru:- RAKESH SHAKYA,<br/>  RESIDENT OF DR. AMBEDKAR COLONY,
+RESIDENT OF DR. AMBEDKAR COLONY,
+NEAR STADIUM, IN FRONT OF HAWAI PATTI,
+OLD SHIVPURI DISTRICT-SHIVPURI,
+M.P.  , , OTHER </p><p>  44 RAMA VISHWAKARMA S/D/W/Thru:- RAJESH MOHAN VISHWAKARMA<br/>  RESIDENT OF VILLAGE AND POST- MADHOGARH,
+TEHSIL RAGURAJ NAGAR SATNA, DISTRICT-SATNA, M.P.  , , OTHER </p><p>  45 PANNALAL NAPIT S/D/W/Thru:- NATHURAM NAPIT<br/>  RESIDENT OF GRAM PURA POST BUDAUR
+TAHSIL GHUWARA, CHHATARPUR DISTRICT- CHHATTAPUR,  , , OTHER </p><p>  46 BHAVNA GUPTA, S/D/W/Thru:- SACHIN GUPTA<br/>  RESIDENT OF WARD NO. 22, PATKUI MOHALLA, PURANI
+SHIVPURI DISTRICT- SHIVPURI M.P.  , , OTHER </p><p>  47 SANJAY RAWAT S/D/W/Thru:- RAGHUVEER SINGH,<br/>  RESIDENT OF GRAM SHERGUDA POST RAJGAR TAHSIL
+KOLARAS SHIVPURI DISTRICT SHIVPURI,
+M.P.  , , OTHER </p><p>  48 RAJKUMARI AHIRWAR, S/D/W/Thru:- LALLUAHIRWAR,<br/>  RESIDENT OF VILLAGE DINAU, POST- SAGARWARA,
+DISTRICT TIKAMGARH, M.P.
+...  , , OTHER </p><p>  49 MANJU NAMDEO S/D/W/Thru:- MAHESH KUMAR NAMDEO<br/>  RESIDENT OF INDRAPRASTH NAGAR,
+SHIVPURI, DISTRICT SHIVPURI M.P.  , , OTHER </p><p>  50 RANJANA RAWAT, S/D/W/Thru:- SIYARAM RAWAT,<br/>  RESIDENT OF GRAM BERAI GIRD,
+TEHSIL SABAIGARH, DIST- MORENA M.P.  , , OTHER </p><p>  51 NEETU SAHU, S/D/W/Thru:- DURGESH KUMAR SAHU,<br/>  RESIDENT OF BLOCK PARASIA,
+DISTRICT- CHHINDWARA, M.P.  , , OTHER </p><p>  52 SHAHNAZ BEE S/D/W/Thru:- MASHKOOR,<br/>  RESIDENT OF BLOCK SILWANI DIST.
+RAISEN, M.P.  , , OTHER </p><p>  53 BRAJESH KUMAR GAUTAM S/D/W/Thru:- GOPAL PRASAD GAUTAM<br/>  R/O 107/1, KATARIYA TEHESIL DHEEMERKHEDA,
+DISTT. KATNI. , KATNI , MADHYA PRADESH  , , OTHER </p><p>  54 SUKHARAJ LIKHITKAR S/D/W/Thru:- RAMESH LIKHITKAR<br/>  R/O MUKAAM POST GUDGAON, TEHSIL
+BHAINSDEHI, DISTT. BETUL. ,
+BETUL , MADHYA PRADESH  , , OTHER </p><p>  55 NAVEEN MANE S/D/W/Thru:- RAJU MANE<br/>  R/O VILLAGE ANKAWADI,TEHSIL
+BETUL, DISTT. BETUL, MADHYA PRADESH  , , OTHER </p><p>  56 PRIYANKA THAKUR S/D/W/Thru:- VEERENDRA SINGH THAKUR<br/>  WARD NO. 1, INDRA GANDHI WARD,
+BIJAWAR, TEHESIL BIJAWAR, DISTT.
+CHHATARPUR , MADHYA PRADESH  , , OTHER </p><p>  57 MANJU CHOUDHARY, S/D/W/Thru:- NANDILAL CHOUDHARY,<br/>  RESIDENT OF SITPURA, TEHSIL RAGHURAJNAGAR,
+DISTRICT SATNA- M.P.  , , OTHER </p><p>  58 PREETI DEVI, S/D/W/Thru:- SATYAPAL SINGH,<br/>  BHADORIA, RESIDENT OF VILLAGE POST-
+MACHHANAD, DIST- BHIND M.P  , , OTHER </p><p>  59 ARSHI FARHEEN QUADARY S/D/W/Thru:- SIRAJ QUADARY,<br/>  RESIDENT OF WARD NO.
+5 NEAR LIC OFFICE, WARASEONI, BALAGHAT, DISTRICT
+BALAGHAT, M.P.  , , OTHER </p><p>  60 TINA KUMARI, S/D/W/Thru:- YUDHISTER KUMAR VASWANI,<br/>  R/O. C/O. SANJAY SAJWANI, WARD NO. 5,
+SANJAY AUOT PARTS, ANUPPUR ROAD NEAR KOTMA
+BUS STAND KOTMA, DISTT.ANUPPUR.  , , OTHER </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 THE STATE OF MADHYA PRADESH<br/>  THROUGH ITS PRINCIPAL SECRETARY DEPARTMENT OF SCHOOL EDUCATION, VALLABH BHAWAN  ,BHOPAL , MADHYA PRADESH </p><p>  2 PROFESSIONAL EXAMINATION BOARD,<br/>  secretary  CHAYAN BHAWAN MAIN ROAD NO. 1
+CHINAR PARK (EAST), BHOPAL
+DISTRICT- BHOPAL, M.P.  , , OTHER </p><p>  3 COMMISSIONER, LOKSHIKSHAN SANCHALNALYA,<br/>  COMMISSIONER, LOKSHIKSHAN SANCHALNALYA, NEAR CHETAK BRIDGE
+GAUTAM NAGAR, BHOPAL DISTRICT-
+BHOPAL, M.P.  , , OTHER </p><p>  4 DISTRICT EDUCATION OFFICER<br/>  DISTRICT EDUCATION OFFICER PSM CAMPUS, JABALPUR  , , OTHER </p><p>  5 MADHYA PRADESH PROFESSIONAL EXAMINATION BOARD<br/>  SECRETARY, CHAYAN BHAWAN, MAIN ROAD
+NO.1, CHINAR PARK (EAST) BHOPAL-462011  , , OTHER </p><p>  6 UNIVERSITY GRANTS COMMISSION<br/>  CHAIRMAN BAHADURSHAH ZAFAR MARG, NEW DELHI-110002  ,CENTRAL *         , DELHI          </p><p>  7 AARTI SONI, S/D/W/Thru:- RAJENDRA PRASAD SONI,<br/>  RESIDENT OF NEW PARASIA NAGAR NEAR,
+HERO SHOWROOM, KHIRSADOH, CHHINDWARA, M.P.  , , OTHER </p><p>  8 THE COMMISSIONER, PUBLIC INSTRUCTIONS, DIRECTORATE OF PUBLIC INSTRUCTIONS<br/>  THE COMMISSIONER, PUBLIC INSTRUCTIONS, DIRECTORATE OF PUBLIC INSTRUCTIONS GAUTAM NAGAR,  , DISTRICT: BHOPAL ,BHOPAL , MADHYA PRADESH </p><p>  9 THE DIRECTOR, PUBLIC INSTRUCTIONS GAUTAM NAGAR,<br/>  THE DIRECTOR, PUBLIC INSTRUCTIONS GAUTAM NAGAR, BHOPAL, M.P.  , , OTHER </p><p>  10 DEEPAK KUMAR BISEN, S/D/W/Thru:- JEETSINGH BISEN,<br/>  RESIDENT OF 21, DONDIWARA BLOCK,
+BHARGHAT, DIST- SEONI, M.P.  , , OTHER </p><p>  11 ANKUSH RATHOD, S/D/W/Thru:- MAHESH CHANDRA RATHOD,<br/>  RESIDENT OF SEMLDA FATA SINGHANA ROAD,
+IN FRONT OF VISWAKARMA TEMPLE, MANAWAR, DIST- DHAR, M.P.  , , OTHER </p><p>  12 SURBHI LILHORE, S/D/W/Thru:- LALIT LILHORE,<br/>  RESIDENT OF OPPOSITE HANUMAN MANDIR,
+VIKAS NAGAR, DIST- BETUL, M.P.  , , OTHER </p><p>  13 KAVITA BISEN, S/D/W/Thru:- RAMDAYAL BISEN,<br/>  RESIDENT OF AT PINDRAIKHURD, POST KESHLA
+KALAN, BLOCK BARGHAT, DIST- SEONI, M.P.  , , OTHER </p><p>  14 KAMAL SHUKLA, S/D/W/Thru:- AJAY SHUKLA,<br/>  RESIDENT OF JAORA JAIL COLONY,
+DIST- RATLAM M.P.  , , OTHER </p><p>  15 THE DISTRICT EDUCATION OFFICER<br/>  THE DISTRICT EDUCATION OFFICER BALAGHAT  , , MADHYA PRADESH </p><p>  16 UMESH KUMAR LILHARE S/D/W/Thru:- GUHALALLILHARE,<br/>  RESIDENT OF KULPA, TEHSIL LANJI,
+DISTRICT- BALAGHAT M.P.  , , OTHER </p><p>  17 RAJESH SINGH MEENA S/D/W/Thru:- KAILASH NARAYAN<br/>  RESIDENT OF VILLAGE HIGONA, POST AND TEHSIL
+MADHUSUDANGARH, DIST- GUNA, M.P  , , OTHER </p><p>  18 ANURADHA TRIPATHI S/D/W/Thru:- ASHOK TRIPATHI,<br/>  RESIDENT OF SHANKAR COLONY WARD NO.7
+SEONDHA, DATIA, M.P.  , , OTHER </p><p>  19 DISTRICT EDUCATION OFFICER<br/>  DISTRICT EDUCATION OFFICER SATNA  ,SATNA   , MADHYA PRADESH </p><p>  20 COMMISSIONER, RAJYA SHIKSHA KENDRA, BHOPAL,<br/>  COMMISSIONER, RAJYA SHIKSHA KENDRA, BHOPAL, DISTRICT  , , OTHER </p><p>  21 GENERAL ADMINISTRATION DEPARTMENT, (GAD) PRINCIPAL SECRETARY<br/>  GENERAL ADMINISTRATION DEPARTMENT, (GAD) PRINCIPAL SECRETARY VALLABH BHAVAN, BHOPAL, M.P.  , , OTHER </p><p>  22 DEEPAK KUMAR VERMA, S/D/W/Thru:- KAILASH NARAYAN VERMA,<br/>  RESIDENT OF ARNIYAGAJI BTC
+POST JAWAR SUB DISTRICT ASHTA DISTRICT
+-SEHORE M.P.  , , OTHER </p><p>  23 SHIVANGI JAIN S/D/W/Thru:- DILEEP JAIN<br/>  RESIDENT OF 313 ANANT AUTOPARTS
+NEAR DURGA MANDIR SHUJALPUR MANDIR
+SHAJAPUR DISTRICT-SHAJAPUR, M.P.  , , OTHER </p><p>  24 SUNITA MEHRBAN S/D/W/Thru:- SANTOSH MEHRBAN<br/>  RESIDENT OF MAHARAJABAG PARTAPPUR
+ROAD BHAIROGANJ, DISTT. SEONI, M.P.  , , OTHER </p><p>  25 ANKIT GAJBHIYE S/D/W/Thru:- CHHATAR SINGH GAJBHIYE,<br/>  RESIDENT OF MAHARAJABAG PARTAPPUR
+ROAD BHAIROGANJ, DISTT. SEONI, M.P.  , , OTHER </p><p>  26 BHERU LAL RATHOR S/D/W/Thru:- SHANKAR LAL<br/>  RESIDENT OF MUKAM POST
+KURAWAN TAHSIL SHAMGARHMANDSAUR
+DISTRICT MANDSAUR, M.P.  , , OTHER </p><p>  27 BRAJLALKAHAR, S/D/W/Thru:- NARAYAN KAHAR<br/>  RESIDENT OF GRAM PINDRAI POST
+MAJHGAVA (KUDARI), SUNWARACHHAPARASEONI
+DISTRICT SEONI, M.P.  , , OTHER </p><p>  28 GEMAN SINGH ALAWA S/D/W/Thru:- PATLIYA ALAWA<br/>  RESIDENT OF UMRALI NAKA 99 SAI CITY
+ALIRAJPUR, DISTRICT ALIRAJPUR, M.P  , , OTHER </p><p>  29 DURGESH KUMAR JATAV S/D/W/Thru:- BHAROSA RAM JATAV<br/>  RESIDENT OF 69 GRAM ALAWADI POST
+BOARD TAHSIL BADARWASALAWADI
+SHIVPURI DISTRICT SHIVPURI, M.P.  , , OTHER </p><p>  30 VINOD DHAKAD S/D/W/Thru:- RAMCHANDRA DHAKAD<br/>  RESIDENT OF MAKAN NO. 43
+LASUDIAFZALPUR, MANDSAUR DISTRICT
+MANDSAUR, M.P.  , , OTHER </p><p>  31 PRAVESH KUMAR YADAV S/D/W/Thru:- RAMESHWAR PRASAD<br/>  RESIDENT OF WARD NO. 03 MAKAN NO. 109
+RAMPURA KHAS TIKAMGARH, DISTRICT-
+TIKAMGARH M.P.  , , OTHER </p><p>  32 SAURAV SINGH CHANDEL S/D/W/Thru:- KALYAN SINGH CHANDEL<br/>  RESIDENT OF NARENDRA NAGAR,
+CHHATRI ROAD, SHIVPURI DISTRICT- SHIVPURI, M.P.  , , OTHER </p><p>  33 BASIL DAWAR S/D/W/Thru:- ALFA DAWAR<br/>  RESIDENT OF 128, VILLAGE AMBADOCHAR, P.O.
+ABHAPURI, (BLOCK) ZIRIYA, DISTRICT KHARGONE, M.P.  , , OTHER </p><p>  34 SUKHNANDAN LODHI, S/D/W/Thru:- PRAHALAD SINGH<br/>  RESIDENT OF DHUVAI, SHIVPURI, DISTRICT-
+SHIVPURI, M.P.  , , OTHER </p><p>  35 NEHA TRIPATHI S/D/W/Thru:- RAJENDRA PRASAD TRIPATHI,<br/>  RESIDENT OF SATAI ROAD,
+GALI NO. 02, CHHATARPUR,
+DISTRICT CHHATERPUR, M.P.  , , OTHER </p><p>  36 LEELA CORE S/D/W/Thru:- NAMDEO KORE<br/>  RESIDENT OF WARD NO. 04
+GRAM NAHARWANI, POST KESLEWADA, DISTRICT BALAGHAT, M.P.  , , OTHER </p><p>  37 KEVAL PRASAD S/D/W/Thru:- GOPAL PRASAD,<br/>  RESIDENT OF VILLAGE SALICHOKA ROAD,
+TEHSIL GADARWADA, DIST-
+NARSINGHPUR, M.P.
+.....  , , OTHER </p><p>  38 ARTI VISHWAKARMA<br/>  RESIDENT OF DEORI, UDAIPURA DIST. RAISEN, M.P.  , , OTHER </p><p>  39 ASHA NAGDEVE S/D/W/Thru:- GANESH PRASAD NAGDEVE<br/>  VILLAGE AND POST GANGERUA TEHSIL
+BARGHAT , SEONI , MADHYA PRADESH  , , OTHER </p><p>  40 MAHESH KUMAR NAGESH S/D/W/Thru:- CHHUTTE PRASAD NAGESH,<br/>  RESIDENT OF VILLAGE BINOURI, TEHSIL GHANSOR
+DISTRICT SEONI, M.P.  , , OTHER </p><p>  41 SWAPNIL PATEL, S/D/W/Thru:- MOTILAL PATEL,<br/>  RESIDENT OF LIG, 2/22/454, NEHRU NAGAR,
+REWA DISTRICT REWA (M.P.)  , , OTHER </p><p>  42 UNION OF INDIA<br/>  ITS THR. SECRETARY ROOM NO. 316, ALL INDIA COUNCIL FOR TECHNICAL EDUCATION (AICTE), NELSON MANDELA MARG  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  ABHISHEK VIKAS</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  MAYANK KSHIRSAGAR[R-2]</p><p>  HARISH PANDEY[R-42]</p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

@@ -1,0 +1,400 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 10666 - 2016</h5>
+<h5 align="center">DEVENDRA ZIPRU SAVALE . vs. THE STATE OF MAHARASHTRA</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="106662016"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">10666/2016</font> Filed on 28-03-2016 02:20 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="blue" style="font-size:16px;font-weight:bold;">PENDING</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">IX</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 012068 / 2016  Registered on 26-04-2016<br/></div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">28-04-2022</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE S. ABDUL NAZEER and HON'BLE MR. JUSTICE VIKRAM NATH</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Pending - (Final Hearing) List After (Weeks) (8)-Ord dt:28-04-2022 </font>
+</td>
+</tr><tr>
+<td width="140px">Admitted</td>
+<td style="font-size:12px;font-weight:100;">[<font color="red">ADMITTED ON : 11-01-2017</font>]</td></tr><tr>
+<td width="140px">Category</td>
+<td>0613-Service Matters : Others</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 DEVENDRA ZIPRU SAVALE .<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, COMMERCE AND SCIENCE COLLEGE  , DISTRICT: SURGANA ,NASHIK          , MAHARASHTRA          </p><p>  2 ARUN UTTAM PATIL<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE, NAMPUR  , DISTRICT: BALGAON ,NASHIK          , MAHARASHTRA          </p><p>  3 GAJANAN JANGALU BHAMARE<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, SCIENCE AND COMMERCE COLLEGE, NAMPUR  , DISTRICT: BALGAON ,NASHIK          , MAHARASHTRA          </p><p>  4 UDDHAV KALU KUDASE<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE,  MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  5 RAMDAS KALU JADHAV<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE,  MALEGAON CAMP  , DISTRICT: MALEGAON ,NASHIK          , MAHARASHTRA          </p><p>  6 DNYANESHWAR NAMDEO SONAWANE<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE,  MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  7 AHIRE KAILAS SAHADU<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE,  MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  8 MRS. BHARATI VASANTRAO SHEWALE<br/>  MAHATMA GANDHI VIDYAMANDIRS SHRIMATI PUSHPATAI HIRAY COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  9 VALMIK DASHRATH SURYAWANSHI<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, SCIENCE AND COMMERCE COLLEGE, NAMPUR  , DISTRICT: BALGAON ,NASHIK          , MAHARASHTRA          </p><p>  10 NARENDRA VASANTRAO DESHMUKH<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE,  MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  11 SURESH RAGHO  PAGAR<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE,  MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  12 PRAKASH TUKARAM WANKHEDE<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, SCIENCE AND COMMERCE COLLEGE, YEOLA  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  13 LAXMAN DATTATRAY DEDE<br/>  M.V.P. SAMAJ ARTS COMMERCE AND SCIENCE COLLEGE, NANDGAON  , DISTRICT: NANDGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  14 AVINASH  KADU SONAWANE<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE,  MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  15 MAHEVI  MASOOD JAVEED MUZAFFAR HASAN<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, SCIENCE AND COMMERCE COLLEGE, NAMPUR  , DISTRICT: BALGAON ,NASHIK          , MAHARASHTRA          </p><p>  16 SMITA RAJENDRA HIRAY<br/>  MAHATMA GANDHI VIDYAMANDIRS SHRIMATI PUSHPATAI HIRAY COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  17 MRS. BHARATI SUKLAL KHAINAR<br/>  MAHATMA GANDHI VIDYAMANDIRS SHRIMATI PUSHPATAI HIRAY COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  18 DEELIP ANANDA PAWAR<br/>  MAHATMA GANDHI VIDYAMANDIRS SHRIMATI PUSHPATAI HIRAY COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  19 MRS. VANDANA KRISHNAJI BACHAV<br/>  MAHATMA GANDHI VIDYAMANDIRS SHRIMATI PUSHPATAI HIRAY COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  20 BHAUSAHEB  UKHA PAWAR<br/>  MAHATMA GANDHI VIDYAMANDIRS SHRIMATI PUSHPATAI HIRAY COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  21 MADHUKAR DAGU AHIRE<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, SCIENCE AND COMMERCE COLLEGE, NAMPUR  , DISTRICT: BALGAON ,NASHIK          , MAHARASHTRA          </p><p>  22 JITENDRA DEELIP PAGAR<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, SCIENCE AND COMMERCE COLLEGE, NAMPUR  , DISTRICT: BALGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  23 ARUN SUKDEO GARDE<br/>  MAHATMA  GANDHI VIDYAMANDIRS ART, COMMERCE AND SCIENCE COLLEGE, SURGANA  , DISTRICT: SURGANA, NASHIK ,NASHIK          , MAHARASHTRA          </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 THE STATE OF MAHARASHTRA DEPARTMENT  OF HIGHER AND TECHNICAL EDUCATION  PRINCIPAL SECRETARY<br/>  PRINCIPAL SECRETARY MANTRALAYA  , DISTRICT: MUMBAI ,MUMBAI          , MAHARASHTRA          </p><p>  2 THE DIRECTOR OF EDUCATION (HIGHER EDUCATION)<br/>  CENTRAL BUILDING  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  3 THE JOINT DIRECTOR OF HIGHER EDUCATION<br/>  PUNE REGION AMBEDKAR ROAD, NEAR LAL DEUL  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  4 THE UNIVERSITY GRANTS COMMISSION<br/>  BAHADUR SHAH ZAFAR MARG  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  5 SAVITRIBAI PHULE PUNE UNIVERSITY, THROUGH ITS REGISTRAR<br/>  GANESH KHIND, PUNE - 7  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  6 THE PRINCIPAL CHIEF CONSERVATOR OF FORESTS<br/>  M.V.P. SAMAJS S.V.K.T. COLLEGE DEOLALI CAMP, NASHIK ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  7 THE PRINCIPAL<br/>  M.V.P SAMAJS K.K. WAGH COLLEGE, PIMPALGAON BASAWAT  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  8 THE PRINCIPAL<br/>  N.D.M.V.P. SAMAJS ART'S SCIENCE, AND COMMERCE COLLEGE, TRIMBAKESHWAR  , DISTRICT: TRIMBAKESHWAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  9 THE PRINCIPAL<br/>  N.D.M.V.P SAMAJS K.T.H.M. COLLEGE, SHIVAJINAGAR, GANGAPUR ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  10 THE PRINCIPAL<br/>  N.D.M.V.P. SAMAJS G.M.D. ARTS B.W.COMMERCE  , DISTRICT: SINNAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  11 THE PRINCIPAL<br/>  M.V.P. SAMAJS K.P.G ARTS, COMMERCE  , DISTRICT: IGATPURI, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  12 THE PRINCIPAL<br/>  M.V.P.SAMAJS ARTS COMMERCE AND SCIENCE COLLEGE, NANDGAON,  , DISTRICT: NANDGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  13 THE PRINCIPAL<br/>  M.V.P. SAMAJS ARTS, COMMERCE AND SCIENCE COLLEGE, NANDGAON  , DISTRICT: NANDGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  14 THE PRINCIPAL<br/>  M.V.P. SAMAJS ARTS, COMMERCE AND SCIENCE COLLEGE, OZAAR(MIG), NIPHAD  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  15 THE PRINCIPAL<br/>  M.V.P. SAMAJS ART'S AND COMMERCE COLLEGE, TAHARABAD  , DISTRICT: BAGLAN ,NASHIK          , MAHARASHTRA          </p><p>  16 THE PRINCIPAL<br/>  M.V.P.SAMAJS ART'S AND COMMERCE COLLEGE, TAHARABAD  , DISTRICT: BAGLAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  17 THE PRINCIPAL<br/>  M.V.P SAMAJS K.A.A.N.M.S. ARTS COMMERCE  , DISTRICT: BALGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  18 THE PRINCIPAL<br/>  M.V.P.S ARTS, SCIENCE AND COMMERCE COLLEGE, HARSUL  , DISTRICT: TRIMBAKESHWAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  19 THE PRINCIPAL<br/>  M.G.V.S. ARTS,SCIENCE AND COMMERCE COLLEGE, MANMAD,  , DISTRICT: NANDGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  20 THE PRINCIPAL<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS,SCIENCE AND COMMERCE COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  21 THE PRINCIPAL<br/>  MAHATMA GANDHI VIDYAMANDIRS ART, SCIENCE AND COMMERCE COLLEGE, NAMPUR  , DISTRICT: BALGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  22 THE PRINCIPAL<br/>  MAHATMA GANDHI VIDYAMANDIRS SHRIMATI PUSHPATAI HIRAY COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  23 STATE OF UP THROUGH THE PRINCIPAL SECRETARY<br/>  MAHATMA  GANDHI VIDYAMANDIRS ART, COMMERCE AND SCIENCE COLLEGE, SURGANA  , DISTRICT: SURGANA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  24 THE PRINCIPAL<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, SCIENCE AND COMMERCE COLLEGE, YEOLA  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  25 THE PRINCIPAL<br/>  MAHATMA GANDHI VIDYAMANDIRS G.D.A.B. ARTS AND COMMERCE COLLEGE MALEGAON CITY,  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  26 THE PRINCIPAL<br/>  G.E. SOCIETY S  N.B. THAKUR LAW COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  27 THE PRINCIPAL<br/>  G.E. SOCIETY S HPT ARTS AND RYK SCIENCE COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  28 THE PRINCIPAL<br/>  G.E. SOCIETYS RNC ARTS, JDB COMMERCE AND NSC SCIENCE COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  29 THE PRINCIPAL<br/>  KALYAN EDUCATION SOCIETYS ARTS, SCIENCE AND COMMERCE COLLEG, KALWAN  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  30 THE PRINCIPAL<br/>  DANG SEVA, MANDALS ART'S COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  31 THE PRINCIPAL<br/>  DANG SEVA, MANDALS ARTS COLLEGE, PETH  , DISTRICT: PETH, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  32 THE PRINCIPAL<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  33 THE PRINCIPAL<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  34 THE PRINCIPAL<br/>  SHREE NEMINATH JAIN BRAHMACHARYA ASHRAMS K.K.H.A. ARTS, S.M.G.L. COMMERCE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  35 CENTRAL HINDU MILITARY EDUCATION SOCIETYS BHONSALA MILITARY COLLEGE<br/>  RAMBHOOMI  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  36 VIKRAM RAGHUNATH KAKULTE<br/>  M.V.P. SAMAJS S.V.K.T. COLLEGE, DEOLALI CAMP, NASHIK ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  37 RAJENDRA  S/O KARBHARI PATIL<br/>  M.V.P. SAMAJS S.V.K.T. COLLEGE DEOLALI CAMP, NASHIK ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  38 SITARAM RAMCHANDRA NIKAM<br/>  M.V.P. SAMAJS K.K. WAGH COLLEGE, PIMPALGAON BASAWAT,  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  39 SUNILDATTA   MADHAV PAGE<br/>  M.V.P. SAMAJS K.T.H.M.COLLEGE, SHIVAJINAGAR, GANGAPUR ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  40 VAISHALI ARJUN TILE<br/>  M.V.P. SAMAJS K.T.H.M.COLLEGE, SHIVAJINAGAR, GANGAPUR ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  41 PRABHAKAR VITTHALRAO JADHAV<br/>  M.V.P. SAMAJS K.T.H.M.COLLEGE, SHIVAJINAGAR, GANGAPUR ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  42 SHRIKANT SAKHARAM  JADHAV<br/>  M.V.P. SAMAJS K.T.H.M.COLLEGE, SHIVAJINAGAR, GANGAPUR ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  43 RAJENDRA VISHWANATH PAWAR<br/>  N.D.M.V.P. SAMAJS G.M.D. ARTS B.W.COMMERCE  , DISTRICT: SINNAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  44 ARUN  AMBADAS POTE<br/>  M.V.P. SAMAJS G.M.D. ARTS B.W.COMMERCE  , DISTRICT: SINNAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  45 LAXMAN SANTU CHANDORE<br/>  M.V.P. SAMAJS G.M.D.ARTS B.W..COMMERCE  , DISTRICT: SINNAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  46 UTTAM  NIVRUTTI SANGALE<br/>  M.V.P. SAMAJS G.M.D. ARTS B.W.COMMERCE  , DISTRICT: SINNAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  47 HARISHCHANDRA RAVINDRA VASAVE<br/>  M.V.P. SAMAJS K.P.G. ARTS, COMMERCE  , DISTRICT: IGATPURI, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  48 DAULAT DHARMA JADHAV<br/>  M.V.P. SAMAJ K.S.K.W ARTS COMMERCE AND SCIENCE COLLEGE, CIDCO  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  49 DARSHAN MADHUKAR KOKATE<br/>  M.V.P. SAMAJ K.S.K.W. ARTS COMMERCE AND SCIENCE COLLEGE, NANDGAON  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  50 MADHAVRAO BAPU THAKARE<br/>  M.V.P. SAMAJ ARTS COMMERCE AND SCIENCE COLLEGE OZAR(MIG),  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  51 DATTATRAYA SITARAM GODAGE<br/>  M.V.P. SAMAJS ARTS, COMMERCE AND SCIENCE COLLEGE, OZAAR(MIG), NIPHAD  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  52 DILIP DAULATRAO BHACHHAV<br/>  M.V.P. SAMAJS ARTS AND COMMERCE COLLEGE, TAHARABAD,  , DISTRICT: BAGLAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  53 ASHOK  NATHURAM DIMBAR<br/>  M.V.P.SAMAJS ARTS AND COMMERCE COLLEGE, TAHARABAD  , DISTRICT: BAGLAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  54 KRISHNA RAWA PADVI<br/>  M.V.P.SAMAJS K.A.A.N.M.S. ARTS  , DISTRICT: BALGAN ,NASHIK          , MAHARASHTRA          </p><p>  55 AVINASH SUDHAKAR KALE<br/>  M.V.P.SAMAJS K.A.A.N.M.S. ART'S COMMERCE  , DISTRICT: BALGAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  56 KEWEL TRYAMBAK KHAIRNAR<br/>  M.G.V.S. LOKNETE VYANKATRAO HIRAY ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: PANCHAVATI, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  57 ASHA SHIVAJIRAO PATIL<br/>  M.G.V.S. LOKNETE VYANKATRAO HIRAY ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: PANCHAVATI, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  58 RAVINDRA  PRALHAD HIRAY<br/>  M.G.V.S. LOKNETE VYANKATRAO HIRAY ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: PANCHAVATI, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  59 RAJANI S. PATIL<br/>  M.G.V.S. LOKNETE VYANKATRAO HIRAY ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: PANCHAVATI, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  60 KAVITA  SHASHIKANT  KAKHANDKI<br/>  M.G.V.S. ARTS, SCIENCE AND COMMERCE COLLEGE, MANMAD  , DISTRICT: NANDGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  61 SAHEBRAO  DEORAM MOHAN<br/>  M.G.V.S. ARTS, SCIENCE AND COMMERCE COLLEGE, MANMAD  , DISTRICT: NANDGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  62 DEORAM GOPAL JADHAV<br/>  M.G.V.S. ARTS, SCIENCE AND COMMERCE COLLEGE, MANMAD  , DISTRICT: NANDGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  63 SOMNATH BHAGA SANAP<br/>  MAHATMA GANDHI VIDYAMANDIRS SHRIMATI PUSHPATAI HIRAY COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  64 BHAUSAHEB BHAGINATH BACHHAV<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, COMMERCE AND SCIENCE COLLEGE  , DISTRICT: SURGANA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  65 SHAH KSHAMA RAJMOHAN<br/>  G.E.SOCIETYS N.B. THAKUR LAW COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  66 RAJESH BUDHA BAGUL<br/>  G.E. SOCIETY S HPT ARTS AND RYK SCIENCE COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  67 KAILAS SHANKARRAO  BORSE<br/>  G.E. SOCIETYS RNC ARTS, JDB COMMERCE AND NSC SCIENCE COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  68 RAVINDRA BHAURAO  BAGUL<br/>  G.E. SOCIETYS RNC ARTS, JDB COMMERCE AND NSC SCIENCE COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  69 VILAS JANARDHAN KAMBLE<br/>  G.E. SOCIETYS RNC ARTS, JDB COMMERCE AND NSC SCIENCE COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  70 DEVIDAS ANANDA SONAWANE<br/>  DANG SEVA, MANDALS ARTS COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  71 GANESH DADASAHEB  RUPWATE<br/>  DANG SEVA, MANDALS ARTS COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  72 BHASKAR GOPAL BORASE<br/>  DANG SEVA, MANDALS ARTS COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  73 RAVINDRA MURLIDHAR PAGAR<br/>  DANG SEVA, MANDALS ARTS COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  74 DINESH  DAULA HALDE<br/>  DANG SEVA, MANDALS ARTS COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  75 NARENDRA  UTTAMRAO PATIL<br/>  DANG SEVA, MANDALS ARTS COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  76 VILAS  VISHWANATH BANKAR<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  77 BHUSAN KEWAL  KIRAY<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  78 PRADIP PUNDLIK  SONAWANE<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  79 ROHIDAS  BABURAO PATIL<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  80 SANJAY MARTAND NIKAM<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  81 AHIRE BAJIRAO  BHILA<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  82 MILIND  BARKU SALUNKE<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  83 DNYANESHWAR NIVRUTTI CHAVAN<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  84 DATTATRAYA SOPAN GHOTEKAR<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  85 VILAS JAIRAM KHAIRNAR<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  86 USHA KARBARI AHIRE<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  87 RAJESH  MAHADEO SHAMBHARKAR<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  88 UJWALA NIVRUTTI SHELKE<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  89 NARAYAN MADHAV JADHAV<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  90 RAMBHAU NIVRUTTI WADALKAR<br/>  S.G.S.P. MANDALS SWAMI MUKTANAND COLLEGE OF SCIENCE,  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  91 KAILASPATI KISANRAO JADHAV<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  92 VILAS CHANGDEO BHAGWAT<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  93 SUNIL PRAKASH BAKALE<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  94 RAGHUNATH KEDU  SONAWANE<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  95 NIMBA ONKAR DABHADE<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  96 BALU SHANKARSA PANDHARE<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEL ,NASHIK          , MAHARASHTRA          </p><p>  97 PURUSHOTTAM NILKANTH PATIL<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  98 SOHANI PARASHARAM RATAN<br/>  SHREE NEMINATH JAIN BRAHMACHARYA ASHRAMS K.K.H.A. ARTS, S.M.G.L. COMMERCE  , DISTRICT: CHANDWAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  99 VIJAYA RAMBHAU JADHAV<br/>  SHREE NEMINATH JAIN BRAHMACHARYA ASHRAMS K.K.H.A. ARTS, S.M.G.L. COMMERCE  , DISTRICT: CHANDWAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  100 DATTATRAYA  NAMDEO KALE<br/>  N.D.M.V.P. SAMAJS ARTS SCIENCE, AND COMMERCE COLLEGE, TRIMBAKESHWAR  , DISTRICT: TRIMBAKESHWAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  101 HEMANTKUMAR BABANRAO GALKAR<br/>  M.V.P. SAMAJS K.T.H.M.COLLEGE, SHIVAJINAGAR, GANGAPUR ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  102 ANJALI KAILAS SHINDE<br/>  M.V.P. SAMAJS K.T.H.M.COLLEGE, SHIVAJINAGAR, GANGAPUR ROAD  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  103 BAPU SHANKAR DEORE<br/>  M.G.V.S. ARTS, SCIENCE AND COMMERCE COLLEGE, HARSUL  , DISTRICT: TRIMBAKESHWAR, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  104 VINOD SITARAM SAVALE<br/>  MGVS MAHARAJA SAYAJIRAO GAIKWAD ARTS, SCIENCE AND COMMERCE COLLEGE, MALEGAON CAMP  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  105 BAPU LUNGA SHELAR<br/>  MAHATMA GANDHI VIDYAMANDIRS ARTS, COMMERCE AND SCIENCE COLLEGE  , DISTRICT: SURGANA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  106 KHAN RIZWAN AMANULLAH KHAN<br/>  G.D.A.B. ARTS  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  107 RAJENDRA SHANKAR TELURE<br/>  G.D.A.B. ARTS  , DISTRICT: MALEGAON, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  108 SANJAY  SUPDU<br/>  G.E. SOCIETYS  N.B. THAKUR LAW COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  109 BALBHIM  BAPURAO  DIVATE<br/>  G.E. SOCIETY S  N.B. THAKUR LAW COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  110 KALYANRAO CHIMAJI  TAKALE<br/>  G.E. SOCIETYS RNC ARTS, JDB COMMERCE AND NSC SCIENCE COLLEGE  , DISTRICT: NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  111 MANOHAR NAGU PATIL<br/>  KALWAN EDUCATION SOCIETYS ARTS, SCIENCE AND COMMERCE COLLEGE,  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  112 SHIVALAL MOTIRAM PAGAR<br/>  KALWAN EDUCATION SOCIETYS ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  113 NIMBA  BALWANT KOTHAWADE<br/>  KALWAN EDUCATION SOCIETYS ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  114 BHAUSAHEB SHIVAJI<br/>  KALWAN EDUCATION SOCIETYS ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  115 RAJENDRA  BAPURAO AHER<br/>  KALWAN EDUCATION SOCIETYS ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  116 MEENA VINAYAK BORSE<br/>  KALWAN EDUCATION SOCIETYS ARTS, SCIENCE AND COMMERCE COLLEGE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  117 DINKAR  JANKIRAM NERPAGAR<br/>  DANG SEVA, MANDALS ARTS COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  118 PRADIP VISHNU  DESHPANDE<br/>  DANG SEVA, MANDALS ARTS COLLEGE ABHONE  , DISTRICT: KALWAN, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  119 BAL NAGORAO RAKSHASE<br/>  NUTAN VIDYA PRASARAK MANDALS ARTS, COMMERCE AND SCIENCE COLLEGE, LASALGAON  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  120 PANDVE  BHIMRAO JAIRAM<br/>  CENTRAL HINDU MILITARY EDUCATION SOCEITYS BHONSALA MILITARY COLLEGE  , DISTRICT: RAMBHOOMI, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  121 ANIL  RAMLAL KUMAVAT<br/>  S.G.S.P. MANDALS SWAMI  MUKTANAND COLLEGE OF SCIENCE  , DISTRICT: YEOLA, NASHIK ,NASHIK          , MAHARASHTRA          </p><p>  122 YOGESHWAR RAJARAM BASTE<br/>  M.V.P.SAMAJS K.K. WAGH COLLEGE PIMPALGAON BASAWAT  , DISTRICT: NIPHAD, NASHIK ,NASHIK          , MAHARASHTRA          </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  PUKHRAMBAM RAMESH KUMAR</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

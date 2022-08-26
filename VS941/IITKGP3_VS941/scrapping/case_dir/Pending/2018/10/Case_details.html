@@ -1,0 +1,398 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 16204 - 2018</h5>
+<h5 align="center">SHINY P.K. vs. THE STATE OF KERALA</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="162042018"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">16204/2018</font> Filed on 26-04-2018 04:16 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="blue" style="font-size:16px;font-weight:bold;">PENDING</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">XI-A</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 018963 -  / 2018  Registered on 17-07-2018<br/>(Verified On 04-07-2018)</div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">14-01-2020</font> [<font color="green" style="font-size:12px;font-weight:bold;">REGISTRAR (J) - II</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">PENDING (Motion Hearing <br/> [AFTER NOTICE (FOR ADMISSION) - CIVIL CASES]) Notice Tag with-Ord dt:17-07-2018 </font>
+</td>
+</tr><tr>
+<td width="140px">Category</td>
+<td>0611-Service Matters : Reservation in service for SC/ST/OBC</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 SHINY P.K. S/D/W/Thru:- KUKKURU<br/>  PAIPPOTHU HOUSE, KUZHIKKANI  , DISTRICT: P.O. THRISSUR ,THRISSUR            , KERALA            </p><p>  2 SHYNIMOL K.K. S/D/W/Thru:- KURUMBAN<br/>  KOLANJIKUDY HOUSE, MALAYATTUR P.O., KALADY VIA, ILLITHODE  ,ERNAKULAM            , KERALA            </p><p>  3 RATHEESHKUMAR K.K. S/D/W/Thru:- KRISHNAN<br/>  KAYIKKODATH HOUSE, PALLIYAKKAL, EAHIKKARA P.O., NORTH PARAVOOR  , , KERALA            </p><p>  4 ASHAKUMARI P.V.<br/>  PULIKKAPARAMBIL HOUE, VYTTILLA P.O., KOCHI  , , KERALA            </p><p>  5 SREELAJA N.G.<br/>  NEDUMURUPPEL HOUSE, ELANTHOOR P.O., PATHANAMTHITTA  ,PATHANAMTHITTA            , KERALA            </p><p>  6 GEIGIMOL N.V.<br/>  MANIMANDIRAM, KUMARANASAN ROAD, KALOOR P.O., KOCHI  , , KERALA            </p><p>  7 SUNITHA K.<br/>  VELAMMUDI HOUSE SOUTH VAZHAKULAM P.O., CHEMBARAKKY, ALUVA  , , KERALA            </p><p>  8 BABUMON EDAMPADAM<br/>  EDAMPADAM HOUSE, KULAYATTIKKARA P.O.  ,ERNAKULAM            , KERALA            </p><p>  9 A. SASIDHARAN<br/>  HAPPY HOME EZHIKKARA P.O., NORTH PARAVUR  , , KERALA            </p><p>  10 SREE AYYANKALI CULTURAL COUNCIL SECRETARY GENERAL<br/>  SECRETARY GENERAL P.K.BAHULEYAN, ELANKUNNAPPUZHA P.O., VYPEEN  , , KERALA            </p><p>  11 NATIONAL ADIVASI FEDRATION (NAF) PRESIDENT<br/>  PRESIDENT P.K.BHASKARAN, PUTHUPPARAMBIL HOUSE, KAIPPALLI P.O., POONJAR SOUTH  ,KOTTAYAM            , KERALA            </p><p>  12 LAWYERS CENTRE FOR SOCIAL JUSTICE SECRETARY<br/>  SECRETARY P. CHELLAPPAN, ADVOCATE HIGH COURT OF KERALA, ROHINI, FIRST FLOOR, POWATHIL ROAD, AYYAPPANKAVU, KOCHI-18,682018  , , KERALA            </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 THE STATE OF KERALA<br/>  REP. BY THE CHIEF SECRETARY TO GOVERNMENT GOVERNMENT SECRETARIAT  , DISTRICT: THIRUVANANTHAPURAM ,THIRUVANANTHAPURAM            , KERALA            </p><p>  2 THE STATE OF KERALA THE PRINCIPAL SECRETARY TO GOVT. DEPARTMENT OF HIGHER EDUCATION<br/>  THE PRINCIPAL SECRETARY TO GOVT. GOVT. SECRETARIAT  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  3 THE STATE OF KERALA PRINCIPAL SECRETARY TO GOVT DEPARTMENT OF GENERAL EDUCATION<br/>  PRINCIPAL SECRETARY TO GOVT GOVT. SECRETARIAT  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  4 DIRECTOR OF COLLEGIATE EDUCATION DIRECTORATE OF COLLEGIATE EDUCATION<br/>  DIRECTOR OF COLLEGIATE EDUCATION VIKAS BHAVAN, VIKAS BHAVAN P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  5 DIRECTOR OF TECHNICAL EDUCATION DIRECTORATE OF TECHNICAL EDUCATION<br/>  DIRECTOR OF TECHNICAL EDUCATION FORT P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  6 DIRECTOR OF AYURVEDA MEDICAL EDUCATION<br/>  DIRECTOR OF AYURVEDA MEDICAL EDUCATION  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  7 PRINCIPAL<br/>  PRINCIPAL GOVT. HOMEOPATHY MEDICAL COLLEGE, IRANIMUTTOM, MANACAUD P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  8 DIRECTOR OF HIGHER SECONDARY EDUCATION<br/>  DIRECTOR OF HIGHER SECONDARY EDUCATION HOUSING BOARD BUILDIGS, SANTHI NAGAR  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  9 DIRECTOR OF VOCATIONAL HIGHER SECONDARY EDUCATION DIRECTORATE OF VOCATIONAL HIGHER SECONDARY EDUCATION<br/>  DIRECTOR OF VOCATIONAL HIGHER SECONDARY EDUCATION HOUSING BOARD BUILDIGS, SANTHI NAGAR  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  10 DIRECTOR OF PUBLIC INSTRUCTION DIRECTORATE OF PUBLIC INSTRUCTION<br/>  DIRECTOR OF PUBLIC INSTRUCTION JAHATHY, THYCAUD P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  11 UNIVERSITY OF KERALA REGISTRAR<br/>  REGISTRAR KERALA UNIVERSITY P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  12 MAHATMA GANDHI UNIVERSITY REGISTRAR<br/>  REGISTRAR PRIYADARSHINI HILLS  ,KOTTAYAM            , KERALA            </p><p>  13 CALICUT UNIVERSITY REGISTRAR<br/>  REGISTRAR THENJIPALAM P.O.  ,MALAPPURAM            , KERALA            </p><p>  14 KANNUR UNIVERSITY REGISTRAR<br/>  REGISTRAR UNIVERSITY CAMPUS P.O.  ,KANNUR            , KERALA            </p><p>  15 TRAVANCORE DEVASWOM BOARD SECRETARY<br/>  SECRETARY DEVASWOM BOARD JUNCTION, KAUDIAR P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  16 COCHIN DEVASWOM BOARD SECRETARY<br/>  SECRETARY DEVASWOM BUILDINGS, ROUND NORTH  ,THRISSUR            , KERALA            </p><p>  17 NAIR SERVICE SOCIETY SECRETARY<br/>  SECRETARY NSS HEAD OFFICE, PERUNNAI P.O. CHANGANASSERY  ,KOTTAYAM            , KERALA            </p><p>  18 S.N. TRUST (CORPORATE EDUCATIONAL AGENCY) SECRETARY<br/>  SECRETARY  ,KOLLAM            , KERALA            </p><p>  19 MUSLIM EDUCATIONAL SOCIETY SECRETARY<br/>  SECRETARY  ,KOZHIKODE            , KERALA            </p><p>  20 CORPORATE MANAGER SACRED HEARTS CORPORATE EDUCATIONAL AGENCY<br/>  CORPORATE MANAGER THE C.M.I., RAVAGER, KALAMASSERY  , , KERALA            </p><p>  21 CORPORATE MANAGER ERNAKULAM ARCHDIOCESES SCHOOL AND COLLEGES<br/>  CORPORATE MANAGER ST. ALBERTS SCHOOL, ERNAKULAM, KOCHI  ,ERNAKULAM            , KERALA            </p><p>  22 CORPORATE MANAGER ERNAKULAM ARCHDIOCESES SCHOOL AND COLLEGES<br/>  CORPORATE MANAGER ARCH BISHOS HOUSE BROADWAY, ERNAKULAM, KOCHI  ,ERNAKULAM            , KERALA            </p><p>  23 CO OPERATIVE ARTS AND SCIENCE COLLEGE, MADAI REP. BY PAYYANNUR<br/>  REP. BY PAYYANNUR CO-OPERATIVE EDUCATIONAL SOCIETY  ,KANNUR            , KERALA            </p><p>  24 UNION OF INDIA UNION CHRISTAN COLLEGE ASSOCIATION<br/>  UNION CHRISTAN COLLEGE ASSOCIATION U C COLLEGE P.O., ALUVA  ,ERNAKULAM            , KERALA            </p><p>  25 M.S.M. COLLEGE, KAYAMKULAM SECRETARY<br/>  SECRETARY MSM TRUST  , , KERALA            </p><p>  26 UNION OF INDIA SECRETARY TO GOVT. MINISTRY OF HUMAN RESOURCE DEVELOPMENT<br/>  SECRETARY TO GOVT.  ,NEW DELHI         , DELHI          </p><p>  27 UNIVERSITY GRANTS COMMISSION SECRETARY<br/>  SECRETARY OFFICE OF THE UNIVERSITY GRANTS COMMISSION NO.35 FEROZE SHAH ROAD  ,NEW DELHI         , DELHI          </p><p>  28 MANNIYA COLLEGE OF ARTS AND SCIENCE MANAGER<br/>  MANAGER MANNIYA COLLEGE OF ARTS AND SCIENCE, PANGODE  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  29 IQBAL COLLEGE, PERINGAMALA SECRETARY<br/>  SECRETARY IQBAL COLLEGE DEVELOPMENT COMMITTE, PERINGAMALA P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  30 ST. GREGARIOUS COLLEGE<br/>  PILAMON P.O., REPRESENTED BY MOST. REV.MATHEWS, MARBOORILAS, KOTTARAKKARA  ,KOLLAM            , KERALA            </p><p>  31 SREE AYYAPPA COLLEGE MANAGER<br/>  MANAGER ERAMALLIKARA, THIRUVANANDOOR P.O., ALAPPUZHA  ,ALAPPUZHA            , KERALA            </p><p>  32 MARIN COLLEGW MANAGER<br/>  MANAGER KUTTIKANAM P.O., PEERUMADE  ,IDUKKI            , KERALA            </p><p>  33 SREE SANKARA COLLEGE MANAGER<br/>  MANAGER SREE SANKARA ASSOCIATION, KALADY  ,ERNAKULAM            , KERALA            </p><p>  34 COCHIN COLLEGE SECRETARY<br/>  SECRETARY COCHIN EDUCATION SOCIETY, COCHIN COLLEGE BUILDING  ,ERNAKULAM            , KERALA            </p><p>  35 MAR ATHANACIOUS COLLEGE SECRETARY<br/>  SECRETARY MAR ATHANACIOUS COLLEGE ASSOCIATION, KOTHAMANGALAM P.O.  ,ERNAKULAM            , KERALA            </p><p>  36 SREE SANKARA VIDHAPEEDAM COLLEGE SECRETARY<br/>  SECRETARY SREE SANKARA TRUST, SREE SANKARAPURAM, VALAY ANCHIRANGARA P.O. PERUMBAVOOR  ,ERNAKULAM            , KERALA            </p><p>  37 SREE NARAYANA MANGALAM COLLEGE SECRETARY<br/>  SECRETARY HINDU DHARMA PARIPALANA SABHA, MALIANKARA P.O., MOOTHAKUNNAM  ,ERNAKULAM            , KERALA            </p><p>  38 SNM TRAINING COLLEGE SECRETARY HMPD SABHA<br/>  SECRETARY HMPD SABHA MOOTHAKUNNAM  ,ERNAKULAM            , KERALA            </p><p>  39 PRAJYOTHI NIKETAN COLLEGE MANAGER<br/>  MANAGER PRAJYOTHI NIKETAN COLLEGE, PUDUKKAD  ,THRISSUR            , KERALA            </p><p>  40 SREEKRISHNAPURAM V T BHATTATHIRIPAD COLLEGE, MANNAMPETTA MANAGER<br/>  MANAGER SREE SANKARA TRUST, NAMBOODHIRI VIDYALAYAM  ,THRISSUR            , KERALA            </p><p>  41 POCKER SAHIB MEMORIAL ORPHANAGE COLLEGE MANAGER<br/>  MANAGER PSMO COLLEGE, THIRURANGADY  ,MALAPPURAM            , KERALA            </p><p>  42 ZAMORINS GURUVA YURAPPAN COLLEGE H.H. THE ZAMORIN RAJA OF CALICUT EDUCATIONAL AGENCY<br/>  H.H. THE ZAMORIN RAJA OF CALICUT EDUCATIONAL AGENCY ZAMORINS GURUVA YURAPPAN COLLEGE  ,KOZHIKODE            , KERALA            </p><p>  43 MUHAMMED ABDURAHIMAN MEMORIAL ORPHANAGE COLLEGE MANAGER<br/>  MANAGER MF AMO COLLEGE, MOKKAM  ,KOZHIKODE            , KERALA            </p><p>  44 FAROOK TRAINING COLLEGE SECRETARY<br/>  SECRETARY FAROOK TRAINING COLLEGE MANAGING COMMITTEE, FAROOK COLLEGE P.O.  ,KOZHIKODE            , KERALA            </p><p>  45 ROUZATHUL ULOOM ARABIC COLLEGE MANAGER<br/>  MANAGER ROUZATHUL ULOOM ARABIC COLLEGE  ,KOZHIKODE            , KERALA            </p><p>  46 W.M.O. ARTS AND SCIENCE COLLEGE MANAGER<br/>  MANAGER W.M.O. ARTS AND SCIENCE COLLEGE, P.O. MUTTIL, WAYANAD  ,WAYANAD            , KERALA            </p><p>  47 PAZHASSIRAJA COLLEGE SECRETARY<br/>  SECRETARY PAZHASSIRAJA EDUCATIONAL SOCIETY, PULPALLUY  ,WAYANAD            , KERALA            </p><p>  48 S.E.S. COLLEGE MANAGER<br/>  MANAGER SREEKANDAPURAM EDUCATIONAL SOCIETY, SREEKANDAPURAM  ,KANNUR            , KERALA            </p><p>  49 CO OPERATIVE ARTS AND SCIENCE COLLEGE, MADAYI SECRETARY<br/>  SECRETARY PAYYANNUR EDUCATIONAL SOCIETY, PAYYANNUR P.O.  ,KANNUR            , KERALA            </p><p>  50 PAYYANNUR COLLEGE MANAGER BOARD OF MANAGEMENT<br/>  MANAGER BOARD OF MANAGEMENT PAYYANNUR EDUCATIONAL SOCIETY, PAYYANNUR P.O.  ,KANNUR            , KERALA            </p><p>  51 NEHRU ARTS AND SCIENCE COLLEGE PRESIDENT<br/>  PRESIDENT NEHRU MEMORIAL EDUCATION SOCIETY, KANHANGAD  ,KASARAGOD            , KERALA            </p><p>  52 T.V. BABU<br/>  GENERAL SECRETARY, KERALA PULAYAR MAHA SABHA, HEAD OFFICE THIRUVANANTHAPURAM, NANDAVANAM, VIKAS BHAVAN P.O.  ,THIRUVANANTHAPURAM            , KERALA            </p><p>  53 M.S. BAHULEYAN<br/>  GENERAL SECRETARY KERALA VELAN MAHAJAN SABHA, HEAD OFFICE, CHERTHALA  ,ALAPPUZHA            , KERALA            </p><p>  54 P.V. SHAJIL<br/>  GENERAL SECRETARY KERAA VELAN MAHAJAN SABHA, HEAD OFFICE PALLURUTHY, COCHIN  ,ERNAKULAM            , KERALA            </p><p>  55 KERALA SC/ST CO ORDINATION FOURM PATRON, DR.M.K.KANDORAN<br/>  PATRON, DR.M.K.KANDORAN MANIANKOT BUILDING, KADAVANTHARA, K.P. VALLON ROAD, KOCHI  ,ERNAKULAM            , KERALA            </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  MALINI PODUVAL[P-1]</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  S. RAMAMANI[R-52]</p><p>  APOORV KURUP[R-27]</p><p>  PRAKASH RANJAN NAYAK[R-25]</p><p>  HIMINDER LAL[R-18]</p><p>  ANKUR S. KULKARNI[R-17]</p><p>  P. V. DINESH[R-16]</p><p>  PRASHANT PADMANABHAN[R-11]</p><p>  NISHE RAJEN SHONKER[R-5]</p><p>  NISHE RAJEN SHONKER[R-3]</p><p>  NISHE RAJEN SHONKER[R-2]</p><p>  NISHE RAJEN SHONKER[R-1]</p><p>  S. RAMAMANI[R-53]</p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>
