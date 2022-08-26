@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- icon -->
+    <link rel="icon" href="Images/icon.png" type="image/gif" sizes="16x16">
+
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!--css-->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+
+<body>
+    <section id="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid navi-cont">
+                <a class="navbar-brand" href="#">
+                    <img src="images/icon.png" alt="" width="25" height="" class="d-inline-block align-text-top">
+                    <p class="brand-name">ALPHA PLAGIARISM DETECTOR</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Team
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="contact.html">Aman Bhar</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Aman Kumar</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Ayush Kaithwas</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Bhargab Guru Das</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Debojyoti Kuri</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Trishna Devi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="main">
+
+        <h1 class="main-text-heading">WHAT IS ALPHA PLAGARISM DETECTOR ?</h1>
+        <hr class="underline">
+        <p class="about">The goal of Alpha is to find plagiarism in research project work.
+
+        We guarantee that your original work will be safe with us and that no previous study work will be plagiarised.
+        Alpha affirmed that the research was original, had not been previously published, and could not be copied by anyone.
+        </p>
+        <!-- <a href="https://google.com" class="btn btn-primary">Go to Google</a> -->
+
+        
+    </section>
+    <div class="lower">
+
+    </div>
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

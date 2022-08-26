@@ -1,0 +1,109 @@
+
+.brand-name{
+    display: inline;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("bg.png");
+    background-size: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+}
+
+.navi-cont{
+    padding: 0 3%;
+}
+
+.navbar-brand{
+    margin: 0 3% 0 2%;
+    
+}
+
+.nav-item{
+    margin: 0 2rem;
+}
+
+.main-text-heading{
+    font-weight: 800;   
+    margin-top: 13%;
+    font-size: 3rem;
+}
+
+.underline{
+    border-bottom: 6px solid white;
+  width: 45%;
+  opacity: 1;
+  margin: auto;
+  opacity: .3;
+}
+
+.about{
+    font-weight: 400;
+    margin: 0 10%;
+}
+
+.check-btn{
+    font-weight: 600;
+    margin: 2rem;
+ padding: .45rem 8rem;
+ -webkit-box-shadow: 0px 0px 76px 3px rgba(119,193,255,1);
+-moz-box-shadow: 0px 0px 76px 3px rgba(119,193,255,1);
+box-shadow: 0px 0px 76px 3px rgba(119,193,255,1);  
+
+}
+
+.check-btn:hover{
+     font-size: 1.2rem;
+     transition: 0.5s;
+     /* color: #0c8bf4 ; */
+     /* background-color: #0c8bf4; */
+}
+
+.lower{
+    background-color: #51b0ff;
+    position: absolute;
+    bottom: 0;
+    height: 7%;
+    width: 100%;
+}
+
+.about-main{
+text-align: left;
+padding: 5% 30% 0 2%;
+}
+
+.about-heading{
+ font-weight: 800; 
+ margin-top: 3%;  
+    text-align: left;
+    font-size: 3rem;   
+}
+
+.about-underline{
+ border-bottom: 6px solid white;
+  width: 20%;
+  opacity: 1;
+  margin: 0 0 0 0;
+  opacity: .3;   
+}
+
+.about-project-content{
+    font-weight: 400;
+}
+
+.name-head{
+    font-weight: 800; 
+    margin-top: 3%;  
+    text-align: left;
+    font-size: 2rem;   
+}
+
+.name-content{
+    font-weight: 400;
+}
+
+.contact-main{
+text-align: left;
+padding: 5% 15% 0 2%;
+}
