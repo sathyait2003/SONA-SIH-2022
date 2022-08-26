@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-area {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EEE;
+
+    &.dark {
+        background-color: #111;
+        color: #ccc;
+    }
+}

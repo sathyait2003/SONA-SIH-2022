@@ -1,0 +1,405 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 27786 - 2019</h5>
+<h5 align="center">ROHAN VIRANI vs. THE STATE OF MAHARASHTRA</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="277862019"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">27786/2019</font> Filed on 05-08-2019 12:53 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="red" style="font-size:16px;font-weight:bold;">DISPOSED</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">III</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">C.A. No. 006753 / 2019  Registered on 02-09-2019<br/>SLP(C) No. 019807 -  / 2019  Registered on 19-08-2019<br/>(Verified On 07-08-2019)</div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">02-09-2019</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MS. JUSTICE INDU MALHOTRA and HON'BLE MR. JUSTICE R. SUBHASH REDDY</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">DISPOSED (Motion Hearing <br/> FOR JUDGEMENT) Leave Granted &amp; Disposed off-Ord dt:02-09-2019  (Disposal Date: 02-09-2019, Month: 9, Year: 2019)<br/> JUDGES: HON'BLE MS. JUSTICE INDU MALHOTRA, HON'BLE MR. JUSTICE R. SUBHASH REDDY<br/><span style="color:green;">Judgement Pronaunced by : HON'BLE MS. JUSTICE INDU MALHOTRA of the bench comprising : HON'BLE MS. JUSTICE INDU MALHOTRA, HON'BLE MR. JUSTICE SANJIV KHANNA</span></font>
+</td>
+</tr><tr>
+<td width="140px">Disp.Type</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Leave Granted &amp; Disposed off</font>
+</td>
+</tr><tr>
+<td width="140px">Category</td>
+<td>3100-Admission To Educational Institutions Other Than Medical &amp; Engineering</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 ROHAN VIRANI<br/>  STUDENT 1301, RAHEJA EXCELSIOR, TARDEO  ,MUMBAI          , MAHARASHTRA          </p><p>  2 SHUBHAM GAWAS<br/>  STUDENT 302/B WING, KARTIKYA COMPLEX, NITYANAND NAGAR, MIRAROAD (EAST)  ,MUMBAI          , MAHARASHTRA          </p><p>  3 MANAN MEHTA<br/>  STUDENT 703, RAJYOG RESIDENCY, DR R P ROAD, MULUND WEST, MUMBAI  ,MUMBAI          , MAHARASHTRA          </p><p>  4 SURAJ NAIR<br/>  STUDENT C-1/301, TRIPURA, LOKDHARA, KALYAN EAST  ,MUMBAI          , MAHARASHTRA          </p><p>  5 SUSHANT SURESH UGALE<br/>  STUDENT ROOM NO. 4, BANKAR CHAWL, GHATIPADA, BAL RAJESHWAR ROAD, VAISHALI NAGAR, MULUND (W), MUMBAI  ,MUMBAI          , MAHARASHTRA          </p><p>  6 HARSHA SOLANKI<br/>  STUDENT A-302, VISHANK APT, NALASOPARA EAST  ,MUMBAI          , MAHARASHTRA          </p><p>  7 VISHAL MHATRE<br/>  STUDENT JANAI NIWAS, PLOT NO. 296, SAINT EKNATH ROAD, NEAR RAVIRAJ FARMHOUSE, MHADE, PEN-402107, RAIGAD  ,RAIGARH          , MAHARASHTRA          </p><p>  8 ROHIT THORAT<br/>  STUDENT 407, PRATIK APARTMENT, BEHIND DEVENDRA IND. YASHODHAN NAGAR PADA NO. 2, THANE (W), MUMBAI  ,MUMBAI          , MAHARASHTRA          </p><p>  9 NIKHIL CHAVAN<br/>  STUDENT E-2/2/12, NANDANVAN CHS, SECTOR 23, JUINAGAR, NAVI MUMBAI  ,NAVI  MUMBAI , MAHARASHTRA          </p><p>  10 SAIRAJ HEMACHANDRAN<br/>  STUDENT 702/SIDDHESHWAR HEIGHTS, KAMOTHE, NAVI MUMBAI  ,NAVI  MUMBAI , MAHARASHTRA          </p><p>  11 SANKET JOSHI<br/>  STUDENT HOUSE NO. 0223, GANGA NIWAS, SHIRAVANE GAON, SEC-1, NERUL, NAVI MUMBAI  ,MUMBAI          , MAHARASHTRA          </p><p>  12 SHIVANI SALGAR<br/>  STUDENT B/18, VANDAN BUILDING, ABAN PARK, DHOKALI, KOLSHET ROAD, THANE WEST  ,THANE          , MAHARASHTRA          </p><p>  13 RUSHABH RAIKAR<br/>  STUDENT 9B/201, ALICA NAGAR, LOKHANDWALA TOWNSHIP, KANDIVALI EAST, MUMBAI  ,MUMBAI          , MAHARASHTRA          </p><p>  14 MAYUR GORE<br/>  STUDENT C/404, YASHWAN ARCADE, RETI BUNDER ROAD, NR KDMC SCHOOL, DOMBIVLI (WEST)  ,MUMBAI          , MAHARASHTRA          </p><p>  15 SWAPNIL TANAJI YAMGAR<br/>  STUDENT C-402, PANCHAVATI COMPLEX, SECTOR 34, KAMOTHE, NAVI MUMBAI  ,NAVI  MUMBAI , MAHARASHTRA          </p><p>  16 WARREN REMEDIOS<br/>  STUDENT 55, SUNITA, OPP. COLABA PO MUMBAI  ,MUMBAI          , MAHARASHTRA          </p><p>  17 RUSHIKESH VIJAY BHOPATRAO<br/>  STUDENT MAULI NIWAS, AT- VADAP, POST- GAURKAMATH, TAL-KARJAT, DIST- RAIGAD 410201  ,RAIGARH          , MAHARASHTRA          </p><p>  18 KOMAL KAMBLE<br/>  STUDENT A/908 USHANAGAR HOUSING SOCIETY, VILLAGE ROAD, BHANDUP WEST, MUMBAI 400078  ,MUMBAI          , MAHARASHTRA          </p><p>  19 PRANAY KOLI<br/>  STUDENT HOUSE NO. 1664, AT- BELPADA, POST-JASAI, TALUKA- PANVEL,RAIGAD 410 206  ,RAIGARH          , MAHARASHTRA          </p><p>  20 ROHIT PATIL<br/>  STUDENT 301 NEST RECIDENCY MAHIM MANOR ROAD TEMBHODE PALGHAR (W)  ,PALGHAR , MAHARASHTRA          </p><p>  21 ANKIT THAKKER<br/>  STUDENT B-205/206, INDIRA APARTMENTS, GOVANDI STATION ROAD, DEONAR, MUMBAI-400088  ,MUMBAI          , MAHARASHTRA          </p><p>  22 OMKAR SHEKHAR NARVEKAR<br/>  STUDENT 4/155, SAHAKAR SADAN A, D.L.MARG, CHINCHPOKLI EAST, 400012  , , MAHARASHTRA          </p><p>  23 MANISH TEMBHEKAR<br/>  STUDENT C/O KEWALDAS TEMBHEKAR MAHA E SEVAKENDRA, GOREWADA BASTI PITESUR ROAD, NAGPUR440013  ,NAGPUR          , MAHARASHTRA          </p><p>  24 PUJA PATEKAR<br/>  STUDENT PLOT NO-69,RATILAL CHAWL,NEAR RADHA KRISHNA MANDIR,KHERWADI,BANDRA-EAST,400051  , , MAHARASHTRA          </p><p>  25 YASH THAKKER<br/>  STUDENT B1306, SECTOR 35G, KHARGHAR NAVI MUMBAI  ,NAVI  MUMBAI , MAHARASHTRA          </p><p>  26 AMIT SURESH KIRTANE<br/>  STUDENT 302,NEHA ANNEXE, KHOT ROAD, BHATTIPADA, BHANDUP WEST, MUMBAI &amp;NDASH; 400078  ,MUMBAI          , MAHARASHTRA          </p><p>  27 UNMESH DAHAKE<br/>  STUDENT JN-2/19/A-5,SEC-9,VASHI,NAVI MUMBAI  ,NAVI  MUMBAI , MAHARASHTRA          </p><p>  28 GAYATRI THAKRE<br/>  STUDENT 1441, NEW NANDANWAN LAY-OUT, NAGPUR 440009  ,NAGPUR          , MAHARASHTRA          </p><p>  29 SRUSHTI SAWANT<br/>  STUDENT A-102, SATYASAGAR SOCIETY, SECTOR-4, PLOT NO.- 5, KALAMBOLI, NAVI MUMBAI  ,NAVI  MUMBAI , MAHARASHTRA          </p><p>  30 SURABHI SHRIDHAR SAWANT<br/>  STUDENT 51A, FLAT NO.34, MATHURESH SOCIETY, VRINDAVAN SOCIETY, THANE(W.) -400601  ,THANE          , MAHARASHTRA          </p><p>  31 ANIKET BHANDWALE<br/>  STUDENT VIDYANAGAR EAST BEED
+PARLI, MAHARASHTRA 431515  , , MAHARASHTRA          </p><p>  32 SUHAS KRISHNA MAHADIK<br/>  STUDENT A-504,D-3,PHASE 2,JAI BHAVANI CHS, SATELITE GARDEN, FILMCITY ROADOPP AAREY BHASKAR GROUND, GOKULDHAM, GOREGAON EAST, MUMBAI 400063  ,MUMBAI          , MAHARASHTRA          </p><p>  33 NIKHIL CHANDRAKANT DAKARE<br/>  STUDENT A/302 SARVODAYA NAGAR RAJESH CHS MEGHWADI IT COLONY ROAD NEAR SWAMI VIVEKANANDA SCHOOL JOGESHWARI EAST MUMBAI 400060  ,MUMBAI          , MAHARASHTRA          </p><p>  34 ASHISH MAHAMUNKAR<br/>  STUDENT AGE 25 YEARS, OCCU. STUDENT, R/O. ROOM NO 4,MHATRE CHAWL, ANIK VILLAGE, SHANKAR DEVAL, CHEMBUR
+  , , MAHARASHTRA          </p><p>  35 VEDANT BUNDELLU<br/>  STUDENT D-103,SHANTINAGAR, DATTA MANDIR ROAD, MALAD EAST, MUMBAI 400097  ,MUMBAI          , MAHARASHTRA          </p><p>  36 ANKLESH SHEKOKAR<br/>  STUDENT ASHIYANA, GANESH NAGAR, NEAR KHAMKAR INDUSTRIES, AHEAD TUKARAM SQUARE, RING ROAD, AKOLA  ,AKOLA          , MAHARASHTRA          </p><p>  37 VAIBHAV JADHAV<br/>  STUDENT ATANA, MANORA, WASHIM, MAHARASHTRA, PIN-444404  ,WASHIM *         , MAHARASHTRA          </p><p>  38 AADITYA MARUTI MAGDUM<br/>  STUDENT AMBI GULLY, SIDDHANERLI, KAGAL, KOLHAPUR -416232  ,KOLHAPUR          , MAHARASHTRA          </p><p>  39 KALPESH SHINDE<br/>  STUDENT LADUD POST SOMPUR, TALUKA BAGLAN, NASHIK - 423303  ,NASHIK          , MAHARASHTRA          </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 THE STATE OF MAHARASHTRA<br/>  PRINCIPAL SECRETARY MANTRALAYA, MUMBAI-32  ,MUMBAI          , MAHARASHTRA          </p><p>  2 THE DIRECTOR OF TECHNICAL EDUCATION, MS<br/>  The Director of Technical Education, MS 3, MAHAPALIKA MARG, POST BOX NO.1967, OPP. METRO CINEMA, MUMBAI 400 001  ,MUMBAI          , MAHARASHTRA          </p><p>  3 THE UNIVERSITY OF MUMBAI THROUGH ITS REGISTRAR<br/>  Through its Registrar M.G. ROAD, FORT, MUMBAI &amp;NDASH; 400 032  ,MUMBAI          , MAHARASHTRA          </p><p>  4 THE DIRECTOR JAMNALAL BAJAJ INSTITUTE OF MANAGEMENT STUDIES<br/>  The Director Jamnalal Bajaj Institute of Management Studies 164, BACKBAY RECLAMATION, H.T. PAREKH MARG, CHURCHGATE, MUMBAI &amp;NDASH; 400 020
+  ,MUMBAI          , MAHARASHTRA          </p><p>  5 THE UNIVERSITY GRANTS COMMISSION, THROUGH ITS CHAIRMAN<br/>  Through its Chairman BAHADUR SHAH ZAFAR ROAD, NEW DELHI 110002  ,NEW DELHI         , DELHI          </p><p>  6 THE STATE COMMON ENTRANCE TEST CELL, MAHARASHTRA STATE, MUMBAI  THROUGH ITS COMMISSIONER<br/>  Through its Commissioner 8TH FLOOR, NEW EXCELSIOR BUILDING, A.K. NAYAK MARG, FORT, MUMBAI 400 001  ,MUMBAI          , MAHARASHTRA          </p><p>  7 DHIRAJ UDAYRAO BORSE<br/>  STUDENT PLOT NO.38, NEAR SIDDHIVINAYAK TEMPLE, SATPUR, ASHOKNAGAR, NASHIK &amp;NDASH; 422 012  ,NASHIK          , MAHARASHTRA          </p><p>  8 SUDIP RAJENDRA NIKAM<br/>  STUDENT PLOT NO.228, SARVADNYA, KALAMAGAV, DONDORI ROAD, NASHIK &amp;NDASH; 422 004  ,NASHIK          , MAHARASHTRA          </p><p>  9 SAHIL RAJMAHAMAD SHAIKH<br/>  STUDENT C-104, HARI SNEHA PHASE 1, KHODE NAGAR, WADALA SHIVAR, NASHIK &amp;NDASH; 422 006.  ,NASHIK          , MAHARASHTRA          </p><p>  10 PRASAD RAJENDRA SURYAWANSHI<br/>  STUDENT FLAT NO.5, A WING, YASH HEIGHTS, GOVIND NAGAR, NASHIK &amp;NDASH; 422 009.  ,NASHIK          , MAHARASHTRA          </p><p>  11 SAURABH SANJAY KALORE<br/>  STUDENT VIRANGULA BUILDING, NEAR HEDGEWAR BLOOD BANK, JATHARPETH, AKOLA &amp;NDASH; 444 005  ,AKOLA          , MAHARASHTRA          </p><p>  12 GHANSHYAM DHANRAJ PAWAR<br/>  STUDENT 23, KAILAS NAGAR, WADALA, PATHARDI ROAD, NASHIK &amp;NDASH; 422 009  ,NASHIK          , MAHARASHTRA          </p><p>  13 ASHWIN SANTOSH TARLE<br/>  STUDENT 5, TEJPRATIK HOUSING SOCIETY, NAVNIRMAN CHOWK, MAKHMALABAD NAKA, PANCHAVATI, NASHIK &amp;NDASH; 422 003  ,NASHIK          , MAHARASHTRA          </p><p>  14 ABHINAV RAMESH NALAWADE<br/>  STUDENT B-504, HARI OM PURAM, NEW DP ROAD, AUNDH, PUNE &amp;NDASH; 411 007.  ,PUNE          , MAHARASHTRA          </p><p>  15 SHANTANU VISHWANATH CHAVAN<br/>  STUDENT MIG-165, MHADA COLONY, NEAR DHOOT HOSPITAL, AURANGABAD &amp;NDASH; 431 001  ,AURANGABAD          , MAHARASHTRA          </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  PRAMOD B. AGARWALA</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  ATUL BABASAHEB DAKH[caveat]</p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

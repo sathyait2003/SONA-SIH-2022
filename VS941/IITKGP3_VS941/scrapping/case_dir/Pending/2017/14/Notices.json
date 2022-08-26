@@ -1,0 +1,72 @@
+[
+    {
+        "S.No": "1",
+        "Process Id": "178252/2019-05-31",
+        "Notice Type": "DUE COURSE NOTICE",
+        "Name": "APARNA BHAT-1246Copy",
+        "State / District": "NEW DELHI        /DELHI",
+        "Station": "",
+        "Issue Date": "31-05-2019",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "2",
+        "Process Id": "178252/2019-05-31",
+        "Notice Type": "DUE COURSE NOTICE",
+        "Name": "DANG SEVA MANDAL THROUGH ITS SECRETARYAPARNA BHAT-1246",
+        "State / District": "MAHARASHTRA         /NASHIK",
+        "Station": "NASHIK",
+        "Issue Date": "31-05-2019",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "19-06-2019",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "3",
+        "Process Id": "178251/2019-05-31",
+        "Notice Type": "DUE COURSE NOTICE",
+        "Name": "APARNA BHAT-1246Copy",
+        "State / District": "NEW DELHI        /DELHI",
+        "Station": "",
+        "Issue Date": "31-05-2019",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "4",
+        "Process Id": "178251/2019-05-31",
+        "Notice Type": "DUE COURSE NOTICE",
+        "Name": "NISHANT RAMAKANTRAO KATNESHWARKAR-1729Copy",
+        "State / District": "NEW DELHI        /DELHI",
+        "Station": "",
+        "Issue Date": "31-05-2019",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "5",
+        "Process Id": "178251/2019-05-31",
+        "Notice Type": "DUE COURSE NOTICE",
+        "Name": "UNIVERSITY GRANTS COMMISSION    THROUGH ITS CHAIRMANNISHANT RAMAKANTRAO KATNESHWARKAR-1729",
+        "State / District": "DELHI         /",
+        "Station": "",
+        "Issue Date": "31-05-2019",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "19-06-2019",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    }
+]

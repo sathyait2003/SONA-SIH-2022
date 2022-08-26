@@ -1,0 +1,15 @@
+.login {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 2rem;
+    background: url('./taraju.jpg');
+    background-size: contain;
+
+    &.light {
+        background-color: #fafafa;
+    }
+    &.dark {
+        background-color: #111;
+        color: #ccc;
+    }
+}

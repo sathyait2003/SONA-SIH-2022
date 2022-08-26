@@ -1,0 +1,44 @@
+[
+    {
+        "S.No": "1",
+        "Process Id": "82680/2020-08-18",
+        "Notice Type": "due course notice in SLP",
+        "Name": "SHIVAJI MAHAVIDYALAYA            THROUGH ITS PRINCIPAL",
+        "State / District": "MAHARASHTRA         /LATUR",
+        "Station": "LATUR",
+        "Issue Date": "18-08-2020",
+        "Returnable Date": "05-10-2020",
+        "Dispatch Date": "25-08-2020",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "2",
+        "Process Id": "52711/2020-03-16",
+        "Notice Type": "due course notice in SLP",
+        "Name": "R. R. DESHPANDE-1678Copy",
+        "State / District": "NEW DELHI        /DELHI",
+        "Station": "",
+        "Issue Date": "16-03-2020",
+        "Returnable Date": "30-04-2020",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "3",
+        "Process Id": "52711/2020-03-16",
+        "Notice Type": "due course notice in SLP",
+        "Name": "SHIVAJI MAHAVIDYALAYA            THROUGH ITS PRINCIPAL R. R. DESHPANDE-1678",
+        "State / District": "MAHARASHTRA         /LATUR",
+        "Station": "",
+        "Issue Date": "16-03-2020",
+        "Returnable Date": "30-04-2020",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    }
+]

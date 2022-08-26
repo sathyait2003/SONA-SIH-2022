@@ -1,0 +1,44 @@
+[
+    {
+        "S.No": "1",
+        "Process Id": "51515/2022-04-20",
+        "Notice Type": "Dismissal Letter",
+        "Name": "ROHIT K. SINGH-1999Copy",
+        "State / District": "NEW DELHI        /DELHI",
+        "Station": "",
+        "Issue Date": "20-04-2022",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "2",
+        "Process Id": "51515/2022-04-20",
+        "Notice Type": "Dismissal Letter",
+        "Name": "THE REGISTRAR,ROHIT K. SINGH-1999",
+        "State / District": "ORISSA         /CUTTACK",
+        "Station": "",
+        "Issue Date": "20-04-2022",
+        "Returnable Date": "30-11--0001",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "3",
+        "Process Id": "24315/2022-02-28",
+        "Notice Type": "Letter to advocate for defects",
+        "Name": "MR. ROHIT K. SINGH, ADVOCATEROHIT K. SINGH-1999",
+        "State / District": "DELHI         /CENTRAL *",
+        "Station": "",
+        "Issue Date": "28-02-2022",
+        "Returnable Date": "18-04-2022",
+        "Dispatch Date": "",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    }
+]

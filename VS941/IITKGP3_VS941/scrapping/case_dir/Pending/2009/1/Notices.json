@@ -1,0 +1,44 @@
+[
+    {
+        "S.No": "1",
+        "Process Id": "74137/2021-07-17",
+        "Notice Type": "Notice Alternative Arrangement Fresh Expired",
+        "Name": "GIRISH SHARMA S/o S.K. SHARMA",
+        "State / District": "CHANDIGARH   /",
+        "Station": "",
+        "Issue Date": "17-07-2021",
+        "Returnable Date": "31-08-2021",
+        "Dispatch Date": "22-07-2021",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "2",
+        "Process Id": "74136/2021-07-17",
+        "Notice Type": "Notice Alternative Arrangement Fresh Expired",
+        "Name": "SUMIT TULSYAN S/o SUBHASH TULSYAN",
+        "State / District": "WEST BENGAL       /HOWRAH",
+        "Station": "HOWRAH",
+        "Issue Date": "17-07-2021",
+        "Returnable Date": "31-08-2021",
+        "Dispatch Date": "22-07-2021",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    },
+    {
+        "S.No": "3",
+        "Process Id": "74135/2021-07-17",
+        "Notice Type": "Notice Alternative Arrangement Fresh Expired",
+        "Name": "ANAND K. GOSALIA AND ORS. S/o KETAN H. GOSALIA",
+        "State / District": "TAMIL NADU        /CHENNAI",
+        "Station": "CHENNAI",
+        "Issue Date": "17-07-2021",
+        "Returnable Date": "31-08-2021",
+        "Dispatch Date": "22-07-2021",
+        "Serve Date": "",
+        "Ack. Date": "",
+        "Served/Unserved": ""
+    }
+]

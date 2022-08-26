@@ -1,0 +1,83 @@
+.schedule {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.calendar-wrapper {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-card {
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
+}
+
+.calendar {
+    transform: translateX(25%);
+}
+
+.upcoming-list {
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: calc(100% - 3rem);
+
+    h2 {
+        text-align: center;
+        margin: 0 0 1rem 0;
+    }
+
+    .upcoming-item {
+        margin: 0 0.5rem 1rem 0.5rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            color: #277BC0;
+        }
+    }
+}
+
+.case-list {
+    width: 60%;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: calc(100vh - 3rem);
+
+    h2 {
+        text-align: center;
+        margin: 0 0 1rem 0;
+    }
+}
+
+.case-item {
+    margin: 0 0.5rem 1.5rem 0.5rem;
+    cursor: pointer;
+    position: relative;
+
+    .badges {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+
+        display: flex;
+        flex-direction: column;
+
+        div:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}

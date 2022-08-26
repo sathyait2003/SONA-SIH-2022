@@ -1,0 +1,50 @@
+{
+    "INTERLOCUTARY APPLICATION(s)": {
+        "0": {
+            "Reg. No./I.A. No.": "1/2016",
+            "Particular": "PERMISSION TO APPEAR AND ARGUE IN PERSON",
+            "Remark": "",
+            "Filed By": "PETITIONER-IN-PERSON",
+            "Filing Date": "22-09-2016",
+            "Sr. No.": "1",
+            "Status.": "D",
+            "Entered On": "22-09-2016 16:45:20"
+        },
+        "1": {
+            "Reg. No./I.A. No.": "2/2016",
+            "Particular": "EX-PARTE STAY",
+            "Remark": "",
+            "Filed By": "PETITIONER-IN-PERSON",
+            "Filing Date": "22-09-2016",
+            "Sr. No.": "2",
+            "Status.": "D",
+            "Entered On": "22-09-2016 16:45:59"
+        },
+        "2": {
+            "Reg. No./I.A. No.": "3/2016",
+            "Particular": "",
+            "Remark": "",
+            "Filed By": "PETITIONER-IN-PERSON",
+            "Filing Date": "22-09-2016",
+            "Sr. No.": "3",
+            "Status.": "D",
+            "Entered On": "22-09-2016 16:47:26"
+        }
+    },
+    "OTHER DOCUMENT(s)": {
+        "0": {
+            "Doc. No.": "24055/2017",
+            "Document Type": "MEMO OF APPEARANCE",
+            "Filed By": "-",
+            "Filing Date": "21-03-2017 12:00 AM",
+            "Enter By": "AMRIT BHOLA21-03-2017 12:00 AM"
+        },
+        "1": {
+            "Doc. No.": "6807/2018",
+            "Document Type": "VAKALATNAMA AND MEMO OF APPEARANCE",
+            "Filed By": "BHARTI TYAGI",
+            "Filing Date": "15-01-2018 12:25 PM",
+            "Enter By": "AMRIT BHOLA15-01-2018 12:25 PM"
+        }
+    }
+}

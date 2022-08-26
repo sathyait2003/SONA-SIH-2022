@@ -1,0 +1,400 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 10844 - 2016</h5>
+<h5 align="center">CHANDRASHEKHAR H. SAWARKAR AND ORS ETC ETC vs. THE STATE OF MAHARASHTRA AND ORS. ETC. ETC.</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="108442016"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">10844/2016</font> Filed on 28-03-2016 04:31 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="blue" style="font-size:16px;font-weight:bold;">PENDING</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">IX</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 011604 - 011607 / 2016  Registered on 23-04-2016<br/></div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">28-04-2022</font> [<font color="green" style="font-size:12px;font-weight:bold;">HON'BLE MR. JUSTICE S. ABDUL NAZEER and HON'BLE MR. JUSTICE VIKRAM NATH</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">Pending - (Final Hearing) List After (Weeks) (8)-Ord dt:28-04-2022 </font>
+</td>
+</tr><tr>
+<td width="140px">Admitted</td>
+<td style="font-size:12px;font-weight:100;">[<font color="red">ADMITTED ON : 11-01-2017</font>]</td></tr><tr>
+<td width="140px">Category</td>
+<td>0613-Service Matters : Others</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 CHANDRASHEKHAR H. SAWARKAR AND ORS ETC ETC<br/>  R/O ARTS. SC. AND COMMERCE COLLEGE, KIRANNAGAR,  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  2 KU. SAROJ R. KUMBHARE<br/>  R/O AMOLAKCHAND MV. YAVATMAL  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  3 PRASHANT G. GAWANDE<br/>  R/O ARTS COMMERCE AND SC. COLLEGE, CHIKHALDARA  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  4 RAMCHANDRA H. BUTLE<br/>  R/O ARTS AND COMMERCE COLLEGE, BORI ARAB  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  5 VIKAS T. NINGHOT<br/>  R/O ARTS AND COMMERCE COLLEGE, BORI ARAB  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  6 GANESH N. PAWAR<br/>  R/O ARTS AND COMMERCE COLLEGE, BORI ARAB  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  7 RAMESH S. KHANDARE<br/>  R/O ARTS AND COMMERCE COLLEGE, BORI ARAB  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  8 ASRAR R. KHAN<br/>  R/O ARTS AND COMMERCE COLLEGE, BORI ARAB  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  9 AJAY S. BONDE<br/>  R/O ARTS AND COMMERCE COLLEGE, BORI ARAB  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  10 CHANDRASHEKHAR R DHABALE<br/>  R/O ARTS AND COMMERCE COLLEGE, BORI ARAB  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  11 RAJENDRA S. KORDE<br/>  R/O ARTS AND COMMERCE COLLEGE, WARWAT BAKAL  , DISTRICT: BULDANA ,BULDANA          , MAHARASHTRA          </p><p>  12 SUBHASH R. GURJAR<br/>  R/O ARTS AND COMMERCE COLLEGE, WARWAT BAKAL  , DISTRICT: BULDHANA ,BULDANA          , MAHARASHTRA          </p><p>  13 DHAIRYAWARDHAN H. PUNDKAR<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  14 DR. KAILASH N. PANDE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  15 KISHOR M. PATIL<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  16 KU. JAYASHRI V. BHISE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  17 KR. KANCHAN M. THORAT<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  18 PRAKASH S. WANKHADE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  19 SANJAY J. PATIL<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  20 SUNIL B. UNHALE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  21 SUNIL Y. DESHMUKH<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  22 ANANT B. KARACHE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  23 SHYAM K. LANDE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  24 KU, CHHAYA D. BADNAKHE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  25 MANOJ R. GADPAYALE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  26 SHRIKRUSHNA N. WANKHADE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  27 KU. SAPNA W. PATEKAR<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  28 RAJESH G. OLAMBE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, BALAPUR  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  29 NARENDRA M. JATHE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, KIRANNAGAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  30 DINESHKUMAR N. SATANGE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, KIRANNAGAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  31 SACHIN K. TIPPAT<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, KIRANNAGAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  32 SHRIKANT P. DESHMUKH<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, KIRANNAGAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  33 NAKUL D. GAWANDE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, KIRANNAGAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  34 DR. PRASHANT N. PAWADE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, KIRANNAGAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  35 ASHIWINIKUMAR U. BAJPEYEE<br/>  R/O ARTS, COMMERCE AND SCIENCE COLLEGE, KIRANNAGAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  36 SUNIL M. MANWAR<br/>  R/O BABASAHEB LAHANE, MV., PINJAR,  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  37 MANOJ K. FADANIS<br/>  R/O BABASAHEB LAHANE, MV., PINJAR,  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  38 WASUDEV W. BHAGAT<br/>  R/O BABASAHEB LAHANE, MV., PINJAR,  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  39 RAMKRISHNA M. GAWANDE<br/>  R/O BABASAHEB LAHANE, MV., PINJAR,  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  40 REKHA S. KALPANDE<br/>  R/O BABASAHEB LAHANE, MV., PINJAR,  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  41 SHRIKANT MAHULKAR<br/>  R/O DATTARAYA PUSADKAR ARTS COLLEGE , NANDGAON PETH  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  42 DEONANDAN T. ADHAU<br/>  R/O G. S. COLLEGA, KHAMGAON  , DISTRICT: KHAMGAON , , MAHARASHTRA          </p><p>  43 RAVINDRA D. DAKHODE<br/>  R/O G.S. TOMPE MV. CHANDUR BAZAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  44 SUBHAS P. SIRSAT<br/>  R/O G.S. TOMPE MV. CHANDUR BAZAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  45 VIJAY K. TOMPE<br/>  R/O G.S. TOMPE MV. CHANDUR BAZAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  46 VIJAY D. ELKAR<br/>  R/O J.D. PATIL SANGLUDKAR MV. DARYAPUR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  47 NARENDRA T. MANE<br/>  R/O J.D. PATIL SANGLUDKAR MV. DARYAPUR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  48 DR. SHUBHANGRI D. KONDOLIKAR<br/>  R/O K.R. INNANI COLLEGE, KARANJA LAD, WASHIM  , DISTRICT: WASHIM ,WASHIM *         , MAHARASHTRA          </p><p>  49 THAKSEN D. RAJGURE<br/>  R/O K.R. INNANI COLLEGE, KARANJA LAD, WASHIM  , DISTRICT: WASHIM ,WASHIM *         , MAHARASHTRA          </p><p>  50 SANDEEP K. THORAT<br/>  R/O K.R. INNANI COLLEGE, KARANJA LAD, WASHIM  , DISTRICT: WASHIM ,WASHIM *         , MAHARASHTRA          </p><p>  51 SANDIP TUNDULWAR<br/>  R/O L.T. COLLEGE, WANI YAVATMAL  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  52 DR. PRASHANT M. THAKRE<br/>  R/O LATE MADANGOPAL MUNDADHA MV. CHANDUR RLY.  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  53 WASUDEV J. UIKE<br/>  R/O LATE MADANGOPAL MUNDADHA MV. CHANDUR RLY.  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  54 KU. MAYA M. WANKHEDE<br/>  R/O LATE MADANGOPAL MUNDADHA MV. CHANDUR RLY.  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  55 ANIL S. VAIDHYA<br/>  R/O LATE N.A. DESHMUKH COLLEGE, CHANUR BAZAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  56 PRAFULLA A. RAUT<br/>  R/O LATE N.A. DESHMUKH COLLEGE, CHANUR BAZAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  57 KU. MEENA S. LAKDE<br/>  R/O LATE N.A. DESHMUKH COLLEGE, CHANUR BAZAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  58 ANIL. R. KADU<br/>  R/O LATE PANCHAFULABAI PAWADE MV., WARUD  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  59 PRADEEP S. DHOLE<br/>  R/O LATE PANCHAFULABAI PAWADE MV., WARUD  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  60 ARVIND M. TATTE<br/>  R/O LATE PANCHAFULABAI PAWADE MV., WARUD  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  61 MANOJ G. RATHOD<br/>  R/O LATE PANCHAFULABAI PAWADE MV., WARUD  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  62 GAJANAN V. PATIL<br/>  R/O M.S.P. M.V. COLLEGE, MANORA  , DISTRICT: WASHIM ,WASHIM *         , MAHARASHTRA          </p><p>  63 PRADIP P. DANDE<br/>  R/O MAHILA M.V. CHANDUR RLY.  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  64 DIPAK B. KUTE.,<br/>  R/O ARTS AND COMMERCE COLLEGE, BORI ARAB  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  65 RAMESH B. JADHAV<br/>  R/O R.D. ARTS COLLEGE, NANDGAON KH. DISTT. AMRAVATI  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  66 RAJESH S. NITNAWARE<br/>  R/O R.D.G. COLLEGE, AKOLA  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  67 KU. PRIYA  B. BOCHE<br/>  R/O SANT BHAGWANBABA ARTS COLLEGE, SINDKHED RAJA  , DISTRICT: BULDHANA ,BULDANA          , MAHARASHTRA          </p><p>  68 KU. MANISHA R. ISAPURE<br/>  R/O SANT GADGE MAHARAJ MV. WALGAON  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  69 VASANT B. THAKARE<br/>  R/O SANT GADGE MAHARAJ MV. WALGAON  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  70 KU. PUSHPA N. BANKAR<br/>  R/O SANT GADGE MAHARAJ MV. WALGAON  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  71 HARISHCHANDRA B. GAJBHIYE<br/>  R/O SANT GADGE MAHARAJ MV. WALGAON  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  72 GAJANAN N. BADHE<br/>  R/O SANT GAJANAN MAHARAJ ARTS COLLEGE, BORGAON MANJU  , DISTRICT: AKOLA ,AKOLA          , MAHARASHTRA          </p><p>  73 JAGDEV JADHAV<br/>  R/O SHRI SHIVAJI MV. CHIKHALI  , DISTRICT: BULDHANA ,BULDANA          , MAHARASHTRA          </p><p>  74 KU. KOKILA S. DEOTALE<br/>  R/O SHRI SHIVAJI MV. CHIKHALI  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  75 KU. ARCHANA L. DWIVEDI<br/>  R/O SHRI SHIVAJI MV. CHIKHALI  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  76 ANANT N. GAWANDE<br/>  R/O SHRI SHIVAJI MV. CHIKHALI  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  77 DR. SUNIL A. RATHOD<br/>  R/O SHRI SHIVAJI MV. CHIKHALI  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  78 DILIP M. MORE<br/>  R/O SHRI SHIVAJI MV. CHIKHALI  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  79 KU. SHUBHANGI S. KALE<br/>  R/O SMT. SALUNKABAI RAUT ARTS, COMM. COLLEGE, WANOJA  , DISTRICT: WASHIM ,WASHIM *         , MAHARASHTRA          </p><p>  80 GAJANAN B. GHONGATE<br/>  R/O SMT. SALUNKABAI RAUT ARTS, COMM. COLLEGE, WANOJA  , DISTRICT: WASHIM ,WASHIM *         , MAHARASHTRA          </p><p>  81 PROF. DR. SUNIL S/D/W/Thru:- SHANKARRAO BIDWAIK<br/>  R/O C/O SHARADRAO PAWAR KALA VANIJYA MAHAVIDYALAYA GADCHANDUR TQ. KORAPANA  , DISTRICT: CHANDRAPUR ,CHANDRAPUR          , MAHARASHTRA          </p><p>  82 PROF. DR. RAJESH HARISHCHANDRA GAIDHANI<br/>  R/O C/O SHARADRAO PAWAR KALA VANIJYA MAHAVIDYALAYA GADCHANDUR TQ. KORAPANA  , DISTRICT: CHANDRAPUR ,CHANDRAPUR          , MAHARASHTRA          </p><p>  83 PROF DR. SANJAY S/D/W/Thru:- BHAGWANRAO GORE<br/>  R/O C/O SHARADRAO PAWAR KALA VANIJYA MAHAVIDYALAYA GADCHANDUR TQ. KORAPANA  , DISTRICT: CHANDRAPUR ,CHANDRAPUR          , MAHARASHTRA          </p><p>  84 MR. SHARAD BAPURAO BELORKAR<br/>  R/O C/O SHARADRAO PAWAR KALA VANIJYA MAHAVIDYALAYA GADCHANDUR TQ. KORAPANA  , DISTRICT: CHANDRAPUR ,CHANDRAPUR          , MAHARASHTRA          </p><p>  85 DR. NATTHU SITARAM GIRDE<br/>  R/O C/O KALA VANIJYA MAHAVIDYALAYA BHISI  , DISTRICT: CHIMUR ,CHANDRAPUR          , MAHARASHTRA          </p><p>  86 DR. VITTHAL NILKANTRAO THAWARI<br/>  R/O C/O KALA VANIJYA MAHAVIDYALAYA BHISI  , DISTRICT: CHANDRAPUR ,CHANDRAPUR          , MAHARASHTRA          </p><p>  87 KU. VEENA M. JAMBEWAR<br/>  R/O C/O J.S.P.M. COLLEGE, DHANORA  , DISTRICT: DIST. GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  88 DR. VIVEK VISHNUPANT JOSHI<br/>  SHRI JIVANRAO SITARAM PATIL MUNGHATE ARTS COLLEGE AND SCIENCE COLLEGE, DHANORA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  89 DR. PANDHARI S/D/W/Thru:- NARAYANRAO WAGH<br/>  SHRI JIVANRAO SITARAM PATIL MUNGHATE ARTS COLLEGE AND SCIENCE COLLEGE, DHANORA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  90 MR. RAMESH S/D/W/Thru:- HARIBHAU SONTAKKE<br/>  SHRI JIVANRAO SITARAM PATIL MUNGHATE ARTS COLLEGE AND SCIENCE COLLEGE, DHANORA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  91 DR. GANESH S/D/W/Thru:- NARAYAN CHAUDHARI<br/>  SHRI JIVANRAO SITARAM PATIL MUNGHATE ARTS COLLEGE AND SCIENCE COLLEGE, DHANORA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  92 DR HARISH S/D/W/Thru:- DAYAL LANJEWAR<br/>  SHRI JIVANRAO SITARAM PATIL MUNGHATE ARTS COLLEGE AND SCIENCE COLLEGE, DHANORA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  93 MR. GOPAL S/D/W/Thru:- SHIVNARAYAN TOMAR<br/>  SHRI JIVANRAO SITARAM PATIL MUNGHATE ARTS COLLEGE AND SCIENCE COLLEGE, DHANORA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  94 DR. NANDAJI S/D/W/Thru:- R. SATPUTE<br/>  MAHILA MAHAVIDYALAYA GADCHIROLI  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  95 MR. ANIL S/D/W/Thru:- MOTIRAM CHAHANDE<br/>  MAHILA MAHAVIDYALAYA GADCHIROLI  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  96 SMT. SHARYU N. GAHERWAR<br/>  MAHILA MAHAVIDYALAYA GADCHIROLI  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  97 MR. PRAMOD M. BODHANE<br/>  MAHILA MAHAVIDYALAYA GADCHIROLI  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  98 MR.  DILIP P. SONTAKKE<br/>  RASHTRAPITA MAHATMA GANDHI COLLEGE, SAOLI  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  99 MR. PRASHANT S. WASADE<br/>  RASHTRAPITA MAHATMA GANDHI COLLEGE, SAOLI  , DISTRICT: GADCHIROLI ,AGAR , MAHARASHTRA          </p><p>  100 DR. ASHOK T. KHOBRAGADE<br/>  RASHTRAPITA MAHATMA GANDHI COLLEGE, SAOLI  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  101 MR. LILADHAR CHARANDAS UJEDA<br/>  DHNYANESH MAHAVIDYALAYA NAVEGAON  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  102 MR. SANJAY UDDHAVRAO NAKADE<br/>  DHNYANESH MAHAVIDYALAYA NAVEGAON  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  103 MR. P.V. BALSARAF<br/>  ARTS AND COMMERCE MAHILA MAHAVIDYALAYA, BALLARPUR  , DISTRICT: CHANDRAPUR ,CHANDRAPUR          , MAHARASHTRA          </p><p>  104 TEJRAO S. HAGE<br/>  R/O C/O ARTS AND COMM. COLLEGE,  , DISTRICT: GONDPIPRI ,CHANDRAPUR          , MAHARASHTRA          </p><p>  105 KRISHNA K. DIXIT<br/>  R/O C/O YASHWANT MAHAVIDYALAYA SELU  , DISTRICT: WARDHA ,WARDHA          , MAHARASHTRA          </p><p>  106 PROF. DR. AVINASH YOGRAJ BADGUJAR<br/>  R/O GUT NO. 79/1, PLOT NO. 6, TILAKNAGAR,  , DISTRICT: JALGAON ,JALGAON          , MAHARASHTRA          </p><p>  107 PROF. KISAN LAHU HOROLE<br/>  R/O GOVERNMENT BOYS HOSTEL NEAR SINDHI COLONY  , DISTRICT: JALGAON ,JALGAON          , MAHARASHTRA          </p><p>  108 PROF NITIN UTTAM BARI<br/>  R/O PLOT NO. 84, GUT NO. 53, SHIV COLONY,  , DISTRICT: JALGAON ,JALGAON          , MAHARASHTRA          </p><p>  109 PROF. AJAY SHALIGRAM PATIL<br/>  R/O 32/5, GAURI RESIDENCY CHAITRABAN COLONY  , DISTRICT: MAHABAD ,JALGAON          , MAHARASHTRA          </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 THE STATE OF MAHARASHTRA AND ORS. ETC. ETC.  THROUGH THE SECRETARY<br/>  THROUGH THE SECRETARY FOR HIGHER AND TECHNICAL EDUCATION, MANTRALAYA,  , DISTRICT: MUMBAI ,MUMBAI          , MAHARASHTRA          </p><p>  2 DIRECTOR, HIGHER EDUCATION<br/>  CENTRAL BUILDING  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  3 JOINT DIRECTOR OF EDUCATION<br/>  HIGHER EDUCATION, AMRAVATI DIVISION, CAMP  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  4 UNIVERSITY GRANTS COMMISSION     THROUGH ITS SECRETARY<br/>  BAHADUR SHAH ZAFAR MARG,  , DISTRICT: DELHI , , DELHI          </p><p>  5 DINESH B. SURYAWANSHI<br/>  R/O C/O ARTS, SC. AND COMM. COLLEGE, KIRANNAGAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  6 KU. JAYSHREE S. INGOLE<br/>  R/O LATE N.A. DESHMUKH COLLEGE, CHANDUR BAZAR  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  7 NARENDRA A. THAKARE<br/>  R/O C/O M.S.M.V. COLLEGE, MANORA  , DISTRICT: WASHIM ,WASHIM *         , MAHARASHTRA          </p><p>  8 MADHUKAR D. WADTE<br/>  R/O C/O NEHRU MAHAVIDYALAYA NER PARSOPANT  , DISTRICT: YAVATMAL ,YAVATMAL          , MAHARASHTRA          </p><p>  9 ARVIND V. JOSHI<br/>  R/O SANT GADGE MAHARAJ MV. WALGAON  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  10 SHANKAR R. CHAVAN<br/>  R/O SANT GADGE MAHARAJ MV. WALGAON  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  11 SANJAY N. WAGH<br/>  R/O SANT GADGE MAHARAJ MV. WALGAON  , DISTRICT: AMRAVATI ,AMRAVATI          , MAHARASHTRA          </p><p>  12 STATE OF MAHARASHTRA     THROUGH THE SECRETARY<br/>  FOR HIGHER AND TECHNICAL EDUCATION, MANTRALAYA  , DISTRICT: MANTRALAYA ,MUMBAI          , MAHARASHTRA          </p><p>  13 DIRECTOR, HIGHER EDUCATION<br/>  CENTRAL BUILDING  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  14 STATE OF MAHARASHTRA  JOINT DIRECTOR OF EDUCATION, HIGHER EDUCATION DIVISIONAL  ENGINEER<br/>  AMRAVATI DIVISION  , DISTRICT: CAMP ,AMRAVATI          , MAHARASHTRA          </p><p>  15 STATE OF MAHARASHTRA  GONDWANA UNIVERSITY THROUGH ITS REGISTRAR<br/>  GADCHIROLI,  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  16 STATE OF MAHARASHTRA  NAGPUR RASHTRASANT TUKADOJI MAHARAJ THROUGH PRINCIPAL<br/>  NAGPUR VIDYAPEETH  , DISTRICT: NAGPUR ,NAGPUR          , MAHARASHTRA          </p><p>  17 STATE OF MAHARASHTRA  UNIVERISTY GRANTS COMMISSION THROUGH ITS SECRETARY<br/>  BAHADUR SHAH ZAFAR MARG  , DISTRICT: NEW DELHI , , DELHI          </p><p>  18 MR. SURYAKANT MADHUKARRAO JAULAKAR<br/>  R/O C/O ISHWAR DESHMUKH COLLEGE OF PHYSICAL EDUCATION,  , DISTRICT: HAUMAN NAGAR ,NAGPUR          , MAHARASHTRA          </p><p>  19 DR. APARNA BAPUJI DHOTE @ APARNA MADHUKARRAO THENGNE<br/>  R/O C/O NILKANTHRAO SHINDE. SCIENCE AND ARTS COLLEGE,  , DISTRICT: BHADRAWATI ,CHANDRAPUR          , MAHARASHTRA          </p><p>  20 MR. BABRAO MAROTI THAWRI<br/>  R/O C/O BHAGWNATRAO ARTS COLLEGE, SIRONCHA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  21 DR. RAJENDER RAJAIAH TULA<br/>  R/O C/O BHAGWNATRAO ARTS COLLEGE, SIRONCHA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  22 MR. MANOHAR SITARAMJI KALODE<br/>  R/O C/O BHAGWNATRAO ARTS COLLEGE, SIRONCHA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  23 MRS. AARATI BASHRATAHJI MAHESHKAR<br/>  R/O C/O BHAGWNATRAO ARTS COLLEGE, SIRONCHA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  24 MR. YOGIRAJ SHANKAR URKUDE<br/>  R/O C/O BHAGWNATRAO ARTS COLLEGE, SIRONCHA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  25 DR. ANAND KISAN BHOYAR<br/>  R/O C/O BHAGWNATRAO ARTS COLLEGE, SIRONCHA  , DISTRICT: GADCHIROLI ,GADCHIROLI          , MAHARASHTRA          </p><p>  26 STATE OF MAHARASHTRA  HIGHER AND TECHNICAL EDUCATION THROUGH THE SECRETARY<br/>  MANTRALAYA  , DISTRICT: MUMAI ,MUMBAI          , MAHARASHTRA          </p><p>  27 DIRECTOR , HIGHER EDUCATION,<br/>  CENTRAL BUILDING,  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  28 JOINT DIRECTOR OF EDUCATION<br/>  HIGHER EDUCATION, NAGPUR OLD MORIS COLLEGE BUILDING, SITABARDI, NAGPUR, DIST. NAGPUR  , DISTRICT: SITABARDI ,NAGPUR          , MAHARASHTRA          </p><p>  29 UNIVERSITY GRANTS COMMISSION    THROUGH ITS SECRETARY<br/>  BAHADUR SHAH ZAFAR MARG  , , DELHI          </p><p>  30 UNIVERSITY GRANTS COMMISSION GONDWANA UNIVERSITY THROUGH ITS REGISTRAR<br/>  GADCHIROLI  ,GADCHIROLI          , MAHARASHTRA          </p><p>  31 THE STATE OF MAHARASHTRA DEPARTMENT OF HIGHER EDUCATION  THROGH THE PRINCIPAL SECRETARY<br/>  MANTRALAYA  , DISTRICT: MUMBAI ,MUMBAI          , MAHARASHTRA          </p><p>  32 THE DIRECTOR OF HIGHER EDUCATION<br/>  MAHARASHTRA STATE PUNE  , DISTRICT: PUNE ,PUNE          , MAHARASHTRA          </p><p>  33 THE JOINT DIRECTOR OF HIGHER EDUCATION,<br/>  JALGAON REGION, C/O MAHARASHTRA JEEVAN, PRADHIKARAN BUILDING 1ST FLOOR  , DISTRICT: JALGAON ,JALGAON          , MAHARASHTRA          </p><p>  34 THE UNIVERSITY GRANTS COMMISSION    THROUGH ITS SECRETARY<br/>  BAHADUR SHAH ZAFAR MARG  , , DELHI          </p><p>  35 THE STATE OF MAHARASHTRA NORTH MAHARASHTRA UNIVERSITY THROUGH ITS REGISTRAR<br/>  JALGAON  ,JALGAON          , MAHARASHTRA          </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  CHANDER SHEKHAR ASHRI</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  NISHANT RAMAKANTRAO KATNESHWARKAR</p><p>   LAMBAT AND ASSOCIATES[R-16]</p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>

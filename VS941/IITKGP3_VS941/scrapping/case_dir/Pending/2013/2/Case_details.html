@@ -1,0 +1,400 @@
+<html><head><link href="https://main.sci.gov.in/php/css/bootstrap.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://main.sci.gov.in/php/js/bootstrap.min.js"></script>
+<script>
+            
+            (function($) {
+                $(document).on("click","#printOR",function(){
+                    var prtContent = $("#newc123").html();
+                    var temp_str=prtContent;
+                    var WinPrint = window.open('','','left=100,top=0,align=center,width=800,height=1200,menubar=1,toolbar=1,scrollbars=1,status=1,cellspacing=1');
+                    WinPrint.document.write(temp_str);
+                    WinPrint.document.close();
+                    WinPrint.focus();
+                    WinPrint.print();
+                });
+
+            })(jQuery);
+
+            function call_f2(fno) {
+
+                $.ajax({
+                    type: 'POST',
+                    //url:"./php/case_status/get_office_report.php",
+                    url:"/php/case_status/get_office_report_html.php",
+                    data:{fno:fno}
+                })
+                    .done(function(msg){
+                        $("#newc123").html(msg);
+                    })
+                    .fail(function(){
+                        alert("ERROR, Please Contact Server Room1111");
+                    });
+                var divname = "";
+                divname = "newc";
+                $('#' + divname).width($(window).width() - 150);
+                $('#' + divname).height($(window).height() - 120);
+                $('#newc123').height($('#newc').height() - $('#newc1').height() - 50);
+
+                var newX = ($('#' + divname).width() / 2);
+                var newY = ($('#' + divname).height() / 2);
+                document.getElementById(divname).style.marginLeft = "-" + newX + "px";
+                document.getElementById(divname).style.marginTop = "-" + newY + "px";
+                document.getElementById(divname).style.display = 'block';
+                document.getElementById(divname).style.zIndex = 10;
+                $('#overlay').height($(window).height());
+                document.getElementById('overlay').style.display = 'block';
+            }
+
+            function openPDF(urlToPdfFile) {
+                window.open(urlToPdfFile, 'pdf');
+            }
+
+            function close_w2() {
+                var divname = "";
+                divname = "newc";
+                document.getElementById(divname).style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+<style>
+            table       { border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; max-width: 100%;}
+            table th    { background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            table td    { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+            /*table tr :nth-child(even){background-color: #f2f2f2}*/
+            tbody tr:nth-child(odd) {   background-color: #f2f2f2;}
+            #newc { position: fixed; padding: 12px; left: 50%; top: 50%; display: none; color: black; background-color: #D3D3D3; border: 2px solid lightslategrey; height:100%;z-index: 999;}
+            #overlay {
+                background-color: #000;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head><body><h5 align="center">Diary No.- 18187 - 2013</h5>
+<h5 align="center">NAMRATA M. AND ANR. vs. THE STATE OF KARNATAKA AND ORS</h5>
+<input id="diaryno" name="diaryno" type="hidden" value="181872013"/>
+<div class="container_cs">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse1">Case Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse in" id="collapse1">
+<div class="panel-body table-responsive">
+<div id="result1"></div>
+<table align="left" border="0" width="100%"><tr>
+<td width="140px">Diary No.</td>
+<td><div width="100%"><font color="blue" style="font-size:12px;font-weight:bold;">18187/2013</font> Filed on 17-06-2013 04:13 PM<div style="float:right;text-align:center;padding-right:5px;"><span class="blink_me"><font color="blue" style="font-size:16px;font-weight:bold;">PENDING</font></span></div>  <font style="font-size:12px;font-weight:bold;"> [SECTION: </font><font color="red" style="font-size:12px;font-weight:bold;">IV-A</font><font style="font-size:12px;font-weight:bold;">]</font></div>
+</td>
+</tr><tr>
+<td width="140px">Case No. </td>
+<td><div width="100%">SLP(C) No. 019942 - 019950 / 2013  Registered on 24-06-2013<br/>S.L.P.(C)...CC No. 012106 - 012114 / 2013  Registered on 24-06-2013<br/></div></td></tr><tr>
+<td width="140px">Present/Last Listed On</td>
+<td style="font-size:12px;font-weight:bold;"><b><font color="blue" style="font-size:12px;font-weight:bold;">19-07-2018</font> [<font color="green" style="font-size:12px;font-weight:bold;">REGISTRAR (J) - II</font>]</b></td></tr><tr>
+<td width="140px">Status/Stage</td>
+<td style="font-size:12px;font-weight:100;"><font color="red" style="font-size:12px;font-weight:100;">PENDING (Motion Hearing <br/> [AFTER NOTICE (FOR ADMISSION) - CIVIL CASES])  </font>
+</td>
+</tr><tr>
+<td width="140px">Tentatively case may be listed on <b>(likely to be listed on)</b></td>
+<td style="font-size:12px;font-weight:100;"><font color="blue" style="font-size:12px;font-weight:100;">09-09-2022</font> (Computer generated)</td></tr><tr>
+<td width="140px">Category</td>
+<td>0615-Service Matters : Recruitment/Transfer/Compassionate Appointment</td></tr><tr>
+<td width="140px">Act</td>
+<td></td></tr><tr>
+<td width="140px">Petitioner(s)</td>
+<td><p>  1 NAMRATA M. AND ANR. S/D/W/Thru:- B.S. MANJUNATHAIAH<br/>  ASSISTANT PROFESSOR OF HOME SCIENCE GOVERNMENT  FIRST GRADE COLLEGE FOR WOMEN JAMKHANDI 45, II MAIN II CROSS &amp;QUOT;SHRI CHANNABASAVA&amp;QUOT; CHANNABASAVESHWAR NAGAR DHARWAD  , DISTRICT: CHANNABASAVESHWAR NAGAR ,DHARWAD          , KARNATAKA          </p><p>  2 SMT. LAKSHMI M PALOTI S/D/W/Thru:- M.B. PALOTI<br/>  ASSISTANT PROFESOR OF HOME SCIENCE DEPARTMENT OF HOME SCIENCE GOVERNMENT FIRST GRADE COLLGE FOR WOMEN BAIHONGAL DISTRICT BELGAUM POLICE HEAD QUARTERS. H.NO. 1, BLOCK NO. B RAKSHA COLONY DHARWAD  , DISTRICT: RAKSHA COLONY ,DHARWAD          , KARNATAKA          </p></td></tr><tr>
+<td width="140px">Respondent(s)</td>
+<td><p>  1 THE STATE OF KARNATAKA AND ORS EDUCATION DEPARTMENT SECRETARY<br/>  SECRETARY M.S. BUILDING, BANGALAORE  ,BANGALORE          , KARNATAKA          </p><p>  2 THE DIRECTOR OF COLLEGIATE EDUCATION IN KARNATAKA<br/>  SESHADIRI ROAD, BANGALORE  ,BANGALORE          , KARNATAKA          </p><p>  3 THE COMMISSIONER DEPARTMENT OF COLLEGIATE EDUCATION<br/>  SESHADRI ROAD BANGALORE, KARNATAKA  ,BANGALORE          , KARNATAKA          </p><p>  4 THE KARNATAKA PUBLIC SERVICE COMMISSION THR. SECRETARY<br/>  UDYOG SOUDHA, BANGALORE  ,BANGALORE          , KARNATAKA          </p><p>  5 THE VICE CHANCELLOR BANGALORE UNIVERSITY<br/>  JNANABHARATHI, BANGALORE  ,BANGALORE          , KARNATAKA          </p><p>  6 THE UNIVERSITY GRANTS COMMISSION (UGC) REP. ITS SECRETARY<br/>  BAHADUR SHAH ZAFAR MARG, NEW DELHI  , DISTRICT: NEW DELHI ,NEW DELHI         , DELHI          </p><p>  7 SMT. VISHANDEVI HARBHAGAWANDAS DHANOOMAL REP. PRINCIPAL<br/>  CENTRAL INSTITUTE OF HOME SCIENCE BANGALORE  ,BANGALORE          , KARNATAKA          </p><p>  8 SMT. MALATI MUNIRAJU PAWAD S/D/W/Thru:- SHRI H.S. NATARAJ<br/>  NO. 298, 4TH BLOCK, 10TH MAIN, RAJAJINAGAR, BANGALORE  , DISTRICT: RAJAJINAGAR ,BANGALORE          , KARNATAKA          </p><p>  9 SMT. VIDYA K S/D/W/Thru:- SHIVAKUAMR H.M.<br/>  197, 208, SFS KHB COLONY 4TH MAIN, YELAHANKA NEW TOWN, BANGALORE  , DISTRICT: YELAHANKA NEW TOWN ,BANGALORE          , KARNATAKA          </p><p>  10 SMT. ASHA G. S/D/W/Thru:- SUHAS Y.S.<br/>  ASISTANT PROFESSOR IN HOME SCIENCE SMT. VHD CENTRAL INSTITUTE OF HOKME SCIENCE  SESHADRI ROAD BANAGORE 18/3-I, MEGHASHYAMA 21ST MAIN, MERANAHALLI EXTENSION, VIJAYANAGAR, BANGALORE  , DISTRICT: VIJAYANAGAR ,BANGALORE          , KARNATAKA          </p><p>  11 SMT. VIJAYA U PATIL<br/>  C/O 197, 208 SFS, KHB COLONY 4TH MAIN YELAKHANKA NEW TOWN, BANGALORE  ,BANGALORE          , KARNATAKA          </p><p>  12 SMT. GIRIJAMMA MULMANI S/D/W/Thru:- DHIMAPPA MULIMANI<br/>  C/O NO. 197, 208 SFS KHD COLONY 4TH MAIN YELAHANKA NEW TOWN BANGALORE  , DISTRICT: YELAHANKA NEW TOWN ,BANGALORE          , KARNATAKA          </p><p>  13 SMT. MANJULA KADAPATTI S/D/W/Thru:- LATE SRI GIRIMALLAPPA KADAPATTI<br/>  151, II CROSS 5TH MAIN MANJUNATH NAGAR, WEST OF CHORD ROAD, BANGAORE  , DISTRICT: MANJUNATH NAGAR ,BANGALORE          , KARNATAKA          </p><p>  14 SMT. NETTA PATTAN<br/>  184/B, 4TH MAIN 8TH CROSS BAPUJI NAGAR BANGALORE  , DISTRICT: BAPUJI NAGAR ,BANGALORE          , KARNATAKA          </p><p>  15 SMT. MANJLA SHESHAGIRI<br/>  C/O B TIRUMALLESH 7, 1ST G MAIN, SARASWATHIPURAM, NADINI LAYOUT BANGALORE  , DISTRICT: SARASWATHIPURAM ,BANGALORE          , KARNATAKA          </p><p>  16 SRI RAMESHA KL S/D/W/Thru:- CHANNAMMA<br/>  KOMALAPURA VILLAGE AND POST PERIYAPATNA TALUK MYSORE DISTRICT KARNATAKA  ,MYSORE          , KARNATAKA          </p><p>  17 SMT. NAVENEETHA S/D/W/Thru:- DR. V. CHANDRASEKHAR<br/>  ASSISTANT PROFESOR IN HOME SCIENCE SMET. VHD CENTRAL INSTITUTE OF HOME SCIENCE, SESHADRI ROAD, BANGALORE 1133, 8TH MAIN B.T.M. LAYOUT, 1ST STAGE, BANGALORE  ,BANGALORE          , KARNATAKA          </p></td></tr><tr>
+<td width="140px">Pet. Advocate(s)</td>
+<td><p>  DINESH KUMAR GARG</p></td></tr><tr>
+<td width="140px">Resp. Advocate(s)</td>
+<td><p>  ARJUN HARKAULI</p><p>  K. V. BHARATHI UPADHYAYA</p><p>  <span style="color:red">S. N. BHAT (Dead / Retired / Elevated) </span></p></td></tr><tr>
+<td width="140px">U/Section</td>
+<td> </td></tr></table> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse2">Indexing</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse2">
+<div class="panel-body table-responsive">
+<div id="result2"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse3">Earlier Court Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse3">
+<div class="panel-body table-responsive">
+<div id="result3"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse4">Tagged Matters</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse4">
+<div class="panel-body table-responsive">
+<div id="result4"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse5">Listing Dates</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse5">
+<div class="panel-body table-responsive">
+<div id="result5"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse6">Interlocutory Application / Documents</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse6">
+<div class="panel-body table-responsive">
+<div id="result6"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse7">Court Fees</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse7">
+<div class="panel-body table-responsive">
+<div id="result7"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse8">Notices</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse8">
+<div class="panel-body table-responsive">
+<div id="result8"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse9">Defects</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse9">
+<div class="panel-body table-responsive">
+<div id="result9"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse10">Judgement/Orders</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse10">
+<div class="panel-body table-responsive">
+<div id="result10"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse12">Mention Memo</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse12">
+<div class="panel-body table-responsive">
+<div id="result12"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse13">Restoration Details</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse13">
+<div class="panel-body table-responsive">
+<div id="result13"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse14">DropNote</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse14">
+<div class="panel-body table-responsive">
+<div id="result14"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse15">Appearance</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse15">
+<div class="panel-body table-responsive">
+<div id="result15"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse16">Office Report</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse16">
+<div class="panel-body table-responsive">
+<div id="result16"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse17">Similarities</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse17">
+<div class="panel-body table-responsive">
+<div id="result17"></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-parent="#accordion" data-toggle="collapse" href="#collapse18">Caveat</a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse18">
+<div class="panel-body table-responsive">
+<div id="result18"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="newb" style="display:none;">
+<table border="0" style="border-collapse: collapse" width="100%">
+<tr style="background-color: #A9A9A9;">
+<td align="center">
+<b><font color="black" style="font-size:14px;">Case Status</font></b>
+</td>
+<td>
+<input id="close_b" name="close_b" onclick="close_w();" style="float:right;" type="button" value="CLOSE WINDOW"/>
+</td>
+</tr>
+</table>
+<div id="newb123" style="overflow:auto; background-color: #FFF;">
+</div>
+<div align="center" id="newb1">
+<table border="0" width="100%">
+<tr>
+<td align="center" width="250px">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="overlay" style="display:none;"> </div>
+<script>
+            (function ($) {
+                $(document).ready(function(){
+                    $(document).on('click','[id^=accordion] a',function (event) {
+                        var accname=$(this).attr('data-parent');
+
+                        if(typeof $(this).attr('data-parent') !== "undefined"){
+							//var collapse_element = event.target;
+                            var url="";
+
+
+							//    alert(collapse_element);
+                            var href = this.hash;
+                            var depId = href.replace("#collapse","");
+                            var accname1=accname.replace("#accordion","");
+                            var acccnt=accname1*100;
+                            var diaryno = document.getElementById('diaryno'+accname1).value;
+                            if(depId!=(acccnt+1)){
+
+                                if (depId == (acccnt + 2)) url = "https://main.sci.gov.in/php/case_status/get_indexing.php";
+                                if(depId==(acccnt+3)) url="https://main.sci.gov.in/php/case_status/get_earlier_court.php";
+                                if(depId==(acccnt+4)) url="https://main.sci.gov.in/php/case_status/get_connected.php";
+                                if(depId==(acccnt+5)) url="https://main.sci.gov.in/php/case_status/get_listings.php";
+                                if(depId==(acccnt+6)) url="https://main.sci.gov.in/php/case_status/get_ia.php";
+								//    if(depId==6) url="get_earlier_court.php";
+                                if(depId==(acccnt+7)) url="https://main.sci.gov.in/php/case_status/get_court_fees.php";
+                                if(depId==(acccnt+8)) url="https://main.sci.gov.in/php/case_status/get_notices.php";
+                                if(depId==(acccnt+9)) url="https://main.sci.gov.in/php/case_status/get_default.php";
+                                if(depId==(acccnt+10)) url="https://main.sci.gov.in/php/case_status/get_judgement_order.php";
+                                if(depId==(acccnt+11)) url="https://main.sci.gov.in/php/case_status/get_adjustment.php";
+                                if(depId==(acccnt+12)) url="https://main.sci.gov.in/php/case_status/get_mention_memo.php";
+                                if(depId==(acccnt+13)) url="https://main.sci.gov.in/php/case_status/get_restore.php";
+                                if(depId==(acccnt+14)) url="https://main.sci.gov.in/php/case_status/get_drop.php";
+                                if(depId==(acccnt+15)) url="https://main.sci.gov.in/php/case_status/get_appearance.php";
+                                if(depId==(acccnt+16)) url="https://main.sci.gov.in/php/case_status/get_office_report.php";
+                                if(depId==(acccnt+17)) url="https://main.sci.gov.in/php/case_status/get_similarities.php";
+                                if(depId==(acccnt+18)) url="https://main.sci.gov.in/php/case_status/get_caveat.php";
+
+
+                                // var dataString = 'depId='+ depId + '&do=getDepUsers';
+                                $.ajax({
+                                    type: 'POST',
+                                    url:url,
+                                    beforeSend: function (xhr) {
+                                        $("#result"+depId).html("<div style='margin:0 auto;margin-top:20px;width:15%'><img src='https://main.sci.gov.in/php/img/load.gif'></div>");
+                                    },
+                                    data:{diaryno:diaryno}
+                                })
+                                    .done(function(msg){
+                                        $("#result"+depId).html(msg);
+                                    })
+                                    .fail(function(){
+                                        alert("ERROR, Please Contact Server Room");
+                                    });
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+</body></html>
