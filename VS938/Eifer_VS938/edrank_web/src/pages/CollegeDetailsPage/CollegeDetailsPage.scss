@@ -1,0 +1,34 @@
+.college-rank-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	// flex-wrap: wrap;
+	// align-items: stretch;
+	// justify-content: space-evenly;
+	gap: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+	.college-rank-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.college-rank-wrapper {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: auto;
+	}
+}
+
+.college-details-page-main {
+
+	h3 {
+		margin: 40px 0 5px;
+	}
+	.sa-graph-wrapper {
+		max-width: 400px;
+		margin: 20px auto;
+	}
+}

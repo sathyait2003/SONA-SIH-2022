@@ -1,0 +1,25 @@
+.feedback-drive-card {
+	display: flex;
+	gap: 1rem;
+	background-color: white;
+	border-radius: 6px;
+	padding: 1rem 1.5rem;
+	margin: 10px 0;
+
+	.drive-toggle-btn-wrapper {
+		// float: right;
+		margin-left: auto;
+
+		button {
+			padding: 0.4rem 0.7rem;
+			border: none;
+
+			background-color: var(--black);
+			color: white;
+
+			&:disabled {
+				opacity: .5;
+			}
+		}
+	}
+}

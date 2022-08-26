@@ -1,0 +1,56 @@
+.top-3-card-main-wrapper {
+	background-color: white;
+	box-shadow: 1px 4px 20px #dedede;
+	border-radius: 6px;
+	padding: 1.5rem;
+	height: 100%;
+
+	.top-3-card-main {
+		max-width: 350px;
+		margin: 0 auto;
+		.circle {
+			min-height: 100px;
+			min-width: 100px;
+			max-width: 150px;
+			margin: 0 auto;
+			aspect-ratio: 1/1;
+			border: 15px solid lightcoral;
+			border-radius: 100rem;
+			position: relative;
+
+			.inner-circle {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				aspect-ratio: 1/1;
+				border: 15px solid rgb(255, 220, 220);
+				border-radius: 100rem;
+
+				display: flex;
+				// background-color: aqua;
+
+				.leaderboard-rank {
+					// position: absolute;
+					margin: auto;
+					font-weight: 900;
+					font-size: 4rem;
+					color: rgb(255, 189, 47);
+				}
+			}
+		}
+
+		.top-3-card-main-text {
+			margin-top: 1rem;
+			text-align: center;
+			.leaderboard-name {
+				font-size: 1.3rem;
+				font-weight: 500;
+			}
+			> span {
+				font-size: 0.9rem;
+			}
+		}
+	}
+}

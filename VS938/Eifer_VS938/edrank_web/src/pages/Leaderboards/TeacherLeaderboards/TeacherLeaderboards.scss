@@ -1,0 +1,79 @@
+.teacher-leaderboard-main {
+	.teacher-leaderboard-header {
+		margin-bottom: 1.5rem;
+	}
+
+	.request-type-form {
+		margin-bottom: 2rem;
+
+		input[type='radio'] {
+			display: none;
+		}
+		label {
+			padding: 0.3rem 0.9rem;
+			border: 1px solid lightcoral;
+			background-color: white;
+			border-radius: 100px;
+			color: rgb(148, 148, 148);
+			margin-right: 10px;
+		}
+		input[type='radio']:checked + label {
+			font-weight: 400;
+			background: #ffdcdc;
+			color: white;
+		}
+	}
+
+	.teacher-leaderboard-top-3 {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		// flex-wrap: wrap;
+		// align-items: stretch;
+		// justify-content: space-evenly;
+		gap: 1.5rem;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+	.teacher-leaderboard-main {
+		.teacher-leaderboard-top-3 {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.teacher-leaderboard-main {
+		.teacher-leaderboard-top-3 {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: auto;
+		}
+	}
+}
+.leaderboard-filter-container {
+	display: flex;
+	margin-bottom: 1.5rem;
+
+	// .leaderboard-filter-item:nth-child(2) {
+	// 	flex: 1;
+	// }
+
+	.leaderboard-filter-item.state_filter,
+	.leaderboard-filter-item.city_filter {
+		width: 200px;
+		margin: 0 10px;
+	}
+
+	input[type='submit'] {
+		padding: 2px 15px;
+		border: none;
+		background-color: lightcoral;
+		border-radius: 6px;
+		font-size: 1rem;
+		color: white;
+		font-weight: 500;
+	}
+}

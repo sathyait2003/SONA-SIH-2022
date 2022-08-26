@@ -1,0 +1,22 @@
+.view-feedback-header {
+	p {
+		margin: 5px 0 15px;
+	}
+	.view-feedback-item {
+		background-color: white;
+		margin: 10px 0;
+		box-shadow: 0 2px 20px var(--gray);
+		border-radius: 6px;
+		padding: 2.3rem 1.5rem 1rem;
+		position: relative;
+		overflow: hidden;
+
+		span {
+			padding: .3rem .8rem;
+			color: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}

@@ -1,0 +1,2 @@
+rootProject.name = "Edrank_app"
+include ':app'

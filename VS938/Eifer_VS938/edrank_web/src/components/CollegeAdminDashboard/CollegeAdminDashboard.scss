@@ -1,0 +1,65 @@
+.college-admin-dashboard-metrics-wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+	// flex-wrap: wrap;
+	// align-items: stretch;
+	// justify-content: space-evenly;
+	gap: 1.5rem;
+}
+
+@media screen and (max-width: 1366px) {
+	.college-admin-dashboard-metrics-wrapper {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (max-width: 767px) {
+	.college-admin-dashboard-metrics-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.college-admin-dashboard-metrics-wrapper {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: auto;
+	}
+}
+
+.college-admin-dashboard-graphs {
+	b {
+		margin-bottom: 5px;
+		display: block;
+	}
+	.sa-graph-wrapper {
+		max-width: 400px;
+		margin: 20px auto;
+	}
+	.kbc-graph-wrapper {
+		max-width: 800px;
+		margin: 20px auto;
+	}
+	.graph-heading {
+		margin: 40px 0 15px;
+	}
+}
+
+.sa-graph-wrapper {
+	background: white;
+	padding: 1rem 1rem 1rem 3rem;
+	border-radius: 6px;
+	box-shadow: 0 2px 20px lightgrey;
+	margin-top: 10px;
+	position: relative;
+
+	>p:nth-of-type(1) {
+		text-align: center;
+	}
+	>p:nth-of-type(2) {
+		position: absolute;
+		left: 25px;
+		top: 50%;
+		transform: translate(-50%, -50%) rotate(-90deg);
+	}
+}
