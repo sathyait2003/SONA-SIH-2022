@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.orangeGradient {
+    background: linear-gradient(140.38deg, #F3613B 42.24%, #EE786B 77.35%);
+}
+
+.grayGradient{
+    background: linear-gradient(180deg, #ECEBED 37.81%, rgba(245, 244, 249, 0) 100%);
+}
+
+.grid-class {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px,2fr));
+}
