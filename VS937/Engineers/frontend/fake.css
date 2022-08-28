@@ -1,0 +1,191 @@
+body{
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+/*login button at the top right*/
+#Login-button1 {
+
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 11px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 72px;
+  margin-left: 15px;
+}
+
+/*onclick login button shadow*/
+#Login-button1:hover {
+  /*background-color: #f65b35;*/
+  cursor: pointer;
+}
+
+/*signup button at the top right*/
+#Sign-up-button1 {
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 11px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 73px;
+  margin-left: 15px;
+}
+
+/*onclick signup button shadow*/
+#Sign-up-button1:hover {
+  /*background-color: #f65b35;*/
+  cursor: pointer;
+}
+/*navigation bar at the top right*/
+#navigation1 {
+  position: absolute;
+  height: 25px;
+  width: 510px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-left: 65vw;
+  padding: 15px 10px 20px 10px;
+  align-items: center;
+  background-color: #293241;
+}
+
+
+#navigation1-2>a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+#Fake1 {
+ background-color: #ffffff;
+ color: #293241;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  height: 20px;
+  font-weight: bold;
+  width: 50px;
+  margin-left: 15px;
+}
+
+#Fake1:hover {
+  /*background-color:rgb(219, 9, 9);*/
+  cursor: pointer;
+}
+
+/*fake university link
+#navigation1-1>a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color:red;
+}*/
+
+/*welcome heading position and styling*/
+#homepageheading1 {
+  margin-left:35% ;
+  margin-top: 3vw;
+}
+/*container for logo...big one*/
+#container11 {
+  position: relative;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  padding: 31px 10px 31px 10px;
+  align-items: center;
+  width:99vw;
+  background-color: #f8dad3;
+  margin-top: -10px;
+  border-bottom: #293241;
+  
+}
+#logo1, #logo2{
+  margin-top: 0vw;
+}
+
+
+#homebutton1 {
+
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 72px;
+  margin-left: 15px;
+}
+
+#homebutton1:hover {
+  /*background-color: #f65b35;*/
+  cursor: pointer;
+}
+
+
+/*footer block position */
+.footer1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 15%;
+  background:#f8dad3;
+  color: black;
+}
+
+.footer1 div{
+  text-align: center;
+  flex-grow: 0.2;
+  right:100vw;
+  font-weight: 300vw;
+  margin-bottom: 0vw;
+}
+
+
+.col_1 a, .col_2 p, .col_3 p {
+  text-decoration: none;
+  display:block;
+  margin-bottom: 0.8vw;
+  color: black;
+  font-size: small;
+}
+
+/*
+.social{
+  padding: 30px 15%;
+  
+  
+}
+
+#icons{
+  margin-left: 350px;
+}
+
+.social a{
+  cursor: pointer;
+  color: #f1f1ef;
+  text-decoration: none;
+  margin-left: 50px;
+  font-size: 30px;
+  
+
+}
+*/
+
+/*copyright block in footer*/
+.copyright1{
+  padding: 0.7vw 35%;
+  color: #ffffff;
+  background:#293241;
+  width:100%;
+}
+

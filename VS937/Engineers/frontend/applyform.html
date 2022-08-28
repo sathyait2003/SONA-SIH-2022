@@ -1,0 +1,212 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="applyform.css">
+  <title>HEI/Universities-Application form</title>
+  <script>
+    function setappno() {
+      var num = [];
+      while (num.length < 10) {
+        var ran = Math.floor(Math.random() * 10000);
+        if (num.indexOf(ran) === -1) {
+          var date = new Date().toLocaleDateString().replaceAll("/", "")
+          num.push("UGC" + date + ran)
+        }
+      }
+      $("#applicationnumber").val(num[0])
+      console.log(num[0]);
+      return num[0];
+
+    }
+  </script>
+</head>
+
+<body onload="setappno()">
+  <!--header added-->
+  <div id="container99">
+    <!--This is for the big navigation bar-->
+    <img src="./images/ugc_logo.png" alt="logo9_1" id="logo9_1" width="364px" height="80px">
+    <img src="./images/satyamev_jayte.png" alt="logo9_2" id="logo9_2" width="80" height="85">
+    <!--it is for website logo png-->
+    <div id="navigation9">
+      <!--links to concerned pages-->
+      <form action="/fakeuniv" method="get">
+        <!-- <a href="./fake.html">Fake Universities</a> -->
+        <button name="fake" type="submit" id="Fake9">FAKE</button>
+      </form>
+      <div id="navigation9-2">
+        <a href="./aboutus.html">About us</a>
+        <a href="./contactus.html">Contact us</a>
+      </div>
+
+      <!--at the top for navigating among pages-->
+
+      <input type="button" value="HEI Sign Up" id="Sign-up-button9"
+        onclick="window.location.href='./official_signup.html'" />
+      <input type="button" value="HEI Log In" id="Login-button9"
+        onclick="window.location.href = './official_login.html'" />
+      <input type="button" value="Home" id="homebutton9" onclick="window.location.href='./index.html'" />
+
+
+    </div>
+  </div>
+  <div>
+    <hr style="height: 2px;background-color:#293241; opacity: 100; margin-top: 0vw; width: 103%; margin-left: -25px;" />
+  </div>
+
+
+  <center>
+    <h1 id="application9">Registration Form</h1>
+  </center>
+  <hr style="width: 103%;height: 4px;background-color: black; opacity: 100; " />
+  <form action="/applyform" method="post">
+    <!--box for application form-->
+    <div id="container9">
+      <label for="university9"><b>Application Number</b></label>
+      <!-- application number generation -->
+      <input name="applicationnumber" type="text" placeholder="Your Application Number" id="applicationnumber" required>
+      <label for="university9"><b>Name of the HEI/University</b></label>
+      <!--mandatory username area-->
+      <input name="universityname" type="text" placeholder="Enter the name" id="university9" required>
+      <label for="address9"><b>Address of the HEI/University</b></label>
+      <input name="address" type="text" placeholder="Enter the address" id="address9" required>
+      <!--mandatory address area-->
+      <label for="city9"><b>City</b></label>
+      <input name="city" type="text" placeholder="Enter the city" id="city9" required>
+      <label for="pincode9"><b>Pincode</b></label>
+      <!--mandatory location area-->
+      <input name="pincode" type="text" placeholder="Enter the pincode" id="pincode9" required>
+      <label for="stateut9"><b>State/UT</b></label>
+      <select name="stateut9" id="stateut9">
+        <option value="" selected disabled hidden></option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+        <option value="Daman and Diu">Daman and Diu</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Lakshadweep">Lakshadweep</option>
+        <option value="Puducherry">Puducherry</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Tripura">Tripura</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="West Bengal">West Bengal</option>
+      </select>
+      <label for="phone9"><b>Contact Number</b></label>
+      <!--mandatory contact details area-->
+      <input name="contact" type="text" placeholder="Enter the phone number with STD code" id="phone9" required>
+      <label for="email9"><b>Email</b></label>
+      <input name="email" type="email" placeholder="Enter your Email" id="email9" required>
+      <label for="website9"><b>Website</b></label>
+      <input name="website" type="url" placeholder="Enter the Website" id="website9" required>
+      <label for="programmes9"><b>Programmes</b> (Hold the Ctrl button to select multiple options)</label>
+      <select name="programmes" id="programmes9" multiple>
+        <option value="B. Tech. Computer Science & Engineering">B. Tech. Computer Science & Engineering</option>
+        <option value="M. Tech. Computer Science & Engineering">M. Tech. Computer Science & Engineering</option>
+        <option value="B. Tech. Electronics & Communication Engineering">B. Tech. Electronics & Communication
+          Engineering</option>
+        <option value="M. Tech. Electronics & Communication Engineering">M. Tech. Electronics & Communication
+          Engineering</option>
+        <option value="B. Tech. Electrical & Electronics Engineering">B. Tech. Electrical & Electronics Engineering
+        </option>
+        <option value="B. Tech. Information Technology">B. Tech. Information Technology</option>
+        <option value="B. Tech. Mechanical Engineering">B. Tech. Mechanical Engineering</option>
+        <option value="B. Tech. Computer Science-Artificial Intelligence">B. Tech. Computer Science-Artificial
+          Intelligence</option>
+        <option value="B. Tech. Computer Science-Artificial Intelligence & Machine Learning">B. Tech. Computer
+          Science-Artificial Intelligence & Machine Learning</option>
+        <option value="B. Tech. Computer Science-IOT">B. Tech. Computer Science-IOT</option>
+        <option value="B. Tech. Computer Science & Design">B. Tech. Computer Science & Design</option>
+        <option value="B. Tech Artificial Intelligence & Data Science">B. Tech Artificial Intelligence & Data Science
+        </option>
+        <option value="B. Tech. Computer Science-Data Science">B. Tech. Computer Science-Data Science</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="other9"><b>Other*(if any)</b></label>
+      <input name="other91" type="text" placeholder="Enter the Programmes offered" id="other9">
+      <label for="upload9"><b>Upload 2(F)&12(B) documentation/Gazette Information/EoA/Approval letter</b></label>
+      <input name="upload92" type="url" placeholder="Enter the Google drive link to the documents" id="upload9">
+      <!--optional nba data-->
+      <b>NBA Accreditation status:-</b>
+      <textarea name="nba" id="nba9" placeholder="Enter the NBA Accreditation status" cols="55" rows="10"></textarea>
+      <label for="upload9"><b>Upload Link</b></label>
+      <input name="upload93" type="url" placeholder="Enter the Google drive link to the NBA Accreditation documents"
+        id="upload9">
+      <!--optional naac data-->
+      <b>NAAC Accreditation status:-</b>
+      <textarea name="naac" id="naac9" placeholder="Enter the NAAC Accreditation status" cols=git "55"
+        rows="10"></textarea>
+      <label for="upload9"><b>Upload Link</b></label>
+      <input name="upload94" type="url" placeholder="Enter the Google drive link to the NAAC Accreditation documents"
+        id="upload9">
+      <b>Other Accreditation(s),if any:-</b>
+      <textarea name="other" id="other9" placeholder="Enter the Accreditation status" cols="55" rows="10"></textarea>
+      <label for="upload9"><b>Upload Link</b></label>
+      <input name="upload95" type="url" placeholder="Enter the Google drive link to the Accreditation documents"
+        id="upload9">
+      <!--button for apply now-->
+      <button type="submit" id="Apply-now9">Submit</button>
+      <div>
+  </form>
+  <div>
+    <hr
+      style="width:100.3%;
+         height: 2px;background-color:#293241; opacity: 100; margin-top: 15vw; margin-bottom: 0vw;width:1523px; margin-left: -340px;" />
+  </div>
+  <!--adding footer-->
+  <div class="footer9">
+    <div class="col9_1">
+      <h2> USEFUL LINKS </h2>
+      <a href="./aboutus.html">About us<br></a>
+      <a href="./contactus.html">Contact us<br></a>
+      <a href="./official_signup.html">Register<br></a>
+      <a href="./termspriv.html">Terms and Conditions<br></a>
+    </div>
+    <div class="col9_2">
+      <h2>LOCATION</h2>
+      <p>University Grants Commission (UGC)<br><br>Bahadur Shah Zafar Marg,<br><br>New Delhi - 110002</p>
+
+    </div>
+    <div class="col9_3">
+      <h2>CONNECT US</h2>
+      <p>011-23604446<br><br>011-23604200<br><br>contact.ugc@nic.in</p>
+    </div>
+  </div>
+
+  <!--for copyright-->
+  <div class="copyright9">
+    <p>Copyright © 2022-University Grants Commission New Delhi, India.</p>
+  </div>
+</body>
+
+</html>

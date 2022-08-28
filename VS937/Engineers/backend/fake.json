@@ -1,0 +1,109 @@
+{
+    "fake": [
+        {
+            "university_name": "All India Institute of Public & Physical Health Sciences (AIIPHS) State Government University",
+            "address": "Office Kh. No. 608-609, 1st Floor, Sant Kripal Singh Public Trust Building, Near BDO Office, Alipur",
+            "state": "Delhi"
+        },
+        {
+           "university_name": "Commercial University Ltd.",
+           "address": "Daryaganj",
+           "state": "Delhi"
+        },
+        {
+            "university_name": "United Nations University",
+            "address": "Delhi",
+            "state": "Delhi"
+        },
+        {
+            "university_name": "Vocational University",
+            "address": "Delhi",
+            "state": "Delhi"
+        },
+        {
+            "university_name": "ADR-Centric Juridical University",
+            "address": "ADR House, 8J, Gopala Tower, 25 Rajendra Place",
+            "state": "New Delhi"
+        },
+        {
+            "university_name": "Indian Institute of Science and Engineering",
+            "address": "New Delhi",
+            "state":"New Delhi"
+        },
+        {
+            "university_name": "Viswakarma Open University for Self-Employment",
+            "address": "Rozgar Sewasadan, 672, Sanjay Enclave, Opp. GTK Depot",
+            "state": "Delhi"
+        },
+        {
+            "university_name": "Adhyatmik Vishwavidyalaya (Spiritual University)",
+            "address": "351-352, Phase-I, Block-A, Vijay Vihar, Rithala, Rohini",
+            "state": "Delhi"
+        },
+        {
+            "university_name": "Badaganvi Sarkar World Open University Education Society",
+            "address": "Gokak, Belgaum",
+            "state": "karnataka"
+        },
+        {
+            "university_name": "St. John’s University",
+            "address": "Kishanattam",
+            "state": "Kerala"
+        },
+        {
+            "university_name": "Raja Arabic University",
+            "address": "Nagpur",
+            "state": "Maharashtra"
+        },
+        {
+            "university_name": "Indian Institute of Alternative Medicine",
+            "address": "Kolkatta",
+            "state": "West Bengal"
+        },
+        {
+            "university_name": "Institute of Alternative Medicine and Research",
+            "address": "8-A, Diamond Harbour Road, Builtech inn, 2nd Floor, Thakurpurkur, Kolkatta ",
+            "state": "West Bengal"
+        },
+        {
+            "university_name": "Gandhi Hindi Vidyapith",
+            "address": "Prayag, Allahabad",
+            "state": "Uttar Pradesh"
+        },
+        {
+            "university_name": "National University of Electro Complex Homeopathy",
+            "address": "Kanpur",
+            "state": "Uttar Pradesh"
+        },
+        {
+            "university_name": "Netaji Subhash Chandra Bose University (Open University)",
+            "address": "Achaltal, Aligarh",
+            "state": "Uttar Pradesh"
+        },
+        {
+            "university_name": "Bhartiya Shiksha Parishad",
+            "address": "Bharat Bhawan, Matiyari Chinhat, Faizabad Road, Lucknow",
+            "state":"Uttar Pradesh"
+        },
+        {
+            "university_name": "Nababharat Shiksha Parishad",
+            "address": "Anupoorna Bhawan, Plot No. 242, Pani Tanki Road,Shaktinagar, Rourkela",
+            "state": "Odisha"
+        },
+        {
+            "university_name": "North Orissa University of Agriculture & Technology",
+            "address": "Odisha",
+            "state": "Odisha"
+        },
+        {
+            "university_name": "Sree Bodhi Academy of Higher Education",
+            "address": "No. 186, Thilaspet, Vazhuthavoor Road",
+            "state": "Puducherry"
+        },
+        {
+            "university_name": "Christ New Testament Deemed University",
+            "address": "7th Lane, Kakumanuvarithoto, Guntur",
+            "state": "Andhra Pradesh"
+        }
+    ]
+}

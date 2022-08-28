@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container11">
+        <!--This is for the big navigation bar-->
+        <img src="./images/ugc_logo.png" alt="logo1" id="logo1" width="364" height="80">
+        <img src="./images/satyamev_jayte.png" alt="logo2" id="logo2" width="80" height="85">
+        <!--it is for website logo png-->
+        <div id="navigation1">
+            <!--links to concerned pages-->
+            <form action="/fakeuniv" method="get">
+                <!-- <a href="./fake.html">Fake Universities</a> -->
+                <button name="fake" type="submit" id="Fake1">FAKE</button>
+            </form>
+            <div id="navigation1-2">
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+
+            <!--at the top for navigating among pages-->
+
+            <input type="button" value="HEI Sign Up" id="Sign-up-button1"
+                onclick="window.location.href='./official_signup.html'" />
+            <input type="button" value="HEI Log In" id="Login-button1"
+                onclick="window.location.href = './official_login.html'" />
+            <input type="button" value="Home" id="homebutton1" onclick="window.location.href='./index.html'" />
+        </div>
+    </div>
+    <div>
+        <hr style="height: 2px;background-color:#293241; opacity: 100; margin-top: 0vw; width: 101%;" />
+    </div>
+    <div style="border-style:solid; box-sizing: 5vw 5vw ;  align-content: center; margin: 10vw 20vw; background-color: #f8dad3;">
+        <% if(temp){%>
+            <h1 style="font-size: 2vw; text-align: center; margin-top: 5vw;">University Name :-
+                <%= universityname %>
+            </h1>
+            <h1 style="font-size: 2vw; text-align: center; margin-top: 1vw;">Address :-
+                <%= address %>
+            </h1>
+            <h1 style="font-size: 2vw; text-align: center; margin-top: 1vw; margin-bottom: 5vw;">State :-
+                <%= state %>
+            </h1>
+            <h2 style="text-align:center ;"><em>Verified By Official Website Of UGC <br><center><a href="https://www.ugc.ac.in">ugc.ac.in</a></center></em></h2>
+            <%} %>
+                <% if(temp=='0' ){%>
+                    <center><h2>No University With This Name Is Verified By The UGC</h2></center>
+                    <%} %>
+    </div>
+    <hr style="width:101%;
+         height: 2px;background-color:#293241; opacity: 100; margin-top: 18vw; margin-bottom: 0vw;" />
+    <div class="footer1">
+        
+        <div class="col_1">
+            <!--links to required pages in footer-->
+            <h2> USEFUL LINKS </h2>
+            <a href="./aboutus.html">About us<br></a>
+            <a href="./contactus.html">Contact us<br></a>
+            <a href="./official_signup.html">Register<br></a>
+            <a href="./termspriv.html">Terms and Conditions<br></a>
+        </div>
+        <div class="col_2">
+            <!--location in footer-->
+            <h2>LOCATION</h2>
+            <p>University Grants Commission (UGC)<br><br>Bahadur Shah Zafar Marg,<br><br>New Delhi - 110002 </p>
+
+        </div>
+        <div class="col_3">
+            <!--connect us data-->
+            <h2>CONNECT US</h2>
+            <p>011-23604446<br><br>011-23604200<br><br>contact.ugc@nic.in</p>
+        </div>
+    </div>
+
+    <!--adding icons
+    <div class="social">
+        <div id="icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+
+        </div>
+
+    </div>-->
+    <div class="copyright1">
+        <!--at the end of footer-->
+        <p>Copyright © 2022-University Grants Commission New Delhi, India.</p>
+    </div>
+    
+</body>
+
+</html>

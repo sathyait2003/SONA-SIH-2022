@@ -1,0 +1,83 @@
+body{
+    background-color: #f1f1ef;
+  }
+  
+  /*position and styling for input boxes*/
+ input[type=text],input[type=password] {
+    width: 26vw;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: block;
+    border: none;
+    background: #ddd;
+  }
+  
+  /*onclick styling for input boxes*/
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: rgb(188, 186, 186);
+    outline: none;
+  }
+  
+  
+  
+  #Loginbutton10:hover {
+    opacity:1;
+    /*hovering effect using webkit box shadow*/
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  
+  /*login button position and styling*/
+  #Loginbutton10 {
+    background-color: #34421E;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: 8vw;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    width: 9vw;
+  }
+  
+  /*admin form complete block*/
+  #container10{
+    padding: 20px;
+  }
+  
+/*heading position for admin form*/
+  #heading10{
+    margin-left: 7.5vw;
+  }
+  
+/*admin form box position*/
+#contain10{
+    position: absolute;
+    top: 160px;
+    left: 500px;
+  
+  }
+
+  /*logo block position*/
+  #container10_1{
+    position: absolute;
+    height: 25px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding: 10px 10px 20px 10px;
+    align-items: center;
+  }
+
+  /*logo styling within block*/
+  #logo10{
+    margin-top: 17px;
+  }

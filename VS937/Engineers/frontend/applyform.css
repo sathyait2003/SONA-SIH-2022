@@ -1,0 +1,252 @@
+body{
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+/*application form styling*/
+#container9 {  
+    padding: 30px 0px 0px 0px;
+    margin-left: 330px;  
+    /*background-color: aqua;*/
+    height: 300vh;
+    width: 55vw;
+}  
+
+/*styling and position for input boxes*/
+input[type=text], input[type=email], input[type=url], textarea {  
+  width: 800px;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: block;  
+  border: none;  
+  background: #ddd;  
+}  
+
+/*onclick box styling*/
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus {  
+  background-color: rgb(188, 186, 186);
+  outline: none;
+} 
+
+body{
+    background-color: #ffffff
+    ;  
+}
+
+/*onclick apply button styling*/
+#Apply-now9:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  
+/*styling and position for apply button*/ 
+#Apply-now9 {
+    background-color: #EE6644;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: 330px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    width: 10vw;
+  }
+
+  #application9{
+    font-size: 60px;
+  }
+
+  #stateut9{
+    width: 800px;  
+    padding: 15px;  
+    margin: 5px 0 22px 0;  
+    display: block;  
+    border: none;  
+    background: #ddd; 
+
+  }
+
+  #stateut9:focus {  
+    background-color:#ddd;
+    outline: none;
+  } 
+
+  #programmes9{
+    width: 800px;  
+    padding: 15px;  
+    margin: 5px 0 22px 0;  
+    display: block;  
+    border: none;  
+    background: #ddd;
+  }
+
+  #programmes9:focus {  
+    background-color:#ddd;
+    outline: none;
+  } 
+
+  /*login button at the top right*/
+#Login-button9 {
+
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 11px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 72px;
+  margin-left: 15px;
+}
+
+/*onclick login button shadow*/
+#Login-button9:hover {
+  cursor: pointer;
+}
+
+/*signup button at the top right*/
+#Sign-up-button9 {
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 11px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 73px;
+  margin-left: 15px;
+}
+
+/*onclick signup button shadow*/
+#Sign-up-button9:hover {
+  cursor: pointer;
+}
+/*navigation bar at the top right*/
+#navigation9{
+  position: absolute;
+  height: 25px;
+  width: 494px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 0vw;
+  margin-left: 66vw;
+  padding: 15px 0px 20px 10px;
+  align-items: center;
+  background-color: #293241;
+}
+
+
+#navigation9-2>a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+#Fake9 {
+ background-color: #ffffff;
+  color:#293241;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  height: 20px;
+  font-weight: bold;
+  width: 50px;
+  margin-left: 15px;
+  margin-top: 17px;
+}
+
+#Fake9:hover {
+  cursor: pointer;
+}
+#container99{
+  position: relative;
+  height: 25px;
+  display: flex;
+  flex-direction:row;
+  padding: 31px 10px 31px 10px;
+  align-items: center;
+  background-color: #f8dad3;
+  width: 1520px;
+  margin-top: -7px;
+  margin-left: -5px;
+}
+
+/*logo position within block*/
+#logo9_1, #logo9_2{
+  margin-top: 0vw;
+}
+
+#homebutton9{
+
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 72px;
+  margin-left: 15px;
+}
+
+#homebutton9:hover {
+  cursor: pointer;
+}
+/*fake un
+
+/*footer block position */
+.footer9 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15%;
+  background:#f8dad3;
+  color: black;
+  margin-top: 0px;
+  margin-left: -350px;
+  width: 1285px;
+  margin-bottom: 0px;
+ 
+}
+
+.footer9 div{
+  text-align: center;
+  flex-grow: 0.2;
+  right:100vw;
+  font-weight: 300vw;
+  margin-top: 0vw;
+  margin-left: 100px;
+  
+}
+.col9_1{
+  margin-top: 10px;
+}
+
+.col9_1 a, .col9_2 p, .col9_3 p {
+  text-decoration: none;
+  display:block;
+  margin-bottom: 10px;
+  color: black;
+  font-size: small;
+}
+
+.copyright9{
+  padding: 0.7vw 15%;
+  text-align:center;
+  color: #ffffff;
+  background:#293241;
+  width:1284px;
+  margin-left: -348px;
+  margin-bottom: 0px;
+  
+
+}

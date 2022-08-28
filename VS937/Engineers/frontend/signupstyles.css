@@ -1,0 +1,223 @@
+/* github@AyushAgnihotri2025 */
+
+body {
+  background-color: #ffffff;
+}
+
+#container {
+  display: flex;
+}
+
+/* Look for pc's and large screens */
+
+@media (min-width: 780px) {
+
+  /*input boxes postion and styling*/
+  input[type=text],
+  input[type=email],
+  input[type=password] {
+    width: 26vw;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: block;
+    border: none;
+    background: #ddd;
+  }
+
+  /*onclick input box*/
+  input[type=text]:focus,
+  input[type=email]:focus,
+  input[type=password]:focus {
+    background-color: rgb(188, 186, 186);
+    outline: none;
+  }
+
+  /*onclick sign up button shadow*/
+  #Sign-up-button2:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+
+  /*sign up button*/
+  #Sign-up-button2 {
+    background-color: #EE6644;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: 8vw;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    width: 10vw;
+  }
+
+  /*sign up form container*/
+  #container2 {
+    padding: 16px;
+  }
+
+  /*Sign up text*/
+  #heading2 {
+    margin-left: 2.5vw;
+  }
+
+  /*text under sign up button*/
+  #text2 {
+    margin-left: 3vw;
+    font-size:12px;
+  }
+
+  /*signup page image*/
+  #image2 {
+    position: absolute;
+    right: 120px;
+  }
+
+  /*complete sign up container*/
+  #contain2 {
+    position: absolute;
+    left: 150px;
+
+  }
+
+  /* Image size */
+  img {
+    width: 580px;
+    height: 680px;
+  }
+
+  #passhead{
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+}
+
+/* Look for mobile phone screens */
+
+@media (max-width: 780px) {
+
+  body {
+    margin: 0;
+    line-height: 1.5;
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  input[type=text],
+  input[type=email],
+  input[type=password] {
+    margin: auto;
+    padding: 10px 50px 10px 50px;
+    margin-bottom: 15px;
+    display: block;
+    border: none;
+    background: #ddd;
+    text-align: center;
+  }
+
+  input[type=text]:focus,
+  input[type=email]:focus,
+  input[type=password]:focus {
+    background-color: rgb(188, 186, 186);
+    outline: none;
+  }
+
+
+
+  #Sign-up-button2:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+
+
+  #Sign-up-button2 {
+    background-color: #34421e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    border-radius: 10%;
+  }
+
+  #container2 {
+    padding: 16px;
+  }
+
+  #text2 {
+    margin-left: 3vw;
+    font-size: 12px;
+  }
+
+  #image2 {
+    position: relative;
+  }
+
+  #contain2 {
+    position: relative;
+  }
+
+  img {
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #passhead{
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+}
+
+
+  .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 420px;
+  background-color:black;
+  color: white;
+  text-align: justify;
+  border-radius: 6px;
+  padding: 5px 5px;
+  font-size: 14px;
+
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

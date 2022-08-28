@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./contactuscss.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div id="container55">
+        <!--This is for the big navigation bar-->
+        <img src="./images/ugc_logo.png" alt="logo5_1" id="logo5_1" width="364" height="80">
+        <img src="./images/satyamev_jayte.png" alt="logo5_2" id="logo5_2" width="80" height="85">
+        <!--it is for website logo png-->
+        <div id="navigation5">
+            <!--links to concerned pages-->
+            <form action="/fakeuniv" method="get">
+                <!-- <a href="./fake.html">Fake Universities</a> -->
+                <button name="fake" type="submit" id="Fake5">FAKE</button>
+            </form>
+            <div id="navigation5-2">
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+
+            <!--at the top for navigating among pages-->
+
+            <input type="button" value="HEI Sign Up" id="Sign-up-button5"
+                onclick="window.location.href='./official_signup.html'" />
+            <input type="button" value="HEI Log In" id="Login-button5"
+                onclick="window.location.href = './official_login.html'" />
+            <input type="button" value="Home" id="homebutton5" onclick="window.location.href='./index.html'" />
+
+
+        </div>
+    </div>
+    <div>
+        <hr style="height: 2px;background-color:#293241; opacity: 100; margin-top: 0vw; width: 100.5%;" />
+    </div>
+    
+    <div id="contain5"><!--for the complete contact us form-->
+        
+            <div class="form-container">
+                <form action="/contactus" method="POST" class="contact-form">
+                    <h1 id="heading5">Contact Us</h1>
+                    <!--mandatory fullname-->
+                    <label for="fullname5"><b>Full Name</b></label>
+                    <input name="fullname" type="text" placeholder="Enter your Full Name" id="fullname5" required>
+                    <!--mandatory email-->
+                    <label for="email5"><b>Email</b></label>
+                    <input name="email" type="email" placeholder="Enter your Email" id="email5" required>
+                    <!--mandatory subject-->
+                    <label for="subject5"><b>Subject</b></label>
+                    <input name="subject" type="text" placeholder="Enter your Subject" id="subject5" required>
+                    <label for="message"><b>.</b></label>
+                    <textarea id="message" placeholder="Tell us how can we help you!" cols="55"
+                        rows="10"></textarea><br>
+                    <button type="submit" id="Sendmsg5">Send message</button>
+                </form>
+            </div>
+    </div>
+
+    <div id="image5"><!--image for the contact us form-->
+        <img src="images/contact_us.svg" alt="contact us form image" width="530" height="630">
+    </div>
+
+
+
+    <script src="./index.js"></script>
+    
+    <hr style="
+         height: 2px;background-color:#293241; opacity: 100; margin-top: 15vw; margin-bottom: 0vw;" />
+    <!--adding footer-->
+    <div class="footer5">
+        <div class="col5_1">
+            <h2> USEFUL LINKS </h2>
+            <a href="./aboutus.html">About us<br></a>
+            <a href="./contactus.html">Contact us<br></a>
+            <a href="./official_signup.html">Register<br></a>
+            <a href="./termspriv.html">Terms and Conditions<br></a>
+        </div>
+        <div class="col5_2">
+            <h2>LOCATION</h2>
+            <p>University Grants Commission (UGC)<br><br>Bahadur Shah Zafar Marg,<br><br>New Delhi - 110002</p>
+
+        </div>
+        <div class="col5_3">
+            <h2>CONNECT US</h2>
+            <p>011-23604446<br><br>011-23604200<br><br>contact.ugc@nic.in</p>
+        </div>
+    </div>
+
+    <!--for copyright-->
+    <div class="copyright5">
+        <p>Copyright © 2022-University Grants Commission New Delhi, India.</p>
+    </div>
+</body>
+
+</html>

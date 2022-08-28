@@ -1,0 +1,113 @@
+<!-- github@AyushAgnihotri2025 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signupstyles.css">
+    <title>HEI Sign Up page</title>
+
+    <script>
+        function ValidateEmail(inputText) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (inputText.value.match(mailformat)) {
+                document.getElementById('validateEmail').innerHTML= ' ';
+                document.test1.password.focus();
+                return true;
+            }
+            else {
+                //alert("You have entered an invalid email address!");
+                document.getElementById('validateEmail').innerHTML= 'You have entered an invalid email address!';
+                document.test1.email.focus();
+                return false;
+            }
+        }
+
+        function CheckPassword(inputtxt) {
+            var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+            if (inputtxt.value.match(decimal)) {
+                document.getElementById('validatePwd').innerHTML= ' ';
+                document.test1.confirmpassword.focus();
+                return true;
+            }
+            else {
+                //alert('Entered password does not match the parameters!')
+                document.getElementById('validatePwd').innerHTML= 'Entered password does not match the parameters!';
+                document.test1.password.focus();
+                return false;
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!-- Container to contain all the elements so, that there is no conflicts in the elements :) -->
+    <div id="container">
+        <div id="image2">
+            <!--images for sign up page-->
+            <img src="images/signup_img1.svg" alt="sign up form image" />
+        </div>
+        <div id="contain2">
+            <!--container for complete signup block-->
+            <div id="container2">
+                <form action="/official_signup" method="POST" name="test1">
+                    <h1 id="heading2">HEI/University Sign Up</h1>
+                    <label for="university2"><b>HEI/University Name</b></label>
+                    <!--university area-->
+                    <input name="universityname" type="text" placeholder="Enter your University" id="university2"
+                        required>
+                    <label for="username2"><b>Username</b></label>
+                    <!--username area-->
+                    <input name="username" type="text" placeholder="Enter your Username" id="username2" required>
+                    <label for="email2"><b>Email</b></label>
+                    <!--email area-->
+                    <input name="email" type="text" placeholder="Enter your Email" id="email2" required>
+                    <label name='vem' id="validateEmail"></label>
+                </br>
+                    <label for="password2"><b>Password </b></label>
+                    <div class="tooltip">&#x1F6C8;
+                        <span class="tooltiptext">Must be a combination of atleast one lowercase character, one
+                            uppercase character, one numeric digit and one special character within the range of 8-15
+                            characters.</span>
+                    </div>
+                    <!--password area-->
+                    <input name="password" type="password" placeholder="Enter Password" id="password2"
+                        onfocus="ValidateEmail(document.test1.email)" required>
+                        <label name='vpw' id="validatePwd"></label>
+                        <br><br>
+                        
+                    <label for="passwordrep2"><b>Confirm Password</b></label>
+                    <!--confirm password area-->
+                    <input name="confirmpassword" type="password" placeholder="Confirm Password" id="passwordrep2"
+                        onfocus="CheckPassword(document.test1.password)" required>
+                        <input type="checkbox" onclick="myFunction()">Show Password
+                        <label id='validatePwd'>
+                                <script>
+                                function myFunction() {
+                                var x = document.getElementById("password2");
+                                if (x.type === "password") {
+                                    x.type = "text";
+                                } else {
+                                    x.type = "password";
+                                }
+                                }
+                                </script>
+                        <br>
+                    <!-- <input type="button" value="REGISTER" id="Sign-up-button2"/> -->
+                    <button type="submit" id="Sign-up-button2">Register</button>
+
+                    <h2 id="text2">By creating an account you agree to our <a href="./termspriv.html"
+                            style="color:darkgreen">Terms &
+                            Conditions</a>.</h2>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

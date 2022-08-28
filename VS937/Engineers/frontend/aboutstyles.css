@@ -1,0 +1,240 @@
+body{
+  background-color: #ffffff;
+}
+
+/*heading for About us*/
+#heading4{
+  margin-top: 8%;
+  text-align: center;
+  font-size: 70px;
+}
+
+#container4 {
+  position: relative;
+  top: -100px;
+  
+  width: 100%;
+  /*background-color: aqua;*/
+}
+
+/*to position want to know us text*/
+#box4-1{
+  width: 350px;
+  /*border: 5px solid green;*/
+  padding-bottom:120px;
+  margin: 50px;
+  padding-top: 3px;
+  margin-left: 150px;
+  height: 300px;
+}
+
+/*to position vision and mission text*/
+#box4-2{
+  width: 350px;
+  /*border: 5px solid green;*/
+  margin-top: 100px;
+  margin: 50px;
+  margin-left: 950px;
+  height: 300px;
+}
+
+/*to position query based platfrom text*/
+#box4-3{
+  width: 350px;
+  /*border: 5px solid green;*/
+  padding: 50px;
+  margin: 50px;
+  margin-top: 100px;
+  margin-left: 150px;
+  height: 300px;
+}
+
+/*styling for the text*/
+#text4-1, #text4-2, #text4-3{
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+/*to position want to know us image*/
+#image4_1{
+  position: absolute;
+  top: 150px;
+  right: 120px;
+}
+
+/*to position vision and mission image*/
+#image4_2{
+  position:absolute;
+  top: 595px;
+  left: 140px;
+}
+
+/*to position query based platfrom image*/
+#image4_3{
+  position: absolute;
+  top: 1050px;
+  right: 100px;
+}
+
+/*login button at the top right*/
+#Login-button1 {
+
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 11px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 72px;
+  margin-left: 15px;
+}
+
+/*onclick login button shadow*/
+#Login-button1:hover {
+  /*background-color: #f65b35;*/
+  cursor: pointer;
+}
+
+/*signup button at the top right*/
+#Sign-up-button1 {
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 11px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 73px;
+  margin-left: 15px;
+}
+
+/*onclick signup button shadow*/
+#Sign-up-button1:hover {
+  /*background-color: #f65b35;*/
+  cursor: pointer;
+}
+/*navigation bar at the top right*/
+#navigation1 {
+  position: relative;
+  height: 25px;
+  width: 495px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 0vw;
+  margin-left: 36vw;
+  padding: 15px 0px 20px 10px;
+  align-items: center;
+  background-color: #293241;
+}
+
+
+#navigation1-2>a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+#Fake1 {
+ background-color: #ffffff;
+ color: #293241;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  height: 20px;
+  font-weight: bold;
+  width: 50px;
+  margin-left: 15px;
+}
+
+#Fake1:hover {
+  /*background-color:rgb(219, 9, 9);*/
+  cursor: pointer;
+}
+#container11 {
+  position: relative;
+  height: 25px;
+  display: flex;
+  flex-direction:row;
+  padding: 31px 10px 31px 10px;
+  align-items: center;
+  background-color: #f8dad3;
+  width: 99.5%;
+  margin-top: -10px;
+}
+
+/*logo position within block*/
+#logo1, #logo2{
+  margin-top: 0vw;
+}
+
+#bg1{
+  margin-top: 6vw;
+}
+
+
+#homebutton1 {
+
+  background-color: #ffffff;
+  color: #293241;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  width: 72px;
+  margin-left: 15px;
+}
+
+#homebutton1:hover {
+  /*background-color: #f65b35;*/
+  cursor: pointer;
+}
+/*fake un
+
+/*footer block position */
+.footer4 {
+  display: flex;
+  flex-direction: row;
+  width: 1059px;
+  align-items: center;
+  padding: 0 15%;
+  background:#f8dad3;
+  color: black;
+
+}
+
+.footer4 div{
+  text-align: center;
+  flex-grow: 0.2;
+  right:100vw;
+  margin-bottom: 0vw;
+  margin-left: 100px;
+}
+
+.col4_1{
+  margin-top: 10px;
+}
+.col4_1 a, .col4_2 p, .col4_3 p {
+  text-decoration: none;
+  display:block;
+  margin-bottom: 10px;
+  color: black;
+  font-size: small;
+}
+
+
+/*copyright block in footer*/
+.copyright4{
+  padding: 0.7vw 15%;
+  text-align:center;
+  color: #ffffff;
+  background:#293241;
+  width:1059px;
+
+}

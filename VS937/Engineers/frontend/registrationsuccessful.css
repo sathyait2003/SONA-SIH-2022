@@ -1,0 +1,79 @@
+body{
+    background-color: #ffffff;
+}
+
+/*complete block of the page*/
+#card6{
+    position: relative;
+    width: 320px;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*success block of the page*/
+#upper-side6 {
+    padding: 2em;
+    background-color: #EE6644;
+    display: block;
+    color: #f8dad3;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+/*success text*/
+#status6 {
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    margin-top: -.2em;
+    margin-bottom: 0;
+}
+
+/*message block*/
+#lower-side6 {
+    padding: 2em 2em 5em 2em;
+    background: #f8dad3;
+    display: block;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/*text message*/
+#message6 {
+    margin-top: -.5em;
+    color: #EE6644;
+    letter-spacing: 1px;
+}
+
+/*home button*/
+#contBtn6 {
+    position: relative;
+    top: 1.5em;
+    text-decoration: none;
+    background: #EE6644;
+    color: #fff;
+    margin: auto;
+    padding: .8em 3em;
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    border-radius: 25px;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+/*onclick home button*/
+#contBtn6:hover {
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
